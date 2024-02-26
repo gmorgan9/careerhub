@@ -69,6 +69,7 @@ if(isLoggedIn() == false) {
                         if($num_rows > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $id             = $row['app_id'];
+                                $idno           = $row['idno'];
                                 $status         = $row['status'];
                                 $job_title      = $row['job_title'];
                                 $company        = $row['company'];
@@ -80,7 +81,7 @@ if(isLoggedIn() == false) {
                                 $formatted_date = $local_date_time->format('M d, Y');
                 ?>
                 <tr>
-                    <th scope="row"><?php echo $id; ?></th>
+                    <th scope="row"><?php echo $idno; ?></th>
                     <td><?php echo $job_title ? $job_title : '-'; ?></td>
                     <td><?php echo $company ? $company : '-'; ?></td>
                     <td><?php echo $location ? $location : '-'; ?></td>
