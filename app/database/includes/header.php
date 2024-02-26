@@ -11,6 +11,8 @@ if (isset($_GET['logout'])) {
 
 <div class="header">
     <h3 class="logo ms-3 me-3">
+        <?php echo BASE_URL;?>
+        <?php echo ROOT_PATH; ?>
         Job Management System
         <!-- Set the href attribute to the logout page URL -->
         <a class="float-end" href="<?php echo BASE_URL; ?>app/database/functions.php"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
