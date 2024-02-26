@@ -1,7 +1,7 @@
 <?php
 function loginUser($conn)
 {
-    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
+    $uname = ($conn, $_POST['uname']);
     $password = md5($_POST['password']);
     $select = "SELECT * FROM users WHERE uname = '$uname' && password = '$password'";
     $result = mysqli_query($conn, $select);
