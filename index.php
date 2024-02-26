@@ -342,6 +342,7 @@ if(isLoggedIn() == false) {
 
                         // Calculate time difference
                         $current_time = time();
+                        echo $current_time;
                         $time_diff = $current_time - $updated_at;
                         $time_ago = "";
 
