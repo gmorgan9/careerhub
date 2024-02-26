@@ -97,7 +97,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         </div>
     <?php endif; ?>
 
-    <!-- Display search results only if a search query is submitted -->
+ <!-- Display search results only if a search query is submitted -->
 <?php if ($result !== false): ?>
     <ul class="list-group">
         <?php if (mysqli_num_rows($result) > 0): ?>
@@ -142,9 +142,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     </div>
 </div>
 
-
-
-
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
@@ -153,13 +151,17 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
 
     viewDetailLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
             const appId = this.getAttribute('data-app-id');
             // Fetch application details using AJAX or fetch API and update modal body content
             fetch(`get_application_details.php?app_id=${appId}`)
                 .then(response => response.text())
                 .then(data => {
                     modalBodyContent.innerHTML = data;
+                    // Show the modal
+                    const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                    modal.show();
                 })
                 .catch(error => {
                     console.error('Error fetching application details:', error);
@@ -167,6 +169,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         });
     });
 </script>
+
 
 
 </body>
