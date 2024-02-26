@@ -8,9 +8,11 @@ $files = glob("app/functions/*.php");
 foreach ($files as $file) {
     require_once $file;
 }
-// if (!isLoggedIN()) {
-// 	header('location: login.php');
-// }
+
+if (!isLoggedIn()) {
+	header('location: login.php');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -369,6 +371,8 @@ foreach ($files as $file) {
                                                     <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Rejected') { ?>
                                                     <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Interested') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } ?>
                                         </li>
                                     <?php 
