@@ -12,29 +12,8 @@ session_start();
 //     require_once $file;
 // }
 
-logoutUser();
+// logoutUser();
 // isLoggedIn($conn);
-
-
-// if (!isset($_SESSION['loggedin'])) {
-//     header('Location: login.php');
-//     exit; // Make sure to stop script execution after redirection
-// }
-
-// function logoutUser()
-// {
-//     if (isset($_POST['logout'])) {
-//         session_destroy();
-//         header("location: login.php");
-//         exit; // Prevent further execution
-//     }
-// }
-
-// if (isset($_GET['logout'])) {
-//     session_destroy();
-//     header("location: login.php");
-//     exit; // Prevent further execution
-// }
 
 ?>
 <!DOCTYPE html>
