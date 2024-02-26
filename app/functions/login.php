@@ -27,7 +27,7 @@ function loginUser($conn)
                 $_SESSION['email']        = $row['email'];
                 $_SESSION['pass']         = $row['password'];
                 // $_SESSION['loggedin']     = true;
-                $_SESSION['loggedin']     = $row['logged_in'];
+                $_SESSION['loggedin']     = 1;
                 header('location:' . BASE_URL . '/');
             } else {
                 echo "Error updating record: " . mysqli_error($conn);
