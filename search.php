@@ -184,14 +184,11 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     });
 
     // Close modal event listener
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-        modal.addEventListener('hidden.bs.modal', function(event) {
-            // Remove the modal body content when the modal is closed
-            const modalBody = this.querySelector('.modal-body');
-            modalBody.innerHTML = '';
-        });
-    });
+    document.addEventListener('hidden.bs.modal', function(event) {
+    const modal = event.target; // Get the modal that triggered the event
+    const modalBody = modal.querySelector('.modal-body');
+    modalBody.innerHTML = ''; // Clear the modal body content
+});
 </script>
 
 
