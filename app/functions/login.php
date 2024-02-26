@@ -1,7 +1,7 @@
 <?php
 function loginUser($conn)
 {
-    if(isset($_POST['login-btn'])){
+    // if(isset($_POST['login-btn'])){
         // Check if 'user_id' is set in $_POST
         // $user_id = isset($_POST['user_id']) ? mysqli_real_escape_string($conn, $_POST['user_id']) : '';
         // $fname = mysqli_real_escape_string($conn, $_POST['fname']);
@@ -31,6 +31,6 @@ function loginUser($conn)
         } else {
            $error[] = 'Incorrect username or password!';
         }
-     };
+    //  };
 }
 ?>
