@@ -125,6 +125,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 </div>
 
 <!-- Modal for application details -->
+<?php if ($result !== false): ?>
 <?php if (mysqli_num_rows($result) > 0): ?>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
 <div class="modal fade" id="#exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
