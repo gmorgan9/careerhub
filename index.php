@@ -12,14 +12,13 @@ session_start();
 //     require_once $file;
 // }
 
-function logoutUser()
-    {
+
         if ($_GET['logout'] == 1) {
             session_destroy();
             header("location: login.php");
             exit; // Prevent further execution
         }
-    }
+
 
 ?>
 <!DOCTYPE html>
