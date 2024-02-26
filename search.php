@@ -158,6 +158,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
+
 <script>
     // JavaScript to load application details dynamically into the modal
     const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
@@ -184,11 +185,11 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     });
 
     // Close modal event listener
-//     document.addEventListener('hidden.bs.modal', function(event) {
-//     const modal = event.target; // Get the modal that triggered the event
-//     const modalBody = modal.querySelector('.modal-body');
-//     modalBody.innerHTML = ''; // Clear the modal body content
-// });
+document.addEventListener('hidden.bs.modal', function(event) {
+    const modal = event.target; // Get the modal that triggered the event
+    const modalBody = modal.querySelector('.modal-body');
+    modalBody.innerHTML = ''; // Clear the modal body content
+});
 </script>
 
 
