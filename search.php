@@ -165,6 +165,12 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                 .then(response => response.text())
                 .then(data => {
                     modalBodyContent.innerHTML = data;
+                    // Close any open modals before showing the new one
+                    const openModal = document.querySelector('.modal.show');
+                    if (openModal) {
+                        const bootstrapModal = bootstrap.Modal.getInstance(openModal);
+                        bootstrapModal.hide();
+                    }
                     // Show the modal
                     const modal = new bootstrap.Modal(document.getElementById('exampleModal' + appId));
                     modal.show();
@@ -172,6 +178,30 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                 .catch(error => {
                     console.error('Error fetching application details:', error);
                 });
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    const closeButton = document.querySelector('.modal .btn-close');
+    if (closeButton) {
+        closeButton.addEventListener('click', function() {
+            const openModal = document.querySelector('.modal.show');
+            if (openModal) {
+                const bootstrapModal = bootstrap.Modal.getInstance(openModal);
+                bootstrapModal.hide();
+            }
+        });
+    }
+
+    // Close the modal when it's dismissed
+    const modalElements = document.querySelectorAll('.modal');
+    modalElements.forEach(modalElement => {
+        modalElement.addEventListener('hidden.bs.modal', function() {
+            const openModal = document.querySelector('.modal.show');
+            if (openModal) {
+                const bootstrapModal = bootstrap.Modal.getInstance(openModal);
+                bootstrapModal.hide();
+            }
         });
     });
 </script>
