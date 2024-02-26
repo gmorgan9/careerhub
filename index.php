@@ -73,6 +73,8 @@ session_start();
 <body>
 
 <?php var_dump($_SESSION);?>
+<?php echo BASE_URL;?>
+        <?php echo ROOT_PATH; ?>
 
 <div class="header">
         <h3 class="logo ms-3 me-3 pt-1">
