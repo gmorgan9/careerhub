@@ -1,15 +1,19 @@
 <?php
 // LOGOUT
-function logoutUser()
-    {
-        if ($_GET['logout'] == 1) {
-            $uname = $_SESSION['username'];
-            $sql = "UPDATE users SET logged_in='0' WHERE uname='$uname'";
-            mysqli_query($conn, $sql)
-            session_destroy();
-            header("location: login.php");
-            exit; // Prevent further execution
-        }
+function logoutUser($conn)
+{
+    if (isset($_GET['logout']) && $_GET['logout'] == 1) {
+        // Update the logged_in status to 0 in the database
+        $uname = $_SESSION['username']; // Assuming 'username' is the column where the username is stored in your users table
+        $sql = "UPDATE users SET logged_in='0' WHERE uname='$uname'";
+        mysqli_query($conn, $sql); // <-- Added semicolon here
+        
+        // Destroy the session and redirect to the login page
+        session_destroy();
+        header("Location: login.php");
+        exit; // Prevent further execution
     }
+}
+
 // END LOGOUT
 ?>
