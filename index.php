@@ -12,7 +12,7 @@ session_start();
 //     require_once $file;
 // }
 
-logoutUser();
+// logoutUser();
 // isLoggedIn($conn);
 
 ?>
