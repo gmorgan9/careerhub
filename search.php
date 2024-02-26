@@ -27,21 +27,31 @@ $search = '';
 $result = false;
 $total_pages = 0;
 
+// Define available search fields
+$searchFields = ['job_title', 'company'];
+
 // Handle search query
-if (isset($_GET['search'])) {
+if (isset($_GET['search']) && isset($_GET['search_field'])) {
     $search = $_GET['search'];
+    $searchField = $_GET['search_field'];
 
-    // Construct SQL query with search condition
-    $sql = "SELECT * FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%' ORDER BY created_at DESC LIMIT $start, $limit";
+    // Check if the selected search field is valid
+    if (in_array($searchField, $searchFields)) {
+        // Construct SQL query with search condition
+        $sql = "SELECT * FROM applications WHERE $searchField LIKE '%$search%' ORDER BY created_at DESC LIMIT $start, $limit";
 
-    // Execute the query
-    $result = mysqli_query($conn, $sql);
+        // Execute the query
+        $result = mysqli_query($conn, $sql);
 
-    // Calculate total number of pages for pagination
-    $countSql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%'";
-    $countResult = mysqli_query($conn, $countSql);
-    $row = mysqli_fetch_assoc($countResult);
-    $total_pages = ceil($row["total"] / $limit);
+        // Calculate total number of pages for pagination
+        $countSql = "SELECT COUNT(*) as total FROM applications WHERE $searchField LIKE '%$search%'";
+        $countResult = mysqli_query($conn, $countSql);
+        $row = mysqli_fetch_assoc($countResult);
+        $total_pages = ceil($row["total"] / $limit);
+    } else {
+        // Invalid search field
+        echo "Invalid search field";
+    }
 }
 ?>
 
@@ -69,7 +79,12 @@ if (isset($_GET['search'])) {
 <div class="container">
     <form method="GET" action="" class="mb-3">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search by job title" name="search">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <select class="form-select" name="search_field">
+                <?php foreach ($searchFields as $field): ?>
+                    <option value="<?php echo $field; ?>"><?php echo ucfirst($field); ?></option>
+                <?php endforeach; ?>
+            </select>
             <button class="btn btn-primary" type="submit">Search</button>
         </div>
     </form>
@@ -91,7 +106,7 @@ if (isset($_GET['search'])) {
         <ul class="pagination justify-content-center">
             <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                 <?php $active = ($page == $i) ? "active" : ""; ?>
-                <li class='page-item <?php echo $active; ?>'><a class='page-link' href='?search=<?php echo $search; ?>&page=<?php echo $i; ?>'><?php echo $i; ?></a></li>
+                <li class='page-item <?php echo $active; ?>'><a class='page-link' href='?search=<?php echo $search; ?>&search_field=<?php echo $searchField; ?>&page=<?php echo $i; ?>'><?php echo $i; ?></a></li>
             <?php endfor; ?>
         </ul>
     </nav>
@@ -100,5 +115,5 @@ if (isset($_GET['search'])) {
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
-</body
+</body>
 </html>
