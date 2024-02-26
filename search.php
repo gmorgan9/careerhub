@@ -104,7 +104,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
                 <li class="list-group-item">
                     <?php echo $row['job_title']; ?>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View Details</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['app_id']; ?>">View Details</a>
                 </li>
             <?php endwhile; ?>
         <?php else: ?>
@@ -135,10 +135,10 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
             <div class="modal-body">
                 <?php
                 // Check if the modal trigger isset and it contains application id
-                if(isset($_GET['application_id'])){
-                    $application_id = $_GET['application_id'];
+                if(isset($_GET['app_id'])){
+                    $application_id = $_GET['app_id'];
                     // Query the database to fetch application details
-                    $sql = "SELECT * FROM applications WHERE id = $application_id";
+                    $sql = "SELECT * FROM applications WHERE id = $app_id";
                     $result = mysqli_query($conn, $sql);
                     // Check if query was successful and if application exists
                     if($result && mysqli_num_rows($result) > 0){
