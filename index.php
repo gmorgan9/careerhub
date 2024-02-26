@@ -15,6 +15,12 @@ foreach ($files as $file) {
 
 logoutUser($conn);
 
+if(isLoggedIn() == true) {
+echo "welcome";
+} else {
+    header('location:' . BASE_URL . '/login.php');
+}
+
 
 ?>
 <!DOCTYPE html>
