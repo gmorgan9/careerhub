@@ -62,18 +62,14 @@ require('../../path.php');
 // logged in function
 
 // logout function
-    // function logoutUser($conn)
-    // {
-    //     if (isset($_POST['logout'])) {
-    //         session_destroy();
-    //         header("location: login.php");
-    //         exit; // Prevent further execution
-    //     }
-    // }
-    if (isset($_GET['logout'])) {
-		session_destroy();
-		header("location: /login.php");
-	}
+    function logoutUser($conn)
+    {
+        if (isset($_GET['logout'])) {
+            session_destroy();
+            header("location: login.php");
+            exit; // Prevent further execution
+        }
+    }
 // logout function
 
 ?>
