@@ -100,7 +100,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 <!-- Display search criteria -->
 <?php if (!empty($search) && !empty($searchField)): ?>
     <div class="alert alert-info" role="alert">
-        Search Criteria: <?php echo ucwords(str_replace('_', ' ', $searchField)) . ' contains "' . $search . '"'; ?>
+        Search Criteria: <?php echo ucfirst(str_replace('_', ' ', $searchField)) . ' contains "' . $search . '"'; ?>
     </div>
 <?php endif; ?>
 
