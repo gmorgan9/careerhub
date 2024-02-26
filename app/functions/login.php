@@ -29,7 +29,7 @@ function loginUser($conn)
         }
     } else {
         // Handle the case when 'uname' or 'password' keys are not set in $_POST
-        $_SESSION['error'][] = 'Username or password is missing!';
+        // $_SESSION['error'][] = 'Username or password is missing!';
     }
 }
 ?>
