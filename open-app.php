@@ -39,20 +39,7 @@ if(isLoggedIn() == false) {
 
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
-    <div class="float-end me-5">
-        <a href="<?php echo BASE_URL ?>/" class="btn btn-secondary">
-            Home
-        </a>
-    </div>
-
-    <h1 style="margin-left: 175px;" class="text-center"><strong>Open Applications</strong></h1>
-    <br>
-
-
-
-
-
-
+<h1 style="margin-left: 175px;" class="text-center"><strong>Open Applications</strong></h1><br>
 
 <!-- main-container -->
     <div class="container-fluid main">

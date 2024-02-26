@@ -38,18 +38,6 @@ if(isLoggedIn() == false) {
 
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
-    <div class="record_incident float-end me-5">
-        <a href="<?php echo BASE_URL ?>/" class="btn btn-secondary">
-            Home
-        </a>
-    </div>
-
-
-
-
-
-
-
  <!-- main-container -->
  <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;">
 

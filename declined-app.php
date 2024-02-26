@@ -37,94 +37,9 @@ if(isLoggedIn() == false) {
 </head>
 <body>
 
-<div class="header">
-        <h3 class="logo ms-3 me-3 pt-1">
-            <a class="text-decoration-none text-white" href="/">Job Management System</a>
-            <a class="float-end" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link text-white"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
-        </h3>
-    </div>
-<br>
+<?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
-<!-- <div class="record_incident float-end me-5">
-    <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="recordJobDropdown" data-bs-toggle="dropdown" data-bs-target="#recordJobDropdown" aria-haspopup="true" aria-expanded="false">
-        Add Application
-    </button>
-    <div class="dropdown-menu" aria-labelledby="recordJobDropdown">
-        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#quickModal">Quick</a>
-        <a class="dropdown-item" href="create-app.php">In-depth</a>
-    </div>
-    </div>
-</div> -->
-
-    <div class="record_incident float-end me-5">
-        <a href="<?php echo BASE_URL ?>/" class="btn btn-secondary">
-            Home
-        </a>
-    </div>
-
-
-<!-- Quick Modal -->
-    <div class="modal fade" id="quickModal" tabindex="-1" aria-labelledby="quickModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="quickModalLabel">Quick Application Creation</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        <form action="" method="POST">
-            <div class="form-group">
-                <label for="job_title">Job Title:</label>
-                <input type="text" class="form-control" id="job_title" name="job_title">
-            </div>
-            <div class="form-group">
-                <label for="company">Company:</label>
-                <input type="text" class="form-control" id="company" name="company">
-            </div>
-            <div class="form-group">
-                <label for="location">Location:</label>
-                <input type="text" class="form-control" id="location" name="location">
-            </div>
-            <div class="form-group">
-                <label for="job_type">Job Type:</label>
-                <input type="text" class="form-control" id="job_type" name="job_type">
-            </div>
-            <div class="form-group">
-                <label for="app_link">Application Link:</label>
-                <input type="text" class="form-control" id="app_link" name="app_link">
-            </div>
-            <br>
-            <div class="form-group">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
-                    <label class="form-check-label" for="watchlist">Add to Watchlist</label>
-                </div>
-            </div>
-            
-            
-        </div>
-        <div class="modal-footer">
-            <button type="submit" name="add-quick" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-        </form>
-        </div>
-    </div>
-    </div>
-<!-- end Quick Modal -->
-
-
-
-
-    <h1 style="margin-left: 175px;" class="text-center"><strong>Rejected Applications</strong></h1>
-    <br>
-
-
-
-
-
-
+<h1 style="margin-left: 175px;" class="text-center"><strong>Rejected Applications</strong></h1><br>
 
 <!-- main-container -->
     <div class="container-fluid main">
