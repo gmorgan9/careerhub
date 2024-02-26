@@ -39,7 +39,7 @@ if(isLoggedIn() == false) {
 
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
-<h1 style="margin-left: 175px;" class="text-center"><strong>All Applications</strong></h1><br>
+<h1 class="text-center"><strong>All Applications</strong></h1><br>
 
 <!-- main-container -->
     <div class="container-fluid main">
