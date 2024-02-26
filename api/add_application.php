@@ -1,6 +1,6 @@
 <?php
 
-require('../database/connection.php');
+require('../app/database/connection.php');
 
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
