@@ -16,7 +16,7 @@ foreach ($files as $file) {
 }
 
 
-    logoutUser();
+    logoutUser($conn);
 
 ?>
 <!DOCTYPE html>
