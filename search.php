@@ -123,24 +123,29 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     </nav>
 <?php endif; ?>
 
-<!-- Modal for application details -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Application Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modal-body-content">
-                <!-- Application details will be loaded here dynamically via JavaScript -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <!-- Additional buttons or actions can be added here -->
+<?php if ($result !== false && mysqli_num_rows($result) > 0): ?>
+    <?php mysqli_data_seek($result, 0); // Reset result pointer ?>
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <!-- Modal for application details -->
+        <div class="modal fade" id="exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php echo $row['app_id']; ?>" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel<?php echo $row['app_id']; ?>">Application Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body-content">
+                        <!-- Application details will be loaded here dynamically via JavaScript -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- Additional buttons or actions can be added here -->
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -160,7 +165,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                 .then(data => {
                     modalBodyContent.innerHTML = data;
                     // Show the modal
-                    const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+                    const modal = new bootstrap.Modal(document.getElementById('exampleModal<?php echo $row['app_id']; ?>'));
                     modal.show();
                 })
                 .catch(error => {
