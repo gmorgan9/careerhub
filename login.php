@@ -13,6 +13,9 @@ foreach ($files as $file) {
 }
 
 loginUser($conn);
+if(isLoggedIn() == true) {
+    header('location:' . BASE_URL . '/');
+}
 
 ?>
 
