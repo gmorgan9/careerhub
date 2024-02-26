@@ -21,13 +21,19 @@ session_start();
 //     exit; // Make sure to stop script execution after redirection
 // }
 
-function logoutUser()
-{
-    if (isset($_POST['logout'])) {
-        session_destroy();
-        header("location: login.php");
-        exit; // Prevent further execution
-    }
+// function logoutUser()
+// {
+//     if (isset($_POST['logout'])) {
+//         session_destroy();
+//         header("location: login.php");
+//         exit; // Prevent further execution
+//     }
+// }
+
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header("location: login.php");
+    exit; // Prevent further execution
 }
 
 ?>
