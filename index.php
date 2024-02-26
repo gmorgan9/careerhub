@@ -331,38 +331,35 @@ if(isLoggedIn() == false) {
             
             <?php
 
+            function time_elapsed_string($datetime, $full = false) {
+                $now = new DateTime('now', new DateTimeZone('America/Chicago'));
+                $ago = new DateTime($datetime);
+                $ago->setTimezone(new DateTimeZone('America/Chicago'));
+                $diff = $now->diff($ago);
 
+                $diff->w = floor($diff->d / 7);
+                $diff->d -= $diff->w * 7;
 
-function time_elapsed_string($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime);
-    $diff = $now->diff($ago);
-    echo $now;
+                $string = array(
+                    'y' => 'year',
+                    'm' => 'month',
+                    'w' => 'week',
+                    'd' => 'day',
+                    'h' => 'hour',
+                    'i' => 'minute',
+                    's' => 'second',
+                );
+                foreach ($string as $k => &$v) {
+                    if ($diff->$k) {
+                        $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+                    } else {
+                        unset($string[$k]);
+                    }
+                }
 
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
-
-    $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-    );
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
-}
-
+                if (!$full) $string = array_slice($string, 0, 1);
+                return $string ? implode(', ', $string) . ' ago' : 'just now';
+            }
 
             $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
             $result = mysqli_query($conn, $sql);
@@ -373,20 +370,10 @@ function time_elapsed_string($datetime, $full = false) {
                         $status = $row['status'];
                         $job_title = $row['job_title'];
                         $company = $row['company'];
-                        $updated_at = strtotime($row['updated_at']); // Convert to timestamp
+                        $updated_at = $row['updated_at']; // No need to convert to timestamp
                         
                         // Calculate time ago
-                        $time_difference = time() - $updated_at;
-                        if ($time_difference < 60) {
-                            $time_ago = $time_difference . " seconds ago";
-                        } elseif ($time_difference < 3600) {
-                            $time_ago = floor($time_difference / 60) . " minutes ago";
-                        } elseif ($time_difference < 86400) {
-                            $time_ago = floor($time_difference / 3600) . " hours ago";
-                        } else {
-                            $time_ago = floor($time_difference / 86400) . " days ago";
-                        }
-                        echo time_elapsed_string('@1367367755');
+                        $time_ago = time_elapsed_string($updated_at);
                         ?>
                         <li class="list-group-item">
                             <p class="float-start">
@@ -403,7 +390,7 @@ function time_elapsed_string($datetime, $full = false) {
                             <?php } elseif ($row['status'] == 'Interested') { ?>
                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                             <?php } ?>
-                            <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo time_elapsed_string($time_ago); ?></p>
+                            <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
                         </li>
                     <?php
                     }
@@ -417,6 +404,7 @@ function time_elapsed_string($datetime, $full = false) {
         </ul>
     </div>
 </div>
+
 
 
             <!-- end third table -->
