@@ -123,7 +123,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                 <?php $app_id_data = $row['app_id']; ?>
                 <li class="list-group-item">
                     <?php echo $row['job_title']; ?>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $app_id_data; ?>" data-app-id="<?php echo $app_id_data; ?>">View Details</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" data-app-id="<?php echo $id; ?>">View Details</a>
                 </li>
 
                 <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
@@ -286,52 +286,52 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 
 <script>
 // JavaScript to load application details dynamically into the modal
-const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+// const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
 
-viewDetailLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        const appId = this.getAttribute('data-app-id');
-        // Fetch application details using AJAX or fetch API and update modal body content
-        fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
-            .then(response => response.text())
-            .then(data => {
-                // Set the modal body content for the specific modal
-                const modalBody = document.getElementById(`modal-body-content-${appId}`);
-                modalBody.innerHTML = data;
-                // Show the modal
-                const modal = new bootstrap.Modal(document.getElementById(`exampleModal${appId}`));
-                modal.show();
-            })
-            .catch(error => {
-                console.error('Error fetching application details:', error);
-            });
-    });
-});
+// viewDetailLinks.forEach(link => {
+//     link.addEventListener('click', function(event) {
+//         event.preventDefault(); // Prevent the default link behavior
+//         const appId = this.getAttribute('data-app-id');
+//         // Fetch application details using AJAX or fetch API and update modal body content
+//         fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
+//             .then(response => response.text())
+//             .then(data => {
+//                 // Set the modal body content for the specific modal
+//                 const modalBody = document.getElementById(`modal-body-content-${appId}`);
+//                 modalBody.innerHTML = data;
+//                 // Show the modal
+//                 const modal = new bootstrap.Modal(document.getElementById(`exampleModal${appId}`));
+//                 modal.show();
+//             })
+//             .catch(error => {
+//                 console.error('Error fetching application details:', error);
+//             });
+//     });
+// });
 
-// Close modal manually when close button is clicked
-const closeButton = document.querySelectorAll('.btn-close');
-const closeButton2 = document.querySelectorAll('.close-btn');
-closeButton.forEach(btn => {
-    btn.addEventListener('click', function() {
-        const modal = this.closest('.modal');
-        modal.classList.remove('show');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('modal-open');
-        const backdrop = document.querySelector('.modal-backdrop');
-        backdrop.parentNode.removeChild(backdrop);
-    });
-});
-closeButton2.forEach(btn => {
-    btn.addEventListener('click', function() {
-        const modal = this.closest('.modal');
-        modal.classList.remove('show');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('modal-open');
-        const backdrop = document.querySelector('.modal-backdrop');
-        backdrop.parentNode.removeChild(backdrop);
-    });
-});
+// // Close modal manually when close button is clicked
+// const closeButton = document.querySelectorAll('.btn-close');
+// const closeButton2 = document.querySelectorAll('.close-btn');
+// closeButton.forEach(btn => {
+//     btn.addEventListener('click', function() {
+//         const modal = this.closest('.modal');
+//         modal.classList.remove('show');
+//         modal.setAttribute('aria-hidden', 'true');
+//         document.body.classList.remove('modal-open');
+//         const backdrop = document.querySelector('.modal-backdrop');
+//         backdrop.parentNode.removeChild(backdrop);
+//     });
+// });
+// closeButton2.forEach(btn => {
+//     btn.addEventListener('click', function() {
+//         const modal = this.closest('.modal');
+//         modal.classList.remove('show');
+//         modal.setAttribute('aria-hidden', 'true');
+//         document.body.classList.remove('modal-open');
+//         const backdrop = document.querySelector('.modal-backdrop');
+//         backdrop.parentNode.removeChild(backdrop);
+//     });
+// });
 
 </script>
 
