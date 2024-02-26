@@ -16,10 +16,10 @@ logoutUser($conn);
 isLoggedIn($conn);
 
 
-if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.php');
-    exit; // Make sure to stop script execution after redirection
-}
+// if (!isset($_SESSION['loggedin'])) {
+//     header('Location: login.php');
+//     exit; // Make sure to stop script execution after redirection
+// }
 
 ?>
 <!DOCTYPE html>
