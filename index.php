@@ -371,7 +371,11 @@ if ($result) {
             $updated_at = $row['updated_at']; // Assuming it's in datetime format
 
             // Calculate time elapsed
-            $time_ago = time_elapsed_string($updated_at);
+            // $time_ago = time_elapsed_string($updated_at);
+            $updated_at_formatted = date('Y-m-d H:i:s', strtotime($updated_at));
+    
+    // Calculate time elapsed
+    $time_ago = time_elapsed_string($updated_at_formatted);
 
             ?>
             <li class="list-group-item">
