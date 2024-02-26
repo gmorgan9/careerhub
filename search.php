@@ -155,7 +155,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
             event.preventDefault(); // Prevent the default link behavior
             const appId = this.getAttribute('data-app-id');
             // Fetch application details using AJAX or fetch API and update modal body content
-            fetch(`get_application_details.php?app_id=${appId}`)
+            fetch(`<?php echo BASE_URL; ?>/get_application_details.php?app_id=${appId}`)
                 .then(response => response.text())
                 .then(data => {
                     modalBodyContent.innerHTML = data;
