@@ -347,11 +347,7 @@ date_default_timezone_set('America/Chicago'); // Dallas is in the Central Time Z
 
 // Convert timestamps to H:i:s format
 $current_time = time();
-$current_time_formatted = date('H:i:s', $current_time);
-$updated_at_formatted = date('H:i:s', $updated_at);
-
-// Calculate time difference
-$time_diff = strtotime($current_time_formatted) - strtotime($updated_at_formatted);
+$time_diff = $current_time - $updated_at;
 
 // Format time difference
 if ($time_diff < 60) {
