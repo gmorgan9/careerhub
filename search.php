@@ -85,30 +85,35 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 
 <!-- Search form -->
 <div class="container">
-<form method="GET" action="" class="mb-3">
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
-        <select class="form-select" name="search_field">
-            <?php foreach ($searchFields as $fieldName => $fieldLabel): ?>
-                <option value="<?php echo $fieldName; ?>" <?php if ($searchField === $fieldName) echo 'selected'; ?>><?php echo $fieldLabel; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <button class="btn btn-primary" type="submit">Search</button>
-    </div>
-</form>
 
-<!-- Display search criteria -->
-<?php if (!empty($search) && !empty($searchField)): ?>
-    <div class="alert alert-info" role="alert">
-        Search Criteria: <?php echo ucfirst(str_replace('_', ' ', $searchField)) . ' contains "' . $search . '"'; ?>
-    </div>
-<?php endif; ?>
+                <!-- Search form -->
+                    <form method="GET" action="" class="mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
+                            <select class="form-select" name="search_field">
+                                <?php foreach ($searchFields as $fieldName => $fieldLabel): ?>
+                                    <option value="<?php echo $fieldName; ?>" <?php if ($searchField === $fieldName) echo 'selected'; ?>><?php echo $fieldLabel; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+                <!-- end Search form -->
 
-<!-- Display search results only if a search query is submitted -->
+                <!-- Display search criteria -->
+                    <?php if (!empty($search) && !empty($searchField)): ?>
+                        <div class="alert alert-info" role="alert">
+                            Search Criteria: <?php echo ucfirst(str_replace('_', ' ', $searchField)) . ' contains "' . $search . '"'; ?>
+                        </div>
+                    <?php endif; ?>
+                <!-- end Display search criteria -->
+
+                <!-- View Modal -->
+                    <!-- View Modal -->
 <?php if ($result !== false): ?>
     <ul class="list-group">
-        <?php if (mysqli_num_rows($result) > 0){ ?>
-            <?php while ($row = mysqli_fetch_assoc($result)){ 
+        <?php if (mysqli_num_rows($result) > 0): ?>
+            <?php while ($row = mysqli_fetch_assoc($result)): 
                 $id             = $row['app_id'];
                 $status         = $row['status'];
                 $job_title      = $row['job_title'];
@@ -125,8 +130,9 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                     <?php echo $row['job_title']; ?>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" data-app-id="<?php echo $id; ?>">View Details</a>
                 </li>
-
-                <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+            
+                <!-- View Modal -->
+                    <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -136,114 +142,117 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                                 <div class="modal-body">
 
                                 <?php
-                                            $new = "SELECT * FROM applications WHERE app_id=$id";
-                                            $new1 = mysqli_query($conn, $new);
-                                            if($new1) {
-                                                while ($cap = mysqli_fetch_assoc($new1)) {       
-                                        ?> 
-                                    <!-- Display the content of the selected entry -->
-                                    <div>
-                                        <h5 class="float-start">Job Details</h5>
-                                        <div class="float-end">
-                                            <?php if($cap['watchlist'] == 1){ ?>
-                                                <i class="bi bi-eye text-muted"></i>
-                                            <?php } else {} ?>
-                                            <?php if($cap['interview_set'] == 1){ ?>
-                                                <i class="bi bi-people"></i>
-                                            <?php } else {} ?>
-                                        </div>
-                                    </div>
-
-                                    <br>
-                                    
-                                    <hr>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Status</p> 
-                                       <?php if($cap['status'] == 'Applied'){ ?>
-                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                        <?php } else if($cap['status'] == 'Interviewed') { ?>
-                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                        <?php } else if($cap['status'] == 'Offered') { ?>
-                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                        <?php } else if($cap['status'] == 'Rejected') { ?>
-                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                        <?php } ?>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                        <p class="float-start fw-bold">Connected Emails</p>
-                                        <p><span class="float-end">
-                                        <?php
-                                            $count="select count('1') from email_application where app_id='$id'";
-                                            $count_result=mysqli_query($conn,$count);
-                                            $rtotal=mysqli_fetch_array($count_result); 
-                                            if($rtotal[0] < 10) {
-                                                echo "0$rtotal[0]";
-                                            } else {
-                                                echo "$rtotal[0]";
-                                            }
-                                        ?>
-                                        </span></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Job Title</p> 
-                                       <p><span class="float-end"><?php echo $cap['job_title']; ?></span></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Company</p> 
-                                       <p><span class="float-end"><?php echo $cap['company']; ?></span></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Location</p>
-                                       <p><span class="float-end"><?php echo $cap['location']; ?></span></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Application Link</p> 
-                                       <p><a target="_blank" href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Job Type</p> 
-                                       <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Base Pay</p> 
-                                       <p><span class="float-end"><?php echo $cap['pay']; ?></span></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Bonus Pay</p> 
-                                       <p><span class="float-end"><?php echo $cap['bonus_pay']; ?></span></p>
-                                    </div>
-                                    <br><br>
-                                    <div class="ms-3 me-3">
-                                       <p class="fw-bold">Notes</p> 
-                                       <p><span><?php echo $cap['notes']; ?></span></p>
-                                    </div>
-                                    
-
-                                    <?php } } ?>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    $new = "SELECT * FROM applications WHERE app_id=$id";
+                                    $new1 = mysqli_query($conn, $new);
+                                    if($new1) {
+                                        while ($cap = mysqli_fetch_assoc($new1)) {       
+                                ?> 
+                                <!-- Display the content of the selected entry -->
+                                <div>
+                                    <h5 class="float-start">Job Details</h5>
+                                <div class="float-end">
+                                    <?php if($cap['watchlist'] == 1): ?>
+                                        <i class="bi bi-eye text-muted"></i>
+                                    <?php else: ?>
+                                    <?php endif; ?>
+                                    <?php if($cap['interview_set'] == 1): ?>
+                                        <i class="bi bi-people"></i>
+                                    <?php else: ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                                                        
+                            <br>
+                                                        
+                            <hr>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Status</p> 
+                                <?php if($cap['status'] == 'Applied'): ?>
+                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                <?php elseif($cap['status'] == 'Interviewed'): ?>
+                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                <?php elseif($cap['status'] == 'Offered'): ?>
+                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                <?php elseif($cap['status'] == 'Rejected'): ?>
+                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                <?php endif; ?>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Connected Emails</p>
+                                <p><span class="float-end">
+                                <?php
+                                    $count="select count('1') from email_application where app_id='$id'";
+                                    $count_result=mysqli_query($conn,$count);
+                                    $rtotal=mysqli_fetch_array($count_result); 
+                                    if($rtotal[0] < 10) {
+                                        echo "0$rtotal[0]";
+                                    } else {
+                                        echo "$rtotal[0]";
+                                    }
+                                ?>
+                                </span></p>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Job Title</p> 
+                                <p><span class="float-end"><?php echo $cap['job_title']; ?></span></p>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Company</p> 
+                                <p><span class="float-end"><?php echo $cap['company']; ?></span></p>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Location</p>
+                                <p><span class="float-end"><?php echo $cap['location']; ?></span></p>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Application Link</p> 
+                                <p><a target="_blank" href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Job Type</p> 
+                                <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Base Pay</p> 
+                                <p><span class="float-end"><?php echo $cap['pay']; ?></span></p>
+                            </div>
+                            <br>
+                            <div class="ms-3 me-3">
+                                <p class="float-start fw-bold">Bonus Pay</p> 
+                                <p><span class="float-end"><?php echo $cap['bonus_pay']; ?></span></p>
+                            </div>
+                            <br><br>
+                            <div class="ms-3 me-3">
+                                <p class="fw-bold">Notes</p> 
+                                <p><span><?php echo $cap['notes']; ?></span></p>
+                            </div>
+                                                    
+                                                    
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <?php } ?>
+                            <?php } ?>
+                        </ul>
+                    <?php endif; ?>
+                    <?php else: ?>
+                        <li class="list-group-item">No results found</li>
+                    <?php endif; ?>
                 <!-- end VIEW Modal -->
 
-
-
-            <?php } ?>
-        <?php } else { ?>
-            <li class="list-group-item">No results found</li>
-        <?php } ?>
-    </ul>
 
     <!-- Pagination links -->
     <nav aria-label="Page navigation">
@@ -256,84 +265,9 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     </nav>
 <?php endif; ?>
 
-<!-- Modal for application details -->
-<!-- <?php //if ($result !== false && mysqli_num_rows($result) > 0): ?>
-    <?php //mysqli_data_seek($result, 0); // Reset result pointer ?>
-   <?php //while ($row = mysqli_fetch_assoc($result)): ?> 
-        <div class="modal fade" id="exampleModal<?php //echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php //echo $row['app_id']; ?>" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel<?php //echo $row['app_id']; ?>">Application Details</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="modal-body-content-<?php //echo $row['app_id']; ?>">
-                
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary close-btn" data-bs-dismiss="modal">Close</button>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php //endwhile; ?>
-<?php //endif; ?> -->
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<script>
-// JavaScript to load application details dynamically into the modal
-// const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
-
-// viewDetailLinks.forEach(link => {
-//     link.addEventListener('click', function(event) {
-//         event.preventDefault(); // Prevent the default link behavior
-//         const appId = this.getAttribute('data-app-id');
-//         // Fetch application details using AJAX or fetch API and update modal body content
-//         fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
-//             .then(response => response.text())
-//             .then(data => {
-//                 // Set the modal body content for the specific modal
-//                 const modalBody = document.getElementById(`modal-body-content-${appId}`);
-//                 modalBody.innerHTML = data;
-//                 // Show the modal
-//                 const modal = new bootstrap.Modal(document.getElementById(`exampleModal${appId}`));
-//                 modal.show();
-//             })
-//             .catch(error => {
-//                 console.error('Error fetching application details:', error);
-//             });
-//     });
-// });
-
-// // Close modal manually when close button is clicked
-// const closeButton = document.querySelectorAll('.btn-close');
-// const closeButton2 = document.querySelectorAll('.close-btn');
-// closeButton.forEach(btn => {
-//     btn.addEventListener('click', function() {
-//         const modal = this.closest('.modal');
-//         modal.classList.remove('show');
-//         modal.setAttribute('aria-hidden', 'true');
-//         document.body.classList.remove('modal-open');
-//         const backdrop = document.querySelector('.modal-backdrop');
-//         backdrop.parentNode.removeChild(backdrop);
-//     });
-// });
-// closeButton2.forEach(btn => {
-//     btn.addEventListener('click', function() {
-//         const modal = this.closest('.modal');
-//         modal.classList.remove('show');
-//         modal.setAttribute('aria-hidden', 'true');
-//         document.body.classList.remove('modal-open');
-//         const backdrop = document.querySelector('.modal-backdrop');
-//         backdrop.parentNode.removeChild(backdrop);
-//     });
-// });
-
-</script>
 
 
 </body>
