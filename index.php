@@ -336,15 +336,15 @@ if(isLoggedIn() == false) {
                                         <li class="list-group-item">
                                         <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                             <?php if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end" style="margin-top: -15px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end" style="margin-top: -35px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end" style="margin-top: -35px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end" style="margin-top: -35px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end" style="margin-top: -35px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Interested') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end" style="margin-top: -35px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } ?>
                                         </li>
                                     <?php 
