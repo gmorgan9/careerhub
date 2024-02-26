@@ -48,7 +48,13 @@ foreach ($files as $file) {
 // 	   $error[] = 'Incorrect username or password!';
 // 	}
 //  };
-loginUser($conn);
+if (isset($_POST['login-btn']) && !empty($_POST['uname']) && !empty($_POST['password'])) {
+    // Call the loginUser function passing the database connection
+    loginUser($conn);
+} else {
+    // Display an error message if login button is not clicked or required fields are empty
+    $error[] = 'Please enter both username and password.';
+}
 ?>
 
 <html>
