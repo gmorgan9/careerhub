@@ -1,6 +1,6 @@
 <?php
 // LOGOUT
-function logoutUser($conn)
+function logoutUser()
 {
     if (isset($_GET['logout']) && $_GET['logout'] == 1) {
         // Update the logged_in status to 0 in the database
