@@ -7,9 +7,15 @@
     </h3>
 </div>
 <br>
-<div class="record_incident float-end me-5">
-    <a href="record-incident.php"><button class="btn btn-secondary rec">Record Job</button></a>
-</div>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="recordJobDropdown" data-bs-toggle="dropdown" data-bs-target="#recordJobDropdown" aria-haspopup="true" aria-expanded="false">
+        Add Application
+    </button>
+    <div class="dropdown-menu" aria-labelledby="recordJobDropdown">
+        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#quickModal">Quick</a>
+        <a class="dropdown-item" href="create-app.php">In-depth</a>
+    </div>
+    </div>
 
 <?php if (isset($_SESSION['fname'])) : ?>
     <h1 style="margin-left: 150px;" class="text-center">Welcome <strong><?php echo $_SESSION['fname']; ?></strong></h1>

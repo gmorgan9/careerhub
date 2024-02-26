@@ -74,7 +74,7 @@ logoutUser($conn);
 
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
-<div class="record_incident float-end me-5">
+<!-- <div class="record_incident float-end me-5">
     <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="recordJobDropdown" data-bs-toggle="dropdown" data-bs-target="#recordJobDropdown" aria-haspopup="true" aria-expanded="false">
         Add Application
@@ -84,7 +84,7 @@ logoutUser($conn);
         <a class="dropdown-item" href="create-app.php">In-depth</a>
     </div>
     </div>
-</div>
+</div> -->
 
 <!-- Quick Modal -->
     <div class="modal fade" id="quickModal" tabindex="-1" aria-labelledby="quickModalLabel" aria-hidden="true">
