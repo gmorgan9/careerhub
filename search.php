@@ -1,19 +1,43 @@
 <?php
+// Include necessary files and start session
 date_default_timezone_set('America/Denver');
 require_once "app/database/connection.php";
 require_once "path.php";
 session_start();
 
+// Include all PHP functions
 $files = glob("app/functions/*.php");
 foreach ($files as $file) {
     require_once $file;
 }
+
+// Logout user if not logged in
 logoutUser($conn);
-if(isLoggedIn() == false) {
+if (isLoggedIn() == false) {
     header('location:' . BASE_URL . '/login.php');
 }
 
+// Pagination variables
+$limit = 10; // Number of items per page
+$page = isset($_GET['page']) ? $_GET['page'] : 1; // Current page number
+$start = ($page - 1) * $limit; // Offset for pagination
+
+// Handle search query
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+
+// Construct SQL query with search condition
+$sql = "SELECT * FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%' ORDER BY created_at DESC LIMIT $start, $limit";
+
+// Execute the query
+$result = mysqli_query($conn, $sql);
+
+// Calculate total number of pages for pagination
+$countSql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%'";
+$countResult = mysqli_query($conn, $countSql);
+$row = mysqli_fetch_assoc($countResult);
+$total_pages = ceil($row["total"] / $limit);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,58 +47,52 @@ if(isLoggedIn() == false) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css?v=1.77">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
-
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
     <title>Job Management System</title>
-
-    <style>
-        
-    </style>
-    
+    <style></style>
 </head>
 <body>
 
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
-<h1 class="text-center"><strong>Saerch Applications</strong></h1><br>
+<h1 class="text-center"><strong>Search Applications</strong></h1><br>
 
-<!-- main-container -->
-    <div class="container-fluid main">
+<!-- Search form -->
+<div class="container">
+    <form method="GET" action="" class="mb-3">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search by job title" name="search">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </form>
 
-        
-        <br>
+    <!-- Display search results -->
+    <ul class="list-group">
         <?php
-            // Pagination links
-            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_assoc($result);
-            $total_pages = ceil($row["total"] / $limit);
-
-                echo '<ul class="pagination justify-content-center">';
-                for ($i = 1; $i <= $total_pages; $i++) {
-                    $active = ($page == $i) ? "active" : "";
-                    echo "<li class='page-item {$active}'><a class='page-link' href='?page={$i}'>{$i}</a></li>";
-                }
-                echo '</ul>';
+        if ($result && mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Display search results here
+                echo '<li class="list-group-item">' . $row['job_title'] . '</li>';
+            }
+        } else {
+            echo '<li class="list-group-item">No results found</li>';
+        }
         ?>
+    </ul>
 
-    </div>
-<!-- END main-container -->
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Pagination links -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <?php
+            for ($i = 1; $i <= $total_pages; $i++) {
+                $active = ($page == $i) ? "active" : "";
+                echo "<li class='page-item {$active}'><a class='page-link' href='?search=$search&page={$i}'>{$i}</a></li>";
+            }
+            ?>
+        </ul>
+    </nav>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
