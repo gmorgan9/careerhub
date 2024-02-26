@@ -133,9 +133,27 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Application details content goes here -->
-                <!-- You can customize this part based on your application data structure -->
-                Example Application Details
+                <?php
+                // Check if the modal trigger isset and it contains application id
+                if(isset($_GET['application_id'])){
+                    $application_id = $_GET['application_id'];
+                    // Query the database to fetch application details
+                    $sql = "SELECT * FROM applications WHERE id = $application_id";
+                    $result = mysqli_query($conn, $sql);
+                    // Check if query was successful and if application exists
+                    if($result && mysqli_num_rows($result) > 0){
+                        $application = mysqli_fetch_assoc($result);
+                        // Display application details
+                        echo "<p><strong>Job Title:</strong> " . $application['job_title'] . "</p>";
+                        echo "<p><strong>Company:</strong> " . $application['company'] . "</p>";
+                        // Add more details as needed
+                    } else {
+                        echo "<p>No application found.</p>";
+                    }
+                } else {
+                    echo "<p>No application selected.</p>";
+                }
+                ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -144,6 +162,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         </div>
     </div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
