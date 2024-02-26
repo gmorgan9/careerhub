@@ -100,7 +100,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     <!-- Display search criteria -->
 <?php if (!empty($search) && !empty($searchField)): ?>
     <div class="alert alert-info" role="alert">
-        Search Criteria: <?php echo ucfirst($searchField) . ' contains "' . $search . '"'; ?>
+        Search Criteria: <?php echo ucfirst($fieldName) . ' contains "' . $search . '"'; ?>
     </div>
 <?php endif; ?>
 
