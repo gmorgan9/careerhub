@@ -19,54 +19,47 @@ if(isset($_POST['login'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/pre.css?v=2.6">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <title>Log In &lsaquo; JMS</title>
-    
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/loginpage.css?v=<?php echo time(); ?>">
 
-    <style>
-        body {
-            background-color: #f0f0f0;
-        }
-    </style>
+  <!-- Page Title -->
+  <title>Sign In | WMS</title>
+
 </head>
+
 <body>
-
-    <div class="login-form">
-        <h1 class="logo text-center">
-            <img src="assets/images/main-logo.png" width="84px" height="84px" alt="">
-        </h1>
-        <?php //echo $error; ?>
-        <form class="form" action="" method="POST">
-            <div class="username">
-                <label for="user_login">Username</label>
-                <input type="text" id="user_login" name="uname" class="form-control" autocapitalize="off">
-            </div>
-            <br>
-            <div class="password">
-                <label for="user_pass">Password</label>
-                <input type="password" id="user_pass" name="password" class="form-control" autocapitalize="off">
-            </div>
-            <br>
-            <div class="button text-end">
-                <input type="submit" name="login" class="btn btn-primary" value="Log In">
-            </div>
-        </form>
-        <br>
-        <div class="bottom-links ms-4">
-            <p><a class="link text-muted" style="text-decoration:none; font-size: 12px;" href="">Forgot password?</a></p>
-        </div>
+    <div class="main" style="height: 450px;">
+        <p class="sign">Sign in</p>
+        <p class="sub_sign">Work Management System</p>
+        <?php
+            if(isset($error)){
+                foreach($error as $err){
+                    echo '<div class="alert alert-danger error-msg" role="alert">'.$err.'</div>';
+                }
+            }
+        ?>
+        <form class="form1" method="POST">
+            <input class="un " type="text" placeholder="Username" name="uname">
+            <input class="pass" type="password" style="align: center;" placeholder="Password" name="password">
+            <input type="submit" name="login-btn" value="Login" class="submit">
+            <p class="forgot"><a href="#">Forgot Password?</a></p>
+            <p class="signup">Dont have an account? <a href="#">Sign up</a></p>          
     </div>
-
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/loginpage.js"></script>
+     
 </body>
+
 </html>

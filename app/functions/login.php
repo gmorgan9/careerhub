@@ -26,7 +26,6 @@ function loginUser($conn)
                 $_SESSION['username']     = $row['uname'];
                 $_SESSION['email']        = $row['email'];
                 $_SESSION['pass']         = $row['password'];
-                // $_SESSION['loggedin']     = true;
                 $_SESSION['loggedin']     = 1;
                 header('location:' . BASE_URL . '/');
             } else {
