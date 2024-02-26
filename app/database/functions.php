@@ -1,5 +1,7 @@
 <?php
 
+require("connection.php");
+
 // login function
     function loginUser($conn)
     {
