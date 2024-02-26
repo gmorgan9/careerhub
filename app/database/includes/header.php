@@ -1,24 +1,20 @@
 <?php
+
 session_start();
 require_once "app/database/functions.php";
+// logoutUser();
 
-// Check if the logout parameter is set and call the logoutUser() function
 if (isset($_GET['logout'])) {
     logoutUser();
 }
 ?>
 
+
 <div class="header">
     <h3 class="logo ms-3 me-3">
         Job Management System
         <!-- Call logoutUser() function directly in the href attribute -->
-        <a class="float-end" href="index.php?logout=1" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-            <button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button>
-        </a>
-        <!-- Hidden form for logout -->
-        <form id="logout-form" action="index.php" method="post" style="display: none;">
-            <input type="hidden" name="logout" value="1">
-        </form>
+        <a class="float-end" href="<?php logoutUser(); ?>"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
     </h3>
 </div>
 <br>
