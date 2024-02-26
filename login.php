@@ -10,9 +10,9 @@ session_start();
 //     require_once $file;
 // }
 
-// if (isLoggedIn()) {
-// 	header('location: /');
-// }
+if(isset($_POST['login'])){
+    loginUser($conn); // Assuming $conn is your database connection
+}
 
 ?>
 
