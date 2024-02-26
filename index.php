@@ -85,6 +85,32 @@ if(isLoggedIn() == false) {
  <!-- main-container -->
  <div class="container-fluid main">
 
+ <?php
+// Handle search query
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+
+// Construct SQL query
+$sql = "SELECT * FROM applications WHERE job_title LIKE '%$search%' ORDER BY created_at DESC LIMIT 3";
+
+// Execute the query and display results as before
+$result = mysqli_query($conn, $sql);
+if ($result) {
+    // Rest of your code to display the results
+}
+?>
+
+
+ <form method="GET" action="">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by job title" name="search">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form>
+
+
+
+
+
     <!-- Top Row -->
         <div class="row d-flex justify-content-center">
         <!-- Open/Awaiting -->
