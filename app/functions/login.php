@@ -21,18 +21,18 @@ if(isset($_POST['login'])){
        $sql = "UPDATE users SET logged_in='1' WHERE uname='$uname'";
        if (mysqli_query($conn, $sql)) {
           echo "Record updated successfully";
+            $_SESSION['fname']        = $row['fname'];
+            $_SESSION['user_id']      = $row['user_id'];
+            $_SESSION['loggedin']     = $row['loggedin'];
+            $_SESSION['user_idno']    = $row['idno'];
+            $_SESSION['lastname']     = $row['lname'];
+            $_SESSION['username']     = $row['uname'];
+            $_SESSION['email']        = $row['email'];
+            $_SESSION['pass']         = $row['password'];
+            header('location:' . BASE_URL . '/');
         } else {
           echo "Error updating record: " . mysqli_error($conn);
         }
-        $_SESSION['fname']        = $row['fname'];
-        $_SESSION['user_id']      = $row['user_id'];
-        $_SESSION['loggedin']     = $row['loggedin'];
-        $_SESSION['user_idno']    = $row['idno'];
-        $_SESSION['lastname']     = $row['lname'];
-        $_SESSION['username']     = $row['uname'];
-        $_SESSION['email']        = $row['email'];
-        $_SESSION['pass']         = $row['password'];
-        header('location:' . BASE_URL . '/');
       
     }else{
        $error = '
