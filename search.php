@@ -184,11 +184,13 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         });
     });
 
-    // Close modal event listener
-document.addEventListener('hidden.bs.modal', function(event) {
-    const modal = event.target; // Get the modal that triggered the event
-    const modalBody = modal.querySelector('.modal-body');
-    modalBody.innerHTML = ''; // Clear the modal body content
+// Close modal event listener using event delegation
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('btn-close')) {
+        const modal = event.target.closest('.modal'); // Get the closest modal
+        const modalBody = modal.querySelector('.modal-body');
+        modalBody.innerHTML = ''; // Clear the modal body content
+    }
 });
 </script>
 
