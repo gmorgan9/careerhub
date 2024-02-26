@@ -1,7 +1,7 @@
 <div class="header">
     <h3 class="logo ms-3 me-3 pt-1">
         
-        Job Management System
+        <a class="text-decoration-none text-white" href="/">Job Management System</a>
         <!-- Set the href attribute to the logout page URL -->
         <a class="float-end" href="index.php?logout=1"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
     </h3>
