@@ -341,20 +341,15 @@ if(isLoggedIn() == false) {
                         $updated_at = strtotime($row['updated_at']); // Convert to timestamp
                         
                         // Calculate time ago
-                        $current_time = time();
-                        $time_difference = $current_time - $updated_at;
-                        $seconds_in_minute = 60;
-                        $seconds_in_hour = 60 * $seconds_in_minute;
-                        $seconds_in_day = 24 * $seconds_in_hour;
-
-                        if ($time_difference < $seconds_in_minute) {
-                            $time_ago = floor($time_difference) . " seconds ago";
-                        } elseif ($time_difference < $seconds_in_hour) {
-                            $time_ago = floor($time_difference / $seconds_in_minute) . " minutes ago";
-                        } elseif ($time_difference < $seconds_in_day) {
-                            $time_ago = floor($time_difference / $seconds_in_hour) . " hours ago";
+                        $time_difference = time() - $updated_at;
+                        if ($time_difference < 60) {
+                            $time_ago = $time_difference . " seconds ago";
+                        } elseif ($time_difference < 3600) {
+                            $time_ago = floor($time_difference / 60) . " minutes ago";
+                        } elseif ($time_difference < 86400) {
+                            $time_ago = floor($time_difference / 3600) . " hours ago";
                         } else {
-                            $time_ago = floor($time_difference / $seconds_in_day) . " days ago";
+                            $time_ago = floor($time_difference / 86400) . " days ago";
                         }
                         ?>
                         <li class="list-group-item">
