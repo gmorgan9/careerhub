@@ -4,6 +4,7 @@ require_once "app/database/connection.php";
 // require_once "app/functions/loggedin.php";
 // require_once "app/functions/logout.php";
 // require_once "app/database/functions.php"
+require_once "app/database/functions.php"
 require_once "path.php";
 session_start();
 
