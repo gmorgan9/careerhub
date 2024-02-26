@@ -402,7 +402,7 @@ function time_elapsed_string($datetime, $full = false) {
                             <?php } elseif ($row['status'] == 'Interested') { ?>
                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                             <?php } ?>
-                            <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
+                            <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo time_elapsed_string($time_ago); ?></p>
                         </li>
                     <?php
                     }
