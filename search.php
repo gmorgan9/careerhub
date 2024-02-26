@@ -146,7 +146,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                         <!-- Application details will be loaded here dynamically via JavaScript -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-close" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary close-btn" data-bs-dismiss="modal">Close</button>
                         <!-- Additional buttons or actions can be added here -->
                     </div>
                 </div>
@@ -186,7 +186,18 @@ viewDetailLinks.forEach(link => {
 
 // Close modal manually when close button is clicked
 const closeButton = document.querySelectorAll('.btn-close');
+const closeButton2 = document.querySelectorAll('.close-btn');
 closeButton.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const modal = this.closest('.modal');
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        const backdrop = document.querySelector('.modal-backdrop');
+        backdrop.parentNode.removeChild(backdrop);
+    });
+});
+closeButton2.forEach(btn => {
     btn.addEventListener('click', function() {
         const modal = this.closest('.modal');
         modal.classList.remove('show');
