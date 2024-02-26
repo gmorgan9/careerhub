@@ -1,6 +1,7 @@
 <?php
+
 session_start();
-require_once "connection.php";
+require('connection.php');
 
 // login function
     function loginUser($conn)
@@ -60,14 +61,18 @@ require_once "connection.php";
 // logged in function
 
 // logout function
-    function logoutUser($conn)
-    {
-        if (isset($_POST['logout'])) {
-            session_destroy();
-            header("location: login.php");
-            exit; // Prevent further execution
-        }
-    }
+    // function logoutUser($conn)
+    // {
+    //     if (isset($_POST['logout'])) {
+    //         session_destroy();
+    //         header("location: login.php");
+    //         exit; // Prevent further execution
+    //     }
+    // }
+    if (isset($_GET['logout'])) {
+		session_destroy();
+		header("location: login.php");
+	}
 // logout function
 
 ?>
