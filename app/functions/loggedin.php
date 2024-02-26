@@ -12,7 +12,7 @@ function isLoggedIn()
 
 // Debugging
 var_dump(isLoggedIn());
-var_dump($_SESSION);
+
 
 
 ?>

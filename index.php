@@ -72,6 +72,8 @@ if (!isLoggedIn()) {
 </head>
 <body>
 
+<?php var_dump($_SESSION);?>
+
 <div class="header">
         <h3 class="logo ms-3 me-3 pt-1">
             <a class="text-decoration-none text-white" href="/">Job Management System</a>
