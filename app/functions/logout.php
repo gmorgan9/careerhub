@@ -1,4 +1,10 @@
 <?php
+
+date_default_timezone_set('America/Denver');
+require_once "../../app/database/connection.php";
+require_once "../../path.php";
+session_start();
+
 // LOGOUT
 function logoutUser()
     {
