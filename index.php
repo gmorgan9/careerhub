@@ -340,15 +340,19 @@ if(isLoggedIn() == false) {
                         $company = $row['company'];
                         $updated_at = strtotime($row['updated_at']); // Convert to timestamp
 
-                        // Calculate time difference
-                        $current_time = time();
-                        echo $current_time;
-                        $time_diff = $current_time - $updated_at;
-                        $time_ago = date('H:i:s', $time_diff);
-                        echo $time_ago;
+                        
 
-                        // Calculate time ago
-// Calculate time ago
+// Set the time zone to Dallas
+date_default_timezone_set('America/Chicago'); // Dallas is in the Central Time Zone
+
+// Convert timestamps to H:i:s format
+$current_time_formatted = date('H:i:s', $current_time);
+$updated_at_formatted = date('H:i:s', $updated_at);
+
+// Calculate time difference
+$time_diff = strtotime($current_time_formatted) - strtotime($updated_at_formatted);
+
+// Format time difference
 if ($time_diff < 60) {
     $time_ago = ($time_diff == 1) ? "1 second ago" : $time_diff . " seconds ago";
 } elseif ($time_diff < 3600) {
