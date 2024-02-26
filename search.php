@@ -124,6 +124,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     </nav>
 <?php endif; ?>
 
+
 <!-- Modal for application details -->
 <?php if ($result !== false && mysqli_num_rows($result) > 0): ?>
     <?php mysqli_data_seek($result, 0); // Reset result pointer ?>
@@ -135,9 +136,10 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                         <h5 class="modal-title" id="exampleModalLabel<?php echo $row['app_id']; ?>">Application Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body" id="modal-body-content">
+                    <div class="modal-body" id="modal-body-content-<?php echo $row['app_id']; ?>">
                         <!-- Application details will be loaded here dynamically via JavaScript -->
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <!-- Additional buttons or actions can be added here -->
@@ -151,7 +153,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
+<!-- <script>
     // JavaScript to load application details dynamically into the modal
     const modalBodyContent = document.getElementById('modal-body-content');
     const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
@@ -202,6 +204,33 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                 const bootstrapModal = bootstrap.Modal.getInstance(openModal);
                 bootstrapModal.hide();
             }
+        });
+    });
+</script> -->
+
+<script>
+    // JavaScript to load application details dynamically into the modal
+    const modalBodyContent = document.getElementById('modal-body-content');
+    const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+
+    viewDetailLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const appId = this.getAttribute('data-app-id');
+            // Fetch application details using AJAX or fetch API and update modal body content
+            fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
+                .then(response => response.text())
+                .then(data => {
+                    // Set the modal body content for the specific modal
+                    const modalBody = document.getElementById(`modal-body-content-${appId}`);
+                    modalBody.innerHTML = data;
+                    // Show the modal
+                    const modal = new bootstrap.Modal(document.getElementById(`exampleModal${appId}`));
+                    modal.show();
+                })
+                .catch(error => {
+                    console.error('Error fetching application details:', error);
+                });
         });
     });
 </script>
