@@ -328,75 +328,61 @@ if(isLoggedIn() == false) {
     <div class="card-body">
         <!-- only allow three -->
         <ul class="list-group">
-        <?php
-function time_elapsed_string($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime);
-    $diff = $now->diff($ago);
+            <?php
+            $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
+            $result = mysqli_query($conn, $sql);
+            if ($result) {
+                $num_rows = mysqli_num_rows($result);
+                if ($num_rows > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $status = $row['status'];
+                        $job_title = $row['job_title'];
+                        $company = $row['company'];
+                        $updated_at = strtotime($row['updated_at']); // Convert to timestamp
+                        
+                        // Calculate time ago
+                        $time_diff = time() - $updated_at;
+                        if ($time_diff < 60) {
+                            $time_ago = $time_diff . " seconds ago";
+                        } elseif ($time_diff < 3600) {
+                            $time_ago = round($time_diff / 60) . " minutes ago";
+                        } elseif ($time_diff < 86400) {
+                            $time_ago = round($time_diff / 3600) . " hours ago";
+                        } else {
+                            $time_ago = round($time_diff / 86400) . " days ago";
+                        }
 
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
-
-    $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-    );
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
-}
-
-$sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
-$result = mysqli_query($conn, $sql);
-
-if ($result) {
-    $num_rows = mysqli_num_rows($result);
-    if ($num_rows > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $status = $row['status'];
-            $job_title = $row['job_title'];
-            $company = $row['company'];
-            $updated_at = $row['updated_at']; // Assuming it's in datetime format
-
-            // Calculate time elapsed
-            // $time_ago = time_elapsed_string($updated_at);
-            $updated_at_formatted = date('Y-m-d H:i:s', strtotime($updated_at));
-    
-    // Calculate time elapsed
-    $time_ago = time_elapsed_string($updated_at_formatted);
-
+                        ?>
+                        <li class="list-group-item">
+                            <p class="float-start">
+                                <div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span>
+                            </p>
+                            <?php if ($row['status'] == 'Applied') { ?>
+                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                            <?php } elseif ($row['status'] == 'Interviewed') { ?>
+                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                            <?php } elseif ($row['status'] == 'Offered') { ?>
+                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                            <?php } elseif ($row['status'] == 'Rejected') { ?>
+                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                            <?php } elseif ($row['status'] == 'Interested') { ?>
+                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                            <?php } ?>
+                            <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
+                        </li>
+                    <?php
+                    }
+                } else { ?>
+                    <h3 class="mt-2 text-center text-muted">
+                        No Entries
+                    </h3>
+            <?php }
+            }
             ?>
-            <li class="list-group-item">
-                <p class="float-start">
-                    <div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span>
-                </p>
-                <!-- Your status display code here -->
-                <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
-            </li>
-        <?php
-        }
-    } else { ?>
-        <h3 class="mt-2 text-center text-muted">
-            No Entries
-        </h3>
-<?php }
-}
-?>
         </ul>
     </div>
 </div>
+
 
             <!-- end third table -->
 
