@@ -26,6 +26,7 @@ $start = ($page - 1) * $limit; // Offset for pagination
 $search = '';
 $result = false;
 $total_pages = 0;
+$searchField = '';
 
 // Define available search fields
 $searchFields = ['job_title', 'company'];
@@ -79,22 +80,32 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 <div class="container">
     <form method="GET" action="" class="mb-3">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="search">
+            <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
             <select class="form-select" name="search_field">
                 <?php foreach ($searchFields as $field): ?>
-                    <option value="<?php echo $field; ?>"><?php echo ucfirst($field); ?></option>
+                    <option value="<?php echo $field; ?>" <?php if ($searchField === $field) echo 'selected'; ?>><?php echo ucfirst($field); ?></option>
                 <?php endforeach; ?>
             </select>
             <button class="btn btn-primary" type="submit">Search</button>
         </div>
     </form>
 
+    <!-- Display search criteria -->
+    <?php if (!empty($search) && !empty($searchField)): ?>
+        <div class="alert alert-info" role="alert">
+            Search Criteria: <?php echo ucfirst($searchField) . ' contains "' . $search . '"'; ?>
+        </div>
+    <?php endif; ?>
+
     <!-- Display search results only if a search query is submitted -->
     <?php if ($result !== false): ?>
     <ul class="list-group">
         <?php if (mysqli_num_rows($result) > 0): ?>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                <li class="list-group-item"><?php echo $row['job_title']; ?></li>
+                <li class="list-group-item">
+                    <?php echo $row['job_title']; ?>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">View Details</a>
+                </li>
             <?php endwhile; ?>
         <?php else: ?>
             <li class="list-group-item">No results found</li>
@@ -111,6 +122,27 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         </ul>
     </nav>
     <?php endif; ?>
+</div>
+
+<!-- Modal for application details -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Application Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Application details content goes here -->
+                <!-- You can customize this part based on your application data structure -->
+                Example Application Details
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- Additional buttons or actions can be added here -->
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
