@@ -106,38 +106,6 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                     <?php echo $row['job_title']; ?>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['app_id']; ?>">View Details</a>
                 </li>
-
-                <!-- Modal for application details -->
-                <div class="modal fade" id="exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php echo $row['app_id']; ?>" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel<?php echo $row['app_id']; ?>">Application Details</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <?php
-                                // Fetch application details
-                                $app_id = $row['app_id'];
-                                $app_sql = "SELECT * FROM applications WHERE id = $app_id";
-                                $app_result = mysqli_query($conn, $app_sql);
-                                if ($app_result && mysqli_num_rows($app_result) > 0) {
-                                    $application = mysqli_fetch_assoc($app_result);
-                                    echo "<p><strong>Job Title:</strong> " . $application['job_title'] . "</p>";
-                                    echo "<p><strong>Company:</strong> " . $application['company'] . "</p>";
-                                    // Add more details as needed
-                                } else {
-                                    echo "<p>No application found.</p>";
-                                }
-                                ?>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <!-- Additional buttons or actions can be added here -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
             <?php endwhile; ?>
         <?php else: ?>
             <li class="list-group-item">No results found</li>
@@ -154,12 +122,52 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         </ul>
     </nav>
 <?php endif; ?>
+
+<!-- Modal for application details -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Application Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Application details will be loaded here dynamically via JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- Additional buttons or actions can be added here -->
+            </div>
+        </div>
+    </div>
 </div>
 
 
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // JavaScript to load application details dynamically into the modal
+    const modalBodyContent = document.getElementById('modal-body-content');
+    const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+
+    viewDetailLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const appId = this.getAttribute('data-app-id');
+            // Fetch application details using AJAX or fetch API and update modal body content
+            fetch(`get_application_details.php?app_id=${appId}`)
+                .then(response => response.text())
+                .then(data => {
+                    modalBodyContent.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching application details:', error);
+                });
+        });
+    });
+</script>
+
 
 </body>
 </html>
