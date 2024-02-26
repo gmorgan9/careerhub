@@ -1,14 +1,14 @@
 <?php
 
 // Check if app_id is provided in the URL query parameter
-if (isset($_GET['idno'])) {
-    $idno = $_GET['idno'];
+if (isset($_GET['app_id'])) {
+    $app_id = $_GET['app_id'];
 
     // Prevent SQL injection
     $app_id = mysqli_real_escape_string($conn, $app_id);
 
     // Fetch application details from the database based on app_id
-    $sql = "SELECT * FROM applications WHERE idno = $idno";
+    $sql = "SELECT * FROM applications WHERE app_id = '$app_id'";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
