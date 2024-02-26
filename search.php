@@ -183,15 +183,6 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                 });
         });
     });
-
-// Close modal event listener using event delegation
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('btn-close')) {
-        const modal = event.target.closest('.modal'); // Get the closest modal
-        const modalBody = modal.querySelector('.modal-body');
-        modalBody.innerHTML = ''; // Clear the modal body content
-    }
-});
 </script>
 
 
