@@ -11,9 +11,7 @@ session_start();
 //     require_once $file;
 // }
 
-if(isset($_POST['logout'])){
-    logoutUser($conn); // Assuming $conn is your database connection
-}
+logoutUser($conn);
 
 if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
