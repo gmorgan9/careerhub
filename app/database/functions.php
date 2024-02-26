@@ -2,6 +2,7 @@
 
 session_start();
 require('connection.php');
+require('../../path.php');
 
 // login function
     // function loginUser($conn)
