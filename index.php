@@ -7,19 +7,12 @@ require_once "app/database/connection.php";
 require_once "path.php";
 session_start();
 
-// $files = glob("app/functions/*.php");
-// foreach ($files as $file) {
-//     require_once $file;
-// }
+$files = glob("app/functions/*.php");
+foreach ($files as $file) {
+    require_once $file;
+}
 
-function logoutUser()
-    {
-        if ($_GET['logout'] == 1) {
-            session_destroy();
-            header("location: login.php");
-            exit; // Prevent further execution
-        }
-    }
+
     logoutUser();
 
 ?>
