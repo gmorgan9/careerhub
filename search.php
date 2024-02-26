@@ -102,9 +102,10 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     <ul class="list-group">
         <?php if (mysqli_num_rows($result) > 0): ?>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                <?php $app_id_data = $row['app_id']; ?>
                 <li class="list-group-item">
                     <?php echo $row['job_title']; ?>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['app_id']; ?>">View Details</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $app_id_data; ?>">View Details</a>
                 </li>
             <?php endwhile; ?>
         <?php else: ?>
@@ -124,7 +125,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 <?php endif; ?>
 
 <!-- Modal for application details -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -153,9 +154,9 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     viewDetailLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the default link behavior
-            const appId = this.getAttribute('data-app-id');
+            // const appId = this.getAttribute('data-app-id');
             // Fetch application details using AJAX or fetch API and update modal body content
-            fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
+            fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${<?php echo $app_id_data; ?>}`)
                 .then(response => response.text())
                 .then(data => {
                     modalBodyContent.innerHTML = data;
