@@ -337,6 +337,7 @@ function time_elapsed_string($datetime, $full = false) {
     $now = new DateTime;
     $ago = new DateTime($datetime);
     $diff = $now->diff($ago);
+    echo $now;
 
     $diff->w = floor($diff->d / 7);
     $diff->d -= $diff->w * 7;
