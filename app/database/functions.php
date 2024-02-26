@@ -62,7 +62,7 @@ require('../../path.php');
 // logged in function
 
 // logout function
-    function logoutUser($conn)
+    function logoutUser()
     {
         if (isset($_GET['logout'])) {
             session_destroy();
