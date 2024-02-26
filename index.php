@@ -10,7 +10,8 @@ foreach ($files as $file) {
 }
 
 if (!isLoggedIn()) {
-	header('location: login.php');
+    header('Location: login.php');
+    exit; // Make sure to stop script execution after redirection
 }
 
 ?>
