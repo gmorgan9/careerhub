@@ -48,13 +48,13 @@ foreach ($files as $file) {
 // 	   $error[] = 'Incorrect username or password!';
 // 	}
 //  };
-if (isset($_POST['login-btn']) && !empty($_POST['uname']) && !empty($_POST['password'])) {
+// if (isset($_POST['login-btn']) && !empty($_POST['uname']) && !empty($_POST['password'])) {
     // Call the loginUser function passing the database connection
     loginUser($conn);
-} else {
+// } else {
     // Display an error message if login button is not clicked or required fields are empty
-    $error[] = 'Please enter both username and password.';
-}
+    // $error[] = 'Please enter both username and password.';
+// }
 ?>
 
 <html>
@@ -82,10 +82,17 @@ if (isset($_POST['login-btn']) && !empty($_POST['uname']) && !empty($_POST['pass
         <p class="sign">Sign in</p>
         <p class="sub_sign">Work Management System</p>
         <?php
-            if(isset($error)){
-                foreach($error as $err){
-                    echo '<div class="alert alert-danger error-msg" role="alert">'.$err.'</div>';
+            // if(isset($error)){
+            //     foreach($error as $err){
+            //         echo '<div class="alert alert-danger error-msg" role="alert">'.$err.'</div>';
+            //     }
+            // }
+            if (isset($_SESSION['error'])) {
+                foreach ($_SESSION['error'] as $error) {
+                    echo '<div class="alert alert-danger error-msg" role="alert">' . $error . '</div>';
                 }
+                // Clear the error messages after displaying them
+                unset($_SESSION['error']);
             }
         ?>
         <form class="form1" method="POST">

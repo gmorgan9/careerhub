@@ -29,7 +29,7 @@ function loginUser($conn)
                 header('location:' . BASE_URL . '/');
             }
         } else {
-           $error[] = 'Incorrect username or password!';
+           $_SESSION['error'][] = 'Incorrect username or password!';
         }
     //  };
 }
