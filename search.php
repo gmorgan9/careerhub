@@ -146,7 +146,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                         <!-- Application details will be loaded here dynamically via JavaScript -->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary btn-close" data-bs-dismiss="modal">Close</button>
                         <!-- Additional buttons or actions can be added here -->
                     </div>
                 </div>
