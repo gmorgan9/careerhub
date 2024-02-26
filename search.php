@@ -118,8 +118,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         <ul class="pagination justify-content-center">
             <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                 <?php $active = ($page == $i) ? "active" : ""; ?>
-                <br>
-                <li class='page-item <?php echo $active; ?>'><a class='page-link' href='?search=<?php echo $search; ?>&search_field=<?php echo $searchField; ?>&page=<?php echo $i; ?>'><?php echo $i; ?></a></li>
+                <li class='page-item <?php echo $active; ?> mt-2'><a class='page-link' href='?search=<?php echo $search; ?>&search_field=<?php echo $searchField; ?>&page=<?php echo $i; ?>'><?php echo $i; ?></a></li>
             <?php endfor; ?>
         </ul>
     </nav>
