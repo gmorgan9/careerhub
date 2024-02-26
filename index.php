@@ -77,6 +77,11 @@ if(isLoggedIn() == false) {
 <body>
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
+<?php if (isset($_SESSION['fname'])) : ?>
+    <h1 style="margin-left: 150px;" class="text-center">Welcome <strong><?php echo $_SESSION['fname']; ?></strong></h1>
+<?php endif ?>
+<br>
+
  <!-- main-container -->
  <div class="container-fluid main">
 
@@ -242,15 +247,15 @@ if(isLoggedIn() == false) {
                                         <li class="list-group-item">
                                             <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                             <?php if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Interested') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } ?>
                                         </li>
                                     <?php 
@@ -289,15 +294,15 @@ if(isLoggedIn() == false) {
                                         <li class="list-group-item">
                                         <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                             <?php if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Interested') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } ?>
                                         </li>
                                     <?php 
