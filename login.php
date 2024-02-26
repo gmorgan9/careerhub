@@ -34,7 +34,7 @@ if(isset($_POST['login'])){
   <link rel="stylesheet" href="assets/css/loginpage.css?v=<?php echo time(); ?>">
 
   <!-- Page Title -->
-  <title>Sign In | JMS</title>
+  <title>Sign In | JAMS</title>
 
 </head>
 
