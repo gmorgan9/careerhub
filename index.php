@@ -15,6 +15,7 @@ foreach ($files as $file) {
 
 logoutUser($conn);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +72,7 @@ logoutUser($conn);
     
 </head>
 <body>
-
+<?php var_dump(isLoggedIn()); ?>
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
 <!-- <div class="record_incident float-end me-5">
