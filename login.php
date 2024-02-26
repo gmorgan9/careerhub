@@ -10,9 +10,9 @@ foreach ($files as $file) {
     require_once $file;
 }
 
-if (isLoggedIn()) {
-	header('location: /');
-}
+// if (isLoggedIn()) {
+// 	header('location: /');
+// }
 
 ?>
 
