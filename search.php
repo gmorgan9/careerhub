@@ -98,7 +98,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     <?php endif; ?>
 
     <!-- Display search results only if a search query is submitted -->
-    <?php if ($result !== false): ?>
+<?php if ($result !== false): ?>
     <ul class="list-group">
         <?php if (mysqli_num_rows($result) > 0): ?>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
@@ -106,6 +106,38 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                     <?php echo $row['job_title']; ?>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['app_id']; ?>">View Details</a>
                 </li>
+
+                <!-- Modal for application details -->
+                <div class="modal fade" id="exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Application Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <?php
+                                // Fetch application details
+                                $app_id = $row['app_id'];
+                                $app_sql = "SELECT * FROM applications WHERE id = $app_id";
+                                $app_result = mysqli_query($conn, $app_sql);
+                                if ($app_result && mysqli_num_rows($app_result) > 0) {
+                                    $application = mysqli_fetch_assoc($app_result);
+                                    echo "<p><strong>Job Title:</strong> " . $application['job_title'] . "</p>";
+                                    echo "<p><strong>Company:</strong> " . $application['company'] . "</p>";
+                                    // Add more details as needed
+                                } else {
+                                    echo "<p>No application found.</p>";
+                                }
+                                ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <!-- Additional buttons or actions can be added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <?php endwhile; ?>
         <?php else: ?>
             <li class="list-group-item">No results found</li>
@@ -121,51 +153,9 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
             <?php endfor; ?>
         </ul>
     </nav>
-    <?php endif; ?>
+<?php endif; ?>
 </div>
 
-<!-- Modal for application details -->
-<?php if ($result !== false): ?>
-<?php if (mysqli_num_rows($result) > 0): ?>
-            <?php while ($row = mysqli_fetch_assoc($result)): ?>
-<div class="modal fade" id="#exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Application Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <?php
-                // Check if the modal trigger isset and it contains application id
-                if(isset($_GET['app_id'])){
-                    $application_id = $_GET['app_id'];
-                    // Query the database to fetch application details
-                    $sql = "SELECT * FROM applications WHERE id = $app_id";
-                    $result = mysqli_query($conn, $sql);
-                    // Check if query was successful and if application exists
-                    if($result && mysqli_num_rows($result) > 0){
-                        $application = mysqli_fetch_assoc($result);
-                        // Display application details
-                        echo "<p><strong>Job Title:</strong> " . $application['job_title'] . "</p>";
-                        echo "<p><strong>Company:</strong> " . $application['company'] . "</p>";
-                        // Add more details as needed
-                    } else {
-                        echo "<p>No application found.</p>";
-                    }
-                } else {
-                    echo "<p>No application selected.</p>";
-                }
-                ?>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <!-- Additional buttons or actions can be added here -->
-            </div>
-        </div>
-    </div>
-</div>
-<?php endwhile; ?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
