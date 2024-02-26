@@ -1,3 +1,11 @@
+<?php
+
+require_once "app/database/functions.php";
+logoutUser();
+
+?>
+
+
 <div class="header">
         <h3 class="logo ms-3 me-3">
             Job Management System
