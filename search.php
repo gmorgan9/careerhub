@@ -22,20 +22,27 @@ $limit = 10; // Number of items per page
 $page = isset($_GET['page']) ? $_GET['page'] : 1; // Current page number
 $start = ($page - 1) * $limit; // Offset for pagination
 
+// Initialize variables for search
+$search = '';
+$result = false;
+$total_pages = 0;
+
 // Handle search query
-$search = isset($_GET['search']) ? $_GET['search'] : '';
+if (isset($_GET['search'])) {
+    $search = $_GET['search'];
 
-// Construct SQL query with search condition
-$sql = "SELECT * FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%' ORDER BY created_at DESC LIMIT $start, $limit";
+    // Construct SQL query with search condition
+    $sql = "SELECT * FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%' ORDER BY created_at DESC LIMIT $start, $limit";
 
-// Execute the query
-$result = mysqli_query($conn, $sql);
+    // Execute the query
+    $result = mysqli_query($conn, $sql);
 
-// Calculate total number of pages for pagination
-$countSql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%'";
-$countResult = mysqli_query($conn, $countSql);
-$row = mysqli_fetch_assoc($countResult);
-$total_pages = ceil($row["total"] / $limit);
+    // Calculate total number of pages for pagination
+    $countSql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied' AND job_title LIKE '%$search%'";
+    $countResult = mysqli_query($conn, $countSql);
+    $row = mysqli_fetch_assoc($countResult);
+    $total_pages = ceil($row["total"] / $limit);
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,34 +74,31 @@ $total_pages = ceil($row["total"] / $limit);
         </div>
     </form>
 
-    <!-- Display search results -->
+    <!-- Display search results only if a search query is submitted -->
+    <?php if ($result !== false): ?>
     <ul class="list-group">
-        <?php
-        if ($result && mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                // Display search results here
-                echo '<li class="list-group-item">' . $row['job_title'] . '</li>';
-            }
-        } else {
-            echo '<li class="list-group-item">No results found</li>';
-        }
-        ?>
+        <?php if (mysqli_num_rows($result) > 0): ?>
+            <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                <li class="list-group-item"><?php echo $row['job_title']; ?></li>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <li class="list-group-item">No results found</li>
+        <?php endif; ?>
     </ul>
 
     <!-- Pagination links -->
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
-            <?php
-            for ($i = 1; $i <= $total_pages; $i++) {
-                $active = ($page == $i) ? "active" : "";
-                echo "<li class='page-item {$active}'><a class='page-link' href='?search=$search&page={$i}'>{$i}</a></li>";
-            }
-            ?>
+            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                <?php $active = ($page == $i) ? "active" : ""; ?>
+                <li class='page-item <?php echo $active; ?>'><a class='page-link' href='?search=<?php echo $search; ?>&page=<?php echo $i; ?>'><?php echo $i; ?></a></li>
+            <?php endfor; ?>
         </ul>
     </nav>
+    <?php endif; ?>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
+</body
 </html>
