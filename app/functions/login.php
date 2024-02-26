@@ -20,7 +20,7 @@ if(isset($_POST['login'])){
        $row = mysqli_fetch_array($result);
        $sql = "UPDATE users SET logged_in='1' WHERE uname='$uname'";
        if (mysqli_query($conn, $sql)) {
-          echo "Record updated successfully";
+        //   echo "Record updated successfully";
             $_SESSION['fname']        = $row['fname'];
             $_SESSION['user_id']      = $row['user_id'];
             $_SESSION['loggedin']     = $row['loggedin'];
