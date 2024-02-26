@@ -1,11 +1,5 @@
 <?php
 
-// // Include necessary files and start session
-// date_default_timezone_set('America/Denver');
-// require_once "../app/database/connection.php"; // Adjust path as necessary
-// require_once "../path.php";
-// session_start();
-
 // Check if app_id is provided in the URL query parameter
 if (isset($_GET['app_id'])) {
     $app_id = $_GET['app_id'];
@@ -14,7 +8,7 @@ if (isset($_GET['app_id'])) {
     $app_id = mysqli_real_escape_string($conn, $app_id);
 
     // Fetch application details from the database based on app_id
-    $sql = "SELECT * FROM applications WHERE id = $app_id";
+    $sql = "SELECT * FROM applications WHERE app_id = $app_id";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
