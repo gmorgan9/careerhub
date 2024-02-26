@@ -4,9 +4,9 @@ require_once "app/database/functions.php";
 // require_once "../../../path.php";
 
 // Check if the logout parameter is set and call the logoutUser() function
-if (isset($_GET['logout'])) {
+// if (isset($_GET['logout'])) {
     logoutUser();
-}
+// }
 ?>
 
 <div class="header">
@@ -14,7 +14,7 @@ if (isset($_GET['logout'])) {
         
         Job Management System
         <!-- Set the href attribute to the logout page URL -->
-        <a class="float-end" href="<?php echo BASE_URL; ?>app/database/functions.php"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
+        <a class="float-end" href="index.php?logout=1"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
     </h3>
 </div>
 <br>
