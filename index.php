@@ -30,7 +30,7 @@ session_start();
 //     }
 // }
 
-if ($_SESSION['loggedin'] == 1) {
+if ($_GET['loggedin'] == 1) {
     session_destroy();
     header("location: login.php");
     exit; // Prevent further execution
