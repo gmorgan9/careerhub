@@ -125,7 +125,9 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 </div>
 
 <!-- Modal for application details -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<?php if (mysqli_num_rows($result) > 0): ?>
+            <?php while ($row = mysqli_fetch_assoc($result)): ?>
+<div class="modal fade" id="#exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -162,6 +164,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
         </div>
     </div>
 </div>
+<?php endwhile; ?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
