@@ -98,11 +98,11 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 </form>
 
     <!-- Display search criteria -->
-    <?php if (!empty($search) && !empty($searchField)): ?>
-        <div class="alert alert-info" role="alert">
-            Search Criteria: <?php echo ucfirst($searchField) . ' contains "' . $search . '"'; ?>
-        </div>
-    <?php endif; ?>
+<?php if (!empty($search) && !empty($searchField)): ?>
+    <div class="alert alert-info" role="alert">
+        Search Criteria: <?php echo ucfirst($searchField) . ' contains "' . $search . '"'; ?>
+    </div>
+<?php endif; ?>
 
 <!-- Display search results only if a search query is submitted -->
 <?php if ($result !== false): ?>
@@ -131,7 +131,6 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     </nav>
 <?php endif; ?>
 
-
 <!-- Modal for application details -->
 <?php if ($result !== false && mysqli_num_rows($result) > 0): ?>
     <?php mysqli_data_seek($result, 0); // Reset result pointer ?>
@@ -146,7 +145,6 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                     <div class="modal-body" id="modal-body-content-<?php echo $row['app_id']; ?>">
                         <!-- Application details will be loaded here dynamically via JavaScript -->
                     </div>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <!-- Additional buttons or actions can be added here -->
@@ -162,30 +160,40 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 
 <script>
     // JavaScript to load application details dynamically into the modal
-const modalBodyContent = document.getElementById('modal-body-content');
-const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+    const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
 
-viewDetailLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        const appId = this.getAttribute('data-app-id');
-        // Fetch application details using AJAX or fetch API and update modal body content
-        fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
-            .then(response => response.text())
-            .then(data => {
-                // Set the modal body content for the specific modal
-                const modalBody = document.getElementById(`modal-body-content-${appId}`);
-                modalBody.innerHTML = data;
-                // Show the modal
-                const modal = new bootstrap.Modal(document.getElementById(`exampleModal${appId}`));
-                modal.show();
-            })
-            .catch(error => {
-                console.error('Error fetching application details:', error);
-            });
+    viewDetailLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            const appId = this.getAttribute('data-app-id');
+            // Fetch application details using AJAX or fetch API and update modal body content
+            fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
+                .then(response => response.text())
+                .then(data => {
+                    // Set the modal body content for the specific modal
+                    const modalBody = document.getElementById(`modal-body-content-${appId}`);
+                    modalBody.innerHTML = data;
+                    // Show the modal
+                    const modal = new bootstrap.Modal(document.getElementById(`exampleModal${appId}`));
+                    modal.show();
+                })
+                .catch(error => {
+                    console.error('Error fetching application details:', error);
+                });
+        });
     });
-});
+
+    // Close modal event listener
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        modal.addEventListener('hidden.bs.modal', function(event) {
+            // Remove the modal body content when the modal is closed
+            const modalBody = this.querySelector('.modal-body');
+            modalBody.innerHTML = '';
+        });
+    });
 </script>
+
 
 </body>
 </html>
