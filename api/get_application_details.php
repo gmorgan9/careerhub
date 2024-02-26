@@ -1,5 +1,11 @@
 <?php
 
+// Include necessary files and start session
+date_default_timezone_set('America/Denver');
+require_once ROOT_PATH . "app/database/connection.php";
+require_once "path.php";
+session_start();
+
 // Check if app_id is provided in the URL query parameter
 if (isset($_GET['app_id'])) {
     $app_id = $_GET['app_id'];
