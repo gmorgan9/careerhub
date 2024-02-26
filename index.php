@@ -12,7 +12,7 @@ session_start();
 // }
 
 if(isset($_POST['logout'])){
-    loginUser($conn); // Assuming $conn is your database connection
+    logoutUser($conn); // Assuming $conn is your database connection
 }
 
 if (!isset($_SESSION['loggedin'])) {
