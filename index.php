@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('America/Denver');
+date_default_timezone_set('America/Chicago');
 require_once "app/database/connection.php";
 require_once "path.php";
 session_start();
