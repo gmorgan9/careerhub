@@ -1,11 +1,11 @@
 <?php
-session_start();
-require_once "app/database/functions.php";
+// session_start();
+// require_once "app/database/functions.php";
 // require_once "../../../path.php";
 
 // Check if the logout parameter is set and call the logoutUser() function
 // if (isset($_GET['logout'])) {
-    logoutUser();
+    // logoutUser();
 // }
 ?>
 
