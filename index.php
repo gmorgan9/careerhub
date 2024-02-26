@@ -351,6 +351,7 @@ if(isLoggedIn() == false) {
                         } else {
                             $time_ago = floor($time_difference / 86400) . " days ago";
                         }
+                        echo time_elapsed_string('@1367367755');
                         ?>
                         <li class="list-group-item">
                             <p class="float-start">
