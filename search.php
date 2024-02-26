@@ -160,7 +160,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 
 
 <script>
-    // JavaScript to load application details dynamically into the modal
+// JavaScript to load application details dynamically into the modal
 const viewDetailLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
 
 viewDetailLinks.forEach(link => {
@@ -185,14 +185,13 @@ viewDetailLinks.forEach(link => {
 });
 
 // Close modal event listener
-const modals = document.querySelectorAll('.modal');
-modals.forEach(modal => {
-    modal.addEventListener('hidden.bs.modal', function(event) {
-        // Remove the modal body content when the modal is closed
-        const modalBody = this.querySelector('.modal-body');
-        modalBody.innerHTML = '';
-    });
+document.addEventListener('hidden.bs.modal', function(event) {
+    // Remove the modal body content when any modal is closed
+    const modal = event.target; // Get the modal that triggered the event
+    const modalBody = modal.querySelector('.modal-body');
+    modalBody.innerHTML = '';
 });
+
 </script>
 
 
