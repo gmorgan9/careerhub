@@ -1,26 +1,49 @@
 <?php
 
 require_once "app/database/connection.php";
-// require_once "app/functions/login.php";
 require_once "path.php";
+
 session_start();
 
-$files = glob("app/functions/*.php");
-foreach ($files as $file) {
-    require_once $file;
-}
-
-// if(isset($_POST['login'])){
-//     loginUser($conn); // Assuming $conn is your database connection
+// if(isLoggedIn()){
+//    header('location:' . BASE_URL . '/pages/dashboard.php');
 // }
 
-loginUser($conn);
-
+if(isset($_POST['login-btn'])){
+	$user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
+	$fname = mysqli_real_escape_string($conn, $_POST['fname']);
+	$lname = mysqli_real_escape_string($conn, $_POST['lname']);
+	$uname = mysqli_real_escape_string($conn, $_POST['uname']);
+	$email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = mysqli_real_escape_string($conn, $_POST['password']);
+	// $pass = md5($_POST['password']);
+	$isadmin = $_POST['account_type'];
+	$loggedin = $_POST['logged_in'];
+ 
+	$select = " SELECT * FROM users WHERE uname = '$uname' && password = '$pass' ";
+	$result = mysqli_query($conn, $select);
+	if(mysqli_num_rows($result) > 0){
+	    $row = mysqli_fetch_array($result);
+	    $sql = "UPDATE users SET logged_in='1' WHERE uname='$uname'";
+	    mysqli_query($conn, $sql);
+	    $_SESSION['fname']          = $row['fname'];
+	    $_SESSION['user_id']        = $row['user_id'];
+	    $_SESSION['loggedin']       = $row['logged_in'];
+	    $_SESSION['user_idno']      = $row['idno'];
+	    $_SESSION['lname']          = $row['lname'];
+	    $_SESSION['acc_type']       = $row['account_type'];
+	    $_SESSION['uname']          = $row['uname'];
+	    $_SESSION['email']          = $row['email'];
+	    $_SESSION['pass']           = $row['password'];
+	    header('location:' . BASE_URL . '/pages/dashboard.php');
+        // header('location: pages/dashboard.php');
+	} else {
+	   $error[] = 'Incorrect username or password!';
+	}
+ };
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <link rel="stylesheet" href="css/style.css">
@@ -36,14 +59,14 @@ loginUser($conn);
   <link rel="stylesheet" href="assets/css/loginpage.css?v=<?php echo time(); ?>">
 
   <!-- Page Title -->
-  <title>Sign In | JAMS</title>
+  <title>Sign In | WMS</title>
 
 </head>
 
 <body>
     <div class="main" style="height: 450px;">
         <p class="sign">Sign in</p>
-        <p class="sub_sign">Job Application Management System</p>
+        <p class="sub_sign">Work Management System</p>
         <?php
             if(isset($error)){
                 foreach($error as $err){
@@ -60,7 +83,7 @@ loginUser($conn);
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="assets/js/loginpage.js?v=<?php echo time(); ?>"></script>
+    <script src="assets/js/loginpage.js"></script>
      
 </body>
 
