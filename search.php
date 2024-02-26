@@ -85,17 +85,17 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
 
 <!-- Search form -->
 <div class="container">
-    <form method="GET" action="" class="mb-3">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
-            <select class="form-select" name="search_field">
-                <?php foreach ($searchFields as $field): ?>
-                    <option value="<?php echo $field; ?>" <?php if ($searchField === $field) echo 'selected'; ?>><?php echo ucfirst($field); ?></option>
-                <?php endforeach; ?>
-            </select>
-            <button class="btn btn-primary" type="submit">Search</button>
-        </div>
-    </form>
+<form method="GET" action="" class="mb-3">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
+        <select class="form-select" name="search_field">
+            <?php foreach ($searchFields as $fieldName => $fieldLabel): ?>
+                <option value="<?php echo $fieldName; ?>" <?php if ($searchField === $fieldName) echo 'selected'; ?>><?php echo $fieldLabel; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form>
 
     <!-- Display search criteria -->
     <?php if (!empty($search) && !empty($searchField)): ?>
