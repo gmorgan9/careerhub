@@ -5,7 +5,7 @@
         
         <!-- Logout button -->
         <div class="float-end">
-            <a href="<?php echo BASE_URL; ?>/search.php" class="badge text-bg-secondary mx-2">Search</a>
+            <a href="<?php echo BASE_URL; ?>/search.php" class="badge text-bg-secondary" style="font-size: 12px;">Search</a>
             <a class="" href="index.php?logout=1"><button style="cursor:pointer;" class="btn btn-link text-white"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
         </div>
         
