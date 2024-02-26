@@ -2,7 +2,7 @@
 
 // Include necessary files and start session
 date_default_timezone_set('America/Denver');
-require_once __DIR__ . "/../app/database/connection.php"; // Adjust path as necessary
+require_once "../app/database/connection.php"; // Adjust path as necessary
 require_once "../path.php";
 session_start();
 
