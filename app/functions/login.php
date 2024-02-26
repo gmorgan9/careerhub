@@ -3,13 +3,13 @@ function loginUser($conn)
 {
     if(isset($_POST['login-btn'])){
         // Check if 'user_id' is set in $_POST
-        $user_id = isset($_POST['user_id']) ? mysqli_real_escape_string($conn, $_POST['user_id']) : '';
-        $fname = mysqli_real_escape_string($conn, $_POST['fname']);
-        $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+        // $user_id = isset($_POST['user_id']) ? mysqli_real_escape_string($conn, $_POST['user_id']) : '';
+        // $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+        // $lname = mysqli_real_escape_string($conn, $_POST['lname']);
         $uname = mysqli_real_escape_string($conn, $_POST['uname']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        // $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = md5($_POST['password']);
-        $loggedin = $_POST['logged_in'];
+        // $loggedin = $_POST['logged_in'];
         $select = "SELECT * FROM users WHERE uname = '$uname' && password = '$password'";
         $result = mysqli_query($conn, $select);
         if(mysqli_num_rows($result) > 0){
