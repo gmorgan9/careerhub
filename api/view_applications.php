@@ -3,7 +3,7 @@
 require('../database/connection.php');
 
 // Fetch data from the database
-$query = "SELECT * FROM applications";
+$query = "SELECT idno, job_title, company, location, status, app_link, job_type FROM applications";
 $result = mysqli_query($conn, $query);
 
 // Check if there are any rows returned
