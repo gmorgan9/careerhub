@@ -29,7 +29,10 @@ $total_pages = 0;
 $searchField = '';
 
 // Define available search fields
-$searchFields = ['job_title', 'company'];
+$searchFields = [
+    'job_title' => 'Job title',
+    'company' => 'Company'
+];
 
 // Handle search query
 if (isset($_GET['search']) && isset($_GET['search_field'])) {
