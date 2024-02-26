@@ -1,6 +1,6 @@
 <?php
 
-require("connection.php");
+require_once "connection.php";
 
 // login function
     function loginUser($conn)
