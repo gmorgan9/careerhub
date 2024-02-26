@@ -13,7 +13,7 @@ session_start();
 // }
 
 logoutUser($conn);
-isLoggedIn($conn);
+// isLoggedIn($conn);
 
 
 if (!isset($_SESSION['loggedin'])) {
