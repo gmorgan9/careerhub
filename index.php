@@ -72,18 +72,7 @@ logoutUser($conn);
 </head>
 <body>
 
-<?php var_dump($_SESSION);?>
-<!-- <?php echo BASE_URL;?>
-        <?php echo ROOT_PATH; ?> -->
-        <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
-
-<!-- <div class="header">
-        <h3 class="logo ms-3 me-3 pt-1">
-            <a class="text-decoration-none text-white" href="/">Job Management System</a>
-            <a class="float-end" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link text-white"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
-        </h3>
-    </div>
-<br> -->
+<?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
 <div class="record_incident float-end me-5">
     <div class="dropdown">
