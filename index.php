@@ -14,7 +14,6 @@ foreach ($files as $file) {
 
 
 logoutUser($conn);
-
 if(isLoggedIn() == false) {
     header('location:' . BASE_URL . '/login.php');
 }
