@@ -346,24 +346,25 @@ if(isLoggedIn() == false) {
                         $time_ago = "";
 
                         // Calculate time ago
-                        if ($time_diff < 60) {
-                            $time_ago = $time_diff . " seconds ago";
-                        } elseif ($time_diff < 3600) {
-                            $minutes = round($time_diff / 60);
-                            $time_ago = $minutes . " min" . ($minutes > 1 ? "s" : "") . " ago";
-                        } elseif ($time_diff < 86400) {
-                            $hours = round($time_diff / 3600);
-                            $time_ago = $hours . " hr" . ($hours > 1 ? "s" : "") . " ago";
-                        } elseif ($time_diff < 2592000) {
-                            $days = round($time_diff / 86400);
-                            $time_ago = $days . " day" . ($days > 1 ? "s" : "") . " ago";
-                        } elseif ($time_diff < 31536000) {
-                            $months = round($time_diff / 2592000);
-                            $time_ago = $months . " mo" . ($months > 1 ? "s" : "") . " ago";
-                        } else {
-                            $years = round($time_diff / 31536000);
-                            $time_ago = $years . " yr" . ($years > 1 ? "s" : "") . " ago";
-                        }
+if ($time_diff < 60) {
+    $time_ago = $time_diff . " seconds ago";
+} elseif ($time_diff < 3600) {
+    $minutes = floor($time_diff / 60);
+    $time_ago = $minutes . " min" . ($minutes > 1 ? "s" : "") . " ago";
+} elseif ($time_diff < 86400) {
+    $hours = floor($time_diff / 3600);
+    $time_ago = $hours . " hr" . ($hours > 1 ? "s" : "") . " ago";
+} elseif ($time_diff < 2592000) {
+    $days = floor($time_diff / 86400);
+    $time_ago = $days . " day" . ($days > 1 ? "s" : "") . " ago";
+} elseif ($time_diff < 31536000) {
+    $months = floor($time_diff / 2592000);
+    $time_ago = $months . " mo" . ($months > 1 ? "s" : "") . " ago";
+} else {
+    $years = floor($time_diff / 31536000);
+    $time_ago = $years . " yr" . ($years > 1 ? "s" : "") . " ago";
+}
+
                         ?>
                         <li class="list-group-item">
                             <p class="float-start">
