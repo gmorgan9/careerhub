@@ -104,7 +104,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
                 <li class="list-group-item">
                     <?php echo $row['job_title']; ?>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['app_id']; ?>">View Details</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#<?php echo $row['app_id']; ?>">View Details</a>
                 </li>
             <?php endwhile; ?>
         <?php else: ?>
@@ -127,7 +127,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     <?php mysqli_data_seek($result, 0); // Reset result pointer ?>
     <?php while ($row = mysqli_fetch_assoc($result)): ?>
         <!-- Modal for application details -->
-        <div class="modal fade" id="exampleModal<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php echo $row['app_id']; ?>" aria-hidden="true">
+        <div class="modal fade" id="<?php echo $row['app_id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel<?php echo $row['app_id']; ?>" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -158,7 +158,7 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
     viewDetailLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the default link behavior
-            const appId = this.getAttribute('data-app-id');
+            const appId = this.getAttribute('data-bs-target');
             // Fetch application details using AJAX or fetch API and update modal body content
             fetch(`<?php echo BASE_URL; ?>/api/get_application_details.php?app_id=${appId}`)
                 .then(response => response.text())
