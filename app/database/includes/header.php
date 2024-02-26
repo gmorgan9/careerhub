@@ -1,7 +1,8 @@
 <div class="header">
         <h3 class="logo ms-3 me-3">
             Job Management System
-            <a class="float-end" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
+            <!-- <a class="float-end" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a> -->
+            <form class="float-end" action="logout_process.php" method="post"><button type="submit" name="logout" style="cursor:pointer;"><i class="bi bi-box-arrow-left fs-5"></i></button></form>
         </h3>
     </div>
 <br>
