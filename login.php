@@ -10,9 +10,11 @@ session_start();
 //     require_once $file;
 // }
 
-if(isset($_POST['login'])){
-    loginUser($conn); // Assuming $conn is your database connection
-}
+// if(isset($_POST['login'])){
+//     loginUser($conn); // Assuming $conn is your database connection
+// }
+
+loginUser($conn);
 
 ?>
 
