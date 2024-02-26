@@ -94,7 +94,7 @@ if(isLoggedIn() == false) {
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                $sql="select count('1') from applications where status='Applied'";
+                                $sql="select count('1') from applications where status='Applied' || status='Interested'";
                                 $result=mysqli_query($conn,$sql);
                                 $rowtotal=mysqli_fetch_array($result); 
                                 if($rowtotal[0] < 10) {
