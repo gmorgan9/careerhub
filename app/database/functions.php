@@ -64,7 +64,7 @@ require('../../path.php');
 // logout function
     function logoutUser()
     {
-        if (isset($_GET['logout'])) {
+        if ($_GET['logout'] == 1) {
             session_destroy();
             header("location: login.php");
             exit; // Prevent further execution
