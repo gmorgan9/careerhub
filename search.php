@@ -246,15 +246,13 @@ if (isset($_GET['search']) && isset($_GET['search_field'])) {
                             <?php endif; ?>
                         </ul>
                     <?php endif; ?>
-                    <?php } ?>
+                <!-- end VIEW Modal -->
+
+            <?php } ?>
         <?php } else { ?>
             <li class="list-group-item">No results found</li>
         <?php } ?>
     </ul>
-                
-                    <!-- end VIEW Modal -->
-
-
 
     <!-- Pagination links -->
     <nav aria-label="Page navigation">
