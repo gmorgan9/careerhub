@@ -16,7 +16,7 @@ foreach ($files as $file) {
 logoutUser($conn);
 
 if(isLoggedIn() == true) {
-echo "welcome";
+    header('location:' . BASE_URL . '/');
 } else {
     header('location:' . BASE_URL . '/login.php');
 }
