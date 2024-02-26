@@ -9,9 +9,10 @@ foreach ($files as $file) {
     require_once $file;
 }
 
-// if (!isLoggedIN()) {
-// 	header('location: login.php');
-// }
+if (!isLoggedIn()) {
+	header('location: login.php');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
