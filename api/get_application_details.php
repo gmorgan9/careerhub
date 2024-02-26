@@ -9,6 +9,7 @@ if (isset($_GET['app_id'])) {
 
     // Fetch application details from the database based on app_id
     $sql = "SELECT * FROM applications WHERE app_id = '$app_id'";
+    echo $sql;
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
