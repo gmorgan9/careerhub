@@ -1,5 +1,5 @@
 <div class="header">
-    <h3 class="logo ms-3 me-3">
+    <h3 class="logo ms-3 me-3 pt-1">
         
         Job Management System
         <!-- Set the href attribute to the logout page URL -->
