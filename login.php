@@ -41,18 +41,18 @@ loginUser($conn);
         <p class="sign">Sign in</p>
         <p class="sub_sign">Work Management System</p>
         <?php
-            if(isset($error)){
-                foreach($error as $err){
-                    echo '<div class="alert alert-danger error-msg" role="alert">'.$err.'</div>';
-                }
-            }
-            // if (isset($_SESSION['error'])) {
-            //     foreach ($_SESSION['error'] as $error) {
-            //         echo '<div class="alert alert-danger error-msg" role="alert">' . $error . '</div>';
+            // if(isset($error)){
+            //     foreach($error as $err){
+            //         echo '<div class="alert alert-danger error-msg" role="alert">'.$err.'</div>';
             //     }
-            //     // Clear the error messages after displaying them
-            //     unset($_SESSION['error']);
             // }
+            if (isset($_SESSION['error'])) {
+                foreach ($_SESSION['error'] as $error) {
+                    echo '<div class="alert alert-danger error-msg" role="alert">' . $error . '</div>';
+                }
+                // Clear the error messages after displaying them
+                unset($_SESSION['error']);
+            }
         ?>
         <form class="form1" method="POST">
             <input class="un " type="text" placeholder="Username" name="uname">
