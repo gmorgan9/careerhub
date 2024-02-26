@@ -240,7 +240,7 @@ if(isLoggedIn() == false) {
                                         $company        = $row['company'];
                                         ?>
                                         <li class="list-group-item">
-                                            <p class="float-start"><span class="text-truncate" style="max-width: 150px;"><?php echo $job_title; ?></span> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                            <p class="float-start"><span class="text-truncate" style="max-width: 10px;"><?php echo $job_title; ?></span> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                             <?php if($row['status'] == 'Applied'){ ?>
                                                     <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Interviewed') { ?>
