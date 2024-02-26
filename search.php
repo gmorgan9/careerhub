@@ -184,12 +184,17 @@ viewDetailLinks.forEach(link => {
     });
 });
 
-// Close modal event listener
-document.addEventListener('hidden.bs.modal', function(event) {
-    // Remove the modal body content when any modal is closed
-    const modal = event.target; // Get the modal that triggered the event
-    const modalBody = modal.querySelector('.modal-body');
-    modalBody.innerHTML = '';
+// Close modal manually when close button is clicked
+const closeButton = document.querySelectorAll('.btn-close');
+closeButton.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const modal = this.closest('.modal');
+        modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        const backdrop = document.querySelector('.modal-backdrop');
+        backdrop.parentNode.removeChild(backdrop);
+    });
 });
 
 </script>
