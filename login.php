@@ -34,14 +34,14 @@ if(isset($_POST['login'])){
   <link rel="stylesheet" href="assets/css/loginpage.css?v=<?php echo time(); ?>">
 
   <!-- Page Title -->
-  <title>Sign In | WMS</title>
+  <title>Sign In | JMS</title>
 
 </head>
 
 <body>
     <div class="main" style="height: 450px;">
         <p class="sign">Sign in</p>
-        <p class="sub_sign">Work Management System</p>
+        <p class="sub_sign">Job Application Management System</p>
         <?php
             if(isset($error)){
                 foreach($error as $err){
