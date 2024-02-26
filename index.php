@@ -346,24 +346,26 @@ if(isLoggedIn() == false) {
                         $time_ago = "";
 
                         // Calculate time ago
+// Calculate time ago
 if ($time_diff < 60) {
-    $time_ago = $time_diff . " seconds ago";
+    $time_ago = ($time_diff == 1) ? "1 second ago" : $time_diff . " seconds ago";
 } elseif ($time_diff < 3600) {
     $minutes = floor($time_diff / 60);
-    $time_ago = $minutes . " min" . ($minutes > 1 ? "s" : "") . " ago";
+    $time_ago = ($minutes == 1) ? "1 minute ago" : $minutes . " minutes ago";
 } elseif ($time_diff < 86400) {
     $hours = floor($time_diff / 3600);
-    $time_ago = $hours . " hr" . ($hours > 1 ? "s" : "") . " ago";
+    $time_ago = ($hours == 1) ? "1 hour ago" : $hours . " hours ago";
 } elseif ($time_diff < 2592000) {
     $days = floor($time_diff / 86400);
-    $time_ago = $days . " day" . ($days > 1 ? "s" : "") . " ago";
+    $time_ago = ($days == 1) ? "1 day ago" : $days . " days ago";
 } elseif ($time_diff < 31536000) {
     $months = floor($time_diff / 2592000);
-    $time_ago = $months . " mo" . ($months > 1 ? "s" : "") . " ago";
+    $time_ago = ($months == 1) ? "1 month ago" : $months . " months ago";
 } else {
     $years = floor($time_diff / 31536000);
-    $time_ago = $years . " yr" . ($years > 1 ? "s" : "") . " ago";
+    $time_ago = ($years == 1) ? "1 year ago" : $years . " years ago";
 }
+
 
                         ?>
                         <li class="list-group-item">
