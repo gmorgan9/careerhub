@@ -12,8 +12,8 @@ session_start();
 //     require_once $file;
 // }
 
-logoutUser($conn);
-isLoggedIn($conn);
+// logoutUser($conn);
+// isLoggedIn($conn);
 
 
 // if (!isset($_SESSION['loggedin'])) {
