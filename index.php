@@ -345,6 +345,7 @@ if(isLoggedIn() == false) {
                         echo $current_time;
                         $time_diff = $current_time - $updated_at;
                         $time_ago = date('H:i:s', $time_diff);
+                        echo $time_ago;
 
                         // Calculate time ago
 // Calculate time ago
