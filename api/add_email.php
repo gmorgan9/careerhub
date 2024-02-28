@@ -9,32 +9,17 @@ require('../app/database/connection.php');
 $data = json_decode(file_get_contents('php://input'), true);
 
 if(isset($data)) {
-    // If $data is not an array, wrap it in an array to handle single item case
-    if (!is_array($data)) {
-        $data = array($data);
-    }
-
-    // Process each set of data independently
-    foreach ($data as $item) {
-        // Check if $item is an array
-        if (!is_array($item)) {
-            echo "Invalid data format. Expected an array.";
-            continue;
-        }
-
-        // Ensure that $item contains exactly four keys
-        if(count($item) !== 4) {
-            echo "Invalid data structure. Each set of data must contain companyName, subject, sender, and link.";
-            continue;
-        }
-
+    // Ensure that $data contains exactly four keys
+    if(count($data) !== 4) {
+        echo "Invalid data structure. The data must contain companyName, subject, sender, and link.";
+    } else {
         // Check if all required fields are present
-        if(isset($item['companyName'], $item['subject'], $item['sender'], $item['link'])) {
+        if(isset($data['companyName'], $data['subject'], $data['sender'], $data['link'])) {
             // Escape and retrieve data
-            $companyName = mysqli_real_escape_string($conn, $item['companyName']);
-            $subject = mysqli_real_escape_string($conn, $item['subject']);
-            $sender = mysqli_real_escape_string($conn, $item['sender']);
-            $link = mysqli_real_escape_string($conn, $item['link']);
+            $companyName = mysqli_real_escape_string($conn, $data['companyName']);
+            $subject = mysqli_real_escape_string($conn, $data['subject']);
+            $sender = mysqli_real_escape_string($conn, $data['sender']);
+            $link = mysqli_real_escape_string($conn, $data['link']);
 
             // Retrieve app_id from applications table
             $query1 = "SELECT app_id FROM applications WHERE company = '$companyName'";
@@ -77,7 +62,7 @@ if(isset($data)) {
             }
         } else {
             // Missing required fields
-            echo "Missing required fields for one of the sets.";
+            echo "Missing required fields in the data.";
         }
     }
 } else {
