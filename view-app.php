@@ -232,7 +232,7 @@ if(isLoggedIn() == false) {
                 </h5>
                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
                     <div class="accordion-body">
-                    <?php echo $note ?> <!-- Add back the <h5> tag removed during split -->
+                    <?php echo $note; ?> <!-- Add back the <h5> tag removed during split -->
                     </div>
                 </div>
             </div>
