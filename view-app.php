@@ -53,30 +53,21 @@ if(isLoggedIn() == false) {
         }
         .card-container {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    justify-content: flex-start;
-    overflow-x: auto; /* Add horizontal scrolling if necessary */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between items */
 }
 
 .card {
-    flex: 0 0 calc(33.33% - 5px); /* 33.33% for desktop layout */
-    margin-right: 5px; /* Add space between cards */
+    width: calc(33.33% - 20px); /* 33.33% for desktop layout */
+    margin-bottom: 20px; /* Add space below cards */
 }
 
-.card:last-child {
-    margin-right: 0; /* Remove margin from the last card */
-}
-
-@media (min-width: 992px) { /* Adjust the breakpoint to target desktop screens */
+@media (max-width: 768px) {
     .card {
-        width: calc(33.33% - 20px); /* 33.33% for desktop layout */
-        margin-right: 20px; /* Add space between cards */
-    }
-
-    .card:last-child {
-        margin-right: 0; /* Remove margin from the last card */
+        width: 100%; /* Take full width on mobile */
     }
 }
+
 
     </style>
 </head>
