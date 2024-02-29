@@ -271,28 +271,19 @@ if(isLoggedIn() == false) {
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM content loaded');
-    
     var accordionButton = document.getElementById('accordion-button');
-    console.log('Accordion button:', accordionButton);
-    
     if (accordionButton) {
         var chev_i = document.getElementById('chev');
-        console.log('Chevron icon:', chev_i);
         
         if (chev_i) {
             accordionButton.addEventListener('click', function() {
-                console.log('Accordion button clicked');
                 
                 var isCollapsed = accordionButton.classList.contains('collapsed');
-                console.log('Accordion button collapsed:', isCollapsed);
                 
                 if (isCollapsed) {
-                    console.log('Changing icon to bi-chevron-down');
                     chev_i.classList.remove('bi-chevron-up');
                     chev_i.classList.add('bi-chevron-down');
                 } else {
-                    console.log('Changing icon to bi-chevron-up');
                     chev_i.classList.remove('bi-chevron-down');
                     chev_i.classList.add('bi-chevron-up');
                 }

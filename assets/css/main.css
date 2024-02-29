@@ -176,6 +176,9 @@ td a:hover {
     text-align: left !important;
     transition: background-color 0.3s ease !important;
 }
+.bi {
+    transition: transform 0.3s ease; /* Add transition for the transform property */
+}
 
 .accordion-button:hover {
     background-color: #e9ecef;
