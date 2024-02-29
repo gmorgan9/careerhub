@@ -72,13 +72,12 @@ if(isLoggedIn() == false) {
             }
 
             .card-container {
-                /* width:  */
             display: flex;
             justify-content: space-between; 
         }
         
         .card {
-            width: calc(33.33% - 20px); /* 33.33% for desktop layout */
+            width: calc(25% - 20px); /* 33.33% for desktop layout */
             margin-bottom: 20px; /* Add space below cards */
         }
         
