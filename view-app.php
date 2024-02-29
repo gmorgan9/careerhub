@@ -233,7 +233,7 @@ if(isLoggedIn() == false) {
                                 <h5 class="accordion-header" id="heading<?= $index ?>">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
                                         <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                                        <i class="chev" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
+                                        <i class="chev bi bi-chevron-down" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
                                     </button>
                                 </h5>
                                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
@@ -280,11 +280,11 @@ if(isLoggedIn() == false) {
                 accordionButton.addEventListener('click', function() {
                     var isCollapsed = accordionButton.classList.contains('collapsed');
                     if (isCollapsed) {
-                        chev_i.classList.remove('bi bi-chevron-up');
-                        chev_i.classList.add('bi bi-chevron-down');
+                        chev_i.classList.remove('bi-chevron-up');
+                        chev_i.classList.add('bi-chevron-down');
                     } else {
-                        chev_i.classList.remove('bi bi-chevron-down');
-                        chev_i.classList.add('bi bi-chevron-up');
+                        chev_i.classList.remove('bi-chevron-down');
+                        chev_i.classList.add('bi-chevron-up');
                     }
                 });
             }
