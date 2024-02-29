@@ -205,7 +205,7 @@ if(isLoggedIn() == false) {
                     </div>
                 </div>
 
-                <h4><i class="bi bi-sticky-fill"></i> Notes</h4>
+                <h4><i class="bi bi-bookmark-fill"></i> Notes</h4>
 
                 <div class="detail-value"><?php echo $notes; ?></div>
                 
