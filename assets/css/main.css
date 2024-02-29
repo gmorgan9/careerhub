@@ -188,7 +188,7 @@ td a:hover {
     margin-top: 5px;
 }
 .accordion-collapse:last-child {
-    border-radius: 15px;
+    border-radius: 15px !important;
 }
 
 .accordion-collapse.in {
