@@ -41,7 +41,7 @@ if(isLoggedIn() == false) {
 
         .application-details h2 {
             /* color: #333; */
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
         }
 
         .detail-label {
