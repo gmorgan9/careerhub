@@ -231,10 +231,10 @@ if(isLoggedIn() == false) {
                             <div class="accordion-item">
                                 
                                 <h5 class="accordion-header" id="heading<?= $index ?>">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                                        <i class="bi bi-chevron-down text-end"></i>
-                                    </button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+    <?= $title ?> <!-- Use text within <h5> tags as button/title -->
+    <i class="bi bi-chevron-down"></i> <!-- Chevron icon -->
+</button>
                                 </h5>
                                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
                                     <div class="accordion-body">
