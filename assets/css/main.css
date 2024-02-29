@@ -164,11 +164,10 @@ td a:hover {
 /* Custom styling for accordion */
 .accordion-item {
     margin-bottom: 10px;
-    background-color: rgb(255, 0, 0);
 }
 
 .accordion-button {
-    background-color: #f8f9fa;
+    background-color: #0080ff;
     color: #495057;
     border: none;
     border-radius: 5px;
