@@ -106,7 +106,7 @@ if(isLoggedIn() == false) {
                     <?php echo $job_title; ?>
                     <span class="ps-3" style="font-size: 14px;">
                         <?php if($status == 'Applied'){ ?>
-                            <<span><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span>
+                            <span><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Interviewed'){ ?>
                             <<span><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Offered'){ ?>
@@ -120,10 +120,19 @@ if(isLoggedIn() == false) {
                 </h2>
 
                 <?php 
-                    $timestamp = strtotime($updated_at);
-                    $updated_at_formatted = date('M j, Y', $timestamp);
+                    $updated_time = strtotime($updated_at);
+                    $updated_at_formatted = date('M j, Y', $updated_time);
+                    $created_time = strtotime($created_at);
+                    $created_at_formatted = date('M j, Y', $created_time);
                 ?>
-                <p class="text-muted" style="font-size: 12px;">Last updated: <?php echo $updated_at_formatted; ?></p>
+                <p class="text-muted" style="font-size: 12px;">
+                    <span class="pe-3">
+                        Last updated: <?php echo $updated_at_formatted; ?>
+                    </span>
+                    <span>
+                        Created: <?php echo $created_at_formatted; ?>
+                    </span>
+                </p>
                 
                 <h4><i class="bi bi-briefcase-fill"></i> Job details</h4>
 
@@ -189,8 +198,6 @@ if(isLoggedIn() == false) {
 
                 
                 
-                <div class="detail-label">Status:</div>
-                <div class="detail-value"></div>
                 
                
                 <div class="detail-label">Notes:</div>
