@@ -406,11 +406,9 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $company    = $row['company'];
                                         $updated_at = $row['updated_at']; // No need to convert to timestamp
 
-                                        // Calculate time ago
-                                        $new_time = new DateTime("now", new DateTimeZone('America/New_York') );
-                                        echo $new_time;
-                                        $time_ago = time_elapsed_string($updated_at, $new_time);
-                                        echo $time_ago;
+                                        $new_time = new DateTime("now", new DateTimeZone('America/Chicago'));
+                                        $new_time_string = $new_time->format('H:i:s');
+                                        echo $new_time_string;
                                         ?>
                                         <li class="list-group-item">
                                         <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
