@@ -81,7 +81,7 @@ if(isLoggedIn() == false) {
             margin-bottom: 20px;
         }
         
-        @media (max-width: 1200px) {
+        @media (max-width: 1366px) {
             .card-container {
                 flex-wrap: wrap;
             }
