@@ -173,11 +173,11 @@ if(isLoggedIn() == false) {
         <!-- end Received Offer -->
 
         <!-- Declined -->
-            <div class="card top-card me-2" style="width: 18rem;">
+            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="declined-app.php">
                     <div class="card-body p-0">
-                        <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-x d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                        <div class="left float-start" style="background-color: lightpink; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
+                            <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4" style="margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
 
                         <div class="right float-end mt-2" style="margin-right: 40px !important;">
@@ -205,11 +205,11 @@ if(isLoggedIn() == false) {
         <!-- end Declined -->
 
         <!-- Total -->
-            <div class="card top-card" style="width: 18rem;">
+            <div class="card top-card" style="min-width: 18rem; max-width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="total-app.php">
                     <div class="card-body p-0">
-                        <div class="left float-start" style="background-color: lightsalmon; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                        <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
+                            <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4" style="margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
 
                         <div class="right float-end mt-2" style="margin-right: 18px !important;">
