@@ -218,25 +218,21 @@ if(isLoggedIn() == false) {
     // Check if $notes is not empty
     if (!empty($notes)) {
         // Split $notes into individual notes based on <h5> tags
-        $notesArray = preg_split('/<h5>/', $notes, -1, PREG_SPLIT_NO_EMPTY);
+        preg_match_all('/<h5>(.*?)<\/h5>/', $notes, $matches);
 
         // Loop through each note
-        foreach ($notesArray as $index => $note) {
-            // Extract the date from the note
-            preg_match('/(\d{2}\/\d{2}\/\d{4})/', $note, $matches);
-            $date = isset($matches[1]) ? $matches[1] : ''; // Get the first matched date
-
+        foreach ($matches[1] as $index => $title) {
             // Display accordion item
             ?>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="heading<?= $index ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                        <?= $date ? $date : 'Note ' . ($index + 1) ?> <!-- Use the date as the title, if available, otherwise use a default title -->
+                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
                     </button>
                 </h5>
                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
                     <div class="accordion-body">
-                        <?= '<h5>' . $note ?> <!-- Add back the <h5> tag removed during split -->
+                        <?= $matches[0][$index] ?> <!-- Output the entire note including the <h5> tag -->
                     </div>
                 </div>
             </div>
