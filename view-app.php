@@ -132,6 +132,19 @@ if(isLoggedIn() == false) {
                     <span>
                         Created: <?php echo $created_at_formatted; ?>
                     </span>
+                    <span class="ps-3 pe-3">
+                        |
+                    </span>
+                    <span>
+                        <?php if($interview_set == 1){ ?>
+                            <i class="bi bi-person-video"></i>
+                        <?php } else { }
+                        ?>
+                        <?php if($watchlist == 1){ ?>
+                            <i class="bi bi-watch"></i>
+                        <?php } else { }
+                        ?>
+                    </span>
                 </p>
                 
                 <h4><i class="bi bi-briefcase-fill"></i> Job details</h4>
@@ -206,8 +219,6 @@ if(isLoggedIn() == false) {
                 <div class="detail-value"><?php echo $watchlist; ?></div>
                 <div class="detail-label">Interview Set:</div>
                 <div class="detail-value"><?php echo $interview_set; ?></div>
-                <div class="detail-label">Created At:</div>
-                <div class="detail-value"><?php echo $created_at; ?></div>
                 
 
             <?php }
