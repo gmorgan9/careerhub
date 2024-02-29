@@ -233,7 +233,7 @@ if(isLoggedIn() == false) {
                                 <h5 class="accordion-header" id="heading<?= $index ?>">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
                                         <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                                        <i class="bi" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
+                                        <i class="chev" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
                                     </button>
                                 </h5>
                                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
@@ -273,17 +273,18 @@ if(isLoggedIn() == false) {
     document.addEventListener('DOMContentLoaded', function() {
         // Your JavaScript code here
         var accordionButton = document.getElementById('accordionButton');
+        
         if (accordionButton) {
-            var icon = accordionButton.querySelector('i.bi');
-            if (icon) {
+            var chev_i = document.getElementById('chev');
+            if (chev_i) {
                 accordionButton.addEventListener('click', function() {
                     var isCollapsed = accordionButton.classList.contains('collapsed');
                     if (isCollapsed) {
-                        icon.classList.remove('bi-chevron-up');
-                        icon.classList.add('bi-chevron-down');
+                        chev_i.classList.remove('bi bi-chevron-up');
+                        chev_i.classList.add('bi bi-chevron-down');
                     } else {
-                        icon.classList.remove('bi-chevron-down');
-                        icon.classList.add('bi-chevron-up');
+                        chev_i.classList.remove('bi bi-chevron-down');
+                        chev_i.classList.add('bi bi-chevron-up');
                     }
                 });
             }
