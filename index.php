@@ -259,6 +259,7 @@ if(isLoggedIn() == false) {
                                 $num_rows = mysqli_num_rows($result);
                                 if($num_rows > 0) {
                                     while ($row = mysqli_fetch_assoc($result)) {
+                                        $app_id         = $row['app_id'];
                                         $status         = $row['status'];
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
