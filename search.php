@@ -127,7 +127,7 @@ if (isLoggedIn() == false) {
                         <?php //$app_id_data = $row['app_id']; ?>
                         <li class="list-group-item float-end">
                             <?php echo $row['job_title']; ?>
-                            <a href="view-app.php?viewid=<?php echo $id; ?>" class="view float-end badge text-bg-secondary">View</a>
+                            <a href="view-app.php?viewid=<?php echo $id; ?>" class="view float-end badge text-bg-secondary text-decoration-none">View</a>
                             <!-- <a href="view-app.php?viewid=<?php //echo $id; ?>">View Details</a> -->
                         </li>
                     
