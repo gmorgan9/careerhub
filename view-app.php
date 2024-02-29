@@ -217,10 +217,10 @@ if(isLoggedIn() == false) {
     <?php
     // Check if $notes is not empty
     if (!empty($notes)) {
-        // Split $notes into individual notes based on <h5> tags
+        // Match all <h5> tags and their content
         preg_match_all('/<h5>(.*?)<\/h5>(.*?)<h5>|<h5>(.*?)<\/h5>(.*?)$/s', $notes, $matches, PREG_SET_ORDER);
 
-        // Loop through each note
+        // Loop through each matched note
         foreach ($matches as $index => $match) {
             // Extract title and content
             $title = isset($match[1]) ? $match[1] : $match[3];
