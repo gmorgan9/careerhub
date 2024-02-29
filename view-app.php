@@ -179,9 +179,9 @@ if(isLoggedIn() == false) {
                         <div class="card-body text-center">
                             <h5 class="card-title">Base Pay</h5>
                             <p class="card-text">
-                                <?php if(!empty($pay)) {
-                                    echo $pay;
-                                } else { ?>
+                                <?php if(!empty($pay)) { ?>
+                                    $<?php echo $pay; ?>
+                                <?php } else { ?>
                                 <span class="text-warning">No base pay found.</span>
                                 <?php } ?>
                             </p>
@@ -192,9 +192,9 @@ if(isLoggedIn() == false) {
                         <div class="card-body text-center">
                             <h5 class="card-title">Bonus Pay</h5>
                             <p class="card-text">
-                                <?php if(!empty($bonus_pay)) {
-                                    echo $bonus_pay;
-                                } else { ?>
+                                <?php if(!empty($bonus_pay)) { ?>
+                                    $<?php echo $bonus_pay; ?>
+                                <?php } else { ?>
                                 <span class="text-warning">No bonus pay found.</span>
                                 <?php } ?>
                             </p>
