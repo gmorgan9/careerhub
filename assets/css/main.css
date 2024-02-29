@@ -158,3 +158,35 @@ td a:hover {
         font-size: 16px;
     }
 }
+
+
+/* view app */
+/* Custom styling for accordion */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #e9ecef;
+}
+
+.accordion-collapse {
+    background-color: #f8f9fa;
+    border-radius: 0 0 5px 5px;
+    padding: 10px 15px;
+}
+
+.accordion-collapse.in {
+    display: block;
+}
