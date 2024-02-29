@@ -102,7 +102,7 @@ if(isLoggedIn() == false) {
                 $updated_at = $row['updated_at'];
                 ?>
 
-                <h2><?php echo $job_title; ?></h2>
+                <h2><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 12px;"><?php echo $status; ?></span></h2>
                 <?php 
                     $timestamp = strtotime($updated_at);
                     $updated_at_formatted = date('M j, Y', $timestamp);
@@ -174,10 +174,9 @@ if(isLoggedIn() == false) {
                 
                 
                 <div class="detail-label">Status:</div>
-                <div class="detail-value"><?php echo $status; ?></div>
+                <div class="detail-value"></div>
                 
-                <div class="detail-label">Application Link:</div>
-                <div class="detail-value"><?php echo $app_link; ?></div>
+               
                 <div class="detail-label">Notes:</div>
                 <div class="detail-value"><?php echo $notes; ?></div>
                 <div class="detail-label">Watchlist:</div>
