@@ -205,7 +205,7 @@ if(isLoggedIn() == false) {
         <!-- end Declined -->
 
         <!-- Total -->
-            <div class="card top-card" style="min-width: 18rem; max-width: 18rem;">
+            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="total-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
