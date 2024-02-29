@@ -217,20 +217,27 @@ if(isLoggedIn() == false) {
     <?php
     // Check if $notes is not empty
     if (!empty($notes)) {
-        ?>
-        <div class="accordion-item">
-            <div class="accordion-header" id="heading0">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
-                    Notes
-                </button>
-            </div>
-            <div id="collapse0" class="accordion-collapse collapse" aria-labelledby="heading0" data-bs-parent="#accordion">
-                <div class="accordion-body">
-                    <?= $notes ?> <!-- Output the entire $notes content -->
+        // Split $notes into individual notes based on <h5> tags
+        $notesArray = preg_split('/<h5>/', $notes, -1, PREG_SPLIT_NO_EMPTY);
+
+        // Loop through each note
+        foreach ($notesArray as $index => $note) {
+            // Display accordion item
+            ?>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="heading<?= $index ?>">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                        <?= strip_tags($note) ?> <!-- Use entire $note as button/text -->
+                    </button>
+                </h5>
+                <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <?= $note ?> <!-- Output the entire note as accordion body -->
+                    </div>
                 </div>
             </div>
-        </div>
-        <?php
+            <?php
+        }
     } else {
         // Display message if $notes is empty
         ?>
@@ -243,6 +250,7 @@ if(isLoggedIn() == false) {
     }
     ?>
 </div>
+
 
 
 
