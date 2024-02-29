@@ -62,7 +62,7 @@ if(isLoggedIn() == false) {
     margin-bottom: 20px; /* Add space below cards */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .card {
         width: 100%; /* Take full width on mobile */
     }
