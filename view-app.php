@@ -54,7 +54,7 @@ if(isLoggedIn() == false) {
         .card-container {
     display: flex;
     justify-content: space-between; /* Distribute space between items */
-    flex-wrap: wrap; /* Enable wrapping */
+    /* flex-wrap: wrap; Enable wrapping */
 }
 
 .card {
