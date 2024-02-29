@@ -222,12 +222,16 @@ if(isLoggedIn() == false) {
 
         // Loop through each note
         foreach ($notesArray as $index => $note) {
+            // Extract the date from the note
+            preg_match('/(\d{2}\/\d{2}\/\d{4})/', $note, $matches);
+            $date = isset($matches[1]) ? $matches[1] : ''; // Get the first matched date
+
             // Display accordion item
             ?>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="heading<?= $index ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                        Note <?= $index + 1 ?> <!-- Note numbering starts from 1 -->
+                        <?= $date ? $date : 'Note ' . ($index + 1) ?> <!-- Use the date as the title, if available, otherwise use a default title -->
                     </button>
                 </h5>
                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
@@ -250,6 +254,7 @@ if(isLoggedIn() == false) {
     }
     ?>
 </div>
+
 
 
 
