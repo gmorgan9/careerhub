@@ -70,6 +70,26 @@ if(isLoggedIn() == false) {
                 opacity: 0;
                 transition: opacity 0.3s ease-in-out;
             }
+
+            .card-container {
+            display: flex;
+            justify-content: space-between; /* Distribute space between items */
+            /* flex-wrap: wrap; Enable wrapping */
+        }
+        
+        .card {
+            width: calc(33.33% - 20px); /* 33.33% for desktop layout */
+            margin-bottom: 20px; /* Add space below cards */
+        }
+        
+        @media (max-width: 992px) {
+            .card-container {
+                flex-wrap: wrap;
+            }
+            .card {
+                width: 100%; /* 50% width on tablets */
+            }
+        }
         /* end top card overlay */
     </style>
     
@@ -85,7 +105,8 @@ if(isLoggedIn() == false) {
 
 
     <!-- Top Row -->
-        <div class="row d-flex justify-content-center">
+        <div class="card-container">
+
         <!-- Open/Awaiting -->
             
             <div class="card top-card me-2" style="width: 18rem;">

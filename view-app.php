@@ -52,24 +52,24 @@ if(isLoggedIn() == false) {
             margin-bottom: 10px;
         }
         .card-container {
-    display: flex;
-    justify-content: space-between; /* Distribute space between items */
-    /* flex-wrap: wrap; Enable wrapping */
-}
-
-.card {
-    width: calc(33.33% - 20px); /* 33.33% for desktop layout */
-    margin-bottom: 20px; /* Add space below cards */
-}
-
-@media (max-width: 992px) {
-    .card-container {
-        flex-wrap: wrap;
-    }
-    .card {
-        width: 100%; /* 50% width on tablets */
-    }
-}
+            display: flex;
+            justify-content: space-between; /* Distribute space between items */
+            /* flex-wrap: wrap; Enable wrapping */
+        }
+        
+        .card {
+            width: calc(33.33% - 20px); /* 33.33% for desktop layout */
+            margin-bottom: 20px; /* Add space below cards */
+        }
+        
+        @media (max-width: 992px) {
+            .card-container {
+                flex-wrap: wrap;
+            }
+            .card {
+                width: 100%; /* 50% width on tablets */
+            }
+        }
 
 
     </style>
