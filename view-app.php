@@ -217,22 +217,22 @@ if(isLoggedIn() == false) {
     <?php
     // Check if $notes is not empty
     if (!empty($notes)) {
-        // Split $notes into individual notes based on <h5> tags
-        $notesArray = preg_split('/<h5>/', $notes, -1, PREG_SPLIT_NO_EMPTY);
+        // Extract the content within <h5></h5> tags
+        preg_match_all('/<h5>(.*?)<\/h5>(.*)/s', $notes, $matches);
 
         // Loop through each note
-        foreach ($notesArray as $index => $note) {
+        foreach ($matches[1] as $index => $title) {
             // Display accordion item
             ?>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="heading<?= $index ?>">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                        <?= strip_tags($note) ?> <!-- Use entire $note as button/text -->
+                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
                     </button>
                 </h5>
                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
                     <div class="accordion-body">
-                        <?= $note ?> <!-- Output the entire note as accordion body -->
+                        <?= $matches[2][$index] ?> <!-- Output the content under the <h5> tag as accordion body -->
                     </div>
                 </div>
             </div>
