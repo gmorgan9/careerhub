@@ -168,13 +168,13 @@ td a:hover {
 
 .accordion-button {
     background-color: #0080ff !important;
-    color: #495057;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    width: 100%;
-    text-align: left;
-    transition: background-color 0.3s ease;
+    color: #495057 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 10px 15px !important;
+    width: 100% !important;
+    text-align: left !important;
+    transition: background-color 0.3s ease !important;
 }
 
 .accordion-button:hover {
