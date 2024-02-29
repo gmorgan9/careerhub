@@ -214,46 +214,47 @@ if(isLoggedIn() == false) {
                 <!-- __________ -->
                 
                 <div id="accordion">
-    <?php
-    // Check if $notes is not empty
-    if (!empty($notes)) {
-        // Match all <h5> tags and their content
-        preg_match_all('/<h5>(.*?)<\/h5>(.*?)(?=<h5>|$)/s', $notes, $matches, PREG_SET_ORDER);
-
-        // Loop through each matched note
-        foreach ($matches as $index => $match) {
-            // Extract title and content
-            $title = $match[1];
-            $content = $match[2];
-
-            // Display accordion item
-            ?>
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="heading<?= $index ?>">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                    </button>
-                </h5>
-                <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        <?= $content ?> <!-- Output the content under the <h5> tag as accordion body -->
-                    </div>
+                    <?php
+                    // Check if $notes is not empty
+                    if (!empty($notes)) {
+                        // Match all <h5> tags and their content
+                        preg_match_all('/<h5>(.*?)<\/h5>(.*?)(?=<h5>|$)/s', $notes, $matches, PREG_SET_ORDER);
+                    
+                        // Loop through each matched note
+                        foreach ($matches as $index => $match) {
+                            // Extract title and content
+                            $title = $match[1];
+                            $content = $match[2];
+                        
+                            // Display accordion item
+                            ?>
+                            <div class="accordion-item">
+                                <span class="float-end"><i class="bi bi-chevron-down"></i></span>
+                                <h5 class="accordion-header" id="heading<?= $index ?>">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
+                                    </button>
+                                </h5>
+                                <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <?= $content ?> <!-- Output the content under the <h5> tag as accordion body -->
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        // Display message if $notes is empty
+                        ?>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="text-warning">No notes found.</span>
+                            </h5>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
-            </div>
-            <?php
-        }
-    } else {
-        // Display message if $notes is empty
-        ?>
-        <div class="accordion-item">
-            <h5 class="accordion-header">
-                <span class="text-warning">No notes found.</span>
-            </h5>
-        </div>
-        <?php
-    }
-    ?>
-</div>
 
 
 
