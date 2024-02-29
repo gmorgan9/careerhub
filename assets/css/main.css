@@ -162,7 +162,7 @@ td a:hover {
   
   @media (max-width: 1366px) {
     .header {
-        height: 75px;
+        height: 80px;
     }
     .logo {
         text-align: center !important;
