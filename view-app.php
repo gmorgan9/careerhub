@@ -102,7 +102,7 @@ if(isLoggedIn() == false) {
                 $updated_at = $row['updated_at'];
                 ?>
 
-                <h2><?php echo $job_title; ?>&nbsp;&nbsp;<span class="text-muted" style="font-size: 14px;"><?php echo $status; ?></span></h2>
+                <h2><?php echo $job_title; ?> <div class="me-3"></div> <span class="text-muted" style="font-size: 14px;"><?php echo $status; ?></span></h2>
 
                 <?php 
                     $timestamp = strtotime($updated_at);
