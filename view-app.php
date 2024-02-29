@@ -119,7 +119,7 @@ if(isLoggedIn() == false) {
                     </span>
                     <span class="float-end">
                         <a class="badge text-bg-secondary text-decoration-none" style="font-size: 14px;" href="update-app.php?updateid=<?php echo $id; ?>">Edit</a>
-                        <a class="badge text-bg-secondary text-decoration-none" style="font-size: 14px;" href="open-app.php?deleteid=<?php echo $id; ?>">Delete</a>
+                        <a class="badge text-bg-danager text-decoration-none" style="font-size: 14px;" href="open-app.php?deleteid=<?php echo $id; ?>">Delete</a>
                     </span>
                 </h2>
 
