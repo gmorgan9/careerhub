@@ -231,16 +231,10 @@ if(isLoggedIn() == false) {
                             <div class="accordion-item">
                                 
                                 <h5 class="accordion-header" id="heading<?= $index ?>">
-                                <?php
-// Determine the icon class based on the presence of the "collapsed" class
-$iconClass = 'bi-chevron-down'; // Default icon when collapsed
-if (strpos($classes, 'collapsed') === false) {
-    $iconClass = 'bi-chevron-up'; // Change to "bi-chevron-up" when expanded
-}
-                                <button class="accordion-button <?= $classes ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="<?= $expanded ? 'true' : 'false' ?>" aria-controls="collapse<?= $index ?>" style="position: relative;">
-                                    <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                                    <i class="bi <?= $iconClass ?>" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i> <!-- Dynamically change the icon class -->
-                                </button>
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
+                                        <i class="bi" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
+                                    </button>
                                 </h5>
                                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
                                     <div class="accordion-body">
@@ -274,6 +268,31 @@ if (strpos($classes, 'collapsed') === false) {
         } ?>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the accordion button element
+        var accordionButton = document.getElementById('accordionButton<?= $index ?>');
+
+        // Get the icon element within the button
+        var icon = accordionButton.querySelector('i.bi');
+
+        // Toggle icon class based on the presence of the "collapsed" class
+        accordionButton.addEventListener('click', function () {
+            // Check if the button has the "collapsed" class
+            var isCollapsed = accordionButton.classList.contains('collapsed');
+
+            // Update the icon class based on the collapsed state
+            if (isCollapsed) {
+                icon.classList.remove('bi-chevron-up');
+                icon.classList.add('bi-chevron-down');
+            } else {
+                icon.classList.remove('bi-chevron-down');
+                icon.classList.add('bi-chevron-up');
+            }
+        });
+    });
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
