@@ -117,7 +117,7 @@ if(isLoggedIn() == false) {
                             <span><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } ?>
                     </span>
-                    <span class="float-end badge text-bg-secondary" style="font-size: 16px;">
+                    <span class="float-end badge text-bg-secondary" style="font-size: 14px;">
                         <a class="text-bg-secondary text-decoration-none" href="update-app.php?updateid=<?php echo $id; ?>">Edit</a>
                     </span>
                 </h2>
