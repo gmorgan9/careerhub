@@ -60,7 +60,7 @@ if(isLoggedIn() == false) {
 
 .card {
     flex: 0 0 calc(33.33% - 20px); /* 33.33% for desktop layout */
-    margin-right: 20px; /* Add space between cards */
+    margin-right: 5px; /* Add space between cards */
 }
 
 .card:last-child {
