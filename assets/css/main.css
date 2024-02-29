@@ -185,6 +185,7 @@ td a:hover {
     background-color: #f8f9fa;
     border-radius: 0 0 5px 5px;
     padding: 10px 15px;
+    margin-top: 5px;
 }
 
 .accordion-collapse.in {
