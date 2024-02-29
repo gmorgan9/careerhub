@@ -218,13 +218,13 @@ if(isLoggedIn() == false) {
     // Check if $notes is not empty
     if (!empty($notes)) {
         // Match all <h5> tags and their content
-        preg_match_all('/<h5>(.*?)<\/h5>(.*?)<h5>|<h5>(.*?)<\/h5>(.*?)$/s', $notes, $matches, PREG_SET_ORDER);
+        preg_match_all('/<h5>(.*?)<\/h5>(.*?)(?=<h5>|$)/s', $notes, $matches, PREG_SET_ORDER);
 
         // Loop through each matched note
         foreach ($matches as $index => $match) {
             // Extract title and content
-            $title = isset($match[1]) ? $match[1] : $match[3];
-            $content = isset($match[2]) ? $match[2] : $match[4];
+            $title = $match[1];
+            $content = $match[2];
 
             // Display accordion item
             ?>
