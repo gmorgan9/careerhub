@@ -63,6 +63,9 @@ if(isLoggedIn() == false) {
 }
 
 @media (max-width: 1170px) {
+    .card-container {
+        flex-wrap: wrap;
+    }
     .card {
         width: calc(50% - 20px); /* 50% width on tablets */
     }
