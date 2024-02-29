@@ -104,7 +104,7 @@ if(isLoggedIn() == false) {
 
 
     <!-- Top Row -->
-        <div class="card-container justify-content-center">
+        <div class="card-container justify-content-cente mx-auto">
 
         <!-- Open/Awaiting -->
             
