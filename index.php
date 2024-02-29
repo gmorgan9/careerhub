@@ -353,45 +353,45 @@ if(isLoggedIn() == false) {
 
                             <?php
 
-function time_elapsed_string($updated_at, $current_time = null, $full = false) {
-    // If current time is not provided, use the current time
-    if ($current_time === null) {
-        $current_time = new DateTime('now', new DateTimeZone('America/Chicago'));
-    } else {
-        $current_time = new DateTime($current_time, new DateTimeZone('America/Chicago'));
-    }
-    
-    $updated_at = new DateTime($updated_at, new DateTimeZone('America/Chicago'));
-    
-    $diff = $current_time->diff($updated_at);
+                            function time_elapsed_string($updated_at, $current_time = null, $full = false) {
+                                // If current time is not provided, use the current time
+                                if ($current_time === null) {
+                                    $current_time = new DateTime('now', new DateTimeZone('America/Chicago'));
+                                } else {
+                                    $current_time = new DateTime($current_time, new DateTimeZone('America/Chicago'));
+                                }
 
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
+                                $updated_at = new DateTime($updated_at, new DateTimeZone('America/Chicago'));
 
-    $string = array(
-        'y' => 'year',
-        'm' => 'month',
-        'w' => 'week',
-        'd' => 'day',
-        'h' => 'hour',
-        'i' => 'minute',
-        's' => 'second',
-    );
-
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) {
-        $string = array_slice($string, 0, 1);
-    }
-
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
-}
+                                $diff = $current_time->diff($updated_at);
+                            
+                                $diff->w = floor($diff->d / 7);
+                                $diff->d -= $diff->w * 7;
+                            
+                                $string = array(
+                                    'y' => 'yr',
+                                    'm' => 'mon',
+                                    'w' => 'wk',
+                                    'd' => 'day',
+                                    'h' => 'hr',
+                                    'i' => 'min',
+                                    's' => 'sec',
+                                );
+                            
+                                foreach ($string as $k => &$v) {
+                                    if ($diff->$k) {
+                                        $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+                                    } else {
+                                        unset($string[$k]);
+                                    }
+                                }
+                            
+                                if (!$full) {
+                                    $string = array_slice($string, 0, 1);
+                                }
+                            
+                                return $string ? implode(', ', $string) . ' ago' : 'Just now';
+                            }
                         
                             $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
                             $result = mysqli_query($conn, $sql);
