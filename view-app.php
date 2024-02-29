@@ -44,7 +44,7 @@ if(isLoggedIn() == false) {
 <br><br>
 
     <?php
-            $id = $_GET['viewid'];
+            $id = $_GET['app_id'];
             $sql = "SELECT * FROM applications WHERE app_id=$id";
             $result = mysqli_query($conn, $sql);
             if($result) {
