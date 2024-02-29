@@ -59,7 +59,7 @@ if(isLoggedIn() == false) {
 }
 
 .card {
-    flex: 0 0 calc(33.33% - 20px); /* 33.33% for desktop layout */
+    flex: 0 0 calc(33.33% - 5px); /* 33.33% for desktop layout */
     margin-right: 5px; /* Add space between cards */
 }
 
