@@ -88,6 +88,7 @@ if(isLoggedIn() == false) {
                 ?>
                 <p class="text-muted" style="font-size: 12px;">Last updated: <?php echo $updated_at_formatted; ?></p>
                 
+                <h4><i class="bi bi-briefcase-fill"></i> Job details</h4>
                 <div class="detail-label">Company:</div>
                 <div class="detail-value"><?php echo $company; ?></div>
                 <div class="detail-label">Location:</div>
