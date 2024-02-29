@@ -270,12 +270,14 @@ if(isLoggedIn() == false) {
 </div>
 
 <script>
+    
     document.addEventListener('DOMContentLoaded', function () {
         // Get the accordion button element
         var accordionButton = document.getElementById('accordionButton<?= $index ?>');
 
         // Get the icon element within the button
         var icon = accordionButton.querySelector('i.bi');
+        console.log('Accordion Button:', accordionButton);
 
         // Toggle icon class based on the presence of the "collapsed" class
         accordionButton.addEventListener('click', function () {
