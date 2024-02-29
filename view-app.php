@@ -270,29 +270,24 @@ if(isLoggedIn() == false) {
 </div>
 
 <script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get the accordion button element
-        var accordionButton = document.getElementById('accordionButton<?= $index ?>');
-
-        // Get the icon element within the button
-        var icon = accordionButton.querySelector('i.bi');
-        console.log('Accordion Button:', accordionButton);
-
-        // Toggle icon class based on the presence of the "collapsed" class
-        accordionButton.addEventListener('click', function () {
-            // Check if the button has the "collapsed" class
-            var isCollapsed = accordionButton.classList.contains('collapsed');
-
-            // Update the icon class based on the collapsed state
-            if (isCollapsed) {
-                icon.classList.remove('bi-chevron-up');
-                icon.classList.add('bi-chevron-down');
-            } else {
-                icon.classList.remove('bi-chevron-down');
-                icon.classList.add('bi-chevron-up');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Your JavaScript code here
+        var accordionButton = document.getElementById('accordionButton');
+        if (accordionButton) {
+            var icon = accordionButton.querySelector('i.bi');
+            if (icon) {
+                accordionButton.addEventListener('click', function() {
+                    var isCollapsed = accordionButton.classList.contains('collapsed');
+                    if (isCollapsed) {
+                        icon.classList.remove('bi-chevron-up');
+                        icon.classList.add('bi-chevron-down');
+                    } else {
+                        icon.classList.remove('bi-chevron-down');
+                        icon.classList.add('bi-chevron-up');
+                    }
+                });
             }
-        });
+        }
     });
 </script>
 
