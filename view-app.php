@@ -58,7 +58,7 @@ if(isLoggedIn() == false) {
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
 <div class="container-fluid main">
-    <div class="application-details">
+    <div class="application-">
         <?php
         $id = $_GET['viewid'];
         $sql = "SELECT * FROM applications WHERE app_id=$id";
@@ -98,19 +98,28 @@ if(isLoggedIn() == false) {
                   </div>
                 </div>
 
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Location</h5>
+                    <p class="card-text"><?php echo $location; ?></p>
+                  </div>
+                </div>
 
-                <div class="detail-label">Company:</div>
-                <div class="detail-value"><?php echo $company; ?></div>
-                <div class="detail-label">Location:</div>
-                <div class="detail-value"><?php echo $location; ?></div>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Job Type</h5>
+                    <p class="card-text"><?php echo $job_type; ?></p>
+                  </div>
+                </div>
+
+                
                 <div class="detail-label">Pay:</div>
                 <div class="detail-value"><?php echo $pay; ?></div>
                 <div class="detail-label">Bonus Pay:</div>
                 <div class="detail-value"><?php echo $bonus_pay; ?></div>
                 <div class="detail-label">Status:</div>
                 <div class="detail-value"><?php echo $status; ?></div>
-                <div class="detail-label">Job Type:</div>
-                <div class="detail-value"><?php echo $job_type; ?></div>
+                
                 <div class="detail-label">Application Link:</div>
                 <div class="detail-value"><?php echo $app_link; ?></div>
                 <div class="detail-label">Notes:</div>
