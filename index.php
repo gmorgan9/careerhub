@@ -409,7 +409,7 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $new_time_string = $new_time->format('Y-m-d h:i:s A');
                                         $updated_at_datetime = new DateTime($updated_at);
                                         $new_updated_at = $updated_at_datetime->format('Y-m-d h:i:s A');
-                                        $time_ago = time_elapsed_string($updated_at, $current_time);
+                                        $time_ago = time_elapsed_string($updated_at);
                                         ?>
                                         <li class="list-group-item">
                                         <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
