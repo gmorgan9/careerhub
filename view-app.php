@@ -91,7 +91,7 @@ if(isLoggedIn() == false) {
                 <h4><i class="bi bi-briefcase-fill"></i> Job details</h4>
 
 
-                <div class="card" style="width: 15rem;">
+                <div class="card" style="width: 18rem;">
                   <div class="card-body text-center">
                     <h5 class="card-title">Company</h5>
                     <p class="card-text"><?php echo $company; ?></p>
