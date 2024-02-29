@@ -210,27 +210,50 @@ if(isLoggedIn() == false) {
                 </div>
 
                 <h4><i class="bi bi-file-earmark-text-fill"></i> Notes</h4>
+                
+                <!-- __________ -->
+                
+                <div id="accordion">
+    <?php
+    // Check if $notes is not empty
+    if (!empty($notes)) {
+        // Split $notes into individual notes based on <h5> tags
+        $notesArray = preg_split('/<h5>/', $notes, -1, PREG_SPLIT_NO_EMPTY);
 
-                <?php $notesArray = preg_split('/<h5>/', $notes, -1, PREG_SPLIT_NO_EMPTY);
-
-// Output Bootstrap accordion markup
-?>
-<div id="accordion">
-    <?php foreach ($notesArray as $index => $note): ?>
-        <div class="accordion-item">
-            <h5 class="accordion-header" id="heading<?= $index ?>">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                    <?= $index == 0 ? 'Notes' : 'Note ' . $index ?>
-                </button>
-            </h5>
-            <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
-                <div class="accordion-body">
-                    <?= $note ?>
+        // Loop through each note
+        foreach ($notesArray as $index => $note) {
+            // Display accordion item
+            ?>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="heading<?= $index ?>">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                        Note <?= $index + 1 ?> <!-- Note numbering starts from 1 -->
+                    </button>
+                </h5>
+                <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <?= '<h5>' . $note ?> <!-- Add back the <h5> tag removed during split -->
+                    </div>
                 </div>
             </div>
+            <?php
+        }
+    } else {
+        // Display message if $notes is empty
+        ?>
+        <div class="accordion-item">
+            <h5 class="accordion-header">
+                <span class="text-warning">No notes found.</span>
+            </h5>
         </div>
-    <?php endforeach; ?>
+        <?php
+    }
+    ?>
 </div>
+
+
+
+                <!-- ___________ -->
                 
 
             <?php }
