@@ -5,8 +5,8 @@
         
         <!-- Logout button -->
         <div class="end" style="margin-top: -5px !important;">
-            <a href="<?php echo BASE_URL; ?>/search.php" class="badge text-bg-secondary mx-2 text-decoration-none fs-6" style="">Search</a>
-            <a class="" href="index.php?logout=1"><button style="cursor:pointer;" class="btn btn-link text-white"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
+            <a href="<?php echo BASE_URL; ?>/search.php" class="badge text-bg-secondary mx-2 text-decoration-none fs-6">Search</a>
+            <a href="index.php?logout=1" class="badge text-bg-primary mx-2 text-decoration-none fs-6">Logout</a>
         </div>
         
     </h3>
