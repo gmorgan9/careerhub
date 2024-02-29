@@ -117,6 +117,9 @@ if(isLoggedIn() == false) {
                             <span><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } ?>
                     </span>
+                    <span class="float-end">
+                        testing
+                    </span>
                 </h2>
 
                 <?php 
