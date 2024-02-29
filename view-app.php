@@ -207,7 +207,13 @@ if(isLoggedIn() == false) {
 
                 <h4><i class="bi bi-file-earmark-text-fill"></i> Notes</h4>
 
-                <div class="detail-value"><?php echo $notes; ?></div>
+                <div class="detail-value">
+                    <?php if(!empty($notes)) {
+                        echo $notes;
+                    } else { ?>
+                        <span class="text-warning">No notes found.</span>
+                    <?php } ?>
+                </div>
                 
 
             <?php }
