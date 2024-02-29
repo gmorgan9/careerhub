@@ -160,12 +160,13 @@ td a:hover {
         margin: none !important;
     }
     .end {
-        float: unset !important;
-        display: flex;
-        justify-self: center;
+        float: none !important;
+        
         margin: none;
     }
     .end .badge {
+        display: flex;
+        justify-self: center;
         margin: none;
     }
 }
