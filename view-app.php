@@ -114,7 +114,7 @@ if(isLoggedIn() == false) {
                         <?php } else if($status == 'Rejected'){ ?>
                             <span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Interested'){ ?>
-                            <span class="" style=""><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span>
+                            <span class="" style=""><i style="font-size: 12px; margin-top: -10px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } ?>
                     </span>
                 </h2>
