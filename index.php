@@ -264,7 +264,7 @@ if(isLoggedIn() == false) {
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
                                         ?>
-                                        <a href="view-app.php?app_id=<?php echo $app_id; ?>" class="text-decoration-none stretch-link">
+                                        <a href="view-app.php?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretch-link">
                                             <li class="list-group-item">
                                                 <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                                 <?php if($row['status'] == 'Applied'){ ?>
