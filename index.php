@@ -108,11 +108,11 @@ if(isLoggedIn() == false) {
 
         <!-- Open/Awaiting -->
             
-            <div class="card top-card me-2">
+            <div class="card top-card me-2" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important;margin-right: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                            <i class="bi bi-clipboard d-block mx-auto my-3 ms-3 me-3" style=" margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
                         <div class="right float-end mt-2" style="margin-right: 30px !important;">
                             <div class="pt-3"></div>
