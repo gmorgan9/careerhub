@@ -167,7 +167,7 @@ td a:hover {
 }
 
 .accordion-button {
-    background-color: #0080ff;
+    background-color: #0080ff !important;
     color: #495057;
     border: none;
     border-radius: 5px;
