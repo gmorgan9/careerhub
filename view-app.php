@@ -62,12 +62,12 @@ if(isLoggedIn() == false) {
     margin-bottom: 20px; /* Add space below cards */
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 992px) {
     .card-container {
         flex-wrap: wrap;
     }
     .card {
-        width: calc(50% - 20px); /* 50% width on tablets */
+        width: 100%; /* 50% width on tablets */
     }
 }
 
