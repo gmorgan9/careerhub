@@ -166,7 +166,7 @@ td a:hover {
     }
     .end .badge {
         display: flex;
-        justify-self: center;
+        justify-content: center;
         margin: none;
     }
 }
