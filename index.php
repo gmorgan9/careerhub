@@ -264,11 +264,10 @@ if(isLoggedIn() == false) {
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
                                         ?>
-                                        <a href="view-app.php?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretch-link">
-                                            <li class="list-group-item">
+                                        <li class="list-group-item">
                                                 <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                                 <?php if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                 <?php } else if($row['status'] == 'Interviewed') { ?>
                                                     <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } else if($row['status'] == 'Offered') { ?>
@@ -278,8 +277,8 @@ if(isLoggedIn() == false) {
                                                 <?php } else if($row['status'] == 'Interested') { ?>
                                                     <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
                                                 <?php } ?>
-                                            </li>
-                                        </a>
+                                                <a href="view-app.php?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretch-link"></a>
+                                        </li>
                                     <?php 
                                     }
                                 } else { ?>
