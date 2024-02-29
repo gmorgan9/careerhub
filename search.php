@@ -120,7 +120,6 @@ if (isLoggedIn() == false) {
                         <li class="list-group-item float-end">
                             <?php echo $row['job_title']; ?>
                             <a href="view-app.php?viewid=<?php echo $id; ?>" class="view float-end badge text-bg-secondary text-decoration-none">View</a>
-                            <!-- <a href="view-app.php?viewid=<?php //echo $id; ?>">View Details</a> -->
                         </li>
                     
             <?php } ?>
