@@ -358,11 +358,10 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
     if ($current_time === null) {
         $current_time = new DateTime('now', new DateTimeZone('America/Chicago'));
     } else {
-        $current_time = new DateTime($current_time);
+        $current_time = new DateTime($current_time, new DateTimeZone('America/Chicago'));
     }
     
-    $updated_at = new DateTime($updated_at);
-    $updated_at->setTimezone(new DateTimeZone('America/Chicago'));
+    $updated_at = new DateTime($updated_at, new DateTimeZone('America/Chicago'));
     
     $diff = $current_time->diff($updated_at);
 
@@ -413,7 +412,7 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $new_updated_at = $updated_at_datetime->format('Y-m-d h:i:s A');
                                         echo $new_updated_at;
 
-                                        $time_ago = time_elapsed_string($new_updated_at, $new_time_string);
+                                        $time_ago = time_elapsed_string($updated_at, $current_time);
                                         echo $time_ago;
                                         ?>
                                         <li class="list-group-item">
