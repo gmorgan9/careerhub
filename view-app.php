@@ -231,10 +231,16 @@ if(isLoggedIn() == false) {
                             <div class="accordion-item">
                                 
                                 <h5 class="accordion-header" id="heading<?= $index ?>">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                                        <i class="bi bi-chevron-down" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
-                                    </button>
+                                <?php
+// Determine the icon class based on the presence of the "collapsed" class
+$iconClass = 'bi-chevron-down'; // Default icon when collapsed
+if (strpos($classes, 'collapsed') === false) {
+    $iconClass = 'bi-chevron-up'; // Change to "bi-chevron-up" when expanded
+}
+                                <button class="accordion-button <?= $classes ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="<?= $expanded ? 'true' : 'false' ?>" aria-controls="collapse<?= $index ?>" style="position: relative;">
+                                    <?= $title ?> <!-- Use text within <h5> tags as button/title -->
+                                    <i class="bi <?= $iconClass ?>" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i> <!-- Dynamically change the icon class -->
+                                </button>
                                 </h5>
                                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
                                     <div class="accordion-body">
