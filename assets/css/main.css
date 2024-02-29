@@ -105,9 +105,7 @@ body, html {
 .open-count h1 {
     margin-top: -20px;
 }
-.table {
-    /* width: 1350px !important; */
-}
+
 .header-line {
     border-bottom: 3px rgb(128, 128, 128) solid;
 }
@@ -144,7 +142,7 @@ td a:hover {
         float: right;
     }
     .end a {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
   
