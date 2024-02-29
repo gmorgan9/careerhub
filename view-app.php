@@ -51,6 +51,27 @@ if(isLoggedIn() == false) {
         .detail-value {
             margin-bottom: 10px;
         }
+        .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px); /* 33.33% for desktop layout */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Take up full width on mobile */
+    }
+}
     </style>
 </head>
 <body>
@@ -91,26 +112,29 @@ if(isLoggedIn() == false) {
                 <h4><i class="bi bi-briefcase-fill"></i> Job details</h4>
 
 
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Company</h5>
-                    <p class="card-text"><?php echo $company; ?></p>
-                  </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Company</h5>
+                            <p class="card-text"><?php echo $company; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Location</h5>
+                            <p class="card-text"><?php echo $location; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Job Type</h5>
+                            <p class="card-text"><?php echo $job_type; ?></p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Location</h5>
-                    <p class="card-text"><?php echo $location; ?></p>
-                  </div>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Job Type</h5>
-                    <p class="card-text"><?php echo $job_type; ?></p>
-                  </div>
-                </div>
 
                 
                 <div class="detail-label">Pay:</div>
