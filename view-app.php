@@ -53,7 +53,7 @@ if(isLoggedIn() == false) {
         }
         .card-container {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between; /* Distribute space between items */
 }
 
