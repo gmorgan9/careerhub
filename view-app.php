@@ -86,7 +86,7 @@ if(isLoggedIn() == false) {
                     $timestamp = strtotime($updated_at);
                     $updated_at_formatted = date('M j, Y', $timestamp);
                 ?>
-                <div class="detail-label">Last updated: <div class="detail-value"><?php echo $updated_at_formatted; ?></div></div>
+                <p class="muted fs-6">Last updated: <?php echo $updated_at_formatted; ?></p>
                 
                 <div class="detail-label">Company:</div>
                 <div class="detail-value"><?php echo $company; ?></div>
