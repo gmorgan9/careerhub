@@ -152,6 +152,9 @@ td a:hover {
   /* header */
   
   @media (max-width: 1366px) {
+    .header {
+        height: 150px;
+    }
     .logo {
         text-align: center !important;
         margin: none !important;
