@@ -407,7 +407,10 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $updated_at = $row['updated_at']; // No need to convert to timestamp
 
                                         // Calculate time ago
-                                        $time_ago = time_elapsed_string($updated_at);
+                                        $new_time = time();
+                                        echo $new_time;
+                                        $time_ago = time_elapsed_string($updated_at, $new_time);
+                                        echo $time_ago;
                                         ?>
                                         <li class="list-group-item">
                                         <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
