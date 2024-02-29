@@ -231,9 +231,9 @@ if(isLoggedIn() == false) {
                             <div class="accordion-item">
                                 
                                 <h5 class="accordion-header" id="heading<?= $index ?>">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                                    <button class="accordion-button collapsed" id="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
                                         <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                                        <i class="chev bi bi-chevron-down" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
+                                        <i id="chev" class="bi bi-chevron-down" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
                                     </button>
                                 </h5>
                                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
@@ -273,7 +273,7 @@ if(isLoggedIn() == false) {
     document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM content loaded');
     
-    var accordionButton = document.getElementById('accordionButton');
+    var accordionButton = document.getElementById('accordion-button');
     console.log('Accordion button:', accordionButton);
     
     if (accordionButton) {
