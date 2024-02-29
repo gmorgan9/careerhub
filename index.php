@@ -73,7 +73,7 @@ if(isLoggedIn() == false) {
 
             .card-container {
             display: flex;
-            justify-content: space-between; 
+            justify-content: center; 
         }
         
         .card {
