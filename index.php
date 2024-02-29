@@ -389,9 +389,10 @@ if(isLoggedIn() == false) {
                                 $num_rows = mysqli_num_rows($result);
                                 if ($num_rows > 0) {
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        $status = $row['status'];
-                                        $job_title = $row['job_title'];
-                                        $company = $row['company'];
+                                        $app_id     = $row['app_id'];
+                                        $status     = $row['status'];
+                                        $job_title  = $row['job_title'];
+                                        $company    = $row['company'];
                                         $updated_at = $row['updated_at']; // No need to convert to timestamp
 
                                         // Calculate time ago
