@@ -58,18 +58,14 @@ if(isLoggedIn() == false) {
 }
 
 .card {
-    width: calc(33.33% - 50px); /* 33.33% for desktop layout */
+    width: calc(33.33% - 20px); /* 33.33% for desktop layout */
     margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    .card-container {
-        flex-direction: column; /* Stack cards vertically on mobile */
-        align-items: center;
-    }
-
+@media (min-width: 992px) { /* Adjust the breakpoint to target desktop screens */
     .card {
-        width: 100%; /* Take up full width on mobile */
+        width: calc(33.33% - 20px); /* 33.33% for desktop layout */
+        margin-bottom: 20px;
     }
 }
     </style>
