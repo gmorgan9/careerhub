@@ -409,7 +409,8 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $new_time = new DateTime("now", new DateTimeZone('America/Chicago'));
                                         $new_time_string = $new_time->format('h:i:s A');
                                         echo $new_time_string;
-                                        $new_updated_at = $updated_at->format('h:i:s A');
+                                        $updated_at_datetime = new DateTime($updated_at);
+                                        $new_updated_at = $updated_at_datetime->format('Y-m-d h:i:s A');
                                         echo $new_updated_at;
 
                                         $time_ago = time_elapsed_string($updated_at, $new_time_string);
