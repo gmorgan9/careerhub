@@ -218,11 +218,13 @@ if(isLoggedIn() == false) {
     // Check if $notes is not empty
     if (!empty($notes)) {
         // Split $notes into individual notes based on <h5> tags
-        preg_match_all('/<h5>(.*?)<\/h5>/', $notes, $matches);
+        preg_match_all('/<h5>(.*?)<\/h5>(.*?)<h5>|<h5>(.*?)<\/h5>(.*)$/', $notes, $matches, PREG_SET_ORDER);
 
         // Loop through each note
-        foreach ($matches[1] as $index => $title) {
-            // Display accordion item
+        foreach ($matches as $index => $match) {
+            // Extract title and content
+            $title = $match[1] ?? $match[3];
+            $content = $match[2] ?? $match[4];
             ?>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="heading<?= $index ?>">
@@ -232,7 +234,7 @@ if(isLoggedIn() == false) {
                 </h5>
                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
                     <div class="accordion-body">
-                    <?php echo $note; ?> <!-- Add back the <h5> tag removed during split -->
+                        <?= $content ?> <!-- Output the entire note including the <h5> tag -->
                     </div>
                 </div>
             </div>
