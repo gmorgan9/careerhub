@@ -89,6 +89,16 @@ if(isLoggedIn() == false) {
                 <p class="text-muted" style="font-size: 12px;">Last updated: <?php echo $updated_at_formatted; ?></p>
                 
                 <h4><i class="bi bi-briefcase-fill"></i> Job details</h4>
+
+
+                <div class="card" style="width: 12rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Company</h5>
+                    <p class="card-text"><?php echo $comapny; ?></p>
+                  </div>
+                </div>
+
+
                 <div class="detail-label">Company:</div>
                 <div class="detail-value"><?php echo $company; ?></div>
                 <div class="detail-label">Location:</div>
