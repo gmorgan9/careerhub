@@ -74,12 +74,11 @@ if(isLoggedIn() == false) {
             .card-container {
                 width: 75%;
             display: flex;
-            justify-content: center; 
         }
         
         .card {
-            width: calc(25%); /* 33.33% for desktop layout */
-            margin-bottom: 20px; /* Add space below cards */
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
         }
         
         @media (max-width: 992px) {
@@ -105,7 +104,7 @@ if(isLoggedIn() == false) {
 
 
     <!-- Top Row -->
-        <div class="card-container">
+        <div class="card-container justify-content-center">
 
         <!-- Open/Awaiting -->
             
