@@ -211,13 +211,28 @@ if(isLoggedIn() == false) {
 
                 <h4><i class="bi bi-file-earmark-text-fill"></i> Notes</h4>
 
-                <div class="detail-value">
-                    <?php if(!empty($notes)) {
-                        echo $notes;
-                    } else { ?>
-                        <span class="text-warning">No notes found.</span>
-                    <?php } ?>
+                <?php if (!empty($notes)) : ?>
+    <div id="accordion">
+        <?php foreach ($notes as $heading => $content) : ?>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="heading-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>" aria-expanded="true" aria-controls="collapse-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>">
+                        <?php echo $heading; ?>
+                    </button>
+                </h5>
+                <div id="collapse-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <?php echo $content; ?>
+                    </div>
                 </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php else : ?>
+    <div class="detail-value">
+        <span class="text-warning">No notes found.</span>
+    </div>
+<?php endif; ?>
                 
 
             <?php }
