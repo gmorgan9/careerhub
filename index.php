@@ -73,11 +73,11 @@ if(isLoggedIn() == false) {
 
             .card-container {
                 width: 75%;
-            display: flex;
+                display: flex;
         }
         
         .card {
-            width: calc(25% - 20px);
+            width: calc(25%);
             margin-bottom: 20px;
         }
         
