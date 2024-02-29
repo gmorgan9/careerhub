@@ -3,7 +3,7 @@
 require('../app/database/connection.php');
 
 // Fetch distinct companies from the database
-$query = "SELECT DISTINCT company FROM applications";
+$query = "SELECT DISTINCT company FROM applications WHERE status = 'Applied'";
 $result = mysqli_query($conn, $query);
 
 // Check if there are any rows returned
