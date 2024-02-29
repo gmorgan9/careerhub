@@ -214,7 +214,7 @@ if(isLoggedIn() == false) {
         <br>
         <?php
             // Pagination links
-            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
+            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied' || status = 'Interested';
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
             $total_pages = ceil($row["total"] / $limit);
