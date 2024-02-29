@@ -73,7 +73,7 @@ if(isLoggedIn() == false) {
 
 
 
-
+<?php echo $job_title; ?>
 
 
     <?php } } ?>
