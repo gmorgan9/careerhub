@@ -211,28 +211,26 @@ if(isLoggedIn() == false) {
 
                 <h4><i class="bi bi-file-earmark-text-fill"></i> Notes</h4>
 
-                <?php if (!empty($notes)) : ?>
-    <div id="accordion">
-        <?php foreach ($notes as $heading => $content) : ?>
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="heading-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>" aria-expanded="true" aria-controls="collapse-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>">
-                        <?php echo $heading; ?>
-                    </button>
-                </h5>
-                <div id="collapse-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?php echo strtolower(str_replace(' ', '-', $heading)); ?>" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        <?php echo $content; ?>
-                    </div>
+                <?php $notesArray = preg_split('/<h5>/', $notes, -1, PREG_SPLIT_NO_EMPTY);
+
+// Output Bootstrap accordion markup
+?>
+<div id="accordion">
+    <?php foreach ($notesArray as $index => $note): ?>
+        <div class="accordion-item">
+            <h5 class="accordion-header" id="heading<?= $index ?>">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                    <?= $index == 0 ? 'Notes' : 'Note ' . $index ?>
+                </button>
+            </h5>
+            <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
+                <div class="accordion-body">
+                    <?= $note ?>
                 </div>
             </div>
-        <?php endforeach; ?>
-    </div>
-<?php else : ?>
-    <div class="detail-value">
-        <span class="text-warning">No notes found.</span>
-    </div>
-<?php endif; ?>
+        </div>
+    <?php endforeach; ?>
+</div>
                 
 
             <?php }
