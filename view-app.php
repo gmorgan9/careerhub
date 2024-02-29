@@ -136,7 +136,7 @@ if(isLoggedIn() == false) {
                         <?php if($interview_set == 1 && $watchlist == 0){ ?>
                             <span class="ps-3 pe-3">|</span><i class="bi bi-person-video"></i>
                         <?php } else if($interview_set == 0 && $watchlist == 1) { ?>
-                            <span class="ps-3 pe-3"></span><i class="bi bi-watch"></i>
+                            <span class="pe-3"></span><i class="bi bi-watch"></i>
                         <?php } else if($interview_set == 1 && $watchlist == 1) { ?>
                             <span class="ps-3 pe-3">|</span><i class="bi bi-person-video"></i>&nbsp;&nbsp;<i class="bi bi-watch"></i>
                         <?php } else { }
