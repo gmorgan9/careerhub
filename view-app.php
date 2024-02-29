@@ -135,6 +135,29 @@ if(isLoggedIn() == false) {
                     </div>
                 </div>
 
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pay</h5>
+                            <p class="card-text"><?php echo $pay; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bonus Pay</h5>
+                            <p class="card-text"><?php echo !empty($bonus_pay) ? $bonus_pay : "No bonus pay found."; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Job Type</h5>
+                            <p class="card-text"><?php echo $job_type; ?></p>
+                        </div>
+                    </div>
+                </div>
+
 
                 
                 <div class="detail-label">Pay:</div>
