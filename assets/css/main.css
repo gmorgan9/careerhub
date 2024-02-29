@@ -187,6 +187,9 @@ td a:hover {
     padding: 10px 15px;
     margin-top: 5px;
 }
+.accordion-collapse:last-child {
+    border-radius: 15px;
+}
 
 .accordion-collapse.in {
     display: block;
