@@ -53,8 +53,8 @@ if(isLoggedIn() == false) {
         }
         .card-container {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between; /* Distribute space between items */
+    flex-wrap: wrap; /* Enable wrapping */
 }
 
 .card {
@@ -62,9 +62,9 @@ if(isLoggedIn() == false) {
     margin-bottom: 20px; /* Add space below cards */
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1170px) {
     .card {
-        width: 100%; /* Take full width on mobile */
+        width: calc(50% - 20px); /* 50% width on tablets */
     }
 }
 
