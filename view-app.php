@@ -233,7 +233,7 @@ if(isLoggedIn() == false) {
                                 <h5 class="accordion-header" id="heading<?= $index ?>">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
                                         <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                                        <span class="float-end"><i class="bi bi-chevron-down"></i></span>
+                                        <span class="text-end"><i class="bi bi-chevron-down"></i></span>
                                     </button>
                                 </h5>
                                 <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
