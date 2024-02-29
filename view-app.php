@@ -92,7 +92,7 @@ if(isLoggedIn() == false) {
 
 
                 <div class="card" style="width: 12rem;">
-                  <div class="card-body">
+                  <div class="card-body text-center">
                     <h5 class="card-title">Company</h5>
                     <p class="card-text"><?php echo $company; ?></p>
                   </div>
