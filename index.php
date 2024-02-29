@@ -77,7 +77,7 @@ if(isLoggedIn() == false) {
         }
         
         .card {
-            width: calc(25% - 20px); /* 33.33% for desktop layout */
+            width: calc(25%); /* 33.33% for desktop layout */
             margin-bottom: 20px; /* Add space below cards */
         }
         
