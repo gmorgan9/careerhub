@@ -147,3 +147,16 @@ td a:hover {
     color: white;
     background-color: #1e2327 !important;
   } */
+
+
+  /* header */
+  
+  @media (max-width: 1366px) {
+    .logo {
+        text-align: center !important;
+    }
+    .end {
+        float: none !important;
+        margin: none;
+    }
+}
