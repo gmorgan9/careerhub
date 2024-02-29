@@ -108,7 +108,7 @@ if(isLoggedIn() == false) {
 
         <!-- Open/Awaiting -->
             
-            <div class="card top-card me-2" style="width: 18rem;">
+            <div class="card me-2">
                 <a class="text-decoration-none text-black stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
