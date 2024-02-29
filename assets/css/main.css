@@ -154,7 +154,7 @@ td a:hover {
   @media (min-width: 1366px) {
 
     .end {
-        float: right !important;
+        float: right;
     }
     .end .badge {
     }
