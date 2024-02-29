@@ -165,7 +165,7 @@ if(isLoggedIn() == false) {
                     <div class="card">
                         <div class="card-body text-center">
                             <h5 class="card-title">Job Listing</h5>
-                            <p class="card-text"><a href="<?php echo $app_link; ?>">Visit Job Listing</a></p>
+                            <p class="card-text"><a href="<?php echo $app_link; ?>" target="_blank">Visit Job Listing</a></p>
                         </div>
                     </div>
                 </div>
