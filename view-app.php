@@ -82,6 +82,12 @@ if(isLoggedIn() == false) {
                 ?>
 
                 <h2><?php echo $job_title; ?></h2>
+                <?php 
+                    $timestamp = strtotime($updated_at);
+                    $updated_at_formatted = date('M j, Y', $timestamp);
+                ?>
+                <div class="detail-label">Last updated: <div class="detail-value"><?php echo $updated_at_formatted; ?></div></div>
+                
                 <div class="detail-label">Company:</div>
                 <div class="detail-value"><?php echo $company; ?></div>
                 <div class="detail-label">Location:</div>
@@ -104,8 +110,7 @@ if(isLoggedIn() == false) {
                 <div class="detail-value"><?php echo $interview_set; ?></div>
                 <div class="detail-label">Created At:</div>
                 <div class="detail-value"><?php echo $created_at; ?></div>
-                <div class="detail-label">Updated At:</div>
-                <div class="detail-value"><?php echo $updated_at; ?></div>
+                
 
             <?php }
         } ?>
