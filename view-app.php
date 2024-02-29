@@ -132,7 +132,6 @@ if(isLoggedIn() == false) {
                     <span>
                         Created: <?php echo $created_at_formatted; ?>
                     </span>
-                    <span class="ps-3 pe-3">|</span>
                     <span>
                         <?php if($interview_set == 1 && $watchlist == 0){ ?>
                             <span class="ps-3 pe-3">|</span><i class="bi bi-person-video"></i>
