@@ -124,10 +124,10 @@ if (isLoggedIn() == false) {
                         $local_date_time = $utc_date_time->setTimezone(new DateTimeZone('America/Denver'));
                         $formatted_date = $local_date_time->format('M d, Y');
                         ?>
-                        <?php $app_id_data = $row['app_id']; ?>
+                        <?php //$app_id_data = $row['app_id']; ?>
                         <li class="list-group-item float-end">
                             <?php echo $row['job_title']; ?>
-                            <a href="view-app.php?viewid=<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a>
+                            <a href="view-app.php?viewid=<?php echo $id; ?>" class="view float-end"><i class="bi bi-eye text-success"></i></a>
                             <!-- <a href="view-app.php?viewid=<?php //echo $id; ?>">View Details</a> -->
                         </li>
                     
