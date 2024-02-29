@@ -81,18 +81,6 @@ if(isLoggedIn() == false) {
     <h1 style="margin-left: 150px;" class="text-center">Welcome <strong><?php echo $_SESSION['fname']; ?></strong></h1>
 <?php endif ?>
 <br>
-<button onclick="executeScript()">Run Script</button>
-    <script>
-        function executeScript() {
-            // Send an AJAX request to execute the PowerShell script
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "execute_script.php", true);
-            xhr.send();
-        }
-    </script>
-<br>
-
-
 
 
 
