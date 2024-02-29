@@ -102,7 +102,22 @@ if(isLoggedIn() == false) {
                 $updated_at = $row['updated_at'];
                 ?>
 
-                <h2><?php echo $job_title; ?><span class="text-muted ps-3" style="font-size: 14px;"><?php echo $status; ?></span></h2>
+                <h2>
+                    <?php echo $job_title; ?>
+                    <span class="text-muted ps-3" style="font-size: 14px;">
+                        <?php if($status == 'Applied'){ ?>
+                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
+                        <?php } else if($status == 'Interviewed'){ ?>
+                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span></p>
+                        <?php } else if($status == 'Offered'){ ?>
+                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $status; ?></span></p>
+                        <?php } else if($status == 'Rejected'){ ?>
+                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span></p>
+                        <?php } else if($status == 'Interested'){ ?>
+                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span></p>
+                        <?php } ?>
+                    </span>
+                </h2>
 
                 <?php 
                     $timestamp = strtotime($updated_at);
