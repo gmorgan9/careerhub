@@ -30,67 +30,87 @@ if(isLoggedIn() == false) {
     <title>Job Management System</title>
 
     <style>
-        
+        .application-details {
+            background-color: rgb(240, 240, 240);
+            max-width: 80%;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .application-details h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .detail-label {
+            font-weight: bold;
+        }
+
+        .detail-value {
+            margin-bottom: 10px;
+        }
     </style>
-    
 </head>
 <body>
 
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
- <!-- main-container -->
- <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;">
+<div class="container-fluid main">
+    <div class="application-details">
+        <?php
+        $id = $_GET['viewid'];
+        $sql = "SELECT * FROM applications WHERE app_id=$id";
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            $num_rows = mysqli_num_rows($result);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $job_title = $row['job_title'];
+                $company = $row['company'];
+                $location = $row['location'];
+                $pay = $row['pay'];
+                $bonus_pay = $row['bonus_pay'];
+                $status = $row['status'];
+                $job_type = $row['job_type'];
+                $app_link = $row['app_link'];
+                $notes = $row['notes'];
+                $watchlist = $row['watchlist'];
+                $interview_set = $row['interview_set'];
+                $created_at = $row['created_at'];
+                $updated_at = $row['updated_at'];
+                ?>
 
-<br><br>
+                <h2><?php echo $job_title; ?></h2>
+                <div class="detail-label">Company:</div>
+                <div class="detail-value"><?php echo $company; ?></div>
+                <div class="detail-label">Location:</div>
+                <div class="detail-value"><?php echo $location; ?></div>
+                <div class="detail-label">Pay:</div>
+                <div class="detail-value"><?php echo $pay; ?></div>
+                <div class="detail-label">Bonus Pay:</div>
+                <div class="detail-value"><?php echo $bonus_pay; ?></div>
+                <div class="detail-label">Status:</div>
+                <div class="detail-value"><?php echo $status; ?></div>
+                <div class="detail-label">Job Type:</div>
+                <div class="detail-value"><?php echo $job_type; ?></div>
+                <div class="detail-label">Application Link:</div>
+                <div class="detail-value"><?php echo $app_link; ?></div>
+                <div class="detail-label">Notes:</div>
+                <div class="detail-value"><?php echo $notes; ?></div>
+                <div class="detail-label">Watchlist:</div>
+                <div class="detail-value"><?php echo $watchlist; ?></div>
+                <div class="detail-label">Interview Set:</div>
+                <div class="detail-value"><?php echo $interview_set; ?></div>
+                <div class="detail-label">Created At:</div>
+                <div class="detail-value"><?php echo $created_at; ?></div>
+                <div class="detail-label">Updated At:</div>
+                <div class="detail-value"><?php echo $updated_at; ?></div>
 
-    <?php
-            $id = $_GET['viewid'];
-            $sql = "SELECT * FROM applications WHERE app_id=$id";
-            $result = mysqli_query($conn, $sql);
-            if($result) {
-                $num_rows = mysqli_num_rows($result);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $app_id          = $row['app_id'];
-                    $job_title      = $row['job_title'];
-                    $comapny        = $row['company'];
-                    $location       = $row['location'];
-                    $job_desc       = $row['job_desc'];
-                    $pay            = $row['pay'];
-                    $bonus_pay      = $row['bonus_pay'];
-                    $status         = $row['status'];
-                    $job_type       = $row['job_type'];
-                    $app_link       = $row['app_link'];
-                    $contact_name   = $row['contact_name'];
-                    $contact_phone  = $row['contact_phone'];
-                    $contact_email  = $row['contact_email'];
-                    $start_date     = $row['start_date'];
-                    $resume_used    = $row['resume_used'];
-                    $notes          = $row['notes'];
-                    $watchlist      = $row['watchlist'];
-                    $interview_set  = $row['interview_set'];
-    ?>
-
-
-
-
-<?php echo $job_title; ?>
-
-
-    <?php } } ?>
-
-
-
+            <?php }
+        } ?>
+    </div>
 </div>
-<!-- END main-container -->
-
-<br><br><br>
-
-
-
-
-
-
-
 
 </body>
 </html>
