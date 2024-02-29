@@ -125,9 +125,10 @@ if (isLoggedIn() == false) {
                         $formatted_date = $local_date_time->format('M d, Y');
                         ?>
                         <?php $app_id_data = $row['app_id']; ?>
-                        <li class="list-group-item">
+                        <li class="list-group-item float-end">
                             <?php echo $row['job_title']; ?>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" data-app-id="<?php echo $id; ?>">View Details</a>
+                            <a href="view-app.php?viewid=<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a>
+                            <!-- <a href="view-app.php?viewid=<?php //echo $id; ?>">View Details</a> -->
                         </li>
                     
                         <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
