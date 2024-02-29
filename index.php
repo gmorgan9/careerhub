@@ -413,7 +413,7 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $new_updated_at = $updated_at_datetime->format('Y-m-d h:i:s A');
                                         echo $new_updated_at;
 
-                                        $time_ago = time_elapsed_string($updated_at, $new_time_string);
+                                        $time_ago = time_elapsed_string($new_updated_at, $new_time_string);
                                         echo $time_ago;
                                         ?>
                                         <li class="list-group-item">
