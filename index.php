@@ -407,7 +407,7 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $updated_at = $row['updated_at']; // No need to convert to timestamp
 
                                         // Calculate time ago
-                                        $new_time = time();
+                                        $new_time = new DateTime("now", new DateTimeZone('America/New_York') );
                                         echo $new_time;
                                         $time_ago = time_elapsed_string($updated_at, $new_time);
                                         echo $time_ago;
