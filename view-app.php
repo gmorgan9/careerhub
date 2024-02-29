@@ -217,29 +217,20 @@ if(isLoggedIn() == false) {
     <?php
     // Check if $notes is not empty
     if (!empty($notes)) {
-        // Split $notes into individual notes based on <h5> tags
-        preg_match_all('/<h5>(.*?)<\/h5>(.*?)<h5>|<h5>(.*?)<\/h5>(.*)$/', $notes, $matches, PREG_SET_ORDER);
-
-        // Loop through each note
-        foreach ($matches as $index => $match) {
-            // Extract title and content
-            $title = $match[1] ?? $match[3];
-            $content = $match[2] ?? $match[4];
-            ?>
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="heading<?= $index ?>">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
-                    </button>
-                </h5>
-                <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        <?= $content ?> <!-- Output the entire note including the <h5> tag -->
-                    </div>
+        ?>
+        <div class="accordion-item">
+            <div class="accordion-header" id="heading0">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                    Notes
+                </button>
+            </div>
+            <div id="collapse0" class="accordion-collapse collapse" aria-labelledby="heading0" data-bs-parent="#accordion">
+                <div class="accordion-body">
+                    <?= $notes ?> <!-- Output the entire $notes content -->
                 </div>
             </div>
-            <?php
-        }
+        </div>
+        <?php
     } else {
         // Display message if $notes is empty
         ?>
