@@ -41,7 +41,7 @@ if(isLoggedIn() == false) {
 
         .application-details h2 {
             /* color: #333; */
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .detail-label {
@@ -86,7 +86,7 @@ if(isLoggedIn() == false) {
                     $timestamp = strtotime($updated_at);
                     $updated_at_formatted = date('M j, Y', $timestamp);
                 ?>
-                <p class="text-muted" style="font-size: 10px;">Last updated: <?php echo $updated_at_formatted; ?></p>
+                <p class="text-muted" style="font-size: 12px;">Last updated: <?php echo $updated_at_formatted; ?></p>
                 
                 <div class="detail-label">Company:</div>
                 <div class="detail-value"><?php echo $company; ?></div>
