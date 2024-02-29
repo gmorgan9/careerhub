@@ -31,12 +31,12 @@ if(isLoggedIn() == false) {
 
     <style>
         .application-details {
-            background-color: rgb(240, 240, 240);
+            /* background-color: rgb(240, 240, 240); */
             max-width: 80%;
-            border-radius: 15px;
+            /* border-radius: 15px; */
             padding: 20px;
             margin: 20px auto;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
         }
 
         .application-details h2 {
@@ -58,7 +58,7 @@ if(isLoggedIn() == false) {
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
 <div class="container-fluid main">
-    <div class="application-">
+    <div class="application-details">
         <?php
         $id = $_GET['viewid'];
         $sql = "SELECT * FROM applications WHERE app_id=$id";
