@@ -72,7 +72,7 @@ if(isLoggedIn() == false) {
             }
 
             .card-container {
-                width: 850px;
+                width: 
             display: flex;
             justify-content: space-between; 
         }
@@ -105,7 +105,7 @@ if(isLoggedIn() == false) {
 
 
     <!-- Top Row -->
-        <div class="card-container">
+        <div class="card-container justify-content-center">
 
         <!-- Open/Awaiting -->
             
