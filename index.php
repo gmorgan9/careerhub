@@ -405,10 +405,6 @@ function time_elapsed_string($updated_at, $current_time = null, $full = false) {
                                         $company    = $row['company'];
                                         $updated_at = $row['updated_at']; // No need to convert to timestamp
 
-                                        $new_time = new DateTime("now", new DateTimeZone('America/Chicago'));
-                                        $new_time_string = $new_time->format('Y-m-d h:i:s A');
-                                        $updated_at_datetime = new DateTime($updated_at);
-                                        $new_updated_at = $updated_at_datetime->format('Y-m-d h:i:s A');
                                         $time_ago = time_elapsed_string($updated_at);
                                         ?>
                                         <li class="list-group-item">
