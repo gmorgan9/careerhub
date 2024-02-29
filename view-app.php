@@ -104,15 +104,15 @@ if(isLoggedIn() == false) {
 
                 <h2>
                     <?php echo $job_title; ?>
-                    <span class="text-muted ps-3" style="font-size: 14px;">
+                    <span class="ps-3" style="font-size: 14px;">
                         <?php if($status == 'Applied'){ ?>
-                            <p><span class="" style=""><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
+                            <<span><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Interviewed'){ ?>
-                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span></p>
+                            <<span><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Offered'){ ?>
-                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $status; ?></span></p>
+                            <span><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Rejected'){ ?>
-                            <span><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span>
+                            <span><i style="font-size: 12px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Interested'){ ?>
                             <span><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } ?>
