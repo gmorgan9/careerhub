@@ -138,8 +138,14 @@ if(isLoggedIn() == false) {
                 <div class="card-container">
                     <div class="card">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Pay</h5>
-                            <p class="card-text"><?php echo $pay; ?></p>
+                            <h5 class="card-title">Base Pay</h5>
+                            <p class="card-text">
+                                <?php if(!empty($pay)) {
+                                    echo $pay;
+                                } else { ?>
+                                <span class="text-warning">No base pay found.</span>
+                                <?php } ?>
+                            </p>
                         </div>
                     </div>
 
@@ -158,18 +164,15 @@ if(isLoggedIn() == false) {
 
                     <div class="card">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Job Type</h5>
-                            <p class="card-text"><?php echo $job_type; ?></p>
+                            <h5 class="card-title">Job Listing</h5>
+                            <p class="card-text"><a href="<?php echo $job_type; ?>">Visit Job Listing</a></p>
                         </div>
                     </div>
                 </div>
 
 
                 
-                <div class="detail-label">Pay:</div>
-                <div class="detail-value"><?php echo $pay; ?></div>
-                <div class="detail-label">Bonus Pay:</div>
-                <div class="detail-value"><?php echo $bonus_pay; ?></div>
+                
                 <div class="detail-label">Status:</div>
                 <div class="detail-value"><?php echo $status; ?></div>
                 
