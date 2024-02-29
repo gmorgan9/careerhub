@@ -106,7 +106,7 @@ if(isLoggedIn() == false) {
                     <?php echo $job_title; ?>
                     <span class="text-muted ps-3" style="font-size: 14px;">
                         <?php if($status == 'Applied'){ ?>
-                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
+                            <p><span class="" style=""><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
                         <?php } else if($status == 'Interviewed'){ ?>
                             <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span></p>
                         <?php } else if($status == 'Offered'){ ?>
@@ -114,7 +114,7 @@ if(isLoggedIn() == false) {
                         <?php } else if($status == 'Rejected'){ ?>
                             <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span></p>
                         <?php } else if($status == 'Interested'){ ?>
-                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span></p>
+                            <p><span class="" style=""><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-secondary"></i> &nbsp; <?php echo $status; ?></span></p>
                         <?php } ?>
                     </span>
                 </h2>
