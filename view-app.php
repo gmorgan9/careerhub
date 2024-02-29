@@ -146,7 +146,13 @@ if(isLoggedIn() == false) {
                     <div class="card">
                         <div class="card-body text-center">
                             <h5 class="card-title">Bonus Pay</h5>
-                            <p class="card-text"><?php echo !empty($bonus_pay) ? $bonus_pay : "No bonus pay found."; ?></p>
+                            <p class="card-text">
+                                <?php if(!empty($bonus_pay)) {
+                                    echo $bonus_pay;
+                                } else { ?>
+                                <span class="text-warning">No bonus pay found.</span>
+                                <?php } ?>
+                            </p>
                         </div>
                     </div>
 
