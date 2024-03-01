@@ -108,7 +108,7 @@ if(isLoggedIn() == false) {
                         <?php if($status == 'Applied'){ ?>
                             <span><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Interviewed'){ ?>
-                            <<span><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span>
+                            <span><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Offered'){ ?>
                             <span><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $status; ?></span>
                         <?php } else if($status == 'Rejected'){ ?>
