@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "dbuser";
 $password = "DBuser123!";
-$dbname = "jms";
+$dbname = "application_management";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 

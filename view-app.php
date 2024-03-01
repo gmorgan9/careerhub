@@ -134,7 +134,7 @@ if(isLoggedIn() == false) {
                         Last updated: <?php echo $updated_at_formatted; ?>
                     </span>
                     <span>
-                        Created: <?php echo $created_at_formatted; ?>
+                        Applied: <?php echo $created_at_formatted; ?>
                     </span>
                     <span>
                         <?php if($interview_set == 1 && $watchlist == 0){ ?>
