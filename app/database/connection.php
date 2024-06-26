@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "dbuser";
 $password = "DBuser123!";
-$dbname = "application_management";
+$dbname = "careerhub";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
 
