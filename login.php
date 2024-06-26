@@ -1,21 +1,21 @@
 <?php
 date_default_timezone_set('America/Denver');
-// require_once "app/database/connection.php";
+require_once "app/database/connection.php";
 require_once "path.php";
 session_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// $files = glob("app/functions/*.php");
-// foreach ($files as $file) {
-//     require_once $file;
-// }
+$files = glob("app/functions/*.php");
+foreach ($files as $file) {
+    require_once $file;
+}
 
-// loginUser($conn);
-// if(isLoggedIn() == true) {
-//     header('location:' . BASE_URL . '/');
-// }
+loginUser($conn);
+if(isLoggedIn() == true) {
+    header('location:' . BASE_URL . '/');
+}
 
 ?>
 
@@ -49,13 +49,13 @@ ini_set('display_errors', 1);
             //         echo '<div class="alert alert-danger error-msg" role="alert">'.$err.'</div>';
             //     }
             // }
-            // if (isset($_SESSION['error'])) {
-            //     foreach ($_SESSION['error'] as $error) {
-            //         echo '<div class="alert alert-danger error-msg" role="alert">' . $error . '</div>';
-            //     }
-            //     // Clear the error messages after displaying them
-            //     unset($_SESSION['error']);
-            // }
+            if (isset($_SESSION['error'])) {
+                foreach ($_SESSION['error'] as $error) {
+                    echo '<div class="alert alert-danger error-msg" role="alert">' . $error . '</div>';
+                }
+                // Clear the error messages after displaying them
+                unset($_SESSION['error']);
+            }
         ?>
         <form class="form1" method="POST">
             <input class="un " type="text" placeholder="Username" name="uname">
