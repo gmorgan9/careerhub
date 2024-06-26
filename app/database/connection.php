@@ -1,8 +1,8 @@
 <?php
 
 $host = "localhost";
-$username = "dbuser";
-$password = "DBuser123!";
+$username = "dbadmin";
+$password = "DBadmin123!";
 $dbname = "careerhub";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);
