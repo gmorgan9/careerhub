@@ -69,7 +69,7 @@
         </nav>
     <!-- End Navbar -->
 
-    <div class="container">
+    <div class="container w-100">
         <div class="page_title">
             <h2>
                 Contact
