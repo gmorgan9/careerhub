@@ -77,7 +77,7 @@
                 Contact
             </h2>
         </div>
-        <div class="content text-white" style="max-width: 1320px; margin 0 auto;">
+        <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
             <div class="row">
                 <div class=" col-xs-12 col-sm-4 ">
                     text
