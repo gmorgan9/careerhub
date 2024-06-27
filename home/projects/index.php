@@ -117,6 +117,7 @@ logoutUser($conn);
         </div> <!-- end -->
 
         <div id="offcanvas"></div>
+        <button onclick="closeOffcanvas()">Close</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
