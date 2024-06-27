@@ -59,7 +59,7 @@
                 <p class="text-secondary">
                     Cybersecurity Ethusiast
                 </p>
-                <h2 class="text-white" style="font-size: 35px;">
+                <h2 class="text-white" style="font-size: 48px;">
                     Garrett Morgan
                 </h2>
                 <p style="color: #d5d5d5;">
