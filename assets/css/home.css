@@ -1,6 +1,7 @@
 :root {
     --primary-color: #994E4E;
     --light-gray: #333333;
+    --background-color: #222222;
   }
 
 .nav-link:hover {
@@ -456,6 +457,6 @@ figure {
     transition: transform 450ms ease-out, opacity 450ms ease-out; */
 }
 .custom-modal-bg {
-    background-color: #444;
+    background-color: var(--background-color);
     color: white; /* Optional: Change text color for better contrast */
 }
