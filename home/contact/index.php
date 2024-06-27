@@ -108,7 +108,7 @@
                 <div class=" col-xs-12 col-sm-4 ">
                     <div class="info-block">
                         <div class="info-icon">
-                            <i class="bi bi-geo-ip"></i>
+                            <i class="bi bi-geo-alt"></i>
                         </div>
                         <div class="info-text">
                             <h4>McKinney, TX</h4>
