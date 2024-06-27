@@ -121,7 +121,9 @@ logoutUser($conn);
                 <div class="modal-content custom-modal-bg">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body d-flex justify-content-center">
-                        Testing here
+                        <p>
+                            Testing here
+                        </p>
                     </div>
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button> -->
