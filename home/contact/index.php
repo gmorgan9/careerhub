@@ -216,7 +216,9 @@
                                     </div>
                                 </div>
                                 <div class="right-column">
-                                    <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                    <div class="form-group">
+                                        <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                    </div>
                                 </div>
                                 <input type="submit" class="form-btn" value="Send message">
                              </div>
