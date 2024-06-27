@@ -64,9 +64,16 @@ foreach ($files as $file) {
                         <a class="nav-link text-secondary" href="/login">Login</a>
                     </li>
                     <?php } else { ?>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/login">Dashboard</a>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button">
+                                Dashboard
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                                <li><a class="dropdown-item" href="/settings">Settings</a></li>
+                                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
                     <?php } ?>
                 </ul>
             </div>
