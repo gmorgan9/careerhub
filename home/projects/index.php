@@ -117,7 +117,7 @@ logoutUser($conn);
     <div class="portfolio-page-content">
         <div class="portfolio-page-wrapper">
 
-            <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+            
             <nav class="portfolio-page-nav">
               <div class="nav-item portfolio-page-close-button">
                   <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
@@ -127,6 +127,7 @@ logoutUser($conn);
             </nav>
 
             <div class="offcanvas-body">
+                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
                 <p>Your PHP Page Content</p>
             </div>
         </div>
