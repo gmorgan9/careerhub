@@ -29,7 +29,7 @@
             border-bottom: 1px solid #333333;
             padding: 65px 70px;
             /* margin-right: -150px; */
-            margin-left: -150px;
+            margin-left: -200px;
             margin-top: 100px;
             margin-bottom: 65px;
             text-align: left;
