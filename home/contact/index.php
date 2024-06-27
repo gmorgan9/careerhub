@@ -192,9 +192,6 @@
                             <!-- ------ -->
                             <div class="mb-3">
                                 <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
-                                    <div pseudo="placeholder">Full Name</div>
-                                    <div contenteditable="plaintext-only"></div>
-                                </input>
                             </div>
                             <!-- ------ -->
                             <button class="form-btn" style="">Send message</button>
