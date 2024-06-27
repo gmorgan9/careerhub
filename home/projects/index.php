@@ -120,7 +120,7 @@ logoutUser($conn);
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content custom-modal-bg">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="modal-body">
+                    <div class="modal-body d-flex justify-content-center">
                         Testing here
                     </div>
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
