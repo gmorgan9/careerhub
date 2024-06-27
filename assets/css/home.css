@@ -463,3 +463,6 @@ figure {
 .modal-body {
     width: 75% !important;
 }
+.modal-body p {
+    text-align: left; /* Ensure the text is left-aligned */
+}
