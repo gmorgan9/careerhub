@@ -118,6 +118,10 @@
             outline: none;
             font-family: poppins,Helvetica,sans-serif;
         }
+        .form-group {
+            position: relative;
+            margin: 0 0 21.5px;
+        }
         .form-input {
             color: #eee;
             background-color: transparent;
@@ -201,9 +205,15 @@
                             <!-- ------ -->
                              <div class="controls">
                                 <div class="left-column">
-                                    <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
-                                    <input id="email" type="text" name="name" class="form-input" placeholder="Email Address" required="required" data-error="Email Address is required.">
-                                    <input id="subject" type="text" name="name" class="form-input" placeholder="Subject" required="required" data-error="Subject is required.">
+                                    <div class="form-group">
+                                        <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="email" type="text" name="name" class="form-input" placeholder="Email Address" required="required" data-error="Email Address is required.">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="subject" type="text" name="name" class="form-input" placeholder="Subject" required="required" data-error="Subject is required.">
+                                    </div>
                                 </div>
                                 <div class="right-column">
                                     <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
