@@ -39,11 +39,19 @@
         .title {
             font-size: 44px;
         }
+        .info-block {
+            position: relative;
+            text-align: left;
+            width: 100%;
+            display: table;
+            margin: 0;
+            padding: 0 10px 30px 0;
+        }
         .info-icon {
             position: relative;
             display: table-cell;
             padding: 0 10px 5px 0;
-            width: 44px;
+            font-size: 44px;
         }
         .info-text {
             position: relative;
