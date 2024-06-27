@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #994E4E;
+    --white: #ffffff;
+  }
+
 .nav-link:hover {
     color: white !important;
 }
@@ -7,16 +12,16 @@
 .form-btn {
     background-color: rgb(51,51,51); 
     border-radius: 50px; 
-    border: 2px solid #994E4E; 
+    border: 2px solid var(--primary-color); 
     padding: 15px 25px; 
     text-decoration: none; 
     color: white;
 }
 .form-btn:hover {
-    background-color: #994E4E !important;
+    background-color: var(--primary-color) !important;
 }
 .download_btn:hover {
-    background-color: #994E4E !important;
+    background-color: var(--primary-color) !important;
 }
 .contact_btn:hover {
     color: rgb(59,59,59) !important;
@@ -49,7 +54,7 @@
     display: table-cell;
     padding: 0 10px 5px 0;
     font-size: 35px;
-    color: #994E4E;
+    color: var(--primary-color);
 }
 .info-text {
     position: relative;
@@ -83,7 +88,7 @@
     position: absolute;
     content: '';
     width: 30px;
-    background-color: #994E4E;
+    background-color: var(--primary-color);
     height: 2px;
     bottom: 0;
 }
@@ -206,7 +211,7 @@
     padding: 25px 0 20px 40px;
 }
 .timeline-item h5.item-period {
-    border-color: #007ced;
+    border-color: var(--primary-color);
     color: #d5d5d5;
     background-color: #222;
 }
@@ -220,7 +225,7 @@
     margin: 0 0 5px -40px;
     padding: 0 10px;
     line-height: 23px;
-    border: 2px solid #7066ff;
+    border: 2px solid var(--primary-color);
     border-radius: 30px;
 }
 .timeline-item .item-company {
