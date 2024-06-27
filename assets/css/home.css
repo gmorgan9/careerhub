@@ -498,3 +498,22 @@ figure {
     background-color: var(--background-color);
     color: white;
 }
+.portfolio-page-wrapper .block-title h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    display: block;
+    position: relative;
+    padding: 25px 30px;
+    background-color: #333;
+    border-radius: 15px;
+    border: 2px solid #444;
+    margin-left: 20px;
+}
+.project-general-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
