@@ -72,6 +72,15 @@
             z-index: 1;
             padding-bottom: 7px;
         }
+        .block-title h2:before {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 100%;
+            background-color: #f5f5f5;
+            height: 2px;
+            bottom: 0;
+        }
         .block-title h2:after {
             display: block;
             position: absolute;
