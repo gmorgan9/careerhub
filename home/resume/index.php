@@ -95,11 +95,21 @@
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <h5 class="item-period ">2023</h5>
-                            <span class="item-company">Brigham Young University</span>
-                            <h4 class="item-title">Bachelor of Science in Cybersecurity</h4>
+                            <h5 class="item-period ">Jan 2023 - July 2023</h5>
+                            <span class="item-company">Arctic Wolf</span>
+                            <h4 class="item-title">Triage Security Analyst Intern</h4>
                             <div class="text">
-        	                    Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.
+                                <ul>
+                                    <li>
+                                        Triaged 500+ customer requests daily, applied playbook driven solutions, and initiated incident investigations.
+                                    </li>
+                                    <li>
+                                        Developed new run books resulting in a 20% increase in team efficiency through streamlined processes and enhanced knowledge management.
+                                    </li>
+                                    <li>
+                                        Troubleshot and resolved over 100 issues with sensors and scanners, achieving a 97% success rate in maintaining operational health and minimizing downtime..
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="timeline-item">
