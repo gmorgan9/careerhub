@@ -58,8 +58,10 @@
             position: relative;
             display: table-cell;
             padding: 0 0 0 15px;
-            font-size: 18px;
             vertical-align: middle;
+        }
+        .info-text h4 {
+            font-size: 25px;
         }
     </style>
 </head>
