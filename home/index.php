@@ -15,11 +15,17 @@
         <div class="left">
             <a href="home/" class="text-white text-decoration-none">
                 <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
-                &nbsp;<span style="font-size: 24px;"><strong>Garrett</strong> Morgan</span>
+                &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
             </a>
         </div>
         <div class="right">
-            test2
+            <ul>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Resume</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
         </div>
     </nav>
 
