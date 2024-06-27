@@ -62,7 +62,7 @@
             <div class="col-sm-12 col-md-5 col-lg-5">
                 <img src="../assets/images/home-image.png" alt="">
             </div>
-            <div class="col-sm-12 col-md-7 col-lg-7 d-flex align-items-center">
+            <div class="col-sm-12 col-md-7 col-lg-7 d-flex align-items-center flex-column">
                 <p class="text-secondary">
                     Cybersecurity Ethusiast
                 </p>
