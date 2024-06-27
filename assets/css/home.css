@@ -459,5 +459,4 @@ figure {
 .custom-modal-bg {
     background-color: var(--background-color);
     color: white; /* Optional: Change text color for better contrast */
-    width: 75%;
 }
