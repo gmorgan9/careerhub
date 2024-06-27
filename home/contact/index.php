@@ -99,7 +99,7 @@
             bottom: 0;
         }
         /* form */
-        .form-control {
+        .form-input {
             color: #eee;
             background-color: transparent;
             border-color: #555;
@@ -172,7 +172,7 @@
                         <form action="">
                             <!-- ------ -->
                             <div class="mb-3">
-                                <input id="full_name" type="text" name="name" class="" placeholder="Full Name" required="required" data-error="Name is required.">
+                                <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
                                     <div pseudo="placeholder">Full Name</div>
                                     <div contenteditable="plaintext-only"></div>
                                 </input>
