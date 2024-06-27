@@ -160,6 +160,7 @@
     position: relative;
     margin: 60px -70px -60px;
     padding: 15px 45px;
+    width: 100%;
     /* background-color: #fdfdfd; */
     border-top: 2px solid #333333;
     /* border-bottom-left-radius: 40px; */
