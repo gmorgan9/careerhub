@@ -141,7 +141,7 @@
                     <div class=" col-xs-12 col-sm-6 "> <!-- Network+ -->
                         <div class="certificate-item clearfix">
                             <div class="cert-logo">
-                                <img decoding="async" src="../../assets/images/cert-logos/networkplus-logo-2.png" alt="logo">
+                                <img decoding="async" src="../../assets/images/cert-logos/networkplus-logo-3.jpeg" alt="logo">
                             </div>
                             <div class="cert-content">
                                 <div class="cert-title">
