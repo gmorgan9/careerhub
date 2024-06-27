@@ -43,7 +43,7 @@ logoutUser($conn);
             <div class="left">
                 <a href="/home" class="text-white text-decoration-none">
                     <img src="../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
-                    &nbsp;<span style="font-size: 20px; margin-top: -5px;"><strong>Garrett</strong> Morgan</span>
+                    &nbsp;<span style="font-size: 20px; margin-top: -15px !important;"><strong>Garrett</strong> Morgan</span>
                 </a>
             </div>
             <div class="right">
