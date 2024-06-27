@@ -81,7 +81,17 @@
                             <span class="item-company">AARC-360</span>
                             <h4 class="item-title">Staff Audit Consultant</h4>
                             <div class="text">
-        	                    Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.
+                                <ul>
+                                    <li>
+                                        Conducted over 15 comprehensive audits, specializing in IT Security Audits and Assessments including SSAE 21 (SOC 1 and SOC 2), PCI DSS Assessments, and HITRUST certifications.
+                                    </li>
+                                    <li>
+                                        Collaborated with clients to identify and implement improvements in each audit, resulting in a 20% increase in their overall security posture.
+                                    </li>
+                                    <li>
+                                        Delivered comprehensive reports to client leadership, outlining findings, risks, and strategic recommendations, resulting in a 15% increase in informed decision-making efficiency.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="timeline-item">
