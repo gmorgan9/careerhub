@@ -68,6 +68,43 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="block-title">
+                    <h2>Fun Facts</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                <div class="lm-info-block">
+                    <i class="bi bi-heart"></i>
+                    <h4>Happy Clients</h4>
+                    <span class="lm-info-block-value">578</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="lm-info-block">
+                    <i class="bi bi-heart"></i>
+                    <h4>Happy Clients</h4>
+                    <span class="lm-info-block-value">578</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="lm-info-block">
+                    <i class="bi bi-heart"></i>
+                    <h4>Happy Clients</h4>
+                    <span class="lm-info-block-value">578</span>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="lm-info-block">
+                    <i class="bi bi-heart"></i>
+                    <h4>Happy Clients</h4>
+                    <span class="lm-info-block-value">578</span>
+                </div>
+            </div>
+        </div>
 
         <footer class="site-footer">
             <div class="footer-socials">
