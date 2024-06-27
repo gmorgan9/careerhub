@@ -111,15 +111,13 @@ logoutUser($conn);
                             
                         </figure>
                     </div>
-
-                    
                     <!-- Button to toggle the offcanvas -->
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
   Toggle top offcanvas
 </button>
 
 <!-- Offcanvas container -->
-<div class="offcanvas offcanvas-lg" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
