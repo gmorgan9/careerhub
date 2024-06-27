@@ -58,7 +58,7 @@
             position: relative;
             display: table-cell;
             padding: 0 0 0 15px;
-            vertical-align: middle;
+            /* vertical-align: middle; */
         }
         .info-text h4 {
             font-size: 18px;
