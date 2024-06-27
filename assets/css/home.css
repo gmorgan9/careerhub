@@ -389,10 +389,13 @@ img {
     display: inline-block;
 }
 .portfolio-filters li a, .portfolio-filters li a:hover, .portfolio-filters li a:not([href]) {
-    color: #222;
+    color: #f5f5f5;
     font-size: 12px;
     line-height: 1.5;
     padding: 3px 14px;
     text-decoration: none;
     opacity: .5;
+}
+.portfolio-filters li.active a, .portfolio-filters li.active a:hover, .portfolio-filters li a:hover {
+    opacity: 1;
 }
