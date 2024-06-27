@@ -28,8 +28,8 @@
             border-top: 1px solid #333333;
             border-bottom: 1px solid #333333;
             padding: 65px 70px;
-            /* margin-right: -70px;
-            margin-left: -70px; */
+            margin-right: -70px;
+            margin-left: -70px;
             margin-top: 100px;
             margin-bottom: 65px;
             text-align: left;
