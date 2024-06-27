@@ -299,3 +299,6 @@
     display: block;
     margin: 15px 0 10px;
 }
+.lm-info-block h4 {
+    color: #fff;
+}
