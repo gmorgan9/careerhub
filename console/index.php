@@ -117,8 +117,8 @@ if(isLoggedIn() == false) {
                             Admin
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                            <a class="dropdown-item" href="/dashboard">Add Project</a>
-                            <a class="dropdown-item" href="/dashboard">Add Certification</a>
+                            <a class="dropdown-item" href="/console/admin/add-project">Add Project</a>
+                            <a class="dropdown-item" href="/console/admin/add-certification">Add Certification</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.php?logout=1">Settings</a>
                         </div>

@@ -30,7 +30,7 @@ foreach ($files as $file) {
     <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
 
 
-    <title>Admin - MorganServer Career Hub</title>
+    <title>Add Certification - MorganServer Career Hub</title>
 
     
 </head>
@@ -52,22 +52,17 @@ foreach ($files as $file) {
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/console">Console</a>
                     </li>
-                    <?php //if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 1) { ?>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                                <a class="dropdown-item" href="/dashboard">Dashboard</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index.php?logout=1">Logout</a>
-                            </div>
-                        </li>   -->
-                    <?php //} else { ?>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link text-secondary" href="/login">Login</a>
-                        </li> -->
-                    <?php// } ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                            <a class="dropdown-item" href="/console/admin/add-project">Add Project</a>
+                            <a class="dropdown-item" href="/console/admin/add-certification">Add Certification</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.php?logout=1">Settings</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
