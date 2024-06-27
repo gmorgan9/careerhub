@@ -71,11 +71,55 @@ foreach ($files as $file) {
 
                     <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
 
-                        <a href=""></a>
+                        <div class="page_title">
+                            <h2 class="text-white title">
+                                Add Project
+                            </h2>
+                        </div>
+
+
+                        <div class="form">
+                            <form action="" method="">
+                                <div class="controls two-columns">
+                                    <div class="left-column">
+                                        <div class="form-group">
+                                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="subject" type="text" name="name" class="form-input" placeholder="Subject" required="required" data-error="Subject is required.">
+                                        </div>
+                                    </div>
+                                    <div class="right-column">
+                                        <div class="form-group">
+                                            <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="form-btn" value="Send message">
+                                </div>
+                            </form>
+                        </div>
                         
 
 
                     </div>
+
+
+                    <footer class="site-footer">
+                        <div class="footer-socials">
+                            <ul class="footer-social-links">
+                                <li><a href="#" target="_blank">Twitter</a></li>
+                                <li><a href="#" target="_blank">Facebook</a></li>
+                                <li><a href="#" target="_blank">Instagram</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="footer-copyright">
+                            <p>© 2024 All rights reserved.</p>
+                        </div>
+                    </footer>
                    
 
 
