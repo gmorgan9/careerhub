@@ -353,20 +353,20 @@ img {
     padding: 20px 25px;
     vertical-align: middle;
 }
-.certi-title h4 {
+.cert-title h4 {
     font-size: 16px;
     margin: 0 0 5px;
 }
-.certi-id {
+.cert-id {
     font-size: .9em;
     color: #aaa;
 }
-.certi-date {
+.cert-date {
     font-size: .7em;
     color: #aaa;
     opacity: .7;
 }
-.certi-company {
+.cert-company {
     /* font-size: .7em; */
     color: var(--primary-color);
     /* opacity: .7; */
