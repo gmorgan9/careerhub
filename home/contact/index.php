@@ -166,6 +166,16 @@
             display: inline-block;
             margin-right: 25px;
         }
+        .site-footer .footer-social-links li a {
+            color: #dddddd;
+            text-decoration: none;
+            line-height: 21px;
+            font-size: 13px;
+            opacity: .6;
+        }
+        .site-footer .footer-social-links li a:hover {
+            color: #333;
+        }
         .footer-copyright {
             float: right;
         }
