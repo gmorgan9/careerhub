@@ -83,9 +83,8 @@
                         <h2>
                             How Can I Help You?
                         </h2>
-                        <form action="">
-                            <!-- ------ -->
-                             <div class="controls two-columns">
+                        <form action="" method="POST">
+                            <div class="controls two-columns">
                                 <div class="left-column">
                                     <div class="form-group">
                                         <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
@@ -103,11 +102,7 @@
                                     </div>
                                 </div>
                                 <input type="submit" class="form-btn" value="Send message">
-                             </div>
-                             
-                            
-                            <!-- ------ -->
-                            
+                            </div>
                         </form>
                     </div>
                 </div>
