@@ -302,3 +302,11 @@
 .lm-info-block h4 {
     color: #fff;
 }
+.lm-info-block i {
+    position: relative;
+    font-size: 33px;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    width: 33px;
+    height: 33px;
+    }
