@@ -123,6 +123,15 @@
             background-color: transparent;
             border-color: #555;
         }
+        .controls .left-column {
+            width: 47%;
+            float: left;
+            margin-right: 3%;   
+        }
+        .controls .right-column {
+            width: 50%;
+            float: right;
+        }
     </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
@@ -190,9 +199,15 @@
                         </h2>
                         <form action="">
                             <!-- ------ -->
-                            <div class="mb-3">
-                                <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
-                            </div>
+                             <div class="controls">
+                                <div class="left-column">
+                                    <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
+                                </div>
+                             </div>
+                             <div class="right-column">
+                                <textarea id="form_message" name="message" class="form-control" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                             </div>
+                            
                             <!-- ------ -->
                             <button class="form-btn" style="">Send message</button>
                         </form>
