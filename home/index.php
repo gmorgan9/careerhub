@@ -11,7 +11,7 @@
 </head>
 <body style="padding: 40px 70px 120px 70px; background-color: rgb(34,34,34);">
     
-    <nav class="d-flex justify-content-between align-items-center navbar">
+    <nav class="d-flex justify-content-between align-items-center">
         <div class="left">
             <a href="home/" class="text-white text-decoration-none">
                 <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
@@ -21,7 +21,7 @@
         <div class="right collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About Me</a>
+                    <a class="nav-link" href="#">About Me</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Resume</a>
@@ -30,7 +30,7 @@
                     <a class="nav-link" href="#">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Me</a>
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Login</a>
