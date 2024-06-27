@@ -8,24 +8,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <link rel="stylesheet" href="../assets/css/home.css?v=<?php echo time(); ?>">
+
 
     <title>Home - MorganServer Career Hub</title>
 
-    <style>
-        .nav-link:hover {
-            color: white !important;
-        }
-        .active {
-            color: white !important;
-        }
-        .download_btn:hover {
-            background-color: #994E4E !important;
-        }
-        .contact_btn:hover {
-            color: rgb(59,59,59) !important;
-            background-color: rgb(213,213,213) !important;
-        }
-    </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
     
@@ -81,6 +68,20 @@
                 </div>
             </div>
         </div>
+
+        <footer class="site-footer">
+            <div class="footer-socials">
+                <ul class="footer-social-links">
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 All rights reserved.</p>
+            </div>
+        </footer>
     </div>
 
 
