@@ -399,3 +399,59 @@ img {
 .portfolio-filters li.active a, .portfolio-filters li.active a:hover, .portfolio-filters li a:hover {
     opacity: 1;
 }
+.portfolio-grid {
+    height: 905.765625px;
+    transition: height 450ms ease-out;  
+    position: relative;
+    overflow: hidden;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.portfolio-grid.three-columns figure {
+    width: calc(33.33333% - 16px);
+    /* width: 33.33333%; */
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin: 8px;
+    border-radius: 12px;
+    max-width: 100%;
+}
+.portfolio-item-img {
+    position: relative;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    border-radius: 8px;
+}
+.portfolio-grid img {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.portfolio-grid figure a {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+a, a:hover {
+    color: var(--primary-color);
+}
+figure {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    /* position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: visible;
+    transition: transform 450ms ease-out, opacity 450ms ease-out; */
+}
