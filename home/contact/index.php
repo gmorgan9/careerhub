@@ -19,13 +19,22 @@
             color: white !important;
         }
         .form-btn {
-            background-color: rgb(51,51,51); 
-            border-radius: 50px; 
-            border: 2px solid #994E4E; 
-            padding: 15px 25px; 
-            text-decoration: none; 
-            color: white;
-            position: absolute;
+            display: inline-block;
+            position: relative;
+            padding: .8em 2.1em;
+            margin-bottom: .75em;
+            margin-right: .25em;
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.2;
+            border: 0;
+            outline: 0;
+            border: 2px solid #7066ff;
+            color: #222;
+            text-shadow: none;
+            background-color: #fff;
+            border-radius: 30px;
+            transition: all .3s ease-in-out;
         }
         .form-btn:hover {
             background-color: #994E4E !important;
@@ -204,7 +213,7 @@
                         </h2>
                         <form action="">
                             <!-- ------ -->
-                             <div class="controls">
+                             <div class="controls two-columns">
                                 <div class="left-column">
                                     <div class="form-group">
                                         <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
