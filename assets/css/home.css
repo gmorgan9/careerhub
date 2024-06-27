@@ -460,8 +460,12 @@ figure {
     background-color: var(--background-color);
     color: white; /* Optional: Change text color for better contrast */
     display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100%; /* Ensure full height of modal content */
 }
+
 .modal-body {
-    justify-content: center;
-    width: 75%;
+    width: 75%; /* Set the width of the modal body */
+    padding: 20px; /* Optional: Add padding for better appearance */
 }

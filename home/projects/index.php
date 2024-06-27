@@ -121,7 +121,6 @@ logoutUser($conn);
                 <div class="modal-content custom-modal-bg">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body">
-                        
                         <p>
                             Testing here
                         </p>
@@ -136,6 +135,7 @@ logoutUser($conn);
                 </div>
             </div>
         </div>
+
 
 
 
