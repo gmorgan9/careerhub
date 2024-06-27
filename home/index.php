@@ -68,7 +68,7 @@ foreach ($files as $file) {
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bi bi-person-circle"></i>
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -150px;">
                                 <a class="dropdown-item" href="/profile">Profile</a>
                                 <a class="dropdown-item" href="/settings">Settings</a>
                                 <div class="dropdown-divider"></div>
