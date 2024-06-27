@@ -26,7 +26,7 @@
             text-decoration: none; 
             color: white;
         }
-        .download_btn:hover {
+        .form-btn:hover {
             background-color: #994E4E !important;
         }
         .contact_btn:hover {
@@ -164,7 +164,7 @@
                             How Can I Help You?
                         </h2>
                         <form action="">
-                            <button class="download_btn" style="">Download Résumé</button>
+                            <button class="form-btn" style="">Download Résumé</button>
                         </form>
                     </div>
                 </div>
