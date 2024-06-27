@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 
-    <title>Home - MorganServer Career Hub</title>
+    <title>Contact - MorganServer Career Hub</title>
 
     <style>
         .nav-link:hover {
@@ -22,6 +22,16 @@
         .contact_btn:hover {
             color: rgb(59,59,59) !important;
             background-color: rgb(213,213,213) !important;
+        }
+        .page_title {
+            background-color: #252525;
+            border-top: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            padding: 65px 70px;
+            margin-right: -70px;
+            margin-left: -70px;
+            margin-bottom: 65px;
+            text-align: left;
         }
     </style>
 </head>
@@ -38,7 +48,7 @@
             <div class="right">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link text-secondary active" href="#">About Me</a>
+                        <a class="nav-link text-secondary" href="#">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="#">Resume</a>
@@ -47,7 +57,7 @@
                         <a class="nav-link text-secondary" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Contact</a>
+                        <a class="nav-link text-secondary active" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="#">Login</a>
@@ -58,26 +68,13 @@
     <!-- End Navbar -->
 
     <div class="container">
-        <div class="row flex-v-align" style="margin-top: 150px;">
-            <div class="col-sm-12 col-md-5 col-lg-5">
-                <img src="../assets/images/home-image.png" alt="">
-            </div>
-            <div class="col-sm-12 col-md-7 col-lg-7 d-flex flex-column justify-content-center">
-                <p class="text-secondary">
-                    Cybersecurity Enthusiast
-                </p>
-                <h2 class="text-white" style="font-size: 48px;">
-                    Garrett Morgan
-                </h2>
-                <p class="pt-3" style="color: #d5d5d5; width: 85%;">
-                Experienced in IT Audit with a strong foundation in cybersecurity, I am actively working to transition back into the technical cybersecurity field. Currently, I am pursuing multiple CompTIA certifications to enhance my expertise and skills.
-                </p>
-                <div class="pt-4 buttons">
-                    <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="download_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid #994E4E; padding: 15px 25px; text-decoration: none; color: white;">Download Résumé</a>
-                    &nbsp;&nbsp;
-                    <a href="/home/contact" target="_blank" id="" class="contact_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid rgb(213,213,213); padding: 15px 25px;; text-decoration: none; color: white;">Contact me</a>
-                </div>
-            </div>
+        <div class="page_title">
+            <h2>
+                Contact
+            </h2>
+        </div>
+        <div class="content">
+
         </div>
     </div>
 
