@@ -25,6 +25,7 @@
             padding: 15px 25px; 
             text-decoration: none; 
             color: white;
+            margin-top: 15px;
             margin-right: 0 !important; 
         }
         .form-btn:hover {
