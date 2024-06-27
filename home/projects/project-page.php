@@ -80,7 +80,7 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
 
-                  
+    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
                         <div class="portfolio-page-content">
                             <div class="portfolio-page-wrapper">
 
@@ -164,6 +164,9 @@ foreach ($files as $file) {
                                 </div>
                             </div>
                         </div>
+
+
+                    </div>
                    
 
 
