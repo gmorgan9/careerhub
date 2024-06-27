@@ -52,6 +52,7 @@
             display: table-cell;
             padding: 0 10px 5px 0;
             font-size: 44px;
+            color: #994E4E;
         }
         .info-text {
             position: relative;
@@ -104,7 +105,7 @@
                 <div class=" col-xs-12 col-sm-4 ">
                     <div class="info-block">
                         <div class="info-icon">
-                            <i class="bi bi-envelope-fill"></i>
+                            <i class="bi bi-envelope"></i>
                         </div>
                         <div class="info-text">
                             <h4>McKinney, TX</h4>
