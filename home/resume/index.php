@@ -133,6 +133,45 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="block-title">
+                    <h2>Certifications</h2>
+                </div>
+                <div class="row">
+                    <div class=" col-xs-12 col-sm-6 ">
+                        <div class="certficate-item clearfix">
+                            <div class="cert-logo">
+                                <img decoding="async" src="../../assets/images/cert-logos/networkplus-logo.png" alt="logo">
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-title">
+                                    <h4>
+                                        Psychology of Intertnation Design
+                                    </h4>
+                                </div>
+                                <div class="cert-id">
+                                    <span>
+                                        Membership ID: XXXX
+                                    </span>
+                                </div>
+                                <div class="cert-date">
+                                    <span>
+                                        19 April 2018
+                                    </span>
+                                </div>
+                                <div class="cert-company">
+                                    <span>
+                                        CompTIA
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-xs-12 col-sm-6 ">
+
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="site-footer clearfix">
