@@ -65,7 +65,7 @@ logoutUser($conn);
                                 <i class="bi bi-person-circle"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                                <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                                <a class="dropdown-item" href="/console">Console</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="index.php?logout=1">Logout</a>
                             </div>
