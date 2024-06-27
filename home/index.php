@@ -47,7 +47,7 @@
                 &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
                 </a>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="right collapse navbar-collapse" id="navbarNav">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="#">About Me</a>
