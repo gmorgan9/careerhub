@@ -112,6 +112,7 @@
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-half"></i>
                             </div>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Ubuntu, Kali, CLI</span>
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
