@@ -114,7 +114,7 @@ logoutUser($conn);
                         </figure>
                     </div>
 
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
                         <div class="portfolio-page-content">
                             <div class="portfolio-page-wrapper">
 
