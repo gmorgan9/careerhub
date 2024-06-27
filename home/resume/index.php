@@ -62,9 +62,9 @@
                     </div>
                     <div class="timeline clearfix">
                         <div class="timeline-item">
-                            <h5 class="item-period ">2009</h5>
-                            <span class="item-company">University of Studies</span>
-                            <h4 class="item-title">UI Design</h4>
+                            <h5 class="item-period ">2023</h5>
+                            <span class="item-company">Brigham Young University</span>
+                            <h4 class="item-title">Bachelor of Science in Cybersecurity</h4>
                             <div class="text">
         	                    Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.
                             </div>
