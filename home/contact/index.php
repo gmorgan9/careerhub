@@ -78,6 +78,14 @@
             </h2>
         </div>
         <div class="content">
+            <div class="row">
+                <div class=" col-xs-12 col-sm-4 ">
+                    text
+                </div>
+                <div class=" col-xs-12 col-sm-8 ">
+                    text
+                </div>
+            </div>
 
         </div>
     </div>
