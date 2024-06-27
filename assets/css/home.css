@@ -341,7 +341,7 @@
     max-width: 100%;
     height: auto;
     border: 0;
-    -ms-interpolation-mode: bicubic;
+    /* -ms-interpolation-mode: bicubic; */
 }
 .cert-content {
     display: table-cell;
