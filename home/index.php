@@ -74,6 +74,7 @@
                 </p>
                 <div class="pt-4 buttons">
                     <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="download_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid #994E4E; padding: 15px; text-decoration: none; color: white;">Download Résumé</a>
+                    <div class="pe-2"></div>
                     <a href="../assets/files/garrett-morgan-resume.pdf" target="_blank" id="" class="contact_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid rgb(213,213,213); padding: 15px; text-decoration: none; color: white;">Contact Me</a>
                 </div>
             </div>
