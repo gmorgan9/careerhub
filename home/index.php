@@ -9,7 +9,7 @@
 
     <title>Home - MorganServer Career Hub</title>
 </head>
-<body>
+<body style="padding: 40px 70px 120px 70px;">
     
     <nav class="d-flex justify-content-between align-items-center">
         <div class="left">
