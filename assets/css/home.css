@@ -225,6 +225,11 @@
 }
 .timeline-item .item-company {
     color: #aaa;
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+    opacity: .7;
+    margin-left: 5px;
 }
 .timeline-item .item-title {
     font-size: 16px;
