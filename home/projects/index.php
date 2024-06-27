@@ -138,8 +138,7 @@ logoutUser($conn);
     </div>
 
 
-
-<script>
+    <script>
 function openOffcanvas(url) {
     var offcanvas = document.getElementById('offcanvas');
     var iframe = document.createElement('iframe');
@@ -148,12 +147,11 @@ function openOffcanvas(url) {
     offcanvas.innerHTML = '';
     offcanvas.appendChild(iframe);
     offcanvas.classList.add('open');
-    // offcanvas.style.display = 'flex'; 
 }
 
 function closeOffcanvas() {
     var offcanvas = document.getElementById('offcanvas');
-    offcanvas.style.display = 'none'; // Hide the offcanvas
+    offcanvas.classList.remove('open');
 }
 </script>
 
