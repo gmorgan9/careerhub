@@ -66,7 +66,7 @@
                 Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
                 </p>
                 <div class="pt-3 buttons">
-                    <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="" style="background-color: rgb(51,51,51); border-radius: 15px; border: 1px solid blue;">Download Résumé</a>
+                    <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="" style="background-color: rgb(51,51,51); border-radius: 15px; border: 1px solid blue; padding: 5px; text-decoration: none;">Download Résumé</a>
                 </div>
             </div>
         </div>
