@@ -58,7 +58,7 @@
             position: relative;
             display: table-cell;
             padding: 0 0 0 15px;
-            font-size: 25px;
+            font-size: 18px;
             vertical-align: middle;
         }
     </style>
