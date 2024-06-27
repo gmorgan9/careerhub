@@ -1,3 +1,24 @@
+<?php
+date_default_timezone_set('America/Denver');
+require_once "../app/database/connection.php";
+require_once "../path.php";
+session_start();
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$files = glob("../app/functions/*.php");
+foreach ($files as $file) {
+    require_once $file;
+}
+
+// logoutUser($conn);
+// if(isLoggedIn() == false) {
+//     header('location:' . BASE_URL . '/login.php');
+// }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,9 +59,15 @@
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/home/contact">Contact</a>
                     </li>
+                    <?php if($_SESSION['loggedin'] != 1) { ?>
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/login">Login</a>
                     </li>
+                    <?php } else { ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/login">Dashboard</a>
+                    </li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
