@@ -164,7 +164,14 @@
                             How Can I Help You?
                         </h2>
                         <form action="">
-                            <button class="form-btn" style="">Download Résumé</button>
+                            <!-- ------ -->
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <!-- ------ -->
+                            <button class="form-btn" style="">Send message</button>
                         </form>
                     </div>
                 </div>
