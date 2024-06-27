@@ -59,7 +59,7 @@ logoutUser($conn);
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/home/contact">Contact</a>
                     </li>
-                    <?php if($_SESSION['loggedin'] == 1) { ?>
+                    <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 1) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bi bi-person-circle"></i>
