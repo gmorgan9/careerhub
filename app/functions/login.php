@@ -22,7 +22,7 @@ function loginUser($conn)
                 $_SESSION['email']        = $row['email'];
                 $_SESSION['pass']         = $row['password'];
                 $_SESSION['loggedin']     = true;
-                header('location:' . BASE_URL . '/');
+                header('location:' . BASE_URL . '/dashboard');
             }
         } else {
             $_SESSION['error'][] = 'Incorrect username or password!';
