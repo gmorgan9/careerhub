@@ -86,7 +86,7 @@
                     </div> -->
                     <div class="text">
                         <div class="row">
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 Web Development
                             </div>
                             <div class="col-xs-9 col-sm-6">
