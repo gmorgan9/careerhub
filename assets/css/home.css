@@ -476,9 +476,13 @@ figure {
     height: 40px;
     width: 40px;
     text-align: center;
-    color: #888;
-    background-color: #fafafa;
+    /* color: #888;
+    background-color: #fafafa; */
     border-radius: 5px;
+}
+.portfolio-page-nav>div.nav-item a i {
+    line-height: 40px;
+    font-size: 22px;
 }
 .modal-body {
     width: 75%; /* Set the width of the modal body */
