@@ -463,6 +463,7 @@ figure {
     overflow-y: auto;
 }
 .portfolio-page-wrapper {
+    height: 100%;
     max-width: 1170px;
     margin: 0 auto;
     padding: 20px 60px 50px;
