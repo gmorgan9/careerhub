@@ -39,25 +39,30 @@
         </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg bg-dark d-flex justify-content-between align-items-center">
+    <nav class="navbar d-flex justify-content-between align-items-center">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="left">
+                <a href="home/" class="text-white text-decoration-none">
+                    <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+                </a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-secondary" href="#">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link text-secondary" href="#">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link text-secondary" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link text-secondary" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Login</a>
                     </li>
                 </ul>
             </div>
