@@ -461,8 +461,12 @@ figure {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    }
-
+}
+.portfolio-page-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px 60px 50px;
+}
 .portfolio-page-nav {
     text-align: right;
     float: right;
