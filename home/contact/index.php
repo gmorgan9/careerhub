@@ -100,6 +100,25 @@
         }
         /* form */
         .form-input {
+            position: relative;
+            border: 2px solid #bfbfbf;
+            border-radius: 5px;
+            display: block;
+            font-size: 1em;
+            margin: 0;
+            padding: 10px 25px 10px 12px;
+            width: 100%;
+            min-width: 100%;
+            background: 0 0;
+            text-align: left;
+            color: inherit;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            outline: none;
+            font-family: poppins,Helvetica,sans-serif;
+        }
+        .form-input {
             color: #eee;
             background-color: transparent;
             border-color: #555;
