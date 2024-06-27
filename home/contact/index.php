@@ -33,6 +33,7 @@
             margin-top: 100px;
             margin-bottom: 65px;
             text-align: left;
+            width: 100wv;
         }
     </style>
 </head>
@@ -49,7 +50,7 @@
             <div class="right">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link text-secondary active" href="/home">About Me</a>
+                        <a class="nav-link text-secondary" href="/home">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/home/resume">Resume</a>
@@ -58,7 +59,7 @@
                         <a class="nav-link text-secondary" href="/home/projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/home/contact">Contact</a>
+                        <a class="nav-link text-secondary active" href="/home/contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/login">Login</a>
