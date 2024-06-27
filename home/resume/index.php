@@ -87,6 +87,18 @@
                     <div class="text">
                         <div class="row">
                             <div class="col-xs-1 col-sm-6">
+                                Web Development
+                            </div>
+                            <div class="col-xs-9 col-sm-6">
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1 col-sm-6">
                                 Javascript
                             </div>
                             <div class="col-xs-9 col-sm-6">
