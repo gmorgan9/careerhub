@@ -25,6 +25,7 @@
             padding: 15px 25px; 
             text-decoration: none; 
             color: white;
+            position: absolute;
         }
         .form-btn:hover {
             background-color: #994E4E !important;
