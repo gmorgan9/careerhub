@@ -40,8 +40,8 @@ logoutUser($conn);
 </head>
 <body style="background-color: rgb(34,34,34);">
 
-<!-- Navbar -->
-<nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
+    <!-- Navbar -->
+        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
             <div class="left">
                 <a href="/home" class="text-white text-decoration-none">
                     <img src="../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
@@ -86,6 +86,9 @@ logoutUser($conn);
 
 
 <?php include 'offcanvas.php'; ?>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
