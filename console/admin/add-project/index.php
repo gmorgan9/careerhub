@@ -89,13 +89,25 @@ foreach ($files as $file) {
                                             <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <input id="subject" type="text" name="name" class="form-input" placeholder="Subject" required="required" data-error="Subject is required.">
+                                            <input id="project_github" type="text" name="project_github" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
                                         </div>
                                     </div>
                                     <div class="right-column">
                                         <div class="form-group">
-                                            <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                            <input id="project_release" type="date" name="project_release" class="form-input" required="required">
                                         </div>
+                                        <div class="form-group">
+                                            <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <input id="project_share_link" type="text" name="project_share_link" class="form-input" placeholder="Project Share Link" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="project_content" name="project_content" class="form-input" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
                                     </div>
                                     <input type="submit" class="form-btn" value="Send message">
                                 </div>
@@ -126,7 +138,14 @@ foreach ($files as $file) {
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#project_content',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
