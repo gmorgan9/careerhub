@@ -136,6 +136,30 @@
             width: 50%;
             float: right;
         }
+        /* Footer */
+        .site-footer {
+            position: absolute;
+            margin: 60px 0 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #252525;
+            border-color: #333333;
+            display: block;
+            /* position: relative; */
+            /* margin: 60px -70px -60px; */
+            padding: 15px 45px;
+            /* background-color: #fdfdfd; */
+            border-top: 2px solid #f2f2f2;
+            /* border-bottom-left-radius: 40px; */
+            /* border-bottom-right-radius: 40px; */
+        }
+        .footer-socials {
+            float: left;
+        }
+        .footer-copyright {
+            float: right;
+        }
     </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
@@ -232,6 +256,20 @@
             </div>
 
         </div>
+
+        <footer class="site-footer">
+            <div class="footer-socials">
+                <ul class="footer-social-links">
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 All rights reserved.</p>
+            </div>
+        </footer>
     </div>
 
 
