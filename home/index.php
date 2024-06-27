@@ -25,10 +25,10 @@
         }
     </style>
 </head>
-<body style="padding: 40px 70px 120px 70px; background-color: rgb(34,34,34);">
+<body style="background-color: rgb(34,34,34);">
     
     <!-- Navbar -->
-        <nav class="d-flex justify-content-between align-items-center">
+        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 120px 70px;">
             <div class="left">
                 <a href="/home" class="text-white text-decoration-none">
                     <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
