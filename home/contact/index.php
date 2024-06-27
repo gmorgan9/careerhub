@@ -42,7 +42,7 @@ logoutUser($conn);
         <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
             <div class="left">
                 <a href="/home" class="text-white text-decoration-none">
-                    <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                    <img src="../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
                     &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
                 </a>
             </div>
@@ -117,6 +117,8 @@ logoutUser($conn);
                         <h2>
                             How Can I Help You?
                         </h2>
+                    </div>
+                    <div class="form">
                         <form action="" method="">
                             <div class="controls two-columns">
                                 <div class="left-column">
