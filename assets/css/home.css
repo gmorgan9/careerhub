@@ -531,10 +531,10 @@ figure {
 .tags a:first-child {
     margin-left: 0;
 }
-/* a {
+a {
     color: inherit;
     text-decoration: none;
-} */
+}
 .tags a, .tags li a, .tagcloud a {
     background-color: #666;
     border: 1px solid transparent;
