@@ -105,7 +105,7 @@ logoutUser($conn);
                             <div class="portfolio-item-img">
                                 <!-- <img fetchpriority="high" decoding="async" width="1280" height="853" src="https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12.jpg" class="attachment-portfolio-image-three-c size-portfolio-image-three-c wp-post-image" alt="Full Project 2" title="" srcset="https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12.jpg 1280w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-300x200.jpg 300w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-1024x682.jpg 1024w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-768x512.jpg 768w" sizes="(max-width: 768px) 92vw, (max-width: 992px) 450px, (max-width: 1200px) 597px, 25vw"> -->
                                  <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/emergency-prep.png" alt="">
-                                <a href="#" onclick="openPhpPage();"></a>
+                                <a href="#" onclick="openOffcanvas('test.php');"></a>
                             </div>
                         </figure>
                     </div>
@@ -115,6 +115,8 @@ logoutUser($conn);
             </div>
             
         </div> <!-- end -->
+
+        <div id="offcanvas"></div>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
@@ -167,10 +169,21 @@ logoutUser($conn);
 
 
     <script>
-        function openPhpPage() {
-            window.open('test.php', '_blank'); // Replace 'your-php-page.php' with your actual PHP page URL
-        }
-    </script>
+function openOffcanvas(url) {
+    var offcanvas = document.getElementById('offcanvas');
+    var iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.setAttribute('frameborder', '0');
+    offcanvas.innerHTML = '';
+    offcanvas.appendChild(iframe);
+    offcanvas.classList.add('open');
+}
+
+function closeOffcanvas() {
+    var offcanvas = document.getElementById('offcanvas');
+    offcanvas.classList.remove('open');
+}
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
