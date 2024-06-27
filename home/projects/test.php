@@ -38,7 +38,7 @@ logoutUser($conn);
 
     
 </head>
-<body>
+<body style="background-color: rgb(34,34,34);">
 
 <?php include 'offcanvas.php'; ?>
 
