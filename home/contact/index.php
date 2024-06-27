@@ -77,7 +77,7 @@
             position: absolute;
             content: '';
             width: 100%;
-            background-color: #f5f5f5;
+            background-color: rgb(53,53,53);
             height: 2px;
             bottom: 0;
         }
@@ -86,7 +86,7 @@
             position: absolute;
             content: '';
             width: 30px;
-            background-color: #7066ff;
+            background-color: #994E4E;
             height: 2px;
             bottom: 0;
         }
