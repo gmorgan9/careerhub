@@ -66,7 +66,7 @@ foreach ($files as $file) {
                     <?php } else { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dashboard
+                                <i class="bi bi-person-circle"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/profile">Profile</a>
