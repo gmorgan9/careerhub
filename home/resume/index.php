@@ -70,7 +70,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="block-title">
+
+                    <div class="block-title" style="margin-top: 15px;">
                         <h2>Additional Skills & Interests</h2>
                     </div>
                     <!-- <div class="timeline clearfix">
