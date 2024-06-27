@@ -105,7 +105,7 @@ logoutUser($conn);
                             <div class="portfolio-item-img">
                                 <!-- <img fetchpriority="high" decoding="async" width="1280" height="853" src="https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12.jpg" class="attachment-portfolio-image-three-c size-portfolio-image-three-c wp-post-image" alt="Full Project 2" title="" srcset="https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12.jpg 1280w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-300x200.jpg 300w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-1024x682.jpg 1024w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-768x512.jpg 768w" sizes="(max-width: 768px) 92vw, (max-width: 992px) 450px, (max-width: 1200px) 597px, 25vw"> -->
                                  <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/emergency-prep.png" alt="">
-                                <a href="https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" class="ajax-page-load"></a>
+                                <a href="https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
                             </div>
                         </figure>
                     </div>
@@ -115,6 +115,23 @@ logoutUser($conn);
             </div>
             
         </div> <!-- end -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+             </div>
+        </div>
 
         
         <footer class="site-footer">
