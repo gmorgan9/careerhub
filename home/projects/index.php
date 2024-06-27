@@ -105,22 +105,25 @@ logoutUser($conn);
                             <div class="portfolio-item-img">
                                 <!-- <img fetchpriority="high" decoding="async" width="1280" height="853" src="https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12.jpg" class="attachment-portfolio-image-three-c size-portfolio-image-three-c wp-post-image" alt="Full Project 2" title="" srcset="https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12.jpg 1280w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-300x200.jpg 300w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-1024x682.jpg 1024w, https://lmpixels.com/wp/leven-wp/full-width-dark/wp-content/uploads/sites/5/2019/12/12-768x512.jpg 768w" sizes="(max-width: 768px) 92vw, (max-width: 992px) 450px, (max-width: 1200px) 597px, 25vw"> -->
                                  <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/emergency-prep.png" alt="">
-                                <a href="#" onclick="openOffcanvas('test.php');"></a>
+                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"></a>
                                 
                             </div>
                             
                         </figure>
                     </div>
-                    <!-- Button to toggle the offcanvas -->
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-  Toggle top offcanvas
-</button>
 
 <!-- Offcanvas container -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <nav class="portfolio-page-nav">
+        <div class="nav-item portfolio-page-close-button">
+            <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
+                <i class="bi bi-x"></i>
+            </a>
+        </div>
+    </nav>
+ 
   </div>
   <div class="offcanvas-body">
     <p>Your PHP Page Content</p>
