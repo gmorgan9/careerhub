@@ -42,7 +42,7 @@
     <nav class="navbar d-flex justify-content-between align-items-center">
         <div class="container-fluid">
             <div class="left">
-                <a href="home/" class="text-white text-decoration-none">
+                <a href="/" class="text-white text-decoration-none">
                     <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
                 &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
                 </a>
