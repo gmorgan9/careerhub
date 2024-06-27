@@ -457,6 +457,11 @@ figure {
     transition: transform 450ms ease-out, opacity 450ms ease-out; */
 }
 
+.portfolio-page-nav {
+    text-align: right;
+    float: right;
+    margin-bottom: 10px;
+    }
 
 .portfolio-page-nav>div.nav-item {
     position: relative;
