@@ -86,7 +86,20 @@
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square"></i>
                             </div>
-                            <span class="text-secondary" style="font-size: 12px;">Including HTML, CSS, Javascript, PHP</span>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including HTML, CSS, Javascript, PHP</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                Database Development
+                            </div>
+                            <div class="col-xs-9 col-sm-6">
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square"></i>
+                            </div>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including MySQL, PostgresSQL, MariaDB</span>
                         </div>
                         <div class="row">
                             <div class="col-sm-3">
@@ -102,20 +115,30 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-3">
-                                SQL
+                                Coding
                             </div>
                             <div class="col-xs-9 col-sm-6">
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-half"></i>
+                                <i class="bi bi-square"></i>
+                            </div>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Python, C(novice), C++(novice)</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                SIEM Tools
+                            </div>
+                            <div class="col-xs-9 col-sm-6">
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-half"></i>
+                                <i class="bi bi-square"></i>
                             </div>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Burpesuite, Wazuh, ELK Stack, OSquery</span>
                         </div>
-                        
-                        
-                    • Coding Languages: Proficient in HTML, CSS, Python, JavaScript, Linux, SQL, PHP, novice in C, C++, C#
-                    • Familiar with Burpsuite, Qualys, Cloudflare, Wazuh, ELK Stack, OSquery, and MS Office
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 ">
