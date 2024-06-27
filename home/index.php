@@ -11,11 +11,11 @@
 </head>
 <body>
     
-    <nav class="d-flex justify-space-between">
-        <div class="left d-flex align-items-center">
+    <nav class="d-flex justify-content-between align-items-center">
+        <div class="left">
             test
         </div>
-        <div class="right d-flex align-items-center">
+        <div class="right">
             test2
         </div>
     </nav>
