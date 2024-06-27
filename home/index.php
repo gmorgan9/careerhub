@@ -85,23 +85,23 @@
             </div>
             <div class="col-xs-12 col-sm-3">
                 <div class="lm-info-block">
-                    <i class="bi bi-heart"></i>
-                    <h4>Happy Clients</h4>
-                    <span class="lm-info-block-value">578</span>
+                    <i class="bi bi-watch"></i>
+                    <h4>Working Hours</h4>
+                    <span class="lm-info-block-value">4,780</span>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-3">
                 <div class="lm-info-block">
-                    <i class="bi bi-heart"></i>
-                    <h4>Happy Clients</h4>
-                    <span class="lm-info-block-value">578</span>
+                    <i class="bi bi-award"></i>
+                    <h4>Awards Won</h4>
+                    <span class="lm-info-block-value">15</span>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-3">
                 <div class="lm-info-block">
-                    <i class="bi bi-heart"></i>
-                    <h4>Happy Clients</h4>
-                    <span class="lm-info-block-value">578</span>
+                    <i class="bi bi-cup-straw"></i>
+                    <h4>Dr Peppers Consumed</h4>
+                    <span class="lm-info-block-value">256</span>
                 </div>
             </div>
         </div>
