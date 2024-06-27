@@ -69,8 +69,7 @@ foreach ($files as $file) {
                                 <i class="bi bi-person-circle"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                                <a class="dropdown-item" href="/profile">Profile</a>
-                                <a class="dropdown-item" href="/settings">Settings</a>
+                                <a class="dropdown-item" href="/dashboard">Dashboard</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="/logout">Logout</a>
                             </div>
