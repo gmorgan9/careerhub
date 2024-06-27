@@ -18,27 +18,13 @@
         .active {
             color: white !important;
         }
-        .input {
-            margin: 0;
-            vertical-align: baseline;
-        }
         .form-btn {
-            display: inline-block;
-            position: relative;
-            padding: .8em 2.1em;
-            margin-bottom: .75em;
-            margin-right: .25em;
-            font-size: 1em;
-            font-weight: 400;
-            line-height: 1.2;
-            border: 0;
-            outline: 0;
-            border: 2px solid #7066ff;
-            color: #222;
-            text-shadow: none;
-            background-color: #fff;
-            border-radius: 30px;
-            transition: all .3s ease-in-out;
+            background-color: rgb(51,51,51); 
+            border-radius: 50px; 
+            border: 2px solid #994E4E; 
+            padding: 15px 25px; 
+            text-decoration: none; 
+            color: white;
         }
         .form-btn:hover {
             background-color: #994E4E !important;
