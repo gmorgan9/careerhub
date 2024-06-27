@@ -163,6 +163,17 @@ logoutUser($conn);
                                                         This website serves as a vital resource hub for a church organization, offering essential information and tools for emergency preparedness.
                                                     </p>
                                                 </div>
+                                                <div class="tags-block">
+                                                    <div class="block-title">
+                                                        <h3>Technology</h3>
+                                                    </div>
+                                                    <ul class="tags">
+                                                        <li><a href="">HTML</a></li>
+                                                        <li><a href="">CSS</a></li>
+                                                        <li><a href="">EmergencyPrep</a></li>
+                                                        <li><a href="">Website</a></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
