@@ -220,11 +220,12 @@
                                 <div class="right-column">
                                     <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
                                 </div>
+                                <inpute class="form-btn" style="">Send message</button>
                              </div>
                              
                             
                             <!-- ------ -->
-                            <inpute class="form-btn" style="">Send message</button>
+                            
                         </form>
                     </div>
                 </div>
