@@ -147,8 +147,8 @@ function openOffcanvas(url) {
     iframe.setAttribute('frameborder', '0');
     offcanvas.innerHTML = '';
     offcanvas.appendChild(iframe);
-    // offcanvas.classList.add('open');
-    offcanvas.style.display = 'flex'; // Display the offcanvas
+    offcanvas.classList.add('open');
+    // offcanvas.style.display = 'flex'; 
 }
 
 function closeOffcanvas() {
