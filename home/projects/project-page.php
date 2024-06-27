@@ -81,7 +81,7 @@ foreach ($files as $file) {
 
 
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
-                        <div class="portfolio-page-content">
+                        <div class="portfolio-page-content mt-5">
                             <div class="portfolio-page-wrapper">
 
                                 <nav class="portfolio-page-nav">
