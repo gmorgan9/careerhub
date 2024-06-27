@@ -6,8 +6,17 @@
     <title>Home - MorganServer Career Hub</title>
 </head>
 <body>
-    <h1>
-        MorganServer Career Hub
-    </h1>
+    
+    <nav>
+        <div class="left" style="display: flex; justify-content: left;">
+            test
+        </div>
+        <div class="right" style="display: flex; justify-content: right;">
+            test2
+        </div>
+    </nav>
+
+
+
 </body>
 </html>
