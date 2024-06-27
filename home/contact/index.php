@@ -18,6 +18,10 @@
         .active {
             color: white !important;
         }
+        .input {
+            margin: 0;
+            vertical-align: baseline;
+        }
         .form-btn {
             display: inline-block;
             position: relative;
