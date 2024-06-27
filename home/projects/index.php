@@ -114,22 +114,27 @@ logoutUser($conn);
 
 <!-- Offcanvas container -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
-    <nav class="portfolio-page-nav">
-        <div class="nav-item portfolio-page-close-button">
-            <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
-                <i class="bi bi-x"></i>
-            </a>
+    <div class="offcanvas-header">
+        <div class="portfolio-page-content">
+            <div class="portfolio-page-wrapper">
+
+              <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+              <nav class="portfolio-page-nav">
+                  <div class="nav-item portfolio-page-close-button">
+                      <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
+                          <i class="bi bi-x"></i>
+                      </a>
+                  </div>
+              </nav>
+
+            </div>
+            <div class="offcanvas-body">
+              <p>Your PHP Page Content</p>
+            </div>
+
+            
         </div>
-    </nav>
- 
-  </div>
-  <div class="offcanvas-body">
-    <p>Your PHP Page Content</p>
-    <!-- Close button to close the offcanvas -->
-    <button class="btn btn-secondary" onclick="closeOffcanvas()">Close</button>
-  </div>
+    </div>
 </div>
 
 

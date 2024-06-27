@@ -457,6 +457,12 @@ figure {
     transition: transform 450ms ease-out, opacity 450ms ease-out; */
 }
 
+.portfolio-page-content {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+
 .portfolio-page-nav {
     text-align: right;
     float: right;
@@ -484,5 +490,6 @@ figure {
     font-size: 22px;
 }
 .offcanvas {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    color: white;
 }
