@@ -150,7 +150,7 @@
             /* margin: 60px -70px -60px; */
             padding: 15px 45px;
             /* background-color: #fdfdfd; */
-            border-top: 2px solid #f2f2f2;
+            border-top: 2px solid #333333;
             /* border-bottom-left-radius: 40px; */
             /* border-bottom-right-radius: 40px; */
         }
