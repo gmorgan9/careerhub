@@ -117,11 +117,15 @@ logoutUser($conn);
         </div> <!-- end -->
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen d-flex">
+            <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content custom-modal-bg">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="modal-body justify-content-center">
-                        testing
+                    <div class="modal-body d-flex justify-content-center align-items-center">
+                        <div style="width: 75%;">
+                            <p>
+                                Testing here
+                            </p>
+                        </div>
                     </div>
                     <!-- Footer buttons if needed -->
                     <!--
@@ -133,6 +137,7 @@ logoutUser($conn);
                 </div>
             </div>
         </div>
+
 
 
 
