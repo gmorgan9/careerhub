@@ -11,14 +11,15 @@
 </head>
 <body>
     
-    <nav style="display: inline;">
-        <div class="left" style="display: flex; justify-content: left;">
+    <nav class="d-flex justify-space-between">
+        <div class="left d-flex align-items-center">
             test
         </div>
-        <div class="right" style="display: flex; justify-content: right;">
+        <div class="right d-flex align-items-center">
             test2
         </div>
     </nav>
+
 
 
 
