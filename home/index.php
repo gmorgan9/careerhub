@@ -70,12 +70,12 @@
                     Garrett Morgan
                 </h2>
                 <p class="pt-3" style="color: #d5d5d5; width: 85%;">
-                Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
+                Experienced in IT Audit with a strong foundation in cybersecurity, I am actively working to transition back into the technical cybersecurity field. Currently, I am pursuing multiple CompTIA certifications to enhance my expertise and skills.
                 </p>
                 <div class="pt-4 buttons">
                     <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="download_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid #994E4E; padding: 15px 25px; text-decoration: none; color: white;">Download Résumé</a>
                     &nbsp;&nbsp;
-                    <a href="../assets/files/garrett-morgan-resume.pdf" target="_blank" id="" class="contact_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid rgb(213,213,213); padding: 15px 25px;; text-decoration: none; color: white;">Contact Me</a>
+                    <a href="../assets/files/garrett-morgan-resume.pdf" target="_blank" id="" class="contact_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid rgb(213,213,213); padding: 15px 25px;; text-decoration: none; color: white;">Contact me</a>
                 </div>
             </div>
         </div>
