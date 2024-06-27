@@ -465,7 +465,7 @@ figure {
     height: 100%; /* Ensure full height of modal content */
 }
 .btn-close {
-    float: right;
+    justify-content: end;
 }
 .modal-body {
     width: 75%; /* Set the width of the modal body */
