@@ -157,6 +157,15 @@
         .footer-socials {
             float: left;
         }
+        .footer-social-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .site-footer .footer-social-links li {
+            display: inline-block;
+            margin-right: 25px;
+        }
         .footer-copyright {
             float: right;
         }
