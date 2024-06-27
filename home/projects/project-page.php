@@ -80,7 +80,7 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
 
-    <div class="offcanvas " tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+    <div class="" >
                         <div class="portfolio-page-content">
                             <div class="portfolio-page-wrapper">
 
