@@ -86,7 +86,7 @@
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square"></i>
                             </div>
-                            <span>Including HTML, CSS, Javascript, PHP</span>
+                            <span class="text-muted" style="font-size: 12px;">Including HTML, CSS, Javascript, PHP</span>
                         </div>
                         <div class="row">
                             <div class="col-sm-3">
