@@ -99,6 +99,11 @@
             bottom: 0;
         }
         /* Map */
+        .map-frame {
+            width: 100%;
+            height: 180px;
+            margin: 15px 0 30px;
+        }
         .map-frame iframe {
             max-width: 100%;
             width: 100%;
