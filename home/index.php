@@ -56,7 +56,15 @@
                 <img src="../assets/images/home-image.png" alt="">
             </div>
             <div class="col-sm-12 col-md-7 col-lg-7">
+                <h3>
+                    Garrett Morgan
+                </h3>
+                <p>
 
+                </p>
+                <div class="buttons">
+                    <a href="../assets/files/garrett-morgan-resume.pdf" download="proposed_file_name" id="" class="btn btn-primary">Download Résumé</a>
+                </div>
             </div>
         </div>
     </div>
