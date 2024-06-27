@@ -460,3 +460,6 @@ figure {
     background-color: var(--background-color);
     color: white; /* Optional: Change text color for better contrast */
 }
+.modal-body {
+    width: 75%;
+}
