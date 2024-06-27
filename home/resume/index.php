@@ -113,11 +113,21 @@
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <h5 class="item-period ">2023</h5>
-                            <span class="item-company">Brigham Young University</span>
-                            <h4 class="item-title">Bachelor of Science in Cybersecurity</h4>
+                            <h5 class="item-period ">Jan 2023 - July 2023</h5>
+                            <span class="item-company">Brigham Young University Office of Information Technology</span>
+                            <h4 class="item-title">Student Systems Engineer</h4>
                             <div class="text">
-        	                    Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.
+                                <ul>
+                                    <li>
+                                        Managed and optimized over 10 ESXi hypervisors, utilizing vCenter technology to oversee and enhance the performance of 200+ virtual machines (VMs), resulting in a 20% reduction in downtime and a 15% improvement in overall system efficiency.
+                                    </li>
+                                    <li>
+                                        Diagnosed and resolved technical challenges pertaining to Dell MX chassis, blades, and network switches.
+                                    </li>
+                                    <li>
+                                    Documented 15+ processes and procedures for future reference, enhancing team efficiency by 10% and facilitating knowledge sharing across departments.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
