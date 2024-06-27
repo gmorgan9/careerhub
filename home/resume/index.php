@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 ">
                     <div class="block-title">
-                        <h2 style="font-size: 21px;">Education</h2>
+                        <h2>Education</h2>
                     </div>
                     <div class="timeline clearfix">
                         <div class="timeline-item">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 ">
                     <div class="block-title">
-                        <h2 style="font-size: 21px;">Experience</h2>
+                        <h2>Experience</h2>
                     </div>
                     <div class="timeline clearfix">
                         <div class="timeline-item">
