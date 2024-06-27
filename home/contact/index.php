@@ -169,6 +169,12 @@
         .footer-copyright {
             float: right;
         }
+        .footer-copyright p {
+            color: #dddddd;
+            line-height: 21px;
+            font-size: 13px;
+            margin: 0;
+        }
     </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
