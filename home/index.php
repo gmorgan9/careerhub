@@ -38,19 +38,19 @@
             <div class="right">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link text-secondary active" href="#">About Me</a>
+                        <a class="nav-link text-secondary active" href="/home">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Resume</a>
+                        <a class="nav-link text-secondary" href="/home/resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Projects</a>
+                        <a class="nav-link text-secondary" href="/home/projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Contact</a>
+                        <a class="nav-link text-secondary" href="/home/contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="#">Login</a>
+                        <a class="nav-link text-secondary" href="/login">Login</a>
                     </li>
                 </ul>
             </div>
