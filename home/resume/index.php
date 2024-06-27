@@ -55,7 +55,21 @@
         </div>
         
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
-           
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 ">
+                    <div class="block-title">
+                        <h2 style="font-size: 21px;">Education</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 ">
+
+                </div>
+            </div>
         </div>
 
         <footer class="site-footer">
