@@ -89,6 +89,18 @@ logoutUser($conn);
         </div>
         
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+
+            <div class="row">
+                <div class=" col-xs-12 col-sm-12 ">
+                    <ul class="portfolio-filters">
+                        <li class="active"><a class="filter btn btn-sm btn-link" data-group="category_all">All</a></li>
+                        <li><a class="filter btn btn-sm btn-link" data-group="category_detailed">Detailed</a></li>
+                        <li><a class="filter btn btn-sm btn-link" data-group="category_direct-url">Direct URL</a></li>
+                        <li><a class="filter btn btn-sm btn-link" data-group="category_image">Image</a></li>
+                        <li><a class="filter btn btn-sm btn-link" data-group="category_youtube-video">YouTube Video</a></li>
+                    </ul>
+                </div>
+            </div>
             
 
         </div>
