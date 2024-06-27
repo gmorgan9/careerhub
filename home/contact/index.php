@@ -98,6 +98,12 @@
             height: 2px;
             bottom: 0;
         }
+        /* form */
+        .form-control {
+            color: #eee;
+            background-color: transparent;
+            border-color: #555;
+        }
     </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
