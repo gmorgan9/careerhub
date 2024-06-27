@@ -112,27 +112,46 @@ logoutUser($conn);
                         </figure>
                     </div>
 
-<!-- Offcanvas container -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
-    <div class="portfolio-page-content">
-        <div class="portfolio-page-wrapper">
+                    <!-- Offcanvas container -->
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+                        <div class="portfolio-page-content">
+                            <div class="portfolio-page-wrapper">
 
-            
-            <nav class="portfolio-page-nav">
-              <div class="nav-item portfolio-page-close-button">
-                  <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
-                      <i class="bi bi-x"></i>
-                  </a>
-              </div>
-            </nav>
+                                <nav class="portfolio-page-nav">
+                                  <div class="nav-item portfolio-page-close-button">
+                                      <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
+                                          <i class="bi bi-x"></i>
+                                      </a>
+                                  </div>
+                                </nav>
 
-            <div class="offcanvas-body">
-                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
-                <p>Your PHP Page Content</p>
-            </div>
-        </div>
-    </div>
-</div>
+                                <div class="offcanvas-body">
+                                    <div class="portfolio-page-title">
+                                        <h2>Full Project 2</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-8 portfolio-block">
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-4 portfolio-block">
+                                            <div class="project-description">
+                                                <div class="block-title">
+                                                    <h3>Description</h3>
+                                                </div>
+                                                <ul class="project-general-info">
+                                                    <li>
+                                                        <p>
+                                                            <i class="bi bi-github"></i> &nbsp; <a href="https://github.com/MorganServer/emergencyprep.git" target="_blank" class="">gmorgan9</a>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
