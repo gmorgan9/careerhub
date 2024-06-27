@@ -203,10 +203,11 @@
                                 <div class="left-column">
                                     <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
                                 </div>
+                                <div class="right-column">
+                                    <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                </div>
                              </div>
-                             <div class="right-column">
-                                <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
-                             </div>
+                             
                             
                             <!-- ------ -->
                             <button class="form-btn" style="">Send message</button>
