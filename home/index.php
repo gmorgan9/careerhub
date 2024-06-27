@@ -8,10 +8,10 @@
 <body>
     
     <nav style="display: flex;">
-        <div class="left" style="float: left;">
+        <div class="left" style="justify-content: left;">
             test
         </div>
-        <div class="right" style="float: right;">
+        <div class="right" style="justify-content: right;">
             test2
         </div>
     </nav>
