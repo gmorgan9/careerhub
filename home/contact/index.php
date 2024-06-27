@@ -51,13 +51,14 @@
             position: relative;
             display: table-cell;
             padding: 0 10px 5px 0;
-            font-size: 44px;
+            font-size: 35px;
             color: #994E4E;
         }
         .info-text {
             position: relative;
             display: table-cell;
             padding: 0 0 0 15px;
+            font-size: 25px;
             vertical-align: middle;
         }
     </style>
@@ -108,7 +109,7 @@
                             <i class="bi bi-envelope"></i>
                         </div>
                         <div class="info-text">
-                            <h4>McKinney, TX</h4>
+                            <h4>garrett.morgan.pro@gmail.com</h4>
                         </div>
                     </div>
                 </div>
