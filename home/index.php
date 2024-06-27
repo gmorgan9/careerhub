@@ -13,8 +13,8 @@
     
     <nav class="d-flex justify-content-between align-items-center">
         <div class="left">
-            <a href="">
-                <img src="../assets/images/logo.png" alt="">
+            <a href="home/" class="text-white text-decoration-none">
+                <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
                 Garrett Morgan
             </a>
         </div>
