@@ -174,7 +174,7 @@
             opacity: .6;
         }
         .site-footer .footer-social-links li a:hover {
-            color: #333;
+            color: #006699;
         }
         .footer-copyright {
             float: right;
