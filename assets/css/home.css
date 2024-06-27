@@ -464,7 +464,9 @@ figure {
     align-items: center; /* Center content vertically */
     height: 100%; /* Ensure full height of modal content */
 }
-
+.btn-close {
+    float: right;
+}
 .modal-body {
     width: 75%; /* Set the width of the modal body */
     padding: 20px; /* Optional: Add padding for better appearance */
