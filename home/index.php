@@ -68,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-top: 45px;">
             <div class="col-xs-12 col-sm-12">
                 <div class="block-title">
                     <h2>Fun Facts</h2>
