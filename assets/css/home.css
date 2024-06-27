@@ -459,10 +459,5 @@ figure {
 .custom-modal-bg {
     background-color: var(--background-color);
     color: white; /* Optional: Change text color for better contrast */
-}
-.modal-body {
-    width: 75% !important;
-}
-.modal-body p {
-    text-align: left; /* Ensure the text is left-aligned */
+    width: 75%;
 }
