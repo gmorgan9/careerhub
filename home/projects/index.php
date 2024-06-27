@@ -110,7 +110,6 @@ logoutUser($conn);
                             </div>
                             
                         </figure>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="closeOffcanvas()">Close</button>
                     </div>
 
 
@@ -121,39 +120,6 @@ logoutUser($conn);
 
         <div id="offcanvas"></div>
         
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content custom-modal-bg">
-                    <nav class="portfolio-page-nav">
-                        <div class="nav-item portfolio-page-close-button">
-                            <a href="" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="bi bi-x"></i>
-                            </a>
-                        </div>
-                    </nav>
-                    <div class="close-btn">
-                        <button type="button" class="btn-close" ></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Testing here
-                        </p>
-                    </div>
-                    <!-- Footer buttons if needed -->
-                    <!--
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                    -->
-                </div>
-            </div>
-        </div>
-
-
-
-
 
         
         <footer class="site-footer">

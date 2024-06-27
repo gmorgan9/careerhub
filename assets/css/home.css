@@ -501,3 +501,13 @@ figure {
     height: 100%;
     border: none;
 }
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
