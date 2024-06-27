@@ -93,7 +93,7 @@ if(isLoggedIn() == false) {
     </style>
     
 </head>
-<body>
+<body style="background-color: rgb(34,34,34);">
 <?php //include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
     <!-- Navbar -->
