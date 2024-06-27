@@ -71,7 +71,7 @@
                         </div>
                     </div>
 
-                    <div class="block-title" style="margin-top: 15px;">
+                    <div class="block-title" style="margin-top: 35px;">
                         <h2>Additional Skills & Interests</h2>
                     </div>
                     <!-- <div class="timeline clearfix">
