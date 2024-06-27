@@ -51,6 +51,7 @@
     <!-- End Navbar -->
 
     <div class="container">
+        <div class="mt-4"></div>
         <div class="row flex-v-align">
             <div class="col-sm-12 col-md-5 col-lg-5">
                 <img src="../assets/images/home-image.png" alt="">
