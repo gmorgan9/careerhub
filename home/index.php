@@ -28,7 +28,7 @@
 <body style="background-color: rgb(34,34,34);">
     
     <!-- Navbar -->
-        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 120px 70px;">
+        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
             <div class="left">
                 <a href="/home" class="text-white text-decoration-none">
                     <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
@@ -58,7 +58,7 @@
     <!-- End Navbar -->
 
     <div class="container">
-        <div class="row flex-v-align" style="margin-top: 75px;">
+        <div class="row flex-v-align" style="margin-top: 150px;">
             <div class="col-sm-12 col-md-5 col-lg-5">
                 <img src="../assets/images/home-image.png" alt="">
             </div>
