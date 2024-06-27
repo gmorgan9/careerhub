@@ -10,7 +10,7 @@ function logoutUser($conn)
         
         // Destroy the session and redirect to the login page
         session_destroy();
-        header("Location: login.php");
+        header("Location: /");
         exit; // Prevent further execution
     }
 }
