@@ -74,16 +74,6 @@
                     <div class="block-title" style="margin-top: 35px;">
                         <h2>Additional Skills & Interests</h2>
                     </div>
-                    <!-- <div class="timeline clearfix">
-                        <div class="timeline-item">
-                            <h5 class="item-period ">2023</h5>
-                            <span class="item-company">Brigham Young University</span>
-                            <h4 class="item-title">Bachelor of Science in Cybersecurity</h4>
-                            <div class="text">
-                            Relevant Coursework: Info Assurance & Security, Database Principles & Application, Computer Networks, Operating Systems, Fundamentals of Web-Based Information Technology, Pentesting, Digital Forensics, Cloud Architecture
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="text">
                         <div class="row">
                             <div class="col-sm-3">
@@ -96,15 +86,33 @@
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square"></i>
                             </div>
+                            <span>Including HTML, CSS, Javascript, PHP</span>
                         </div>
                         <div class="row">
-                            <div class="col-xs-1 col-sm-6">
-                                Javascript
+                            <div class="col-sm-3">
+                                Linux
                             </div>
                             <div class="col-xs-9 col-sm-6">
-                                test
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-half"></i>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                SQL
+                            </div>
+                            <div class="col-xs-9 col-sm-6">
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-half"></i>
+                            </div>
+                        </div>
+                        
                         
                     • Coding Languages: Proficient in HTML, CSS, Python, JavaScript, Linux, SQL, PHP, novice in C, C++, C#
                     • Familiar with Burpsuite, Qualys, Cloudflare, Wazuh, ELK Stack, OSquery, and MS Office
