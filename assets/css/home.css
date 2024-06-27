@@ -385,3 +385,14 @@ img {
     margin: 0 0 2em;
     text-align: right;
 }
+.portfolio-filters li {
+    display: inline-block;
+}
+.portfolio-filters li a, .portfolio-filters li a:hover, .portfolio-filters li a:not([href]) {
+    color: #222;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 3px 14px;
+    text-decoration: none;
+    opacity: .5;
+}
