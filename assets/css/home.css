@@ -336,6 +336,13 @@
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
+.cert-logo img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
 .cert-content {
     display: table-cell;
     width: 100%;
