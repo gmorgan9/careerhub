@@ -34,6 +34,9 @@
             text-align: left;
             width: 100vw;
         }
+        .title {
+            font-size: 44px;
+        }
     </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
@@ -70,7 +73,7 @@
 
     <div class="container w-100">
         <div class="page_title">
-            <h2 class="text-white">
+            <h2 class="text-white title">
                 Contact
             </h2>
         </div>
