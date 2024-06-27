@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" col-xs-12 col-sm-8 ">
+                <div class=" col-xs-12 col-sm-8 ms-3">
                     text
                 </div>
             </div>
