@@ -59,11 +59,7 @@ logoutUser($conn);
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/home/contact">Contact</a>
                     </li>
-                    <?php if($_SESSION['loggedin'] != 1) { ?>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/login">Login</a>
-                    </li>
-                    <?php } else { ?>
+                    <?php if($_SESSION['loggedin'] === 1) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bi bi-person-circle"></i>
@@ -73,6 +69,10 @@ logoutUser($conn);
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="index.php?logout=1">Logout</a>
                             </div>
+                        </li>  
+                    <?php } else { ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="/login">Login</a>
                         </li>
                     <?php } ?>
                 </ul>
