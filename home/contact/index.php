@@ -18,6 +18,14 @@
         .active {
             color: white !important;
         }
+        .form-btn {
+            background-color: rgb(51,51,51); 
+            border-radius: 50px; 
+            border: 2px solid #994E4E; 
+            padding: 15px 25px; 
+            text-decoration: none; 
+            color: white;
+        }
         .download_btn:hover {
             background-color: #994E4E !important;
         }
@@ -155,6 +163,9 @@
                         <h2>
                             How Can I Help You?
                         </h2>
+                        <form action="">
+                            <button class="download_btn" style="">Download Résumé</button>
+                        </form>
                     </div>
                 </div>
             </div>
