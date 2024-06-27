@@ -26,7 +26,6 @@
             text-decoration: none; 
             color: white;
             margin-top: 15px;
-            margin-right: 0 !important; 
         }
         .form-btn:hover {
             background-color: #994E4E !important;
