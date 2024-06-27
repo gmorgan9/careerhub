@@ -19,21 +19,21 @@
             </a>
         </div>
         <div class="right">
-            <ul class="nav text-white">
+            <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Me</a>
+                    <a class="nav-link text-white" href="#">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Resume</a>
+                    <a class="nav-link text-white" href="#">Resume</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link text-white" href="#">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link text-white" href="#">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link text-white" href="#">Login</a>
                 </li>
             </ul>
         </div>
