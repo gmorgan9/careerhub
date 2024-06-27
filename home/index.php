@@ -19,7 +19,7 @@
             </a>
         </div>
         <div class="right">
-            <ul class="nav">
+            <ul class="nav text-white">
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Me</a>
                 </li>
