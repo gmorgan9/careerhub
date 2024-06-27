@@ -1,17 +1,17 @@
 <?php
-// date_default_timezone_set('America/Denver');
-// require_once "../../app/database/connection.php";
-// require_once "../../path.php";
-// session_start();
+date_default_timezone_set('America/Denver');
+require_once "../../app/database/connection.php";
+require_once "../../path.php";
+session_start();
 
 
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// $files = glob("../../app/functions/*.php");
-// foreach ($files as $file) {
-//     require_once $file;
-// }
+$files = glob("../../app/functions/*.php");
+foreach ($files as $file) {
+    require_once $file;
+}
 
 
 
