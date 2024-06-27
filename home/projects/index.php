@@ -119,7 +119,7 @@ logoutUser($conn);
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content custom-modal-bg">
-                    <div class="modal-body d-flex justify-content-center">
+                    <div class="modal-body d-flex justify-content-center flex-column">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <p>
                             Testing here
