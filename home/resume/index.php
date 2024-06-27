@@ -139,7 +139,7 @@
                 </div>
                 <div class="row">
                     <div class=" col-xs-12 col-sm-6 ">
-                        <div class="certficate-item clearfix">
+                        <div class="certificate-item clearfix">
                             <div class="cert-logo">
                                 <img decoding="async" src="../../assets/images/cert-logos/networkplus-logo.png" alt="logo">
                             </div>
