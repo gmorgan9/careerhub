@@ -360,14 +360,14 @@ img {
 .cert-id {
     font-size: .9em;
     color: #aaa;
+    padding-bottom: 5px;
 }
 .cert-date {
     font-size: .7em;
     color: #aaa;
     opacity: .7;
+    padding-bottom: 5px;
 }
 .cert-company {
-    /* font-size: .7em; */
     color: var(--primary-color);
-    /* opacity: .7; */
 }
