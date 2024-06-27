@@ -13,7 +13,7 @@
         .nav-link:hover {
             color: white !important;
         }
-        .nav-link:active {
+        .active {
             color: white !important;
         }
         .download_btn:hover {
