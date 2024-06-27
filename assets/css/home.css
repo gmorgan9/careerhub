@@ -421,10 +421,10 @@ img {
 .portfolio-item-img {
     position: relative;
     overflow: hidden;
-    -webkit-backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0); */
     border-radius: 8px;
 }
 .portfolio-grid img {
@@ -454,4 +454,8 @@ figure {
     left: 0px;
     visibility: visible;
     transition: transform 450ms ease-out, opacity 450ms ease-out; */
+}
+.custom-modal-bg {
+    background-color: #444;
+    color: white; /* Optional: Change text color for better contrast */
 }
