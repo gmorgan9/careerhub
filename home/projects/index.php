@@ -121,9 +121,7 @@ logoutUser($conn);
                 <div class="modal-content custom-modal-bg">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body justify-content-center">
-                        <p>
-                            Testing here
-                        </p>
+                        testing
                     </div>
                     <!-- Footer buttons if needed -->
                     <!--
