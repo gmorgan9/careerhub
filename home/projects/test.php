@@ -13,9 +13,7 @@
 
 <script>
 function closeOffcanvas() {
-    if (window.opener) {
-        window.opener.closeOffcanvas();
-    }
+    parent.document.getElementById('offcanvas').style.display = 'none';
 }
 </script>
 

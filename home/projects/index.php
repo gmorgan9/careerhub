@@ -146,12 +146,12 @@ function openOffcanvas(url) {
     iframe.setAttribute('frameborder', '0');
     offcanvas.innerHTML = '';
     offcanvas.appendChild(iframe);
-    offcanvas.classList.add('open');
+    offcanvas.style.display = 'flex'; // Display the offcanvas
 }
 
 function closeOffcanvas() {
     var offcanvas = document.getElementById('offcanvas');
-    offcanvas.classList.remove('open');
+    offcanvas.style.display = 'none'; // Hide the offcanvas
 }
 </script>
 
