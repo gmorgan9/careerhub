@@ -151,6 +151,7 @@
 .site-footer {
     /* position: absolute; */
     /* margin: 60px 0 0; */
+    height: 56px;
     right: 0;
     left: 0;
     bottom: 0;
