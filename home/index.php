@@ -59,7 +59,7 @@
                 <h2 class="text-white">
                     Garrett Morgan
                 </h2>
-                <p class="text-muted">
+                <p class="text-secondary">
                 Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
                 </p>
                 <div class="buttons">
