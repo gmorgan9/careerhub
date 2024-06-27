@@ -472,6 +472,13 @@ figure {
 .portfolio-page-nav>div.nav-item a {
     color: #aaa;
     background-color: #333;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    color: #888;
+    background-color: #fafafa;
+    border-radius: 5px;
 }
 .modal-body {
     width: 75%; /* Set the width of the modal body */
