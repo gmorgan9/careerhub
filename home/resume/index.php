@@ -135,7 +135,7 @@
             </div>
         </div>
 
-        <footer class="site-footer">
+        <footer class="site-footer clearfix">
             <div class="footer-socials">
                 <ul class="footer-social-links">
                     <li><a href="#" target="_blank">Twitter</a></li>
