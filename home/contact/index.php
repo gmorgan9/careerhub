@@ -25,6 +25,7 @@
             padding: 15px 25px; 
             text-decoration: none; 
             color: white;
+            margin-right: 0 !important; 
         }
         .form-btn:hover {
             background-color: #994E4E !important;
@@ -222,7 +223,7 @@
                              
                             
                             <!-- ------ -->
-                            <button class="form-btn" style="">Send message</button>
+                            <inpute class="form-btn" style="">Send message</button>
                         </form>
                     </div>
                 </div>
