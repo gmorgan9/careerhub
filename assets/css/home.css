@@ -212,3 +212,13 @@
     left: 15px;
     bottom: 5px;
 }
+.timeline-item:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    background-color: #292929;
+    width: calc(100% - 15px);
+    left: 15px;
+    bottom: 3px;
+}

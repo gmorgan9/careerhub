@@ -62,7 +62,12 @@
                     </div>
                     <div class="timeline">
                         <div class="timeline-item">
-                            
+                            <h5 class="item-period ">2009</h5>
+                            <span class="item-company">University of Studies</span>
+                            <h4 class="item-title">UI Design</h4>
+                            <div class="text">
+        	                    Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.
+                            </div>
                         </div>
                     </div>
                 </div>
