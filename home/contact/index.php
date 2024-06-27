@@ -64,6 +64,14 @@
         .info-text h4 {
             font-size: 18px;
         }
+        .block-title h2 {
+            display: inline-block;
+            position: relative;
+            font-size: 21px;
+            margin: 0 0 30px;
+            z-index: 1;
+            padding-bottom: 7px;
+        }
     </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
@@ -125,7 +133,11 @@
                     </div>
                 </div>
                 <div class=" col-xs-12 col-sm-8 ">
-                    text
+                    <div class="block-title">
+                        <h2>
+                            How Can I Help You?
+                        </h2>
+                    </div>
                 </div>
             </div>
 
