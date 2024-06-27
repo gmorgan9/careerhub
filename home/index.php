@@ -16,6 +16,9 @@
         .nav-link .active {
             color: white !important;
         }
+        .download_btn:hover {
+            background-color: #994E4E !important;
+        }
         .contact_btn:hover {
             color: rgb(59,59,59) !important;
             background-color: rgb(213,213,213) !important;
@@ -70,7 +73,7 @@
                 Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
                 </p>
                 <div class="pt-3 buttons">
-                    <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid #994E4E; padding: 15px; text-decoration: none; color: white;">Download Résumé</a>
+                    <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="download_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid #994E4E; padding: 15px; text-decoration: none; color: white;">Download Résumé</a>
                     <a href="../assets/files/garrett-morgan-resume.pdf" target="_blank" id="" class="contact_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid rgb(213,213,213); padding: 15px; text-decoration: none; color: white;">Download Résumé</a>
                 </div>
             </div>
