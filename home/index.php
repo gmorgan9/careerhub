@@ -13,38 +13,53 @@
         .nav-link:hover {
             color: white !important;
         }
+        .nav-link .active {
+            color: white !important;
+        }
     </style>
 </head>
 <body style="padding: 40px 70px 120px 70px; background-color: rgb(34,34,34);">
     
-    <nav class="d-flex justify-content-between align-items-center">
-        <div class="left">
-            <a href="/home" class="text-white text-decoration-none">
-                <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
-                &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
-            </a>
-        </div>
-        <div class="right">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="#">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="#">Resume</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="#">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="#">Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navbar -->
+        <nav class="d-flex justify-content-between align-items-center">
+            <div class="left">
+                <a href="/home" class="text-white text-decoration-none">
+                    <img src="../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+                </a>
+            </div>
+            <div class="right">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary active" href="#">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- End Navbar -->
 
+    <div class="container">
+        <div class="row flex-v-align">
+            <div class="col-sm-12 col-md-5 col-lg-5">
+                <img src="../assets/images/home-image.png" alt="">
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-7">
+
+            </div>
+        </div>
+    </div>
 
 
 
