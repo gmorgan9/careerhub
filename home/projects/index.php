@@ -141,10 +141,28 @@ logoutUser($conn);
                                                 <ul class="project-general-info">
                                                     <li>
                                                         <p>
-                                                            <i class="bi bi-github"></i> &nbsp; <a href="https://github.com/MorganServer/emergencyprep.git" target="_blank" class="">gmorgan9</a>
+                                                            <i class="bi bi-github"></i> &nbsp; 
+                                                            <a href="https://github.com/MorganServer/emergencyprep.git" target="_blank" class="">gmorgan9</a>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="bi bi-globe"></i> &nbsp; 
+                                                            <a href="https://emergencyprep.morganserver.com" target="_blank">EmergencyPrep</a>
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <i class="bi bi-calendar3"></i> &nbsp; 
+                                                            March 7, 2024
                                                         </p>
                                                     </li>
                                                 </ul>
+                                                <div class="text-justify">
+                                                    <p>
+                                                        This website serves as a vital resource hub for a church organization, offering essential information and tools for emergency preparedness.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
