@@ -232,7 +232,7 @@
                                 <div class="right-column">
                                     <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
                                 </div>
-                                <input class="form-btn" style="">Send message</input>
+                                <input type="submit" class="form-btn" value="Send message">
                              </div>
                              
                             
