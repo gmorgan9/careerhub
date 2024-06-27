@@ -77,7 +77,7 @@
                 Contact
             </h2>
         </div>
-        <div class="content">
+        <div class="content text-white">
             <div class="row">
                 <div class=" col-xs-12 col-sm-4 ">
                     text
