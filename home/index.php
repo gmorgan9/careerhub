@@ -56,14 +56,14 @@
                 <img src="../assets/images/home-image.png" alt="">
             </div>
             <div class="col-sm-12 col-md-7 col-lg-7">
-                <h3>
+                <h2 class="text-white">
                     Garrett Morgan
-                </h3>
+                </h2>
                 <p>
-
+                Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
                 </p>
                 <div class="buttons">
-                    <a href="../assets/files/garrett-morgan-resume.pdf" download="proposed_file_name" id="" class="btn btn-primary">Download Résumé</a>
+                    <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="btn btn-primary">Download Résumé</a>
                 </div>
             </div>
         </div>
