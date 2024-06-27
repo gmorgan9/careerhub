@@ -13,7 +13,10 @@
     
     <nav class="d-flex justify-content-between align-items-center">
         <div class="left">
-            test
+            <a href="">
+                <img src="../assets/images/logo.png" alt="">
+                Garrett Morgan
+            </a>
         </div>
         <div class="right">
             test2
