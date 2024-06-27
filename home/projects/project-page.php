@@ -82,17 +82,9 @@ foreach ($files as $file) {
 
                     <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
 
-                    
+
                         <div class="portfolio-page-content mt-5">
                             <div class="portfolio-page-wrapper">
-
-                                <!-- <nav class="portfolio-page-nav">
-                                  <div class="nav-item portfolio-page-close-button">
-                                      <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
-                                          <i class="bi bi-x"></i>
-                                      </a>
-                                  </div>
-                                </nav> -->
 
                                 <div class="body">
                                     <div class="portfolio-page-title">
