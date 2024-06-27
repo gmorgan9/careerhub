@@ -33,7 +33,7 @@
             margin-top: 100px;
             margin-bottom: 65px;
             text-align: left;
-            width: 100wv;
+            width: 100vw;
         }
     </style>
 </head>

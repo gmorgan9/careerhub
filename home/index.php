@@ -58,7 +58,7 @@
     <!-- End Navbar -->
 
     <div class="container">
-        <div class="row flex-v-align" style="margin-top: 100px;">
+        <div class="row flex-v-align" style="margin-top: 75px;">
             <div class="col-sm-12 col-md-5 col-lg-5">
                 <img src="../assets/images/home-image.png" alt="">
             </div>
