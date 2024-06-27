@@ -56,6 +56,9 @@
                 <img src="../assets/images/home-image.png" alt="">
             </div>
             <div class="col-sm-12 col-md-7 col-lg-7">
+                <p class="text-secondary">
+                    Cybersecurity Ethusiast
+                </p>
                 <h2 class="text-white">
                     Garrett Morgan
                 </h2>
