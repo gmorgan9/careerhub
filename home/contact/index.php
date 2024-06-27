@@ -72,6 +72,15 @@
             z-index: 1;
             padding-bottom: 7px;
         }
+        .block-title h2:after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 30px;
+            background-color: #7066ff;
+            height: 2px;
+            bottom: 0;
+        }
     </style>
 </head>
 <body style="background-color: rgb(34,34,34);">
