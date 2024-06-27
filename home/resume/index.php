@@ -66,9 +66,26 @@
                             <span class="item-company">Brigham Young University</span>
                             <h4 class="item-title">Bachelor of Science in Cybersecurity</h4>
                             <div class="text">
-        	                    Duis posuere, quam non imperdiet egestas, eros enim mattis mauris, in posuere lacus arcu quis felis. Etiam interdum erat non enim venenatis fermentum.
+                            Relevant Coursework: Info Assurance & Security, Database Principles & Application, Computer Networks, Operating Systems, Fundamentals of Web-Based Information Technology, Pentesting, Digital Forensics, Cloud Architecture
                             </div>
                         </div>
+                    </div>
+                    <div class="block-title">
+                        <h2>Additional Skills & Interests</h2>
+                    </div>
+                    <!-- <div class="timeline clearfix">
+                        <div class="timeline-item">
+                            <h5 class="item-period ">2023</h5>
+                            <span class="item-company">Brigham Young University</span>
+                            <h4 class="item-title">Bachelor of Science in Cybersecurity</h4>
+                            <div class="text">
+                            Relevant Coursework: Info Assurance & Security, Database Principles & Application, Computer Networks, Operating Systems, Fundamentals of Web-Based Information Technology, Pentesting, Digital Forensics, Cloud Architecture
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="text">
+                    • Coding Languages: Proficient in HTML, CSS, Python, JavaScript, Linux, SQL, PHP, novice in C, C++, C#
+                    • Familiar with Burpsuite, Qualys, Cloudflare, Wazuh, ELK Stack, OSquery, and MS Office
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 ">
