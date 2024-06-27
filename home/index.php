@@ -11,7 +11,7 @@
 
     <style>
         .nav-link:hover {
-            color: white;
+            color: white !important;
         }
     </style>
 </head>
