@@ -458,11 +458,11 @@ figure {
 }
 .custom-modal-bg {
     background-color: var(--background-color);
-    color: white; /* Optional: Change text color for better contrast */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100%; /* Ensure full height of modal content */
+    color: white; 
+    /* display: flex; */
+    /* justify-content: center;  */
+    /* align-items: center;  */
+    height: 100%; 
 }
 .portfolio-page-nav>div.nav-item {
     position: relative;
