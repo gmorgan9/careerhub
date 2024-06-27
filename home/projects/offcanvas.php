@@ -23,7 +23,7 @@
                                                 <div class="block-title">
                                                     <h3>Description</h3>
                                                 </div>
-                                                <a href="https://careerhub.morganserver.com/projects/test.php">test</a>
+                                                <a href="https://careerhub.morganserver.com/home/projects/test.php">test</a>
                                                 <ul class="project-general-info">
                                                     <li>
                                                         <p>
