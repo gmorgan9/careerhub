@@ -7,11 +7,11 @@
 </head>
 <body>
     
-    <nav>
-        <div class="left" style="display: flex; justify-content: left;">
+    <nav style="display: flex;">
+        <div class="left" style="justify-content: left;">
             test
         </div>
-        <div class="right" style="display: flex; justify-content: right;">
+        <div class="right" style="justify-content: right;">
             test2
         </div>
     </nav>
