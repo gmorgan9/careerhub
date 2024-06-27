@@ -49,10 +49,10 @@ logoutUser($conn);
             <div class="right">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link text-secondary active" href="/home">About Me</a>
+                        <a class="nav-link text-secondary" href="/home">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/home/resume">Resume</a>
+                        <a class="nav-link text-secondary active" href="/home/resume">Resume</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/home/projects">Projects</a>
