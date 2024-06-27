@@ -461,5 +461,5 @@ figure {
     color: white; /* Optional: Change text color for better contrast */
 }
 .modal-body {
-    width: 75%;
+    width: 75% !important;
 }
