@@ -69,7 +69,7 @@
                 <h2 class="text-white" style="font-size: 48px;">
                     Garrett Morgan
                 </h2>
-                <p class="pt-3" style="color: #d5d5d5;">
+                <p class="pt-3" style="color: #d5d5d5; width: 95%;">
                 Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia urna, a placerat sapien pretium eu.
                 </p>
                 <div class="pt-4 buttons">
