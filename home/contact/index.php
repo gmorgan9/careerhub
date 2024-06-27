@@ -61,7 +61,7 @@
             vertical-align: middle;
         }
         .info-text h4 {
-            font-size: 25px;
+            font-size: 18px;
         }
     </style>
 </head>
