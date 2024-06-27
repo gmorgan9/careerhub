@@ -197,7 +197,10 @@
 .timeline-item:first-child {
     padding-top: 3px;
 }
-
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
 .timeline-item {
     position: relative;
     padding: 25px 0 20px 40px;

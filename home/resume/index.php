@@ -60,7 +60,7 @@
                     <div class="block-title">
                         <h2 style="font-size: 21px;">Education</h2>
                     </div>
-                    <div class="timeline">
+                    <div class="timeline clearfix">
                         <div class="timeline-item">
                             <h5 class="item-period ">2009</h5>
                             <span class="item-company">University of Studies</span>
