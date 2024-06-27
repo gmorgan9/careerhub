@@ -114,8 +114,7 @@ logoutUser($conn);
                         </figure>
                     </div>
 
-                  
-                    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
                         <div class="portfolio-page-content">
                             <div class="portfolio-page-wrapper">
 
@@ -140,6 +139,7 @@ logoutUser($conn);
                                                 <div class="block-title">
                                                     <h3>Description</h3>
                                                 </div>
+                                                <a href="https://careerhub.morganserver.com/home/projects/project-page.php">test</a>
                                                 <ul class="project-general-info">
                                                     <li>
                                                         <p>
@@ -198,7 +198,7 @@ logoutUser($conn);
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
 
                 </div>
