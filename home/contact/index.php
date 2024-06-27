@@ -28,7 +28,6 @@
             border-top: 1px solid #333333;
             border-bottom: 1px solid #333333;
             padding: 65px 70px;
-            /* margin-right: -150px; */
             margin-left: -210px;
             margin-top: 100px;
             margin-bottom: 65px;
@@ -71,7 +70,7 @@
 
     <div class="container w-100">
         <div class="page_title">
-            <h2>
+            <h2 class="text-white">
                 Contact
             </h2>
         </div>
