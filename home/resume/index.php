@@ -85,12 +85,15 @@
                         </div>
                     </div> -->
                     <div class="text">
-                        <div class="col-xs-5 col-sm-6">
-                            Javascript
+                        <div class="row">
+                            <div class="col-xs-5 col-sm-6">
+                                Javascript
+                            </div>
+                            <div class="col-xs-9 col-sm-6">
+                                test
+                            </div>
                         </div>
-                        <div class="col-xs-9 col-sm-6">
-                            test
-                        </div>
+                        
                     • Coding Languages: Proficient in HTML, CSS, Python, JavaScript, Linux, SQL, PHP, novice in C, C++, C#
                     • Familiar with Burpsuite, Qualys, Cloudflare, Wazuh, ELK Stack, OSquery, and MS Office
                     </div>
