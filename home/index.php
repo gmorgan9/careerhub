@@ -19,7 +19,7 @@
             </a>
         </div>
         <div class="right collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Me</a>
                 </li>
