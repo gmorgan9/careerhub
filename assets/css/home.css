@@ -483,3 +483,6 @@ figure {
     line-height: 40px;
     font-size: 22px;
 }
+.offcanvas {
+    background-color: var(--background-color)
+}
