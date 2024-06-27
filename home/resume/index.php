@@ -76,7 +76,7 @@
                     </div>
                     <div class="text">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 Web Development
                             </div>
                             <div class="col-xs-9 col-sm-6">
@@ -89,7 +89,7 @@
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including HTML, CSS, Javascript, PHP</span>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 Database Development
                             </div>
                             <div class="col-xs-9 col-sm-6">
@@ -102,7 +102,7 @@
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including MySQL, PostgresSQL, MariaDB</span>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 Linux
                             </div>
                             <div class="col-xs-9 col-sm-6">
@@ -114,10 +114,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 Coding
                             </div>
-                            <div class="col-xs-9 col-sm-6">
+                            <div class="col-sm-6">
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-fill"></i>
@@ -127,7 +127,7 @@
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including Python, C(novice), C++(novice)</span>
                         </div>
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-4">
                                 SIEM Tools
                             </div>
                             <div class="col-xs-9 col-sm-6">
