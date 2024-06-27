@@ -3,6 +3,8 @@ date_default_timezone_set('America/Denver');
 require_once "../../app/database/connection.php";
 require_once "../../path.php";
 session_start();
+<?php include 'test.php'; ?>
+
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -112,8 +114,8 @@ logoutUser($conn);
                         </figure>
                     </div>
 
-                    <!-- Offcanvas container -->
-                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+                  
+                    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
                         <div class="portfolio-page-content">
                             <div class="portfolio-page-wrapper">
 
@@ -196,7 +198,7 @@ logoutUser($conn);
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                 </div>
