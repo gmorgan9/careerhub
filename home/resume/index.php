@@ -138,7 +138,7 @@
                     <h2>Certifications</h2>
                 </div>
                 <div class="row">
-                    <div class=" col-xs-12 col-sm-6 ">
+                    <div class=" col-xs-12 col-sm-6 "> <!-- Network+ -->
                         <div class="certificate-item clearfix">
                             <div class="cert-logo">
                                 <img decoding="async" src="../../assets/images/cert-logos/networkplus-logo.png" alt="logo">
@@ -146,17 +146,17 @@
                             <div class="cert-content">
                                 <div class="cert-title">
                                     <h4>
-                                        Psychology of Intertnation Design
+                                        Network+ N10-008
                                     </h4>
                                 </div>
                                 <div class="cert-id">
                                     <span>
-                                        Membership ID: XXXX
+                                        Membership ID: ----
                                     </span>
                                 </div>
                                 <div class="cert-date">
                                     <span>
-                                        19 April 2018
+                                        In-progress
                                     </span>
                                 </div>
                                 <div class="cert-company">
@@ -167,25 +167,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class=" col-xs-12 col-sm-6 ">
+                    <div class=" col-xs-12 col-sm-6 "> <!-- Security+ -->
                         <div class="certificate-item clearfix">
                             <div class="cert-logo">
-                                <img decoding="async" src="../../assets/images/cert-logos/networkplus-logo.png" alt="logo">
+                                <img decoding="async" src="../../assets/images/cert-logos/securityplus-logo.png" alt="logo">
                             </div>
                             <div class="cert-content">
                                 <div class="cert-title">
                                     <h4>
-                                        Psychology of Intertnation Design
+                                        Security+ SY0-701
                                     </h4>
                                 </div>
                                 <div class="cert-id">
                                     <span>
-                                        Membership ID: XXXX
+                                        Membership ID: ----
                                     </span>
                                 </div>
                                 <div class="cert-date">
                                     <span>
-                                        19 April 2018
+                                        In-progress
                                     </span>
                                 </div>
                                 <div class="cert-company">
