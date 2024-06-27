@@ -71,7 +71,7 @@ foreach ($files as $file) {
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
                                 <a class="dropdown-item" href="/dashboard">Dashboard</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/logout">Logout</a>
+                                <a class="dropdown-item" href="/logout?logout=1">Logout</a>
                             </div>
                         </li>
                     <?php } ?>
