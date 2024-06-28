@@ -99,6 +99,7 @@ foreach ($files as $file) {
                     $project_tech          = $project['project_tech'];
                     $project_share_link    = $project['project_share_link'];
                     $project_content       = $project['project_content'];
+                    $technologies          = explode(", ", $project_tech);
 
                     
                 }
@@ -132,22 +133,22 @@ foreach ($files as $file) {
                                     <li>
                                         <p>
                                             <i class="bi bi-globe"></i> &nbsp; 
-                                            <a href="<?php echo $project_url; ?>" target="_blank"><?php  ?></a>
+                                            <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_short_name; ?></a>
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <i class="bi bi-calendar3"></i> &nbsp; 
-                                            March 7, 2024
+                                            <?php echo $project_release; ?>
                                         </p>
                                     </li>
                                 </ul>
                                 <div class="text-justify">
                                     <p>
-                                        This website serves as a vital resource hub for a church organization, offering essential information and tools for emergency preparedness.
+                                        <?php echo $project_description; ?>
                                     </p>
                                 </div>
-                                <div class="tags-block">
+                                <!-- <div class="tags-block">
                                     <div class="block-title">
                                         <h3>Technology</h3>
                                     </div>
@@ -156,6 +157,16 @@ foreach ($files as $file) {
                                         <li><a href="">CSS</a></li>
                                         <li><a href="">EmergencyPrep</a></li>
                                         <li><a href="">Website</a></li>
+                                    </ul>
+                                </div> -->
+                                <div class="tags-block">
+                                    <div class="block-title">
+                                        <h3>Technology</h3>
+                                    </div>
+                                    <ul class="tags">
+                                        <?php foreach ($technologies as $tech): ?>
+                                            <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                        <?php endforeach; ?>
                                     </ul>
                                 </div>
                                 <div class="share-buttons">
