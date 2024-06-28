@@ -80,7 +80,7 @@ foreach ($files as $file) {
 
 
                         <div class="form">
-                            <form action="" method="">
+                            <form action="" method="POST">
                                 <div class="controls two-columns">
                                     <div class="left-column">
                                         <div class="form-group">
