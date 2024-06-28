@@ -3,7 +3,7 @@
 require('../app/database/connection.php');
 
 // Fetch distinct companies from the database
-$query = "SELECT DISTINCT company FROM applications WHERE status = 'Applied'";
+$query = "SELECT DISTINCT company FROM jobs WHERE status = 'Applied'";
 $result = mysqli_query($conn, $query);
 
 // Check if there are any rows returned
@@ -21,6 +21,6 @@ if (mysqli_num_rows($result) > 0) {
     echo json_encode($companies);
 } else {
     // No data found
-    echo json_encode(array('message' => 'No applications found'));
+    echo json_encode(array('message' => 'No Jobs found'));
 }
 ?>

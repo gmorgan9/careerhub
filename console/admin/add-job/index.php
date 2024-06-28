@@ -87,8 +87,8 @@ foreach ($files as $file) {
                 <input type="text" class="form-input" id="job_title" name="job_title">
             </div>
             <div class="col">
-                <label for="app_link" class="form-label">Application Link</label>
-                <input type="text" class="form-input" id="app_link" name="app_link">
+                <label for="job_link" class="form-label">Job Link</label>
+                <input type="text" class="form-input" id="job_link" name="job_link">
             </div>
         </div>
 

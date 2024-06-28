@@ -41,13 +41,13 @@ foreach ($files as $file) {
                 $searchField = $selectedField;
             
                 // Construct SQL query with search condition
-                $sql = "SELECT * FROM applications WHERE $searchField LIKE '%$search%' ORDER BY created_at DESC LIMIT $start, $limit";
+                $sql = "SELECT * FROM jobs WHERE $searchField LIKE '%$search%' ORDER BY created_at DESC LIMIT $start, $limit";
             
                 // Execute the query
                 $result = mysqli_query($conn, $sql);
             
                 // Calculate total number of pages for pagination
-                $countSql = "SELECT COUNT(*) as total FROM applications WHERE $searchField LIKE '%$search%'";
+                $countSql = "SELECT COUNT(*) as total FROM jobs WHERE $searchField LIKE '%$search%'";
                 $countResult = mysqli_query($conn, $countSql);
                 $row = mysqli_fetch_assoc($countResult);
                 $total_pages = ceil($row["total"] / $limit);
@@ -146,10 +146,10 @@ foreach ($files as $file) {
             <ul class="list-group">
                 <?php if (mysqli_num_rows($result) > 0){ ?>
                     <?php while ($row = mysqli_fetch_assoc($result)){ 
-                        $id             = $row['app_id'];
+                        $id             = $row['job_id'];
                         $job_title      = $row['job_title'];
                         ?>
-                        <?php //$app_id_data = $row['app_id']; ?>
+                        <?php //$job_id_data = $row['job_id']; ?>
                         <li class="list-group-item float-end">
                             <?php echo $row['job_title']; ?>
                             <a href="/console/jobs/view-job/?viewid=<?php echo $id; ?>" class="view float-end badge text-bg-secondary text-decoration-none">View</a>

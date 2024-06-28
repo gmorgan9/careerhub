@@ -116,7 +116,7 @@ foreach ($files as $file) {
     <div class="application-details">
         <?php
         $id = $_GET['viewid'];
-        $sql = "SELECT * FROM applications WHERE app_id=$id";
+        $sql = "SELECT * FROM jobs WHERE job_id=$id";
         $result = mysqli_query($conn, $sql);
         if ($result) {
             $num_rows = mysqli_num_rows($result);
@@ -128,7 +128,7 @@ foreach ($files as $file) {
                 $bonus_pay = $row['bonus_pay'];
                 $status = $row['status'];
                 $job_type = $row['job_type'];
-                $app_link = $row['app_link'];
+                $job_link = $row['job_link'];
                 $notes = $row['notes'];
                 $watchlist = $row['watchlist'];
                 $interview_set = $row['interview_set'];
@@ -238,7 +238,7 @@ foreach ($files as $file) {
                     <div class="card" style="background-color: #333;">
                         <div class="card-body text-center">
                             <h5 class="card-title">Job Listing</h5>
-                            <p class="card-text"><a href="<?php echo $app_link; ?>" target="_blank" class="badge text-bg-secondary text-decoration-none" style="margin-top: -10px !important; padding: none !important;">Visit</a></p>
+                            <p class="card-text"><a href="<?php echo $job_link; ?>" target="_blank" class="badge text-bg-secondary text-decoration-none" style="margin-top: -10px !important; padding: none !important;">Visit</a></p>
                         </div>
                     </div>
                 </div>

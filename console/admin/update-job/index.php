@@ -82,12 +82,12 @@ foreach ($files as $file) {
 
     <?php
             $id = $_GET['updateid'];
-            $sql = "SELECT * FROM applications WHERE app_id=$id";
+            $sql = "SELECT * FROM jobs WHERE job_id=$id";
             $result = mysqli_query($conn, $sql);
             if($result) {
                 $num_rows = mysqli_num_rows($result);
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $app_id          = $row['app_id'];
+                    $job_id         = $row['job_id'];
                     $job_title      = $row['job_title'];
                     $comapny        = $row['company'];
                     $location       = $row['location'];
@@ -96,7 +96,7 @@ foreach ($files as $file) {
                     $bonus_pay      = $row['bonus_pay'];
                     $status         = $row['status'];
                     $job_type       = $row['job_type'];
-                    $app_link       = $row['app_link'];
+                    $job_link       = $row['job_link'];
                     $contact_name   = $row['contact_name'];
                     $contact_phone  = $row['contact_phone'];
                     $contact_email  = $row['contact_email'];
@@ -107,16 +107,9 @@ foreach ($files as $file) {
                     $interview_set  = $row['interview_set'];
     ?>
 
-
-
-
-
-
-
-
     <form method="POST" action="">
 
-        <input type="hidden" class="form-input" id="app_id" name="app_id" value="<?php echo $app_id; ?>">
+        <input type="hidden" class="form-input" id="job_id" name="job_id" value="<?php echo $job_id; ?>">
 
         <div class="row mb-3">
             <div class="col">
@@ -124,8 +117,8 @@ foreach ($files as $file) {
                 <input type="text" class="form-input" id="job_title" name="job_title" value="<?php echo $job_title; ?>">
             </div>
             <div class="col">
-                <label for="app_link" class="form-label">Application Link</label>
-                <input type="text" class="form-input" id="app_link" name="app_link" value="<?php echo $app_link; ?>">
+                <label for="job_link" class="form-label">Job Link</label>
+                <input type="text" class="form-input" id="job_link" name="job_link" value="<?php echo $job_link; ?>">
             </div>
         </div>
 

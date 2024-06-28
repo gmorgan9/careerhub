@@ -6,37 +6,37 @@ require_once "../app/database/connection.php";
 require_once "../path.php";
 session_start();
 
-// Check if app_id is provided in the URL query parameter
-if (isset($_GET['app_id'])) {
-    // Get the app_id from the URL
-    $app_id = $_GET['app_id'];
+
+if (isset($_GET['job_id'])) {
+   
+    $job_id = $_GET['job_id'];
 
     // Prevent SQL injection
-    $app_id = mysqli_real_escape_string($conn, $app_id);
+    $job_id = mysqli_real_escape_string($conn, $job_id);
 
-    // Fetch application details from the database based on app_id
-    $sql = "SELECT * FROM applications WHERE app_id = '$app_id'"; // Assuming 'id' is the primary key
+    // 
+    $sql = "SELECT * FROM jobs WHERE job_id = '$job_id'"; // Assuming 'id' is the primary key
     $result = mysqli_query($conn, $sql);
 
     // Check if the query was successful
     if ($result) {
         // Check if there are rows returned
         if (mysqli_num_rows($result) > 0) {
-            // Fetch the application details
-            $application = mysqli_fetch_assoc($result);
-            // Output application details as HTML
-            echo "<p><strong>Job Title:</strong> " . htmlspecialchars($application['job_title']) . "</p>";
-            echo "<p><strong>Company:</strong> " . htmlspecialchars($application['company']) . "</p>";
+            // Fetch the jobs details
+            $job = mysqli_fetch_assoc($result);
+            // Output job details as HTML
+            echo "<p><strong>Job Title:</strong> " . htmlspecialchars($job['job_title']) . "</p>";
+            echo "<p><strong>Company:</strong> " . htmlspecialchars($job['company']) . "</p>";
             // Add more details as needed
         } else {
-            echo "<p>No application found.</p>";
+            echo "<p>No job found.</p>";
         }
     } else {
         // If there was an error executing the query, echo the error message
         echo "<p>Error executing the query: " . mysqli_error($conn) . "</p>";
     }
 } else {
-    echo "<p>No application ID provided.</p>";
+    echo "<p>No job ID provided.</p>";
 }
 
 ?>

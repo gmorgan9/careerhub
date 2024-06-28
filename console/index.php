@@ -149,7 +149,7 @@ foreach ($files as $file) {
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                $sql="select count('1') from applications where status='Applied' || status='Interested'";
+                                $sql="select count('1') from jobs where status='Applied' || status='Interested'";
                                 $result=mysqli_query($conn,$sql);
                                 $rowtotal=mysqli_fetch_array($result); 
                                 if($rowtotal[0] < 10) {
@@ -183,7 +183,7 @@ foreach ($files as $file) {
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                    $sql="select count('1') from applications where status='Offered'";
+                                    $sql="select count('1') from jobs where status='Offered'";
                                     $result=mysqli_query($conn,$sql);
                                     $rowtotal=mysqli_fetch_array($result); 
                                     if($rowtotal[0] < 10) {
@@ -215,7 +215,7 @@ foreach ($files as $file) {
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                    $sql="select count('1') from applications where status='Rejected'";
+                                    $sql="select count('1') from jobs where status='Rejected'";
                                     $result=mysqli_query($conn,$sql);
                                     $rowtotal=mysqli_fetch_array($result); 
                                     if($rowtotal[0] < 10) {
@@ -247,7 +247,7 @@ foreach ($files as $file) {
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                    $sql="select count('1') from applications";
+                                    $sql="select count('1') from jobs";
                                     $result=mysqli_query($conn,$sql);
                                     $rowtotal=mysqli_fetch_array($result); 
                                     if($rowtotal[0] < 10) {
@@ -257,7 +257,7 @@ foreach ($files as $file) {
                                     }
                                 ?>
                             </h5>
-                            <p class="card-title text-center">Total Applications</p>
+                            <p class="card-title text-center">Total Jobs</p>
                             <div class="overlay-text">
                                 View Details
                             </div>
@@ -278,19 +278,19 @@ foreach ($files as $file) {
             <!-- first table -->
                 <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
                     <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
+                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest jobs</span> 
                     </div>
                     <div class="card-body">
                         <!-- only allow three -->
                         <ul class="list-group">
                             <?php
-                            $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
+                            $sql = "SELECT * FROM jobs ORDER BY created_at DESC LIMIT 3";
                             $result = mysqli_query($conn, $sql);
                             if($result) {
                                 $num_rows = mysqli_num_rows($result);
                                 if($num_rows > 0) {
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        $app_id         = $row['app_id'];
+                                        $job_id         = $row['job_id'];
                                         $status         = $row['status'];
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
@@ -308,7 +308,7 @@ foreach ($files as $file) {
                                                 <?php } else if($row['status'] == 'Interested') { ?>
                                                     <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                 <?php } ?>
-                                                <a href="/console/jobs/view-job/?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
                                         </li>
                                     <?php 
                                     }
@@ -333,13 +333,13 @@ foreach ($files as $file) {
                         <!-- only allow three -->
                         <ul class="list-group">
                             <?php
-                            $sql = "SELECT * FROM applications WHERE watchlist = 1 LIMIT 3";
+                            $sql = "SELECT * FROM jobs WHERE watchlist = 1 LIMIT 3";
                             $result = mysqli_query($conn, $sql);
                             if($result) {
                                 $num_rows = mysqli_num_rows($result);
                                 if($num_rows > 0) {
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        $app_id         = $row['app_id'];
+                                        $job_id         = $row['job_id'];
                                         $status         = $row['status'];
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
@@ -357,7 +357,7 @@ foreach ($files as $file) {
                                             <?php } else if($row['status'] == 'Interested') { ?>
                                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                             <?php } ?>
-                                            <a href="/console/jobs/view-job/?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
+                                            <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
                                         </li>
                                     <?php 
                                     }
@@ -424,13 +424,13 @@ foreach ($files as $file) {
                                 return $string ? implode(', ', $string) . ' ago' : 'Just now';
                             }
                         
-                            $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
+                            $sql = "SELECT * FROM jobs ORDER BY updated_at DESC LIMIT 3";
                             $result = mysqli_query($conn, $sql);
                             if ($result) {
                                 $num_rows = mysqli_num_rows($result);
                                 if ($num_rows > 0) {
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        $app_id     = $row['app_id'];
+                                        $job_id     = $row['job_id'];
                                         $status     = $row['status'];
                                         $job_title  = $row['job_title'];
                                         $company    = $row['company'];
@@ -451,7 +451,7 @@ foreach ($files as $file) {
                                             <?php } else if($row['status'] == 'Interested') { ?>
                                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                             <?php } ?>
-                                            <a href="/console/jobs/view-job/?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
+                                            <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
                                             <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
                                         </li>
                                     <?php

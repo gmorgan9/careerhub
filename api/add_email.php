@@ -21,18 +21,18 @@ if(isset($data)) {
             $sender = mysqli_real_escape_string($conn, $data['sender']);
             $link = mysqli_real_escape_string($conn, $data['link']);
 
-            // Retrieve app_id from applications table
-            $query1 = "SELECT app_id FROM applications WHERE company = '$companyName'";
+            
+            $query1 = "SELECT job_id FROM jobs WHERE company = '$companyName'";
             $result1 = mysqli_query($conn, $query1);
             
             if ($result1) {
                 if (mysqli_num_rows($result1) > 0) {
-                    // Fetch the app_id from the result set
+                    
                     $row = mysqli_fetch_assoc($result1);
-                    $app_id = $row['app_id'];
+                    $job_id = $row['job_id'];
                 } else {
-                    // No matching company, set app_id to null
-                    $app_id = null;
+                    
+                    $job_id = null;
                 }
                 
                 // Generate idno
@@ -43,7 +43,7 @@ if(isset($data)) {
                 $result_check = mysqli_query($conn, $query_check);
                 if (mysqli_num_rows($result_check) == 0) {
                     // Insert data into email_application table
-                    $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), '$subject', '$sender', '$link')";
+                    $query2 = "INSERT INTO email_application (idno, job_id, subject, sender, link) VALUES ('$idno', NULLIF('$job_id',''), '$subject', '$sender', '$link')";
                     $result2 = mysqli_query($conn, $query2);
                     
                     if ($result2) {
@@ -57,8 +57,8 @@ if(isset($data)) {
                     echo "Link already exists in the database.";
                 }
             } else {
-                // Error retrieving app_id
-                echo "Error retrieving app_id: " . mysqli_error($conn);
+                
+                echo "Error retrieving job_id: " . mysqli_error($conn);
             }
         } else {
             // Missing required fields
