@@ -242,6 +242,7 @@ foreach ($files as $file) {
                 </div>
 
                 <h4><i class="bi bi-file-earmark-text-fill"></i> Notes</h4>
+                <?php echo $notes; ?>
                 
                 <!-- __________ -->
                 
