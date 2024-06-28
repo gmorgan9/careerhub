@@ -261,10 +261,10 @@ foreach ($files as $file) {
         <br>
         <?php
             // Pagination links
-            $sql = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Applied' || status = 'Interested'";
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_assoc($result);
-            $total_pages = ceil($row["total"] / $limit);
+            $pag_sql = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Applied' || status = 'Interested'";
+            $pag_result = mysqli_query($conn, $pag_sql);
+            $pag_row = mysqli_fetch_assoc($pag_result);
+            $total_pages = ceil($pag_row["total"] / $limit);
 
                 echo '<ul class="pagination justify-content-center">';
                 for ($i = 1; $i <= $total_pages; $i++) {
