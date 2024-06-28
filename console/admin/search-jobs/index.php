@@ -108,15 +108,13 @@ foreach ($files as $file) {
         </nav>
     <!-- End Navbar -->
 
-    <!-- <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;"> -->
         
 
     <!-- Search form -->
-        <!-- <div class="container"> -->
         <div class="container w-100">
         <div class="page_title">
             <h2 class="text-white title">
-                Rejected Jobs
+                Search Jobs
             </h2>
         </div>
 
