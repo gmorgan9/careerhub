@@ -289,7 +289,7 @@ foreach ($files as $file) {
                     ?>
                 </div>
 
-                </div>
+               
 
 
 
@@ -299,6 +299,7 @@ foreach ($files as $file) {
             <?php }
         } ?>
     </div>
+</div>
 </div>
 
 
