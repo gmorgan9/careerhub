@@ -100,15 +100,16 @@ foreach ($files as $file) {
 
                     
                 }
-           
-            ?>
+            }
+        }
+    ?>
 
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
         <div class="portfolio-page-content mt-5">
             <div class="portfolio-page-wrapper">
                 <div class="body">
                     <div class="portfolio-page-title">
-                        <h2><?php echo $project_title; ?></h2>
+                        <h2><?php echo $project_name; ?></h2>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-8 portfolio-block">
@@ -178,7 +179,7 @@ foreach ($files as $file) {
             </div>
         </div>
     </div>
-    <?php }} ?>
+
                    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
