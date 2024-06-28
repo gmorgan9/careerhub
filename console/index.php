@@ -125,7 +125,7 @@ foreach ($files as $file) {
 
 
 
-    <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 35px;">
+    <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
     <!-- Top Row -->
         <div class="card-container justify-content-center mx-auto">
 
