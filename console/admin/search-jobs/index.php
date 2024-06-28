@@ -11,7 +11,6 @@ foreach ($files as $file) {
     require_once $file;
 }
 
-
     // Search functionality
         // Pagination variables
         $limit = 10; // Number of items per page
@@ -109,14 +108,13 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
         
-
     <!-- Search form -->
-        <div class="container w-100">
         <div class="page_title">
             <h2 class="text-white title">
                 Search Jobs
             </h2>
         </div>
+        <div class="container-fluid">
 
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
         

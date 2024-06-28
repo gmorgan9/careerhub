@@ -10,7 +10,6 @@ foreach ($files as $file) {
     require_once $file;
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,12 +27,8 @@ foreach ($files as $file) {
     <!-- TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/7kainuaawjddfzf3pj7t2fm3qdjgq5smjfjtsw3l4kqfd1h4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
-    <title>Job Management System</title>
+    <title>Add Job - MorganServer Career Hub</title>
 
-    <style>
-        
-    </style>
-    
 </head>
 <body style="background-color: rgb(34,34,34);">
 
@@ -67,116 +62,110 @@ foreach ($files as $file) {
             </div>
         </nav>
     <!-- End Navbar -->
-
- <!-- main-container -->
  
- <div class="container w-100">
-        <div class="page_title">
-            <h2 class="text-white title">
-                Add Job
-            </h2>
-        </div>  
-    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
-        
+    <div class="page_title">
+        <h2 class="text-white title">
+            Add Job
+        </h2>
+    </div>  
 
-    <form method="POST" action="">
+    <div class="container-fluid">
+            
+        <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+            
+            <form method="POST" action="">
 
-        <div class="row mb-3">
-            <div class="col">
-                <label for="job_title" class="form-label">Job Title</label>
-                <input type="text" class="form-input" id="job_title" name="job_title">
-            </div>
-            <div class="col">
-                <label for="job_link" class="form-label">Job Link</label>
-                <input type="text" class="form-input" id="job_link" name="job_link">
-            </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="job_title" class="form-label">Job Title</label>
+                        <input type="text" class="form-input" id="job_title" name="job_title">
+                    </div>
+                    <div class="col">
+                        <label for="job_link" class="form-label">Job Link</label>
+                        <input type="text" class="form-input" id="job_link" name="job_link">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="company" class="form-label">Company</label>
+                        <input type="text" class="form-input" id="company" name="company">
+                    </div>
+                    <div class="col">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-input" id="location" name="location">
+                    </div>
+                </div>
+            
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="pay" class="form-label">Pay</label>
+                        <input type="text" class="form-input" id="pay" name="pay">
+                    </div>
+                    <div class="col">
+                        <label for="bonus_pay" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
+                        <input type="text" class="form-input" id="bonus_pay" name="bonus_pay">
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="status">Status</label>
+                        <select class="form-input" name="status">
+                            <option value="">Please select one...</option>
+                            <option value="Applied">Applied</option>
+                            <option value="Interviewed">Interviewed</option>
+                            <option value="Offered">Offered</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="job_type">Job Type</label>
+                        <select class="form-input" name="job_type">
+                            <option value="">Please select one...</option>
+                            <option value="Full Time">Full Time</option>
+                            <option value="Part Time">Part Time</option>
+                            <option value="Contract">Contract</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Temporary">Temporary</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label" for="notes">Notes</label>
+                        <textarea class="form-input" name="notes" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mb-3 ps-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
+                        <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="1">
+                        <label class="form-check-label" for="interview_set">Interview Set</label>
+                    </div>
+                </div>
+
+
+            
+                <button type="submit" name="add-full" class="form-btn">Add Job</button>
+                <div class="pb-4"></div>
+            </form>
+
         </div>
 
-        <div class="row mb-3">
-            <div class="col">
-                <label for="company" class="form-label">Company</label>
-                <input type="text" class="form-input" id="company" name="company">
-            </div>
-            <div class="col">
-                <label for="location" class="form-label">Location</label>
-                <input type="text" class="form-input" id="location" name="location">
-            </div>
-        </div>
-    
-        <div class="row mb-3">
-            <div class="col">
-                <label for="pay" class="form-label">Pay</label>
-                <input type="text" class="form-input" id="pay" name="pay">
-            </div>
-            <div class="col">
-                <label for="bonus_pay" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
-                <input type="text" class="form-input" id="bonus_pay" name="bonus_pay">
-            </div>
-            <div class="col">
-                <label class="form-label" for="status">Status</label>
-                <select class="form-input" name="status">
-                    <option value="">Please select one...</option>
-                    <option value="Applied">Applied</option>
-                    <option value="Interviewed">Interviewed</option>
-                    <option value="Offered">Offered</option>
-                    <option value="Rejected">Rejected</option>
-                </select>
-            </div>
-            <div class="col">
-                <label class="form-label" for="job_type">Job Type</label>
-                <select class="form-input" name="job_type">
-                    <option value="">Please select one...</option>
-                    <option value="Full Time">Full Time</option>
-                    <option value="Part Time">Part Time</option>
-                    <option value="Contract">Contract</option>
-                    <option value="Internship">Internship</option>
-                    <option value="Temporary">Temporary</option>
-                </select>
-            </div>
-        </div>
+    </div>
 
-        <div class="row mb-3">
-            <div class="col">
-                <label class="form-label" for="notes">Notes</label>
-                <textarea class="form-input" name="notes" rows="5"></textarea>
-            </div>
-        </div>
+    <div class="mt-5"></div>
 
-        <div class="row mb-3 ps-3">
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
-                <label class="form-check-label" for="watchlist">Add to Watchlist</label>
-            </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="1">
-                <label class="form-check-label" for="interview_set">Interview Set</label>
-            </div>
-        </div>
-
-
-    
-        <button type="submit" name="add-full" class="form-btn">Add Job</button>
-        <div class="pb-4"></div>
-    </form>
-
-
-
-</div>
-<!-- END main-container -->
-
-<br><br><br>
-
-
-
-
-<script>
+    <script>
         tinymce.init({
             selector: 'textarea',
             plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         });
     </script>
-
 
 
 </body>
