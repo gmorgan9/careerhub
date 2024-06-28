@@ -144,7 +144,7 @@ foreach ($files as $file) {
                         <?php } ?>
                     </span>
                     <span class="float-end">
-                        <a class="badge text-bg-success text-decoration-none" style="font-size: 14px;" href="/console/jobs/update-job/?updateid=<?php echo $id; ?>">Edit</a>
+                        <a class="badge text-bg-success text-decoration-none" style="font-size: 14px;" href="/console/admin/update-job/?updateid=<?php echo $id; ?>">Edit</a>
                         <a class="badge text-bg-danger text-decoration-none" style="font-size: 14px;" href="open-app.php?deleteid=<?php echo $id; ?>">Delete</a>
                     </span>
                 </h2>

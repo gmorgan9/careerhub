@@ -128,7 +128,7 @@ foreach ($files as $file) {
                             <i class="bi bi-eye text-success"></i>
                         </a>
                         &nbsp; 
-                        <a href="update-app.php?updateid=<?php echo $id; ?>" style="text-decoration: none;">
+                        <a href="/console/admin/update-job/?updateid=<?php echo $id; ?>" style="text-decoration: none;">
                             <i class="bi bi-pencil-square" style="color:#005382;"></i>
                         </a>
                         &nbsp;

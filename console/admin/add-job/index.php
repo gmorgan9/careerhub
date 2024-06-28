@@ -153,7 +153,7 @@ foreach ($files as $file) {
 
 
     
-        <button type="submit" name="add-full" class="form-btn">Submit</button>
+        <button type="submit" name="add-full" class="form-btn">Add Job</button>
         <div class="pb-4"></div>
     </form>
 
