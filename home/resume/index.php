@@ -34,10 +34,8 @@ foreach ($files as $file) {
     
     <?php include(ROOT_PATH . "/app/database/includes/hub-header.php"); ?>
 
-    <div class="page_title">
-        <h2 class="text-white title">
-             Résumé
-        </h2>
+    <div class="page_title">    
+            <h2 class="text-white title">Open Jobs</h2>
     </div>
 
     <div class="container-fluid" style="width: 99.5%;">
