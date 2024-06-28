@@ -67,14 +67,13 @@ foreach ($files as $file) {
         </nav>
     <!-- End Navbar -->
 
+    <div class="container w-100">
 
-                    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+        <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
 
-                        <a href=""></a>
-                        
-
-
-                    </div>
+        </div>
+        
+    </div>
                    
 
 

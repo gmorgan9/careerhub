@@ -68,14 +68,15 @@ foreach ($files as $file) {
 
 
 <!-- main-container -->
-
-<div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
-<!-- <h1 class="text-center"><strong>Open Applications</strong></h1><br> -->
+    <div class="container w-100">
         <div class="page_title">
             <h2 class="text-white title">
                 Rejected Jobs
             </h2>
         </div>
+        
+    <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
+        
 
     <div class="container-fluid main">
 
