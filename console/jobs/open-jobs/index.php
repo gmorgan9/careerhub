@@ -79,7 +79,7 @@ foreach ($files as $file) {
 
     <div class="container-fluid main">
 
-        <table class="table">
+        <table class="table text-white">
             <thead>
                 <tr>
                 <th scope="col">#</th>
