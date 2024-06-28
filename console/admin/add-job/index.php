@@ -113,6 +113,7 @@ foreach ($files as $file) {
             <div class="col">
                 <label class="form-label" for="status">Status</label>
                 <select class="form-input" name="status">
+                    <option value="">Please select one...</option>
                     <option value="Applied">Applied</option>
                     <option value="Interviewed">Interviewed</option>
                     <option value="Offered">Offered</option>
@@ -122,6 +123,7 @@ foreach ($files as $file) {
             <div class="col">
                 <label class="form-label" for="job_type">Job Type</label>
                 <select class="form-input" name="job_type">
+                    <option value="">Please select one...</option>
                     <option value="Full Time">Full Time</option>
                     <option value="Part Time">Part Time</option>
                     <option value="Contract">Contract</option>
