@@ -74,7 +74,7 @@ foreach ($files as $file) {
     <title>Search Jobs - MorganServer Career Hub</title>
     <style></style>
 </head>
-<body>
+<body style="background-color: rgb(34,34,34);">
 
     <!-- Navbar -->
         <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
@@ -109,11 +109,7 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
     <!-- <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;"> -->
-        <div class="page_title">
-            <h2 class="text-white title">
-                Rejected Jobs
-            </h2>
-        </div>
+        
 
     <!-- Search form -->
         <!-- <div class="container"> -->
