@@ -101,6 +101,27 @@ foreach ($files as $file) {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script src="<?php echo BASE_URL; ?>/assets/js/active-page.js"></script>
+    <!-- <script src="<?php //echo BASE_URL; ?>/assets/js/active-page.js"></script> -->
+     <script>
+        window.onload = function() {
+    // Get the current path
+    var path = window.location.pathname;
+
+    // Select all nav-link elements
+    var navLinks = document.querySelectorAll('.nav-link');
+
+    // Remove .active class from all nav-link elements
+    navLinks.forEach(function(link) {
+        link.classList.remove('active');
+    });
+
+    // Add .active class to the link that matches the current path
+    navLinks.forEach(function(link) {
+        if (link.getAttribute('href') === path) {
+            link.classList.add('active');
+        }
+    });
+};
+     </script>
 </body>
 </html>
