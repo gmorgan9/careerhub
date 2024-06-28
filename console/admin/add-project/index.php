@@ -108,9 +108,7 @@ foreach ($files as $file) {
                                             <input id="project_share_link" type="text" name="project_share_link" class="form-input" placeholder="Project Share Link" required="required">
                                         </div>
                                     </div>
-                                    <div class="form-group">
                                         <textarea id="project_content" name="project_content" class="form-input" placeholder="" rows="7" required="required"></textarea>
-                                    </div>
                                     <input type="submit" class="form-btn" value="Send message">
                                 </div>
                             </form>
