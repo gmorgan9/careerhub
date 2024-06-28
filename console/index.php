@@ -164,14 +164,14 @@ foreach ($files as $file) {
         <!-- end Open/Awaiting -->
 
         <!-- Recieved Offer -->
-            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem;">
-                <a class="text-decoration-none text-black stretched-link" href="offer-app.php">
+            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                <a class="text-decoration-none stretched-link" href="offer-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightblue; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-check d-block mx-auto my-3 ms-4 me-4" style="margin-top: 20px !important; font-size: 48px;"></i>
+                            <i class="bi bi-clipboard-check d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
 
-                        <div class="right float-end mt-2" style="margin-right: 30px !important;">
+                        <div class="right float-end mt-2 text-white" style="margin-right: 30px !important;">
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
@@ -196,14 +196,14 @@ foreach ($files as $file) {
         <!-- end Received Offer -->
 
         <!-- Declined -->
-            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem;">
-                <a class="text-decoration-none text-black stretched-link" href="declined-app.php">
+            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                <a class="text-decoration-none stretched-link" href="declined-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightpink; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4" style="margin-top: 20px !important; font-size: 48px;"></i>
+                            <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
 
-                        <div class="right float-end mt-2" style="margin-right: 40px !important;">
+                        <div class="right float-end mt-2 text-white" style="margin-right: 40px !important;">
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
@@ -228,14 +228,14 @@ foreach ($files as $file) {
         <!-- end Declined -->
 
         <!-- Total -->
-            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem;">
-                <a class="text-decoration-none text-black stretched-link" href="total-app.php">
+            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                <a class="text-decoration-none stretched-link" href="total-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4" style="margin-top: 20px !important; font-size: 48px;"></i>
+                            <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
 
-                        <div class="right float-end mt-2" style="margin-right: 18px !important;">
+                        <div class="right float-end mt-2 text-white" style="margin-right: 18px !important;">
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
@@ -268,7 +268,7 @@ foreach ($files as $file) {
     <!-- Bottom Row -->
         <div class="row d-flex justify-content-center">
             <!-- first table -->
-                <div class="card p-0 me-2" style="width: 25rem;">
+                <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
                     </div>
