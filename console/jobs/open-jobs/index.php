@@ -68,7 +68,7 @@ foreach ($files as $file) {
 
 
 
-    <!-- main-container -->
+<!-- main-container -->
 <div class="container w-100">
     <div class="page_title">    
         <h2 class="text-white title">
@@ -100,13 +100,17 @@ foreach ($files as $file) {
                     $limit = 10; // Number of entries per page
                     $page = isset($_GET['page']) ? $_GET['page'] : 1;
                     $offset = ($page - 1) * $limit;
-                    
+
+                    // Debugging output
+                    echo "<!-- Page: $page, Offset: $offset -->";
+
                     $sql = "SELECT * FROM jobs WHERE status = 'Applied' OR status = 'Interested' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
                     $result = mysqli_query($conn, $sql);
 
-                    if($result) {
+                    if ($result) {
                         $num_rows = mysqli_num_rows($result);
-                        if($num_rows > 0) {
+                        echo "<!-- Number of rows fetched: $num_rows -->";
+                        if ($num_rows > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $id             = $row['job_id'];
                                 $idno           = $row['idno'];
@@ -153,17 +157,17 @@ foreach ($files as $file) {
                                 <?php
                                     $new = "SELECT * FROM jobs WHERE job_id=$id";
                                     $new1 = mysqli_query($conn, $new);
-                                    if($new1) {
+                                    if ($new1) {
                                         while ($cap = mysqli_fetch_assoc($new1)) {
                                 ?>
                                 <!-- Display the content of the selected entry -->
                                 <div>
                                     <h5 class="float-start">Job Details</h5>
                                     <div class="float-end">
-                                        <?php if($cap['watchlist'] == 1){ ?>
+                                        <?php if ($cap['watchlist'] == 1) { ?>
                                             <i class="bi bi-eye text-muted"></i>
                                         <?php } ?>
-                                        <?php if($cap['interview_set'] == 1){ ?>
+                                        <?php if ($cap['interview_set'] == 1) { ?>
                                             <i class="bi bi-people"></i>
                                         <?php } ?>
                                     </div>
@@ -172,13 +176,13 @@ foreach ($files as $file) {
                                 <hr>
                                 <div class="ms-3 me-3">
                                     <p class="float-start fw-bold">Status</p> 
-                                    <?php if($cap['status'] == 'Applied'){ ?>
+                                    <?php if ($cap['status'] == 'Applied') { ?>
                                         <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                    <?php } else if($cap['status'] == 'Interviewed') { ?>
+                                    <?php } else if ($cap['status'] == 'Interviewed') { ?>
                                         <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                    <?php } else if($cap['status'] == 'Offered') { ?>
+                                    <?php } else if ($cap['status'] == 'Offered') { ?>
                                         <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                    <?php } else if($cap['status'] == 'Rejected') { ?>
+                                    <?php } else if ($cap['status'] == 'Rejected') { ?>
                                         <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
                                     <?php } ?>
                                 </div>
@@ -187,14 +191,11 @@ foreach ($files as $file) {
                                     <p class="float-start fw-bold">Connected Emails</p>
                                     <p><span class="float-end">
                                         <?php
-                                            $count="select count('1') from email_application where job_id='$id'";
-                                            $count_result=mysqli_query($conn,$count);
-                                            $rtotal=mysqli_fetch_array($count_result); 
-                                            if($rtotal[0] < 10) {
-                                                echo "0$rtotal[0]";
-                                            } else {
-                                                echo "$rtotal[0]";
-                                            }
+                                            $count = "SELECT COUNT(*) as email_count FROM email_application WHERE job_id='$id'";
+                                            $count_result = mysqli_query($conn, $count);
+                                            $rtotal = mysqli_fetch_assoc($count_result);
+                                            $email_count = $rtotal['email_count'];
+                                            echo $email_count < 10 ? "0$email_count" : $email_count;
                                         ?>
                                     </span></p>
                                 </div>
