@@ -69,12 +69,12 @@ foreach ($files as $file) {
 
 
 <!-- main-container -->
-<div class="container w-100">
+<div class="container w-100" style="margin:0;">
     <div class="page_title">    
         <h2 class="text-white title">Open Jobs</h2>
     </div>
 
-    <div class="content text-white" style="max-width: 1320px; margin-top: 55px;">
+    <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
         <table class="table text-white">
             <thead>
                 <tr>
