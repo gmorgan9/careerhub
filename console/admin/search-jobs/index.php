@@ -116,7 +116,14 @@ foreach ($files as $file) {
         </div>
 
     <!-- Search form -->
-        <div class="container">
+        <!-- <div class="container"> -->
+
+        <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
+        <div class="page_title">
+            <h2 class="text-white title">
+                Rejected Jobs
+            </h2>
+        </div>
         <form method="GET" action="" class="mb-3">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
