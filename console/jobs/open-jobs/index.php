@@ -1,78 +1,72 @@
-<?php
-date_default_timezone_set('America/Denver');
-require_once "../../../app/database/connection.php";
-require_once "../../../path.php";
-session_start();
-
-$files = glob("../../../app/functions/*.php");
-foreach ($files as $file) {
-    require_once $file;
-}
-
-$limit = 10; // Number of entries per page
-$page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
-$offset = ($page - 1) * $limit;
-
-$sql = "SELECT * FROM jobs WHERE status = 'Applied' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
-$result = mysqli_query($conn, $sql);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Jobs - MorganServer Career Hub</title>
     <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-    <title>Open Jobs - MorganServer Career Hub</title>
+    <style>
+        body {
+            background-color: rgb(34,34,34);
+        }
+        .page_title {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .table-container {
+            margin: 30px auto;
+            width: 75%;
+        }
+        @media (max-width: 768px) {
+            .table-container {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
-<body style="background-color: rgb(34,34,34);">
+<body>
 
-
-    <!-- Navbar -->
-        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
-            <div class="left">
-                <a href="/home" class="text-white text-decoration-none">
-                    <img src="../../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
-                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+<nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
+    <div class="left">
+        <a href="/home" class="text-white text-decoration-none">
+            <img src="../../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+            &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+        </a>
+    </div>
+    <div class="right">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="/">Career Hub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secondary active" href="/console">Console</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin
                 </a>
-            </div>
-            <div class="right">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/">Career Hub</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary active" href="/console">Console</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Admin
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                            <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index.php?logout=1">Settings</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    <!-- End Navbar -->
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                    <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="index.php?logout=1">Settings</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <div class="container-fluid">
-        <div class="page_title">    
-            <h2 class="text-white title">Open Jobs</h2>
-        </div>
+<div class="container-fluid">
+    <div class="page_title">    
+        <h2 class="text-white title">Open Jobs</h2>
+    </div>
 
-        <!-- <div class="content text-white" style="margin-top: 55px;"> -->
-        <table class="table text-white w-75">
+    <div class="table-container">
+        <table class="table text-white">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -122,7 +116,7 @@ $result = mysqli_query($conn, $sql);
                 } else {
                 ?>
                     <tr>
-                        <td colspan="6" class="text-center">No jobs found.</td>
+                        <td colspan="7" class="text-center">No jobs found.</td>
                     </tr>
                 <?php
                 }
@@ -148,8 +142,8 @@ $result = mysqli_query($conn, $sql);
         }
         ?>
     </div>
-    
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
