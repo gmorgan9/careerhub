@@ -114,7 +114,7 @@ foreach ($files as $file) {
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
                             <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
-                            <a class="dropdown-item" href="/console/admin/update-job" disabled>Update Job</a>
+                            <a class="dropdown-item disabled" href="/console/admin/update-job">Update Job</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.php?logout=1">Settings</a>
                         </div>
