@@ -270,7 +270,7 @@ foreach ($files as $file) {
             <div class="footer-copyright">
                 <p>© 2024 All rights reserved.</p>
             </div>
-        </footer>≈
+        </footer>
     </div>
 
 
