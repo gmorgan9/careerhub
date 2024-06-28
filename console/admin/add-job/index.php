@@ -75,6 +75,7 @@ foreach ($files as $file) {
             <h2 class="text-white title">
                 Add Project
             </h2>
+        </div>  
 
     <form method="POST" action="">
 
