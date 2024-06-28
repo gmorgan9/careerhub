@@ -35,61 +35,63 @@ foreach ($files as $file) {
     <?php include(ROOT_PATH . "/app/database/includes/hub-header.php"); ?>
 
     <div class="container-fluid">
-        <div class="row flex-v-align" style="margin-top: 150px;">
-            <div class="col-sm-12 col-md-5 col-lg-5">
-                <img src="../assets/images/home-image.png" alt="">
-            </div>
-            <div class="col-sm-12 col-md-7 col-lg-7 d-flex flex-column justify-content-center">
-                <p class="text-secondary">
-                    Cybersecurity Enthusiast
-                </p>
-                <h2 class="text-white" style="font-size: 48px;">
-                    Garrett Morgan
-                </h2>
-                <p class="pt-3" style="color: #d5d5d5; width: 85%;">
-                Experienced in IT Audit with a strong foundation in cybersecurity, I am actively working to transition back into the technical cybersecurity field. Currently, I am pursuing multiple CompTIA certifications to enhance my expertise and skills.
-                </p>
-                <div class="pt-4 buttons">
-                    <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="download_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid #994E4E; padding: 15px 25px; text-decoration: none; color: white;">Download Résumé</a>
-                    &nbsp;&nbsp;
-                    <a href="/home/contact" id="" class="contact_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid rgb(213,213,213); padding: 15px 25px;; text-decoration: none; color: white;">Contact me</a>
+        <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+            <div class="row flex-v-align" style="margin-top: 150px;">
+                <div class="col-sm-12 col-md-5 col-lg-5">
+                    <img src="../assets/images/home-image.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-7 col-lg-7 d-flex flex-column justify-content-center">
+                    <p class="text-secondary">
+                        Cybersecurity Enthusiast
+                    </p>
+                    <h2 class="text-white" style="font-size: 48px;">
+                        Garrett Morgan
+                    </h2>
+                    <p class="pt-3" style="color: #d5d5d5; width: 85%;">
+                    Experienced in IT Audit with a strong foundation in cybersecurity, I am actively working to transition back into the technical cybersecurity field. Currently, I am pursuing multiple CompTIA certifications to enhance my expertise and skills.
+                    </p>
+                    <div class="pt-4 buttons">
+                        <a href="../assets/files/garrett-morgan-resume.pdf" download="garrett-morgan-resume" id="" class="download_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid #994E4E; padding: 15px 25px; text-decoration: none; color: white;">Download Résumé</a>
+                        &nbsp;&nbsp;
+                        <a href="/home/contact" id="" class="contact_btn" style="background-color: rgb(51,51,51); border-radius: 50px; border: 2px solid rgb(213,213,213); padding: 15px 25px;; text-decoration: none; color: white;">Contact me</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row" style="margin-top: 75px !important;">
-            <div class="col-xs-12 col-sm-12">
-                <div class="block-title">
-                    <h2>Fun Facts</h2>
+            <div class="row" style="margin-top: 75px !important;">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="block-title">
+                        <h2>Fun Facts</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-3">
-                <div class="lm-info-block">
-                    <i class="bi bi-heart"></i>
-                    <h4>Happy Clients</h4>
-                    <span class="lm-info-block-value">578</span>
+            <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                    <div class="lm-info-block">
+                        <i class="bi bi-heart"></i>
+                        <h4>Happy Clients</h4>
+                        <span class="lm-info-block-value">578</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="lm-info-block">
-                    <i class="bi bi-watch"></i>
-                    <h4>Working Hours</h4>
-                    <span class="lm-info-block-value">4,780</span>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="lm-info-block">
+                        <i class="bi bi-watch"></i>
+                        <h4>Working Hours</h4>
+                        <span class="lm-info-block-value">4,780</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="lm-info-block">
-                    <i class="bi bi-award"></i>
-                    <h4>Awards Won</h4>
-                    <span class="lm-info-block-value">15</span>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="lm-info-block">
+                        <i class="bi bi-award"></i>
+                        <h4>Awards Won</h4>
+                        <span class="lm-info-block-value">15</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="lm-info-block">
-                    <i class="bi bi-cup-straw"></i>
-                    <h4>Dr Peppers Consumed</h4>
-                    <span class="lm-info-block-value">256</span>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="lm-info-block">
+                        <i class="bi bi-cup-straw"></i>
+                        <h4>Dr Peppers Consumed</h4>
+                        <span class="lm-info-block-value">256</span>
+                    </div>
                 </div>
             </div>
         </div>
