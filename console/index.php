@@ -137,145 +137,141 @@ foreach ($files as $file) {
     <div class="content text-white" style="max-width: 1400px; margin: 0 auto; margin-top: 55px;">
         <!-- Top Row -->
             <div class="card-container justify-content-center mx-auto">
-
             <!-- Open/Awaiting -->
-            
-            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="/console/jobs/open-jobs">
-                    <div class="card-body p-0">
-                        <div class="left float-start" style="background-color: lightgreen; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard d-block mx-auto my-3 ms-4 me-4 text-black" style=" margin-top: 20px !important; font-size: 48px;"></i>
-                        </div>
-                        <div class="right float-end mt-2 text-white" style="margin-right: 30px !important;">
-                            <div class="pt-3"></div>
-                            <h5 class="card-text text-center">
-                                <?php
-                                $sql="select count('1') from jobs where status='Applied' || status='Interested'";
-                                $result=mysqli_query($conn,$sql);
-                                $rowtotal=mysqli_fetch_array($result); 
-                                if($rowtotal[0] < 10) {
-                                    echo "0$rowtotal[0]";
-                                } else {
-                                    echo "$rowtotal[0]";
-                                }
-                                ?>
-                            </h5>
-                            <p class="card-title text-center">Open/Awaiting</p>
-                            <div class="overlay-text">
-                                View Details
+                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                    <a class="text-decoration-none stretched-link" href="/console/jobs/open-jobs">
+                        <div class="card-body p-0">
+                            <div class="left float-start" style="background-color: lightgreen; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
+                                <i class="bi bi-clipboard d-block mx-auto my-3 ms-4 me-4 text-black" style=" margin-top: 20px !important; font-size: 48px;"></i>
+                            </div>
+                            <div class="right float-end mt-2 text-white" style="margin-right: 30px !important;">
+                                <div class="pt-3"></div>
+                                <h5 class="card-text text-center">
+                                    <?php
+                                    $sql="select count('1') from jobs where status='Applied' || status='Interested'";
+                                    $result=mysqli_query($conn,$sql);
+                                    $rowtotal=mysqli_fetch_array($result); 
+                                    if($rowtotal[0] < 10) {
+                                        echo "0$rowtotal[0]";
+                                    } else {
+                                        echo "$rowtotal[0]";
+                                    }
+                                    ?>
+                                </h5>
+                                <p class="card-title text-center">Open/Awaiting</p>
+                                <div class="overlay-text">
+                                    View Details
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-
-            
+                    </a>
+                </div>
             <!-- end Open/Awaiting -->
 
             <!-- Recieved Offer -->
-            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="/console/jobs/offer-jobs">
-                    <div class="card-body p-0">
-                        <div class="left float-start" style="background-color: lightblue; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-check d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
-                        </div>
+                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                    <a class="text-decoration-none stretched-link" href="/console/jobs/offer-jobs">
+                        <div class="card-body p-0">
+                            <div class="left float-start" style="background-color: lightblue; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
+                                <i class="bi bi-clipboard-check d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
+                            </div>
 
-                        <div class="right float-end mt-2 text-white" style="margin-right: 30px !important;">
-                            <div class="pt-3"></div>
-                            <h5 class="card-text text-center">
-                                <?php
-                                    $sql="select count('1') from jobs where status='Offered'";
-                                    $result=mysqli_query($conn,$sql);
-                                    $rowtotal=mysqli_fetch_array($result); 
-                                    if($rowtotal[0] < 10) {
-                                        echo "0$rowtotal[0]";
-                                    } else {
-                                        echo "$rowtotal[0]";
-                                    }
-                                ?>
-                            </h5>
-                            <p class="card-title text-center">Recevied Offer</p>
-                            <div class="overlay-text">
-                                    View Details
-                                </div>
+                            <div class="right float-end mt-2 text-white" style="margin-right: 30px !important;">
+                                <div class="pt-3"></div>
+                                <h5 class="card-text text-center">
+                                    <?php
+                                        $sql="select count('1') from jobs where status='Offered'";
+                                        $result=mysqli_query($conn,$sql);
+                                        $rowtotal=mysqli_fetch_array($result); 
+                                        if($rowtotal[0] < 10) {
+                                            echo "0$rowtotal[0]";
+                                        } else {
+                                            echo "$rowtotal[0]";
+                                        }
+                                    ?>
+                                </h5>
+                                <p class="card-title text-center">Recevied Offer</p>
+                                <div class="overlay-text">
+                                        View Details
+                                    </div>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
             <!-- end Received Offer -->
 
             <!-- Declined -->
-            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="/console/jobs/declined-jobs">
-                    <div class="card-body p-0">
-                        <div class="left float-start" style="background-color: lightpink; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
-                        </div>
+                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                    <a class="text-decoration-none stretched-link" href="/console/jobs/declined-jobs">
+                        <div class="card-body p-0">
+                            <div class="left float-start" style="background-color: lightpink; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
+                                <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
+                            </div>
 
-                        <div class="right float-end mt-2 text-white" style="margin-right: 55px !important;">
-                            <div class="pt-3"></div>
-                            <h5 class="card-text text-center">
-                                <?php
-                                    $sql="select count('1') from jobs where status='Rejected'";
-                                    $result=mysqli_query($conn,$sql);
-                                    $rowtotal=mysqli_fetch_array($result); 
-                                    if($rowtotal[0] < 10) {
-                                        echo "0$rowtotal[0]";
-                                    } else {
-                                        echo "$rowtotal[0]";
-                                    }
-                                ?>
-                            </h5>
-                            <p class="card-title text-center">Rejected</p>
-                            <div class="overlay-text">
-                                View Details
+                            <div class="right float-end mt-2 text-white" style="margin-right: 55px !important;">
+                                <div class="pt-3"></div>
+                                <h5 class="card-text text-center">
+                                    <?php
+                                        $sql="select count('1') from jobs where status='Rejected'";
+                                        $result=mysqli_query($conn,$sql);
+                                        $rowtotal=mysqli_fetch_array($result); 
+                                        if($rowtotal[0] < 10) {
+                                            echo "0$rowtotal[0]";
+                                        } else {
+                                            echo "$rowtotal[0]";
+                                        }
+                                    ?>
+                                </h5>
+                                <p class="card-title text-center">Rejected</p>
+                                <div class="overlay-text">
+                                    View Details
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
             <!-- end Declined -->
 
             <!-- Total -->
-            <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="/console/jobs/total-jobs">
-                    <div class="card-body p-0">
-                        <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
-                        </div>
+                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                    <a class="text-decoration-none stretched-link" href="/console/jobs/total-jobs">
+                        <div class="card-body p-0">
+                            <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
+                                <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
+                            </div>
 
-                        <div class="right float-end mt-2 text-white" style="margin-right: 55px !important;">
-                            <div class="pt-3"></div>
-                            <h5 class="card-text text-center">
-                                <?php
-                                    $sql="select count('1') from jobs";
-                                    $result=mysqli_query($conn,$sql);
-                                    $rowtotal=mysqli_fetch_array($result); 
-                                    if($rowtotal[0] < 10) {
-                                        echo "0$rowtotal[0]";
-                                    } else {
-                                        echo "$rowtotal[0]";
-                                    }
-                                ?>
-                            </h5>
-                            <p class="card-title text-center">Total Jobs</p>
-                            <div class="overlay-text">
-                                View Details
+                            <div class="right float-end mt-2 text-white" style="margin-right: 55px !important;">
+                                <div class="pt-3"></div>
+                                <h5 class="card-text text-center">
+                                    <?php
+                                        $sql="select count('1') from jobs";
+                                        $result=mysqli_query($conn,$sql);
+                                        $rowtotal=mysqli_fetch_array($result); 
+                                        if($rowtotal[0] < 10) {
+                                            echo "0$rowtotal[0]";
+                                        } else {
+                                            echo "$rowtotal[0]";
+                                        }
+                                    ?>
+                                </h5>
+                                <p class="card-title text-center">Total Jobs</p>
+                                <div class="overlay-text">
+                                    View Details
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
             <!-- end Total -->
             </div>
         <!-- end Top Row -->
 
-    <br><br>
+    <div class="mt-5"></div>
     <hr>
-    <br><br>
+    <div class="mt-5"></div>
 
     <!-- Bottom Row -->
-        <div class="row" style="margin-left: -20px; width: 105%;">
+        <div class="row" style="">
             <!-- first table -->
                 <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
                     <div class="card-header">
