@@ -4,7 +4,6 @@ require_once "../../../app/database/connection.php";
 require_once "../../../path.php";
 session_start();
 
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
