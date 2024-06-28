@@ -103,7 +103,7 @@ logoutUser($conn);
                     </ul>
                     <?php
                             // $idno = $_GET['key'];
-                            $projet_sql = "SELECT * FROM projects WHERE idno = $idno";
+                            $projet_sql = "SELECT * FROM projects";
                             $project_result = mysqli_query($conn, $projet_sql);
                             if($project_result) {
                                 $num_rows = mysqli_num_rows($project_result);
