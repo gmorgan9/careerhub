@@ -30,7 +30,7 @@ foreach ($files as $file) {
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Console - - MorganServer Career Hub</title>
+    <title>Console - MorganServer Career Hub</title>
 
 
     <style>
@@ -90,7 +90,6 @@ foreach ($files as $file) {
     
 </head>
 <body style="background-color: rgb(34,34,34);">
-<?php //include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
     <!-- Navbar -->
         <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
@@ -125,19 +124,20 @@ foreach ($files as $file) {
         </nav>
     <!-- End Navbar -->
 
-
     <div class="page_title">
-            <h2 class="text-white title">
-                MorganServer Career Hub Console
-            </h2>
-        </div>
+        <h2 class="text-white title">
+            MorganServer Career Hub Console
+        </h2>
+    </div>
+
     <div class="container-fluid">
         
 
-    <div class="content text-white" style="max-width: 1400px; margin: 0 auto; margin-top: 55px;">
-        <!-- Top Row -->
-            <div class="card-container justify-content-center mx-auto">
-            <!-- Open/Awaiting -->
+        <div class="content text-white" style="max-width: 1400px; margin: 0 auto; margin-top: 55px;">
+
+            <!-- Top Row -->
+                <div class="card-container justify-content-center mx-auto">
+                <!-- Open/Awaiting -->
                 <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/open-jobs">
                         <div class="card-body p-0">
@@ -166,9 +166,9 @@ foreach ($files as $file) {
                         </div>
                     </a>
                 </div>
-            <!-- end Open/Awaiting -->
+                <!-- end Open/Awaiting -->
 
-            <!-- Recieved Offer -->
+                <!-- Recieved Offer -->
                 <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/offer-jobs">
                         <div class="card-body p-0">
@@ -198,9 +198,9 @@ foreach ($files as $file) {
                         </div>
                     </a>
                 </div>
-            <!-- end Received Offer -->
+                <!-- end Received Offer -->
 
-            <!-- Declined -->
+                <!-- Declined -->
                 <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/declined-jobs">
                         <div class="card-body p-0">
@@ -230,9 +230,9 @@ foreach ($files as $file) {
                         </div>
                     </a>
                 </div>
-            <!-- end Declined -->
+                <!-- end Declined -->
 
-            <!-- Total -->
+                <!-- Total -->
                 <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/total-jobs">
                         <div class="card-body p-0">
@@ -262,223 +262,218 @@ foreach ($files as $file) {
                         </div>
                     </a>
                 </div>
-            <!-- end Total -->
-            </div>
-        <!-- end Top Row -->
-
-    <div class="mt-5"></div>
-    <hr>
-    <div class="mt-5"></div>
-
-    <!-- Bottom Row -->
-        <div class="row justify-content-center mx-auto" style="margin-left: 2%;">
-            <!-- first table -->
-                <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
-                    <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest jobs</span> 
-                    </div>
-                    <div class="card-body">
-                        <!-- only allow three -->
-                        <ul class="list-group">
-                            <?php
-                            $sql = "SELECT * FROM jobs ORDER BY created_at DESC LIMIT 3";
-                            $result = mysqli_query($conn, $sql);
-                            if($result) {
-                                $num_rows = mysqli_num_rows($result);
-                                if($num_rows > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $job_id         = $row['job_id'];
-                                        $status         = $row['status'];
-                                        $job_title      = $row['job_title'];
-                                        $company        = $row['company'];
-                                        ?>
-                                        <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
-                                                <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                                <?php if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                                <?php } else if($row['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                                <?php } else if($row['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                                <?php } else if($row['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-danger"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                                <?php } else if($row['status'] == 'Interested') { ?>
-                                                    <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                                <?php } ?>
-                                                <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
-                                        </li>
-                                    <?php 
-                                    }
-                                } else { ?>
-                                    <h3 class="mt-2 text-center text-muted">
-                                        No Entries
-                                    </h3>
-                                <?php }
-                            }
-                            ?>
-                        </ul>
-                    </div>
+                <!-- end Total -->
                 </div>
-            <!-- end first table -->
+            <!-- end Top Row -->
 
-            <!-- second table -->
-                <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
-                    <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
-                    </div>
-                    <div class="card-body">
-                        <!-- only allow three -->
-                        <ul class="list-group">
-                            <?php
-                            $sql = "SELECT * FROM jobs WHERE watchlist = 1 LIMIT 3";
-                            $result = mysqli_query($conn, $sql);
-                            if($result) {
-                                $num_rows = mysqli_num_rows($result);
-                                if($num_rows > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $job_id         = $row['job_id'];
-                                        $status         = $row['status'];
-                                        $job_title      = $row['job_title'];
-                                        $company        = $row['company'];
-                                        ?>
-                                        <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
-                                            <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                            <?php if($row['status'] == 'Applied'){ ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Interviewed') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Offered') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Rejected') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-danger"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Interested') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } ?>
-                                            <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
-                                        </li>
-                                    <?php 
-                                    }
-                                } else { ?>
-                                    <h3 class="mt-2 text-center text-muted">
-                                        No Entries
-                                    </h3>
-                                <?php }
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            <!-- end second table -->
+            <div class="mt-5"></div>
+            <hr>
+            <div class="mt-5"></div>
 
-            <!-- third table -->
-                <div class="card p-0" style="width: 25rem; background-color: #333333;">
-                    <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest updated</span>
-                    </div>
-                    <div class="card-body">
-                        <!-- only allow three -->
-                        <ul class="list-group">
-
-                            <?php
-
-                            function time_elapsed_string($updated_at, $current_time = null, $full = false) {
-                                // If current time is not provided, use the current time
-                                if ($current_time === null) {
-                                    $current_time = new DateTime('now', new DateTimeZone('America/Chicago'));
-                                } else {
-                                    $current_time = new DateTime($current_time, new DateTimeZone('America/Chicago'));
-                                }
-
-                                $updated_at = new DateTime($updated_at, new DateTimeZone('America/Chicago'));
-
-                                $diff = $current_time->diff($updated_at);
-                            
-                                $diff->w = floor($diff->d / 7);
-                                $diff->d -= $diff->w * 7;
-                            
-                                $string = array(
-                                    'y' => 'yr',
-                                    'm' => 'mon',
-                                    'w' => 'wk',
-                                    'd' => 'day',
-                                    'h' => 'hr',
-                                    'i' => 'min',
-                                    's' => 'sec',
-                                );
-                            
-                                foreach ($string as $k => &$v) {
-                                    if ($diff->$k) {
-                                        $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
-                                    } else {
-                                        unset($string[$k]);
-                                    }
-                                }
-                            
-                                if (!$full) {
-                                    $string = array_slice($string, 0, 1);
-                                }
-                            
-                                return $string ? implode(', ', $string) . ' ago' : 'Just now';
-                            }
-                        
-                            $sql = "SELECT * FROM jobs ORDER BY updated_at DESC LIMIT 3";
-                            $result = mysqli_query($conn, $sql);
-                            if ($result) {
-                                $num_rows = mysqli_num_rows($result);
-                                if ($num_rows > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $job_id     = $row['job_id'];
-                                        $status     = $row['status'];
-                                        $job_title  = $row['job_title'];
-                                        $company    = $row['company'];
-                                        $updated_at = $row['updated_at']; // No need to convert to timestamp
-
-                                        $time_ago = time_elapsed_string($updated_at);
-                                        ?>
-                                        <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
-                                        <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                            <?php if($row['status'] == 'Applied'){ ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Interviewed') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Offered') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Rejected') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-danger"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } else if($row['status'] == 'Interested') { ?>
-                                                <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
-                                            <?php } ?>
-                                            <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
-                                            <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
-                                        </li>
+            <!-- Bottom Row -->
+                <div class="row justify-content-center mx-auto" style="margin-left: 2% !important;">
+                    <!-- first table -->
+                        <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
+                            <div class="card-header">
+                                <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest jobs</span> 
+                            </div>
+                            <div class="card-body">
+                                <!-- only allow three -->
+                                <ul class="list-group">
                                     <?php
+                                    $sql = "SELECT * FROM jobs ORDER BY created_at DESC LIMIT 3";
+                                    $result = mysqli_query($conn, $sql);
+                                    if($result) {
+                                        $num_rows = mysqli_num_rows($result);
+                                        if($num_rows > 0) {
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                $job_id         = $row['job_id'];
+                                                $status         = $row['status'];
+                                                $job_title      = $row['job_title'];
+                                                $company        = $row['company'];
+                                                ?>
+                                                <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
+                                                        <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                                        <?php if($row['status'] == 'Applied'){ ?>
+                                                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                        <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                        <?php } else if($row['status'] == 'Offered') { ?>
+                                                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                        <?php } else if($row['status'] == 'Rejected') { ?>
+                                                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-danger"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                        <?php } else if($row['status'] == 'Interested') { ?>
+                                                            <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                        <?php } ?>
+                                                        <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                </li>
+                                            <?php 
+                                            }
+                                        } else { ?>
+                                            <h3 class="mt-2 text-center text-muted">
+                                                No Entries
+                                            </h3>
+                                        <?php }
                                     }
-                                } else { ?>
-                                    <h3 class="mt-2 text-center text-muted">
-                                        No Entries
-                                    </h3>
-                            <?php }
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
+                                    ?>
+                                </ul>
+                            </div>
+                        </div>
+                    <!-- end first table -->
 
+                    <!-- second table -->
+                        <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
+                            <div class="card-header">
+                                <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
+                            </div>
+                            <div class="card-body">
+                                <!-- only allow three -->
+                                <ul class="list-group">
+                                    <?php
+                                    $sql = "SELECT * FROM jobs WHERE watchlist = 1 LIMIT 3";
+                                    $result = mysqli_query($conn, $sql);
+                                    if($result) {
+                                        $num_rows = mysqli_num_rows($result);
+                                        if($num_rows > 0) {
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                $job_id         = $row['job_id'];
+                                                $status         = $row['status'];
+                                                $job_title      = $row['job_title'];
+                                                $company        = $row['company'];
+                                                ?>
+                                                <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
+                                                    <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                                    <?php if($row['status'] == 'Applied'){ ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Offered') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Rejected') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-danger"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Interested') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } ?>
+                                                    <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                </li>
+                                            <?php 
+                                            }
+                                        } else { ?>
+                                            <h3 class="mt-2 text-center text-muted">
+                                                No Entries
+                                            </h3>
+                                        <?php }
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
+                        </div>
+                    <!-- end second table -->
 
+                    <!-- third table -->
+                        <div class="card p-0" style="width: 25rem; background-color: #333333;">
+                            <div class="card-header">
+                                <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest updated</span>
+                            </div>
+                            <div class="card-body">
+                                <!-- only allow three -->
+                                <ul class="list-group">
 
-            <!-- end third table -->
+                                    <?php
 
-        </div>
-    <!-- end Bottom Row -->
+                                    function time_elapsed_string($updated_at, $current_time = null, $full = false) {
+                                        // If current time is not provided, use the current time
+                                        if ($current_time === null) {
+                                            $current_time = new DateTime('now', new DateTimeZone('America/Chicago'));
+                                        } else {
+                                            $current_time = new DateTime($current_time, new DateTimeZone('America/Chicago'));
+                                        }
 
-</div>
-<!-- END main-container -->
+                                        $updated_at = new DateTime($updated_at, new DateTimeZone('America/Chicago'));
+
+                                        $diff = $current_time->diff($updated_at);
+                                    
+                                        $diff->w = floor($diff->d / 7);
+                                        $diff->d -= $diff->w * 7;
+                                    
+                                        $string = array(
+                                            'y' => 'yr',
+                                            'm' => 'mon',
+                                            'w' => 'wk',
+                                            'd' => 'day',
+                                            'h' => 'hr',
+                                            'i' => 'min',
+                                            's' => 'sec',
+                                        );
+                                    
+                                        foreach ($string as $k => &$v) {
+                                            if ($diff->$k) {
+                                                $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+                                            } else {
+                                                unset($string[$k]);
+                                            }
+                                        }
+                                    
+                                        if (!$full) {
+                                            $string = array_slice($string, 0, 1);
+                                        }
+                                    
+                                        return $string ? implode(', ', $string) . ' ago' : 'Just now';
+                                    }
+                                
+                                    $sql = "SELECT * FROM jobs ORDER BY updated_at DESC LIMIT 3";
+                                    $result = mysqli_query($conn, $sql);
+                                    if ($result) {
+                                        $num_rows = mysqli_num_rows($result);
+                                        if ($num_rows > 0) {
+                                            while ($row = mysqli_fetch_assoc($result)) {
+                                                $job_id     = $row['job_id'];
+                                                $status     = $row['status'];
+                                                $job_title  = $row['job_title'];
+                                                $company    = $row['company'];
+                                                $updated_at = $row['updated_at']; // No need to convert to timestamp
+
+                                                $time_ago = time_elapsed_string($updated_at);
+                                                ?>
+                                                <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
+                                                <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                                    <?php if($row['status'] == 'Applied'){ ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-info"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Offered') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-success"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Rejected') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-danger"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } else if($row['status'] == 'Interested') { ?>
+                                                        <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
+                                                    <?php } ?>
+                                                    <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                    <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
+                                                </li>
+                                            <?php
+                                            }
+                                        } else { ?>
+                                            <h3 class="mt-2 text-center text-muted">
+                                                No Entries
+                                            </h3>
+                                    <?php }
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
                         </div>
 
 
 
+                    <!-- end third table -->
 
+                </div>
+            <!-- end Bottom Row -->
 
+        </div>
+
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
