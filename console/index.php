@@ -183,7 +183,7 @@ foreach ($files as $file) {
             <!-- Bottom Row -->
                 <div class="row justify-content-center mx-auto text-white" style="margin-left: 2% !important;">
                     <!-- first table -->
-                        <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
+                        <div class="card p-0 me-2 text-white" style="width: 25rem; background-color: #333333;">
                             <div class="card-header">
                                 <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest jobs</span> 
                             </div>
