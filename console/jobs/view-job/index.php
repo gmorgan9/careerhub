@@ -290,7 +290,7 @@ foreach ($files as $file) {
                 </div>
 
 
-
+                </div>
 
 
                 <!-- ___________ -->
@@ -300,7 +300,7 @@ foreach ($files as $file) {
         } ?>
     </div>
 </div>
-    </div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
