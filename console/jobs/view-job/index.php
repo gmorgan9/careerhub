@@ -178,7 +178,7 @@ foreach ($files as $file) {
 
 
                 <div class="card-container">
-                    <div class="card">
+                    <div class="card" style="background-color: #333;">
                         <div class="card-body text-center">
                             <h5 class="card-title">Company</h5>
                             <p class="card-text"><?php echo $company; ?></p>
