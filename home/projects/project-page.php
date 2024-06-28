@@ -181,7 +181,7 @@ foreach ($files as $file) {
                                         <a href="https://twitter.com/share?url=https://careerhub.morganserver.com/home/projects/project-page.php?key=<?php echo $project_idno; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
                                             <i class="bi bi-twitter"></i>
                                         </a>
-                                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://careerhub.morganserver.com/home/projects/project-page.php?key=<?php echo $project_idno; ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
+                                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $project_share_link; ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
                                             <i class="bi bi-linkedin"></i>
                                         </a>
                                     </div>
