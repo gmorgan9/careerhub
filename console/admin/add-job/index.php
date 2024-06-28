@@ -41,7 +41,7 @@ foreach ($files as $file) {
         <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
             <div class="left">
                 <a href="/home" class="text-white text-decoration-none">
-                    <img src="../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                    <img src="../../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
                     &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
                 </a>
             </div>
@@ -71,7 +71,7 @@ foreach ($files as $file) {
  <!-- main-container -->
  <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;">
 
-<br><br>
+<br><br><br><br><br>
 
     <form method="POST" action="">
 
