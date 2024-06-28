@@ -103,12 +103,6 @@ foreach ($files as $file) {
             </div>
         </nav>
     <!-- End Navbar -->
-    <div class="container w-100">
-    <div class="page_title">
-            <h2 class="text-white title">
-                View Job
-            </h2>
-        </div>
 
 <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
     <div class="application-details">
@@ -246,40 +240,49 @@ foreach ($files as $file) {
                 <!-- __________ -->
                 
                 <div id="accordion">
-    <?php
-    if (!empty($notes)) {
-        preg_match_all('/<h5>(.*?)<\/h5>(.*?)(?=<h5>|$)/s', $notes, $matches, PREG_SET_ORDER);
-
-        foreach ($matches as $index => $match) {
-            $title = $match[1];
-            $content = $match[2];
-            ?>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading<?= $index ?>">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
-                        <?= $title ?>
-                        <i class="bi bi-chevron-down" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
-                    </button>
-                </h2>
-                <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        <?= $content ?>
-                    </div>
+                    <?php
+                    // Check if $notes is not empty
+                    if (!empty($notes)) {
+                        // Match all <h5> tags and their content
+                        preg_match_all('/<h5>(.*?)<\/h5>(.*?)(?=<h5>|$)/s', $notes, $matches, PREG_SET_ORDER);
+                    
+                        // Loop through each matched note
+                        foreach ($matches as $index => $match) {
+                            // Extract title and content
+                            $title = $match[1];
+                            $content = $match[2];
+                        
+                            // Display accordion item
+                            ?>
+                            <div class="accordion-item">
+                                
+                                <h5 class="accordion-header" id="heading<?= $index ?>">
+                                    <button class="accordion-button collapsed" id="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $index ?>" aria-expanded="false" aria-controls="collapse<?= $index ?>">
+                                        <?= $title ?> <!-- Use text within <h5> tags as button/title -->
+                                        <i id="chev" class="bi bi-chevron-down" style="position: absolute; top: 50%; transform: translateY(-50%); right: 10px;"></i>
+                                    </button>
+                                </h5>
+                                <div id="collapse<?= $index ?>" class="accordion-collapse collapse" aria-labelledby="heading<?= $index ?>" data-bs-parent="#accordion">
+                                    <div class="accordion-body">
+                                        <?= $content ?> <!-- Output the content under the <h5> tag as accordion body -->
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        // Display message if $notes is empty
+                        ?>
+                        <div class="accordion-item">
+                            <h5 class="accordion-header">
+                                <span class="text-warning">No notes found.</span>
+                            </h5>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
-            </div>
-            <?php
-        }
-    } else {
-        ?>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <span class="text-warning">No notes found.</span>
-            </h2>
-        </div>
-        <?php
-    }
-    ?>
-</div>
+
 
 
 
@@ -291,7 +294,6 @@ foreach ($files as $file) {
         } ?>
     </div>
 </div>
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
