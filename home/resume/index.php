@@ -258,7 +258,7 @@ foreach ($files as $file) {
             </div>
         </div>
 
-        <footer class="site-footer">
+        <footer class=" container-fluid site-footer">
             <div class="footer-socials">
                 <ul class="footer-social-links">
                     <li><a href="#" target="_blank">Twitter</a></li>
@@ -270,7 +270,7 @@ foreach ($files as $file) {
             <div class="footer-copyright">
                 <p>© 2024 All rights reserved.</p>
             </div>
-        </footer>
+        </footer>≈
     </div>
 
 
