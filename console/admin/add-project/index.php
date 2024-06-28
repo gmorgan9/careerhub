@@ -83,13 +83,9 @@ foreach ($files as $file) {
                         <div class="form">
                             <form action="" method="">
                                 <div class="controls two-columns">
-                                    <div class="form-group">
-                                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
-                                        </div>
                                     <div class="left-column">
-                                        
                                         <div class="form-group">
-                                            <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
+                                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
                                         </div>
                                         <div class="form-group">
                                             <input id="project_github" type="text" name="project_github" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
@@ -109,6 +105,9 @@ foreach ($files as $file) {
                                             <input id="project_share_link" type="text" name="project_share_link" class="form-input" placeholder="Project Share Link" required="required">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
                                 </div>
                                 <textarea id="project_content" name="project_content" class="" placeholder="" rows="7" required="required"></textarea>
                                 <input type="submit" class="form-btn" value="Send message">
