@@ -109,7 +109,7 @@ foreach ($files as $file) {
                 View Job
             </h2>
         </div>
-        
+
 <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
     <div class="application-details">
         <?php
@@ -300,6 +300,7 @@ foreach ($files as $file) {
         } ?>
     </div>
 </div>
+    </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
