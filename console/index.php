@@ -350,7 +350,7 @@ foreach ($files as $file) {
                                             <?php } else if($row['status'] == 'Interested') { ?>
                                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                             <?php } ?>
-                                            <a href="view-app.php?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
+                                            <a href="/console/jobs/view-job/?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
                                         </li>
                                     <?php 
                                     }
@@ -444,7 +444,7 @@ foreach ($files as $file) {
                                             <?php } else if($row['status'] == 'Interested') { ?>
                                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                             <?php } ?>
-                                            <a href="view-app.php?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
+                                            <a href="/console/jobs/view-job/?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
                                             <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
                                         </li>
                                     <?php
