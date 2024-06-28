@@ -65,10 +65,14 @@ foreach ($files as $file) {
         </nav>
     <!-- End Navbar -->
 
-<h1 class="text-center text-white"><strong>Open Applications</strong></h1><br>
+
 
 <!-- main-container -->
+
 <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
+<h1 class="text-center"><strong>Open Applications</strong></h1><br>
+
+    <div class="container-fluid main">
 
         <table class="table">
             <thead>
