@@ -132,7 +132,7 @@ foreach ($files as $file) {
             <!-- Open/Awaiting -->
             
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="open-app.php">
+                <a class="text-decoration-none stretched-link" href="/console/jobs/open-jobs">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                             <i class="bi bi-clipboard d-block mx-auto my-3 ms-4 me-4 text-black" style=" margin-top: 20px !important; font-size: 48px;"></i>
@@ -165,7 +165,7 @@ foreach ($files as $file) {
 
             <!-- Recieved Offer -->
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="offer-app.php">
+                <a class="text-decoration-none stretched-link" href="/console/jobs/offer-jobs">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightblue; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                             <i class="bi bi-clipboard-check d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
@@ -197,7 +197,7 @@ foreach ($files as $file) {
 
             <!-- Declined -->
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="declined-app.php">
+                <a class="text-decoration-none stretched-link" href="/console/jobs/declined-jobs">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightpink; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                             <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
@@ -229,7 +229,7 @@ foreach ($files as $file) {
 
             <!-- Total -->
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none stretched-link" href="total-app.php">
+                <a class="text-decoration-none stretched-link" href="/console/jobs/total-jobs">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                             <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
