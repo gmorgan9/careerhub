@@ -271,7 +271,7 @@ foreach ($files as $file) {
     <div class="mt-5"></div>
 
     <!-- Bottom Row -->
-        <div class="row mx-auto" style="">
+        <div class="row justify-content-center mx-auto" style="">
             <!-- first table -->
                 <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
                     <div class="card-header">
