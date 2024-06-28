@@ -115,27 +115,27 @@ foreach ($files as $file) {
 
     <form method="POST" action="">
 
-        <input type="hidden" class="form-control" id="app_id" name="app_id" value="<?php echo $app_id; ?>">
+        <input type="hidden" class="form-input" id="app_id" name="app_id" value="<?php echo $app_id; ?>">
 
         <div class="row mb-3">
             <div class="col">
                 <label for="job_title" class="form-label">Job Title</label>
-                <input type="text" class="form-control" id="job_title" name="job_title" value="<?php echo $job_title; ?>">
+                <input type="text" class="form-input" id="job_title" name="job_title" value="<?php echo $job_title; ?>">
             </div>
             <div class="col">
                 <label for="app_link" class="form-label">Application Link</label>
-                <input type="text" class="form-control" id="app_link" name="app_link" value="<?php echo $app_link; ?>">
+                <input type="text" class="form-input" id="app_link" name="app_link" value="<?php echo $app_link; ?>">
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col">
                 <label for="company" class="form-label">Company</label>
-                <input type="text" class="form-control" id="company" name="company" value="<?php echo $comapny; ?>">
+                <input type="text" class="form-input" id="company" name="company" value="<?php echo $comapny; ?>">
             </div>
             <div class="col">
                 <label for="location" class="form-label">Location</label>
-                <input type="text" class="form-control" id="location" name="location" value="<?php echo $location; ?>">
+                <input type="text" class="form-input" id="location" name="location" value="<?php echo $location; ?>">
             </div>
         </div>
 
@@ -143,15 +143,15 @@ foreach ($files as $file) {
         <div class="row mb-3">
             <div class="col">
                 <label for="pay" class="form-label">Pay</label>
-                <input type="text" class="form-control" id="pay" name="pay" value="<?php echo $pay; ?>">
+                <input type="text" class="form-input" id="pay" name="pay" value="<?php echo $pay; ?>">
             </div>
             <div class="col">
                 <label for="bonus_pay" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
-                <input type="text" class="form-control" id="bonus_pay" name="bonus_pay" value="<?php echo $bonus_pay; ?>">
+                <input type="text" class="form-input" id="bonus_pay" name="bonus_pay" value="<?php echo $bonus_pay; ?>">
             </div>
             <div class="col">
                 <label class="form-label" for="status">Status</label>
-                <select class="form-control" name="status">
+                <select class="form-input" name="status">
                     <option value="<?php echo $status; ?>"><?php echo $status; ?></option>
                     <option value="Applied">Applied</option>
                     <option value="Interviewed">Interviewed</option>
@@ -161,7 +161,7 @@ foreach ($files as $file) {
             </div>
             <div class="col">
                 <label class="form-label" for="job_type">Job Type</label>
-                <select class="form-control" name="job_type">
+                <select class="form-input" name="job_type">
                     <option value="<?php echo $job_type; ?>"><?php echo $job_type; ?></option>
                     <option value="Full Time">Full Time</option>
                     <option value="Part Time">Part Time</option>
@@ -176,7 +176,7 @@ foreach ($files as $file) {
         <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="notes">Notes</label>
-                <textarea class="form-control" name="notes" rows="5"><?php echo $notes; ?></textarea>
+                <textarea class="form-input" name="notes" rows="5"><?php echo $notes; ?></textarea>
             </div>
         </div>
 
