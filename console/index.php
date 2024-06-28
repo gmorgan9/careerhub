@@ -274,7 +274,7 @@ foreach ($files as $file) {
     <br><br>
 
     <!-- Bottom Row -->
-        <div class="row d-flex justify-content-center">
+        <div class="row" style="margin-left: -20px; width: 105%;">
             <!-- first table -->
                 <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
                     <div class="card-header">
