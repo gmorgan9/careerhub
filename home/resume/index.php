@@ -34,11 +34,13 @@ foreach ($files as $file) {
     
     <?php include(ROOT_PATH . "/app/database/includes/hub-header.php"); ?>
 
-    <div class="page_title">    
-            <h2 class="text-white title">Open Jobs</h2>
+    <div class="page_title">
+        <h2 class="text-white title">
+             Résumé
+        </h2>
     </div>
 
-    <div class="container-fluid" style="width: 99.5%;">
+    <div class="container-fluid">
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 ">
