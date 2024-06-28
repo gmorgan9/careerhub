@@ -91,7 +91,8 @@ foreach ($files as $file) {
                     $project_idno          = $project['idno'];  
                     $project_name          = $project['project_name']; 
                     $project_description   = $project['project_description'];
-                    $project_github        = $project['project_github'];
+                    $project_github_link   = $project['project_github_link'];
+                    $project_github_user   = $project['project_github_user'];
                     $project_url           = $project['project_url'];
                     $project_release       = $project['project_release'];
                     $project_tech          = $project['project_tech'];
