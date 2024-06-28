@@ -106,7 +106,7 @@ logoutUser($conn);
 $projet_sql = "SELECT * FROM projects";
 $project_result = mysqli_query($conn, $projet_sql);
 
-if ($project_result) {
+if (mysqli_num_rows($project_result) > 0) {
     while ($project = mysqli_fetch_assoc($project_result)) {
         $project_id            = $project['project_id'];
         $project_idno          = $project['idno'];  
@@ -204,10 +204,15 @@ if ($project_result) {
         </div>
 
 <?php
-    } // end while
+    } 
 } else {
-    echo "no projects";
-} // end if
+    // If no projects found, display a message
+?>
+    <div class="portfolio-grid three-columns shuffle">
+        <p>No current projects.</p>
+    </div>
+<?php
+}
 ?>
 
 
