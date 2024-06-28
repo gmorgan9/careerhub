@@ -115,6 +115,9 @@ foreach ($files as $file) {
                     <div class="portfolio-page-title">
                         <h2><?php echo $project_name; ?></h2>
                     </div>
+                    <div class="project-content">
+                        <?php echo $project_content; ?>
+                    </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-8 portfolio-block">
                         </div>
@@ -123,7 +126,6 @@ foreach ($files as $file) {
                                 <div class="block-title">
                                     <h3>Description</h3>
                                 </div>
-                                <a href="https://careerhub.morganserver.com/home/projects/project-page.php?key=<?php echo $project_idno; ?>">test</a>
                                 <ul class="project-general-info">
                                     <li>
                                         <p>
@@ -149,17 +151,6 @@ foreach ($files as $file) {
                                         <?php echo $project_description; ?>
                                     </p>
                                 </div>
-                                <!-- <div class="tags-block">
-                                    <div class="block-title">
-                                        <h3>Technology</h3>
-                                    </div>
-                                    <ul class="tags">
-                                        <li><a href="">HTML</a></li>
-                                        <li><a href="">CSS</a></li>
-                                        <li><a href="">EmergencyPrep</a></li>
-                                        <li><a href="">Website</a></li>
-                                    </ul>
-                                </div> -->
                                 <div class="tags-block">
                                     <div class="block-title">
                                         <h3>Technology</h3>
