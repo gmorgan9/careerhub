@@ -91,7 +91,7 @@ foreach ($files as $file) {
 </head>
 <body style="background-color: rgb(34,34,34);">
 
-    <?php include(ROOT_PATH . "/app/includes/console-header.php"); ?>
+    <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
 
     <div class="page_title">
         <h2 class="text-white title">
