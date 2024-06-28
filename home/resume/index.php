@@ -40,8 +40,8 @@ foreach ($files as $file) {
         </h2>
     </div>
 
-    <div class="container-fluid">
-        <!-- <div class="content text-white" style="max-width: 1320px; margin: 0 auto;"> -->
+    <div class="container-fluid w-100">
+        <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 ">
                     <div class="block-title">
@@ -256,7 +256,7 @@ foreach ($files as $file) {
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
 
         
     </div>
