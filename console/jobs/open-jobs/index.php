@@ -72,7 +72,7 @@ $result = mysqli_query($conn, $sql);
     </div>
 
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
-        <table class="table">
+        <table class="table text-white">
             <thead>
                 <tr>
                     <th scope="col">#</th>
