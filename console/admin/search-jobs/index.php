@@ -148,7 +148,7 @@ foreach ($files as $file) {
                         $job_title      = $row['job_title'];
                         ?>
                         <?php //$job_id_data = $row['job_id']; ?>
-                        <li class="list-group-item float-end" style="border: 2px solid #555 !important;font-size: 1em !important;color: inherit !important; background-color: transparent !important;">
+                        <li class="list-group-item float-end" style="font-size: 1em !important;color: inherit !important; background-color: transparent !important;">
                             <?php echo $row['job_title']; ?>
                             <a href="/console/jobs/view-job/?viewid=<?php echo $id; ?>" class="view float-end badge text-bg-secondary text-decoration-none">View</a>
                         </li>
