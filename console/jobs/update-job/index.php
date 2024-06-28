@@ -34,7 +34,7 @@ foreach ($files as $file) {
     </style>
     
 </head>
-<body>
+<body style="background-color: rgb(34,34,34);">
 
 
     <!-- Navbar -->
@@ -69,7 +69,8 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
  <!-- main-container -->
- <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;">
+ <!-- <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;"> -->
+ <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
 
 <br><br>
 
