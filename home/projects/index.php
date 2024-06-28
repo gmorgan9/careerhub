@@ -68,7 +68,7 @@ logoutUser($conn);
                                 <i class="bi bi-person-circle"></i>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                                <a class="dropdown-item" href="/console">Console</a>
+                                <a class="dropdown-item" href="/dashboard">Dashboard</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="index.php?logout=1">Logout</a>
                             </div>
@@ -101,6 +101,7 @@ logoutUser($conn);
                         <li><a class="filter btn btn-sm btn-link" data-group="category_image">Image</a></li>
                         <li><a class="filter btn btn-sm btn-link" data-group="category_youtube-video">YouTube Video</a></li>
                     </ul>
+
                     <?php
 $projet_sql = "SELECT * FROM projects";
 $project_result = mysqli_query($conn, $projet_sql);
@@ -137,6 +138,13 @@ if ($project_result) {
                 <div class="portfolio-page-content mt-5">
                     <div class="portfolio-page-wrapper">
                         <div class="body">
+                        <nav class="portfolio-page-nav">
+                                  <div class="nav-item portfolio-page-close-button">
+                                      <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
+                                          <i class="bi bi-x"></i>
+                                      </a>
+                                  </div>
+                                </nav>
                             <div class="portfolio-page-title">
                                 <h2><?php echo $project_name; ?></h2>
                             </div>
@@ -201,13 +209,16 @@ if ($project_result) {
 ?>
 
 
+                  
 
-                <!-- </div> -->
-            <!-- </div> -->
+
+                </div>
+            </div>
             
         </div> <!-- end -->
 
  
+        
         
 
         
