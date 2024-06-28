@@ -100,7 +100,7 @@ foreach ($files as $file) {
 
                     
                 }
-            }}
+           
             ?>
 
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
@@ -178,6 +178,7 @@ foreach ($files as $file) {
             </div>
         </div>
     </div>
+    <?php }} ?>
                    
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
