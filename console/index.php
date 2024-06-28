@@ -287,7 +287,7 @@ foreach ($files as $file) {
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
                                         ?>
-                                        <li class="list-group-item text-white" style=" background-color: #333333;">
+                                        <li class="list-group-item text-white" style=" background-color: #333333; border-color: #444444;">
                                                 <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                                 <?php if($row['status'] == 'Applied'){ ?>
                                                     <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
