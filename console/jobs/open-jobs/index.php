@@ -32,7 +32,7 @@ foreach ($files as $file) {
     </style>
     
 </head>
-<body>
+<body style="background-color: rgb(34,34,34);">
 
     <!-- Navbar -->
         <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
@@ -68,7 +68,7 @@ foreach ($files as $file) {
 <h1 class="text-center"><strong>Open Applications</strong></h1><br>
 
 <!-- main-container -->
-    <div class="container-fluid main">
+<div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
 
         <table class="table">
             <thead>
