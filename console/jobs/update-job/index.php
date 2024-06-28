@@ -77,7 +77,7 @@ foreach ($files as $file) {
             </h2>
         </div>
 
-<br><br>
+<br>
 
     <?php
             $id = $_GET['updateid'];
