@@ -66,13 +66,13 @@ $result = mysqli_query($conn, $sql);
         </nav>
     <!-- End Navbar -->
 
-    <div class="container-fluid" style="padding-left: 195px;">
+    <div class="container-fluid">
         <div class="page_title">    
             <h2 class="text-white title">Open Jobs</h2>
         </div>
 
         <!-- <div class="content text-white" style="margin-top: 55px;"> -->
-        <table class="table text-white w-75" style="margin: 0 auto;">
+        <table class="table text-white w-75">
             <thead>
                 <tr>
                     <th scope="col">#</th>
