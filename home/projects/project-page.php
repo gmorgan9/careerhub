@@ -115,11 +115,11 @@ foreach ($files as $file) {
                     <div class="portfolio-page-title">
                         <h2><?php echo $project_name; ?></h2>
                     </div>
-                    <div class="project-content">
-                        <?php echo $project_content; ?>
-                    </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-8 portfolio-block">
+                            <div class="project-content">
+                                <?php echo $project_content; ?>
+                            </div>
                         </div>
                         <div class="col-sm-12 col-md-4 portfolio-block">
                             <div class="project-description">
