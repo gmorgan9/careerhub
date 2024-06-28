@@ -71,6 +71,11 @@ foreach ($files as $file) {
  <!-- main-container -->
  <!-- <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;"> -->
  <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
+    <div class="page_title">
+            <h2 class="text-white title">
+                Update Job
+            </h2>
+        </div>
 
 <br><br>
 
