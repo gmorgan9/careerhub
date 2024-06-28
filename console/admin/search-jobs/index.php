@@ -113,13 +113,15 @@ foreach ($files as $file) {
 
     <!-- Search form -->
         <!-- <div class="container"> -->
-
-        <div class="content text-white" style="margin: 0; width: 1330px; margin-top: 55px;">
+        <div class="container w-100">
         <div class="page_title">
             <h2 class="text-white title">
                 Rejected Jobs
             </h2>
         </div>
+
+        <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
+        
         <form method="GET" action="" class="mb-3">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
