@@ -20,26 +20,58 @@ $result = mysqli_query($conn, $sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Job Management System</title>
-    <style>
-        
-    </style>
+    <title>Open Jobs - MorganServer Career Hub</title>
 </head>
-<body>
-    <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
+<body style="background-color: rgb(34,34,34);">
 
-    <h1 class="text-center"><strong>Open Jobs</strong></h1><br>
 
-    <div class="container-fluid main">
+    <!-- Navbar -->
+        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
+            <div class="left">
+                <a href="/home" class="text-white text-decoration-none">
+                    <img src="../../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+                </a>
+            </div>
+            <div class="right">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/">Career Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary active" href="/console">Console</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                            <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.php?logout=1">Settings</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- End Navbar -->
+
+    <div class="container w-100" style="margin:auto;">
+    <div class="page_title">    
+        <h2 class="text-white title">Open Jobs</h2>
+    </div>
+
+    <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
         <table class="table">
             <thead>
                 <tr>
