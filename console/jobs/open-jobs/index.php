@@ -71,9 +71,7 @@ foreach ($files as $file) {
 <!-- main-container -->
 <div class="container w-100">
     <div class="page_title">    
-        <h2 class="text-white title">
-            Open Jobs
-        </h2>
+        <h2 class="text-white title">Open Jobs</h2>
     </div>
 
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
@@ -98,13 +96,13 @@ foreach ($files as $file) {
 
                     // Pagination variables
                     $limit = 10; // Number of entries per page
-                    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                    $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
                     $offset = ($page - 1) * $limit;
 
                     // Debugging output
                     echo "<!-- Page: $page, Offset: $offset -->";
 
-                    $sql = "SELECT * FROM jobs WHERE status = 'Applied' OR status = 'Interested' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+                    $sql = "SELECT * FROM jobs WHERE status = 'Applied' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
                     $result = mysqli_query($conn, $sql);
 
                     if ($result) {
@@ -112,24 +110,24 @@ foreach ($files as $file) {
                         echo "<!-- Number of rows fetched: $num_rows -->";
                         if ($num_rows > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                $id             = $row['job_id'];
-                                $idno           = $row['idno'];
-                                $status         = $row['status'];
-                                $job_title      = $row['job_title'];
-                                $company        = $row['company'];
-                                $location       = $row['location'];
-                                $created_at     = $row['created_at'];
+                                $id = $row['job_id'];
+                                $idno = $row['idno'];
+                                $status = $row['status'];
+                                $job_title = $row['job_title'];
+                                $company = $row['company'];
+                                $location = $row['location'];
+                                $created_at = $row['created_at'];
                                 $utc_date_time = new DateTime($created_at, new DateTimeZone('UTC'));
                                 $local_date_time = $utc_date_time->setTimezone(new DateTimeZone('America/Denver'));
                                 $formatted_date = $local_date_time->format('M d, Y');
                 ?>
                 <tr>
                     <th scope="row"><?php echo $idno; ?></th>
-                    <td><?php echo $job_title ? $job_title : '-'; ?></td>
-                    <td><?php echo $company ? $company : '-'; ?></td>
-                    <td><?php echo $location ? $location : '-'; ?></td>
-                    <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
-                    <td><?php echo $status ? $status : '-'; ?></td>
+                    <td><?php echo $job_title ?: '-'; ?></td>
+                    <td><?php echo $company ?: '-'; ?></td>
+                    <td><?php echo $location ?: '-'; ?></td>
+                    <td><?php echo $formatted_date ?: '-'; ?></td>
+                    <td><?php echo $status ?: '-'; ?></td>
                     <td style="font-size: 20px;">
                         <a href="<?php echo BASE_URL; ?>/console/jobs/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
                             <i class="bi bi-eye text-success"></i>
@@ -263,7 +261,7 @@ foreach ($files as $file) {
         <br>
         <?php
             // Pagination links
-            $sql = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Applied' OR status = 'Interested'";
+            $sql = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Applied'";
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
             $total_pages = ceil($row["total"] / $limit);
@@ -278,6 +276,7 @@ foreach ($files as $file) {
     </div>
 </div>
 <!-- END main-container -->
+
 
 
 
