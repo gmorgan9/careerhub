@@ -287,7 +287,7 @@ foreach ($files as $file) {
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
                                         ?>
-                                        <li class="list-group-item text-white" style=" background-color: #333333; border-color: #444444;">
+                                        <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
                                                 <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                                 <?php if($row['status'] == 'Applied'){ ?>
                                                     <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
@@ -317,7 +317,7 @@ foreach ($files as $file) {
             <!-- end first table -->
 
             <!-- second table -->
-                <div class="card p-0 me-2" style="width: 25rem;">
+                <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
                     </div>
@@ -336,7 +336,7 @@ foreach ($files as $file) {
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
                                         ?>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
                                             <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                             <?php if($row['status'] == 'Applied'){ ?>
                                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
@@ -366,7 +366,7 @@ foreach ($files as $file) {
             <!-- end second table -->
 
             <!-- third table -->
-                <div class="card p-0" style="width: 25rem;">
+                <div class="card p-0" style="width: 25rem; background-color: #333333;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest updated</span>
                     </div>
@@ -430,7 +430,7 @@ foreach ($files as $file) {
 
                                         $time_ago = time_elapsed_string($updated_at);
                                         ?>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
                                         <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                             <?php if($row['status'] == 'Applied'){ ?>
                                                 <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
