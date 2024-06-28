@@ -30,7 +30,7 @@ foreach ($files as $file) {
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Job Management System</title>
+    <title>Console - - MorganServer Career Hub</title>
 
 
     <style>
@@ -300,7 +300,7 @@ foreach ($files as $file) {
                                                 <?php } else if($row['status'] == 'Interested') { ?>
                                                     <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                 <?php } ?>
-                                                <a href="view-app.php?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                <a href="/console/jobs/view-job/?viewid=<?php echo $app_id; ?>" class="text-decoration-none stretched-link"></a>
                                         </li>
                                     <?php 
                                     }
