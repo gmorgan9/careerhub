@@ -135,46 +135,9 @@ if ($project_result) {
     } // end while
 } // end if
 ?>
-                    <?php
-                            // $idno = $_GET['key'];
-                            // $projet_sql = "SELECT * FROM projects";
-                            // $project_result = mysqli_query($conn, $projet_sql);
-                            // if($project_result) {
-                            //     $num_rows = mysqli_num_rows($project_result);
-                            //     if($num_rows > 0) {
-                            //         while ($project = mysqli_fetch_assoc($project_result)) {
-                            //             $project_id            = $project['project_id'];
-                            //             $project_idno          = $project['idno'];  
-                            //             $project_name          = $project['project_name']; 
-                            //             $project_short_name    = $project['project_short_name']; 
-                            //             $project_description   = $project['project_description'];
-                            //             $project_github_link   = $project['project_github_link'];
-                            //             $project_github_user   = $project['project_github_user'];
-                            //             $project_url           = $project['project_url'];
-                            //             $project_release       = $project['project_release'];
-                            //             $project_tech          = $project['project_tech'];
-                            //             $project_content       = $project['project_content'];
-                            //             $technologies          = explode(", ", $project_tech);
-                                    
-                            //             $f_release_date = date("F j, Y", strtotime($project_release));
+            
 
-                            //         }
-                            //     }
-                            // }
-                        ?>
-
-                    <!-- <div class="portfolio-grid three-columns shuffle" style="height: 905.765625px; transition: height 450ms ease-out;">
-                        <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
-                            <div class="portfolio-item-img">
-                                 <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/emergency-prep.png" alt="">
-                                <a href="#" data-bs-toggle="offcanvas-<?php //echo $project_id; ?>" data-bs-target="#offcanvas-<?php //echo $project_id; ?>" aria-controls="offcanvasTop"></a>
-                                
-                            </div>
-                            
-                        </figure>
-                    </div> -->
-
-                <div class="offcanvas-<?php echo $project_id; ?> offcanvas-start" tabindex="-1" id="offcanvas-<?php echo $project_id; ?>" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-<?php echo $project_id; ?>" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
                         
 
                         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
