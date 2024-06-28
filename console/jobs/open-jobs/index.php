@@ -123,16 +123,16 @@ foreach ($files as $file) {
                     <td><?php echo $location ? $location : '-'; ?></td>
                     <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                     <td><?php echo $status ? $status : '-'; ?></td>
-                    <td style="font-size: 20px; text-decoration: none;">
-                        <a href="<?php echo BASE_URL; ?>/console/jobs/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>">
+                    <td style="font-size: 20px;">
+                        <a href="<?php echo BASE_URL; ?>/console/jobs/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
                             <i class="bi bi-eye text-success"></i>
                         </a>
                         &nbsp; 
-                        <a href="update-app.php?updateid=<?php echo $id; ?>">
+                        <a href="update-app.php?updateid=<?php echo $id; ?>" style="text-decoration: none;">
                             <i class="bi bi-pencil-square" style="color:#005382;"></i>
                         </a>
                         &nbsp;
-                        <a href="open-app.php?deleteid=<?php echo $id; ?>" class="delete">
+                        <a href="open-app.php?deleteid=<?php echo $id; ?>" class="delete" style="text-decoration: none;">
                             <i class="bi bi-trash" style="color:#941515;"></i>
                         </a>
                     </td>
