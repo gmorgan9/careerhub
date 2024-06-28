@@ -126,12 +126,13 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
 
-    <div class="container w-100">
-        <div class="page_title">
+    <div class="page_title">
             <h2 class="text-white title">
                 MorganServer Career Hub Console
             </h2>
         </div>
+    <div class="container-fluid">
+        
 
     <div class="content text-white" style="max-width: 1400px; margin: 0 auto; margin-top: 55px;">
         <!-- Top Row -->
