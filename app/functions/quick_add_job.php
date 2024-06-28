@@ -1,6 +1,5 @@
 <?php
 
-// ADD QUICK JOB
 if(isset($_POST['add-quick'])){
     $idno  = rand(1000000, 9999999);
     $job_title = mysqli_real_escape_string($conn, $_POST['job_title']);
@@ -19,10 +18,8 @@ if(isset($_POST['add-quick'])){
     }else{
     $insert = "INSERT INTO jobs (idno, job_title, company, location, job_link, job_type, watchlist,interview_set, status) VALUES('$idno', NULLIF('$job_title',''), NULLIF('$company',''), NULLIF('$location',''), NULLIF('$job_link',''), NULLIF('$job_type',''), '$watchlist', '$interview_set', 'Applied')";
     mysqli_query($conn, $insert);
-    header('location:' . BASE_URL . '/');
+    header('location:' . BASE_URL . '/console');
     }
     
 }
-// END ADD QUICK JOB
-
 ?>
