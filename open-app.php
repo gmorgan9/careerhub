@@ -1,14 +1,17 @@
 <?php
 date_default_timezone_set('America/Denver');
-require_once "../../../app/database/connection.php";
-require_once "../../../path.php";
+require_once "app/database/connection.php";
+require_once "path.php";
 session_start();
 
-$files = glob("../../../app/functions/*.php");
+$files = glob("app/functions/*.php");
 foreach ($files as $file) {
     require_once $file;
 }
-
+logoutUser($conn);
+if(isLoggedIn() == false) {
+    header('location:' . BASE_URL . '/login.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +21,7 @@ foreach ($files as $file) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="assets/css/main.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 
@@ -36,7 +39,7 @@ foreach ($files as $file) {
 
 <?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
 
-<h1 class="text-center"><strong>Open Jobs</strong></h1><br>
+<h1 class="text-center"><strong>Open Applications</strong></h1><br>
 
 <!-- main-container -->
     <div class="container-fluid main">
@@ -60,7 +63,7 @@ foreach ($files as $file) {
                     $page = isset($_GET['page']) ? $_GET['page'] : 1;
                     $offset = ($page - 1) * $limit;
                     
-                    $sql = "SELECT * FROM jobs WHERE status = 'Applied' || status = 'Interested' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+                    $sql = "SELECT * FROM applications WHERE status = 'Applied' || status = 'Interested' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
                     $result = mysqli_query($conn, $sql);
                     if($result) {
                         $num_rows = mysqli_num_rows($result);
@@ -94,13 +97,13 @@ foreach ($files as $file) {
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="viewModalLabel">View Job</h5>
+                                    <h5 class="modal-title" id="viewModalLabel">View Application</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
 
                                 <?php
-                                            $new = "SELECT * FROM jobs WHERE job_id=$id";
+                                            $new = "SELECT * FROM applications WHERE app_id=$id";
                                             $new1 = mysqli_query($conn, $new);
                                             if($new1) {
                                                 while ($cap = mysqli_fetch_assoc($new1)) {       
@@ -138,7 +141,7 @@ foreach ($files as $file) {
                                         <p class="float-start fw-bold">Connected Emails</p>
                                         <p><span class="float-end">
                                         <?php
-                                            $count="select count('1') from email_application where job_id='$id'";
+                                            $count="select count('1') from email_application where app_id='$id'";
                                             $count_result=mysqli_query($conn,$count);
                                             $rtotal=mysqli_fetch_array($count_result); 
                                             if($rtotal[0] < 10) {
@@ -166,8 +169,8 @@ foreach ($files as $file) {
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Job Link</p> 
-                                       <p><a target="_blank" href="<?php echo $cap['job_link']; ?>" class="float-end">Link Here</a></p>
+                                       <p class="float-start fw-bold">Application Link</p> 
+                                       <p><a target="_blank" href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
@@ -211,7 +214,7 @@ foreach ($files as $file) {
         <br>
         <?php
             // Pagination links
-            $sql = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Applied' || status = 'Interested'";
+            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied' || status = 'Interested'";
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
             $total_pages = ceil($row["total"] / $limit);
