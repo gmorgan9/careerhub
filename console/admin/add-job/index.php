@@ -82,7 +82,7 @@ foreach ($files as $file) {
         <div class="row mb-3">
             <div class="col">
                 <label for="job_title" class="form-label">Job Title</label>
-                <input type="text" class="form-control" id="job_title" name="job_title">
+                <input type="text" class="form-input" id="job_title" name="job_title">
             </div>
             <div class="col">
                 <label for="app_link" class="form-label">Application Link</label>
