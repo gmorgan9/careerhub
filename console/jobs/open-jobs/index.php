@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $sql);
         </nav>
     <!-- End Navbar -->
 
-    <div class="container w-100" style="margin:auto; margin-left: -210px;">
+    <div class="container w-100" style="margin-left: 180px !important;">
     <div class="page_title">    
         <h2 class="text-white title">Open Jobs</h2>
     </div>
