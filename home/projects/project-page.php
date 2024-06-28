@@ -123,7 +123,7 @@ foreach ($files as $file) {
                                 <div class="block-title">
                                     <h3>Description</h3>
                                 </div>
-                                <!-- <a href="https://careerhub.morganserver.com/home/projects/test.php">test</a> -->
+                                <a href="https://careerhub.morganserver.com/home/projects/project-page.php?key=<?php echo $project_idno; ?>">test</a>
                                 <ul class="project-general-info">
                                     <li>
                                         <p>
