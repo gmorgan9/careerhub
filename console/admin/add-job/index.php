@@ -73,7 +73,7 @@ foreach ($files as $file) {
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
         <div class="page_title">
             <h2 class="text-white title">
-                Add Project
+                Add Job
             </h2>
         </div>  
 
