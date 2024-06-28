@@ -101,6 +101,7 @@ foreach ($files as $file) {
                     $project_content       = $project['project_content'];
                     $technologies          = explode(", ", $project_tech);
 
+                    $f_release_date = date("F j, Y", strtotime($project_release));
                     
                 }
             }
@@ -139,7 +140,7 @@ foreach ($files as $file) {
                                     <li>
                                         <p>
                                             <i class="bi bi-calendar3"></i> &nbsp; 
-                                            <?php echo $project_release; ?>
+                                            <?php echo $f_release_date; ?>
                                         </p>
                                     </li>
                                 </ul>
