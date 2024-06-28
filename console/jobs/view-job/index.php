@@ -104,13 +104,13 @@ foreach ($files as $file) {
         </nav>
     <!-- End Navbar -->
 
-    
-    <div class="container w-100">
     <div class="page_title">
             <h2 class="text-white title">
                 View Job
             </h2>
         </div>
+    <div class="container-fluid">
+    
 
 <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
     <div class="application-details">
