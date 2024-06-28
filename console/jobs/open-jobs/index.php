@@ -129,7 +129,6 @@ $result = mysqli_query($conn, $sql);
                 ?>
             </tbody>
         </table>
-        </div>
         
         <?php
         // Pagination links
@@ -148,7 +147,6 @@ $result = mysqli_query($conn, $sql);
             echo '</ul>';
         }
         ?>
-    <!-- </div> -->
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
