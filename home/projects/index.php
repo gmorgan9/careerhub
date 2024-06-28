@@ -130,14 +130,14 @@ logoutUser($conn);
                         ?>
 
                     <div class="portfolio-grid three-columns shuffle" style="height: 905.765625px; transition: height 450ms ease-out;">
-                        <!-- <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
+                        <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
                             <div class="portfolio-item-img">
                                  <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/emergency-prep.png" alt="">
                                 <a href="#" data-bs-toggle="offcanvas-<?php echo $project_id; ?>" data-bs-target="#offcanvas-<?php echo $project_id; ?>" aria-controls="offcanvasTop"></a>
                                 
                             </div>
                             
-                        </figure> -->
+                        </figure>
                     </div>
 
                 <div class="offcanvas-<?php echo $project_id; ?> offcanvas-start" tabindex="-1" id="offcanvas-<?php echo $project_id; ?>" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
