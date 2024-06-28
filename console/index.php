@@ -13,7 +13,6 @@ foreach ($files as $file) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +24,6 @@ foreach ($files as $file) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/home.css?v=<?php echo time(); ?>">
-
 
     <title>Console - MorganServer Career Hub</title>
 
@@ -48,7 +46,7 @@ foreach ($files as $file) {
             <!-- Top Row -->
                 <div class="card-container justify-content-center mx-auto">
                 <!-- Open/Awaiting -->
-                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/open-jobs">
                         <div class="card-body p-0">
                             <div class="left float-start" style="background-color: lightgreen; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -79,7 +77,7 @@ foreach ($files as $file) {
                 <!-- end Open/Awaiting -->
 
                 <!-- Recieved Offer -->
-                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/offer-jobs">
                         <div class="card-body p-0">
                             <div class="left float-start" style="background-color: lightblue; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -111,7 +109,7 @@ foreach ($files as $file) {
                 <!-- end Received Offer -->
 
                 <!-- Declined -->
-                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/declined-jobs">
                         <div class="card-body p-0">
                             <div class="left float-start" style="background-color: lightpink; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -143,7 +141,7 @@ foreach ($files as $file) {
                 <!-- end Declined -->
 
                 <!-- Total -->
-                <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
+                <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                     <a class="text-decoration-none stretched-link" href="/console/jobs/total-jobs">
                         <div class="card-body p-0">
                             <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -232,7 +230,7 @@ foreach ($files as $file) {
                     <!-- end first table -->
 
                     <!-- second table -->
-                        <div class="card p-0 me-2 text-white" style="width: 25rem; background-color: #333333;">
+                        <div class="card p-0 me-3 text-white" style="width: 25rem; background-color: #333333;">
                             <div class="card-header">
                                 <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
                             </div>
