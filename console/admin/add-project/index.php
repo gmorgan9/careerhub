@@ -83,10 +83,11 @@ foreach ($files as $file) {
                         <div class="form">
                             <form action="" method="">
                                 <div class="controls two-columns">
-                                    <div class="left-column">
-                                        <div class="form-group">
+                                    <div class="form-group">
                                             <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
                                         </div>
+                                    <div class="left-column">
+                                        
                                         <div class="form-group">
                                             <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
                                         </div>
