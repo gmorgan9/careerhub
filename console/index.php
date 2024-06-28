@@ -12,82 +12,23 @@ foreach ($files as $file) {
     require_once $file;
 }
 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/home.css?v=<?php echo time(); ?>">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <title>Console - MorganServer Career Hub</title>
 
-
-    <style>
-        /* top card overlay */
-            .top-card {
-                position: relative;
-            }
-
-            .top-card:hover::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: rgba(107, 107, 107, 0.75);
-                border-radius: 0.325rem;
-            }
-
-            .top-card:hover .overlay-text {
-                visibility: visible;
-                opacity: 1;
-            }
-
-            .overlay-text {
-                color: white;
-                font-weight: bold;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                visibility: hidden;
-                opacity: 0;
-                transition: opacity 0.3s ease-in-out;
-            }
-
-            .card-container {
-                width: 75%;
-                display: flex;
-        }
-        
-        .card {
-            width: calc(25%);
-            margin-bottom: 20px;
-        }
-        
-        @media (max-width: 1366px) {
-            .card-container {
-                flex-wrap: wrap;
-            }
-            .card {
-                width: 100%; /* 50% width on tablets */
-            }
-        }
-        /* end top card overlay */
-    </style>
-    
 </head>
 <body style="background-color: rgb(34,34,34);">
 
