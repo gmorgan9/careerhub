@@ -119,12 +119,12 @@ foreach ($files as $file) {
                                 <div class="block-title">
                                     <h3>Description</h3>
                                 </div>
-                                <a href="https://careerhub.morganserver.com/home/projects/test.php">test</a>
+                                <!-- <a href="https://careerhub.morganserver.com/home/projects/test.php">test</a> -->
                                 <ul class="project-general-info">
                                     <li>
                                         <p>
                                             <i class="bi bi-github"></i> &nbsp; 
-                                            <a href="https://github.com/MorganServer/emergencyprep.git" target="_blank" class="">gmorgan9</a>
+                                            <a href="<?php echo $project_github; ?>" target="_blank" class="">gmorgan9</a>
                                         </p>
                                     </li>
                                     <li>

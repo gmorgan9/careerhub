@@ -84,21 +84,21 @@ foreach ($files as $file) {
                             <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
                         </div>
                         <div class="form-group">
-                            <input id="project_github" type="text" name="project_github" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
+                            <input id="project_github_link" type="text" name="project_github_link" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
                         </div>
                         <div class="form-group">
-                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
+                            <input id="project_github_user" type="text" name="project_github_user" class="form-input" placeholder="Github User" required="required">
                         </div>
                     </div>
                     <div class="right-column">
+                        <div class="form-group">
+                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
+                        </div>
                         <div class="form-group">
                             <input id="project_release" type="date" name="project_release" class="form-input" required="required">
                         </div>
                         <div class="form-group">
                             <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
-                        </div>
-                        <div class="form-group">
-                            <input id="project_share_link" type="text" name="project_share_link" class="form-input" placeholder="Project Share Link" required="required">
                         </div>
                     </div>
                 </div>
