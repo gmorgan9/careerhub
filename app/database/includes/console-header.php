@@ -12,7 +12,7 @@
                     <a class="nav-link text-secondary" href="/">Career Hub</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-secondary active" href="/console">Console</a>
+                    <a class="nav-link text-secondary" href="/console">Console</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
