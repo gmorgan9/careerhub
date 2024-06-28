@@ -71,8 +71,8 @@ $result = mysqli_query($conn, $sql);
         <h2 class="text-white title">Open Jobs</h2>
     </div>
 
-    <div class="content text-white" style="margin-top: 55px;">
-        <table class="table text-white">
+    <!-- <div class="content text-white" style="margin-top: 55px;"> -->
+        <table class="table text-white w-75">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -129,7 +129,6 @@ $result = mysqli_query($conn, $sql);
                 ?>
             </tbody>
         </table>
-    </div>
 
         <?php
         // Pagination links
