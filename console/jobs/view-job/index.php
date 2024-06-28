@@ -103,6 +103,8 @@ foreach ($files as $file) {
             </div>
         </nav>
     <!-- End Navbar -->
+
+    
     <div class="container w-100">
     <div class="page_title">
             <h2 class="text-white title">
@@ -246,48 +248,11 @@ foreach ($files as $file) {
                 
                 
 
-               
-
-
-
-                <!-- ___________ -->
-                
-
             <?php }
         } ?>
     </div>
 </div>
 </div>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var accordionButton = document.getElementById('accordion-button');
-    if (accordionButton) {
-        var chev_i = document.getElementById('chev');
-        
-        if (chev_i) {
-            accordionButton.addEventListener('click', function() {
-                
-                var isCollapsed = accordionButton.classList.contains('collapsed');
-                
-                if (isCollapsed) {
-                    chev_i.classList.remove('bi-chevron-up');
-                    chev_i.classList.add('bi-chevron-down');
-                } else {
-                    chev_i.classList.remove('bi-chevron-down');
-                    chev_i.classList.add('bi-chevron-up');
-                }
-            });
-        } else {
-            console.log('Chevron icon not found');
-        }
-    } else {
-        console.log('Accordion button not found');
-    }
-});
-
-</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
