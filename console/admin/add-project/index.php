@@ -84,6 +84,9 @@ foreach ($files as $file) {
                             <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
                         </div>
                         <div class="form-group">
+                            <input id="project_short_name" type="text" name="project_short_name" class="form-input" placeholder="Project Short Name" required="required" data-error="Project Short Name is required.">
+                        </div>
+                        <div class="form-group">
                             <input id="project_github_link" type="text" name="project_github_link" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
                         </div>
                         <div class="form-group">

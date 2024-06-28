@@ -90,6 +90,7 @@ foreach ($files as $file) {
                     $project_id            = $project['project_id'];
                     $project_idno          = $project['idno'];  
                     $project_name          = $project['project_name']; 
+                    $project_short_name    = $project['project_short_name']; 
                     $project_description   = $project['project_description'];
                     $project_github_link   = $project['project_github_link'];
                     $project_github_user   = $project['project_github_user'];
@@ -125,13 +126,13 @@ foreach ($files as $file) {
                                     <li>
                                         <p>
                                             <i class="bi bi-github"></i> &nbsp; 
-                                            <a href="<?php echo $project_github; ?>" target="_blank" class="">gmorgan9</a>
+                                            <a href="<?php echo $project_github_link; ?>" target="_blank" class=""><?php echo $project_github_user; ?></a>
                                         </p>
                                     </li>
                                     <li>
                                         <p>
                                             <i class="bi bi-globe"></i> &nbsp; 
-                                            <a href="https://emergencyprep.morganserver.com" target="_blank">EmergencyPrep</a>
+                                            <a href="<?php echo $project_url; ?>" target="_blank"><?php  ?></a>
                                         </p>
                                     </li>
                                     <li>
