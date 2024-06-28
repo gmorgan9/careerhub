@@ -86,33 +86,33 @@ foreach ($files as $file) {
             </div>
             <div class="col">
                 <label for="app_link" class="form-label">Application Link</label>
-                <input type="text" class="form-control" id="app_link" name="app_link">
+                <input type="text" class="form-input" id="app_link" name="app_link">
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col">
                 <label for="company" class="form-label">Company</label>
-                <input type="text" class="form-control" id="company" name="company">
+                <input type="text" class="form-input" id="company" name="company">
             </div>
             <div class="col">
                 <label for="location" class="form-label">Location</label>
-                <input type="text" class="form-control" id="location" name="location">
+                <input type="text" class="form-input" id="location" name="location">
             </div>
         </div>
     
         <div class="row mb-3">
             <div class="col">
                 <label for="pay" class="form-label">Pay</label>
-                <input type="text" class="form-control" id="pay" name="pay">
+                <input type="text" class="form-input" id="pay" name="pay">
             </div>
             <div class="col">
                 <label for="bonus_pay" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
-                <input type="text" class="form-control" id="bonus_pay" name="bonus_pay">
+                <input type="text" class="form-input" id="bonus_pay" name="bonus_pay">
             </div>
             <div class="col">
                 <label class="form-label" for="status">Status</label>
-                <select class="form-control" name="status">
+                <select class="form-input" name="status">
                     <option value="Applied">Applied</option>
                     <option value="Interviewed">Interviewed</option>
                     <option value="Offered">Offered</option>
@@ -121,7 +121,7 @@ foreach ($files as $file) {
             </div>
             <div class="col">
                 <label class="form-label" for="job_type">Job Type</label>
-                <select class="form-control" name="job_type">
+                <select class="form-input" name="job_type">
                     <option value="Full Time">Full Time</option>
                     <option value="Part Time">Part Time</option>
                     <option value="Contract">Contract</option>
@@ -134,7 +134,7 @@ foreach ($files as $file) {
         <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="notes">Notes</label>
-                <textarea class="form-control" name="notes" rows="5"></textarea>
+                <textarea class="form-input" name="notes" rows="5"></textarea>
             </div>
         </div>
 
