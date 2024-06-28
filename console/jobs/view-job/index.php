@@ -1,17 +1,14 @@
 <?php
 date_default_timezone_set('America/Denver');
-require_once "app/database/connection.php";
-require_once "path.php";
+require_once "../../../app/database/connection.php";
+require_once "../../../path.php";
 session_start();
 
-$files = glob("app/functions/*.php");
+$files = glob("../../../app/functions/*.php");
 foreach ($files as $file) {
     require_once $file;
 }
-logoutUser($conn);
-if(isLoggedIn() == false) {
-    header('location:' . BASE_URL . '/login.php');
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -21,13 +18,13 @@ if(isLoggedIn() == false) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Job Management System</title>
+    <title>View Job - MorganServer Career Hub</title>
 
     <style>
         .application-details {
@@ -76,9 +73,38 @@ if(isLoggedIn() == false) {
 </head>
 <body>
 
-<?php include(ROOT_PATH . "/app/database/includes/header.php"); ?>
+    <!-- Navbar -->
+        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
+            <div class="left">
+                <a href="/home" class="text-white text-decoration-none">
+                    <img src="../../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+                </a>
+            </div>
+            <div class="right">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/">Career Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary active" href="/console">Console</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                            <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.php?logout=1">Settings</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- End Navbar -->
 
-<div class="container-fluid main">
+<div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
     <div class="application-details">
         <?php
         $id = $_GET['viewid'];
