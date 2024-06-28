@@ -108,9 +108,9 @@ foreach ($files as $file) {
                                             <input id="project_share_link" type="text" name="project_share_link" class="form-input" placeholder="Project Share Link" required="required">
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <textarea id="project_content" name="project_content" class="form-input" placeholder="" rows="7" required="required" data-error="Please, leave me a message."></textarea>
-                                    </div> -->
+                                    <div class="form-group">
+                                        <textarea id="project_content" name="project_content" class="form-input" placeholder="" rows="7" required="required"></textarea>
+                                    </div>
                                     <input type="submit" class="form-btn" value="Send message">
                                 </div>
                             </form>
@@ -141,12 +141,12 @@ foreach ($files as $file) {
 
 
     <script>
-        // tinymce.init({
-        //     selector: 'textarea#project_content',
-        //     plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-        //     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-        //     // skin_url: '../../../assets/test/skins/ui/'
-        // });
+        tinymce.init({
+            selector: 'textarea#project_content',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+            // skin_url: '../../../assets/test/skins/ui/'
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
