@@ -12,11 +12,6 @@ foreach ($files as $file) {
     require_once $file;
 }
 
-logoutUser($conn);
-// if(isLoggedIn() == false) {
-//     header('location:' . BASE_URL . '/login.php');
-// }
-
 ?>
 
 <!DOCTYPE html>
@@ -31,55 +26,24 @@ logoutUser($conn);
 
     <link rel="stylesheet" href="../../assets/css/home.css?v=<?php echo time(); ?>">
 
-
     <title>Contact - MorganServer Career Hub</title>
 
-    
 </head>
 <body style="background-color: rgb(34,34,34);">
     
-    <!-- Navbar -->
-        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
-            <div class="left">
-                <a href="/home" class="text-white text-decoration-none">
-                    <img src="../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
-                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
-                </a>
-            </div>
-            <div class="right">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/home">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/home/resume">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/home/projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary active" href="/home/contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/console">Console</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    <!-- End Navbar -->
+    <?php include(ROOT_PATH . "/app/database/includes/hub-header.php"); ?>
+
+    <div class="page_title">
+        <h2 class="text-white title">Contact</h2>
+    </div>
 
     <div class="container w-100">
-        <div class="page_title">
-            <h2 class="text-white title">
-                Contact
-            </h2>
-        </div>
-        
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+
             <div class="map-frame">
-                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106813.99079929621!2d-96.65331520000001!3d33.21574225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c125aa0745495%3A0xaa290ada6420a624!2sMcKinney%2C%20TX!5e0!3m2!1sen!2sus!4v1719493304192!5m2!1sen!2sus" title="McKinney, TX 75070"></iframe>
-                
+                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106813.99079929621!2d-96.65331520000001!3d33.21574225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c125aa0745495%3A0xaa290ada6420a624!2sMcKinney%2C%20TX!5e0!3m2!1sen!2sus!4v1719493304192!5m2!1sen!2sus" title="McKinney, TX 75070"></iframe>   
             </div>
+
             <div class="row">
                 <div class=" col-xs-12 col-sm-4 ">
                     <div class="info-block">
@@ -132,23 +96,9 @@ logoutUser($conn);
             </div>
 
         </div>
-
-        <footer class="site-footer">
-            <div class="footer-socials">
-                <ul class="footer-social-links">
-                    <li><a href="#" target="_blank">Twitter</a></li>
-                    <li><a href="#" target="_blank">Facebook</a></li>
-                    <li><a href="#" target="_blank">Instagram</a></li>
-                </ul>
-
-            </div>
-            <div class="footer-copyright">
-                <p>© 2024 All rights reserved.</p>
-            </div>
-        </footer>
     </div>
 
-
+    <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
