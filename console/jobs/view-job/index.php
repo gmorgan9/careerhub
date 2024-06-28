@@ -71,7 +71,7 @@ foreach ($files as $file) {
 
     </style>
 </head>
-<body>
+<body style="background-color: rgb(34,34,34);">
 
     <!-- Navbar -->
         <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
