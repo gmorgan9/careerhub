@@ -121,7 +121,7 @@ foreach ($files as $file) {
         <form method="GET" action="" class="mb-3">
             <div class="input-group">
                 <input type="text" class="form-input" placeholder="Search" name="search" value="<?php echo $search; ?>">
-                <select class="form-input" name="search_field">
+                <select class="form-select form-input" name="search_field">
                     <?php foreach ($searchFields as $fieldName => $fieldLabel): ?>
                         <option value="<?php echo $fieldName; ?>" <?php if ($searchField === $fieldName) echo 'selected'; ?>><?php echo $fieldLabel; ?></option>
                     <?php endforeach; ?>
