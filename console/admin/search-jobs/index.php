@@ -120,8 +120,8 @@ foreach ($files as $file) {
         
         <form method="GET" action="" class="mb-3">
             <div class="input-group">
-                <input type="text" class="form-control" style="border: 2px solid #bfbfbf !important;font-size: 1em !important;color: inherit !important; background-color: transparent !important;" placeholder="Search" name="search" value="<?php echo $search; ?>">
-                <select class="form-select" style="border: 2px solid #bfbfbf !important;font-size: 1em !important;color: inherit !important; background-color: transparent !important;" name="search_field">
+                <input type="text" class="form-control" style="border: 2px solid #555 !important;font-size: 1em !important;color: inherit !important; background-color: transparent !important;" placeholder="Search" name="search" value="<?php echo $search; ?>">
+                <select class="form-select" style="border: 2px solid #555 !important;font-size: 1em !important;color: inherit !important; background-color: transparent !important;" name="search_field">
                     <?php foreach ($searchFields as $fieldName => $fieldLabel): ?>
                         <option value="<?php echo $fieldName; ?>" <?php if ($searchField === $fieldName) echo 'selected'; ?>><?php echo $fieldLabel; ?></option>
                     <?php endforeach; ?>
