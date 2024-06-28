@@ -74,7 +74,7 @@ foreach ($files as $file) {
         <h2 class="text-white title">Open Jobs</h2>
     </div>
 
-    <div class="content text-white" style="width: 1320px; margin: 0 auto; margin-top: 55px;">
+    <div class="content text-white" style="max-width: 1320px; margin-top: 55px;">
         <table class="table text-white">
             <thead>
                 <tr>
