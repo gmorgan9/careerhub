@@ -81,6 +81,7 @@ $result = mysqli_query($conn, $sql);
                     <th scope="col">Location</th>
                     <th scope="col">Applied</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -102,6 +103,19 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $location ? $location : '-'; ?></td>
                             <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                             <td><?php echo $row['status'] ? $row['status'] : '-'; ?></td>
+                            <td style="font-size: 20px;">
+                                <a href="<?php echo BASE_URL; ?>/console/jobs/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
+                                    <i class="bi bi-eye text-success"></i>
+                                </a>
+                                &nbsp; 
+                                <a href="/console/admin/update-job/?updateid=<?php echo $id; ?>" style="text-decoration: none;">
+                                    <i class="bi bi-pencil-square" style="color:#005382;"></i>
+                                </a>
+                                &nbsp;
+                                <a href="open-app.php?deleteid=<?php echo $id; ?>" class="delete" style="text-decoration: none;">
+                                    <i class="bi bi-trash" style="color:#941515;"></i>
+                                </a>
+                            </td>
                         </tr>
                 <?php
                     }
