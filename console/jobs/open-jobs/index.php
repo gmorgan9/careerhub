@@ -60,10 +60,11 @@
     </div>
 </nav>
 
-<div class="container-fluid">
-    <div class="page_title">    
+<div class="page_title">    
         <h2 class="text-white title">Open Jobs</h2>
     </div>
+<div class="container-fluid">
+    
 
     <div class="table-container">
         <table class="table text-white">
