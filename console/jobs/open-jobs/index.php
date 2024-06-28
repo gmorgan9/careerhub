@@ -70,7 +70,12 @@ foreach ($files as $file) {
 <!-- main-container -->
 
 <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
-<h1 class="text-center"><strong>Open Applications</strong></h1><br>
+<!-- <h1 class="text-center"><strong>Open Applications</strong></h1><br> -->
+        <div class="page_title">
+            <h2 class="text-white title">
+                Open Jobs
+            </h2>
+        </div>
 
     <div class="container-fluid main">
 
