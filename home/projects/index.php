@@ -96,9 +96,9 @@ logoutUser($conn);
                 <div class=" col-xs-12 col-sm-12 ">
                     <ul class="portfolio-filters">
                         <li class="active"><a class="filter btn btn-sm btn-link" data-group="category_all">All</a></li>
-                        <li><a class="filter btn btn-sm btn-link" data-group="category_detailed">Detailed</a></li>
-                        <li><a class="filter btn btn-sm btn-link" data-group="category_direct-url">Direct URL</a></li>
-                        <li><a class="filter btn btn-sm btn-link" data-group="category_image">Image</a></li>
+                        <li><a class="filter btn btn-sm btn-link" data-group="category_detailed">Website</a></li>
+                        <li><a class="filter btn btn-sm btn-link" data-group="category_direct-url">Coding</a></li>
+                        <li><a class="filter btn btn-sm btn-link" data-group="category_image">CyberSecurity</a></li>
                         <li><a class="filter btn btn-sm btn-link" data-group="category_youtube-video">YouTube Video</a></li>
                     </ul>
 

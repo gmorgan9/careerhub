@@ -81,27 +81,36 @@ foreach ($files as $file) {
                 <div class="controls two-columns">
                     <div class="left-column">
                         <div class="form-group">
-                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
+                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required>
                         </div>
                         <div class="form-group">
-                            <input id="project_short_name" type="text" name="project_short_name" class="form-input" placeholder="Project Short Name" required="required" data-error="Project Short Name is required.">
+                            <input id="project_short_name" type="text" name="project_short_name" class="form-input" placeholder="Project Short Name" required>
                         </div>
                         <div class="form-group">
-                            <input id="project_github_link" type="text" name="project_github_link" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
+                            <input id="project_github_link" type="text" name="project_github_link" class="form-input" placeholder="Github Project Link" required>
                         </div>
                         <div class="form-group">
-                            <input id="project_github_user" type="text" name="project_github_user" class="form-input" placeholder="Github User" required="required">
+                            <input id="project_github_user" type="text" name="project_github_user" class="form-input" placeholder="Github User" required>
                         </div>
                     </div>
                     <div class="right-column">
                         <div class="form-group">
-                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
+                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required>
                         </div>
                         <div class="form-group">
-                            <input id="project_release" type="date" name="project_release" class="form-input" required="required">
+                            <input id="project_release" type="date" name="project_release" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
+                            <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-input" name="project_category" required>
+                                <option value="">Select an option...</option>
+                                <option value="Website">Website</option>
+                                <option value="Scriptin">Scripting</option>
+                                <option value="CyberSecurity">CyberSecurity</option>
+                                <option value="YouTube Video">YouTube Video</option>
+                            </select>
                         </div>
                     </div>
                 </div>
