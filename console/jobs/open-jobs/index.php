@@ -258,8 +258,10 @@ foreach ($files as $file) {
         ?>
 
     </div>
+
 <!-- END main-container -->
 
+            </div>
 
 
 
