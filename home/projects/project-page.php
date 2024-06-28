@@ -175,13 +175,13 @@ foreach ($files as $file) {
                                         <h3>Share</h3>
                                     </div>
                                     <div class="btn-group">
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Facebook">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $project_share_link; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Facebook">
                                             <i class="bi bi-facebook"></i>
                                         </a>
-                                        <a href="https://twitter.com/share?url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
+                                        <a href="https://twitter.com/share?url=<?php echo $project_share_link; ?>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
                                             <i class="bi bi-twitter"></i>
                                         </a>
-                                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
+                                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $project_share_link; ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
                                             <i class="bi bi-linkedin"></i>
                                         </a>
                                     </div>
