@@ -66,12 +66,12 @@ $result = mysqli_query($conn, $sql);
         </nav>
     <!-- End Navbar -->
 
-    <div class="content w-100" style="">
-    <div class="page_title">    
-        <h2 class="text-white title">Open Jobs</h2>
-    </div>
+    <div class="container-fluid" style="">
+        <div class="page_title">    
+            <h2 class="text-white title">Open Jobs</h2>
+        </div>
 
-    <!-- <div class="content text-white" style="margin-top: 55px;"> -->
+        <!-- <div class="content text-white" style="margin-top: 55px;"> -->
         <table class="table text-white w-75">
             <thead>
                 <tr>
@@ -147,7 +147,7 @@ $result = mysqli_query($conn, $sql);
             echo '</ul>';
         }
         ?>
-        </div>
+    </div>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
