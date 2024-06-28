@@ -123,15 +123,11 @@ foreach ($files as $file) {
         </nav>
     <!-- End Navbar -->
 
-<?php if (isset($_SESSION['fname'])) : ?>
-    <h1 class="text-center">Welcome <strong><?php echo $_SESSION['fname']; ?></strong></h1>
-<?php endif ?>
-<br>
 
 
-
-    <!-- Top Row -->
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+    <!-- Top Row -->
+        <div class="card-container justify-content-center mx-auto">
 
         <!-- Open/Awaiting -->
             
@@ -472,6 +468,7 @@ foreach ($files as $file) {
 
 </div>
 <!-- END main-container -->
+                        </div>
 
 
 
