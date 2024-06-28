@@ -73,7 +73,7 @@ foreach ($files as $file) {
 <!-- <h1 class="text-center"><strong>Open Applications</strong></h1><br> -->
         <div class="page_title">
             <h2 class="text-white title">
-                Open Jobs
+                Rejected Jobs
             </h2>
         </div>
 
