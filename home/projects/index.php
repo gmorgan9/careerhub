@@ -203,7 +203,7 @@ if ($project_result) {
 
 
                 <!-- </div> -->
-            </div>
+            <!-- </div> -->
             
         </div> <!-- end -->
 
