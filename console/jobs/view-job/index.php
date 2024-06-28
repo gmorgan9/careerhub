@@ -185,14 +185,14 @@ foreach ($files as $file) {
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" style="background-color: #333;">
                         <div class="card-body text-center">
                             <h5 class="card-title">Location</h5>
                             <p class="card-text"><?php echo $location; ?></p>
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" style="background-color: #333;">
                         <div class="card-body text-center">
                             <h5 class="card-title">Job Type</h5>
                             <p class="card-text"><?php echo $job_type; ?></p>
@@ -201,7 +201,7 @@ foreach ($files as $file) {
                 </div>
 
                 <div class="card-container">
-                    <div class="card">
+                    <div class="card" style="background-color: #333;">
                         <div class="card-body text-center">
                             <h5 class="card-title">Base Pay</h5>
                             <p class="card-text">
@@ -214,7 +214,7 @@ foreach ($files as $file) {
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" style="background-color: #333;">
                         <div class="card-body text-center">
                             <h5 class="card-title">Bonus Pay</h5>
                             <p class="card-text">
@@ -227,7 +227,7 @@ foreach ($files as $file) {
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" style="background-color: #333;">
                         <div class="card-body text-center">
                             <h5 class="card-title">Job Listing</h5>
                             <p class="card-text"><a href="<?php echo $app_link; ?>" target="_blank" class="badge text-bg-secondary text-decoration-none" style="margin-top: -10px !important; padding: none !important;">Visit</a></p>
