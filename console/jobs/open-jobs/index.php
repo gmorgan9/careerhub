@@ -124,11 +124,11 @@ $result = mysqli_query($conn, $sql);
                             <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content" style="background-color: #333;">
-                                        <div class="modal-header">
+                                        <div class="modal-header text-white">
                                             <h5 class="modal-title" id="viewModalLabel">View Job</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-white">
                                             <?php
                                                 $new = "SELECT * FROM jobs WHERE job_id=$id";
                                                 $new1 = mysqli_query($conn, $new);
