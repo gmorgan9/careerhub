@@ -126,10 +126,10 @@ foreach ($files as $file) {
 
 
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
-    <!-- Top Row -->
-        <div class="card-container justify-content-center mx-auto">
+        <!-- Top Row -->
+            <div class="card-container justify-content-center mx-auto">
 
-        <!-- Open/Awaiting -->
+            <!-- Open/Awaiting -->
             
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                 <a class="text-decoration-none stretched-link" href="open-app.php">
@@ -161,9 +161,9 @@ foreach ($files as $file) {
             </div>
 
             
-        <!-- end Open/Awaiting -->
+            <!-- end Open/Awaiting -->
 
-        <!-- Recieved Offer -->
+            <!-- Recieved Offer -->
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                 <a class="text-decoration-none stretched-link" href="offer-app.php">
                     <div class="card-body p-0">
@@ -193,9 +193,9 @@ foreach ($files as $file) {
                     </div>
                 </a>
             </div>
-        <!-- end Received Offer -->
+            <!-- end Received Offer -->
 
-        <!-- Declined -->
+            <!-- Declined -->
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                 <a class="text-decoration-none stretched-link" href="declined-app.php">
                     <div class="card-body p-0">
@@ -225,9 +225,9 @@ foreach ($files as $file) {
                     </div>
                 </a>
             </div>
-        <!-- end Declined -->
+            <!-- end Declined -->
 
-        <!-- Total -->
+            <!-- Total -->
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
                 <a class="text-decoration-none stretched-link" href="total-app.php">
                     <div class="card-body p-0">
@@ -257,9 +257,9 @@ foreach ($files as $file) {
                     </div>
                 </a>
             </div>
-        <!-- end Total -->
-        </div>
-    <!-- end Top Row -->
+            <!-- end Total -->
+            </div>
+        <!-- end Top Row -->
 
     <br><br>
     <hr>
