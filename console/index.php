@@ -181,9 +181,9 @@ foreach ($files as $file) {
             <div class="mt-5"></div>
 
             <!-- Bottom Row -->
-                <div class="row justify-content-center mx-auto text-white" style="margin-left: 2% !important;">
+                <div class="row justify-content-center mx-auto" style="margin-left: 2% !important;">
                     <!-- first table -->
-                        <div class="card p-0 me-2 text-white" style="width: 25rem; background-color: #333333;">
+                        <div class="card p-0 me-3 text-white" style="width: 25rem; background-color: #333333;">
                             <div class="card-header">
                                 <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest jobs</span> 
                             </div>
@@ -220,7 +220,7 @@ foreach ($files as $file) {
                                             <?php 
                                             }
                                         } else { ?>
-                                            <h3 class="mt-2 text-center text-muted">
+                                            <h3 class="mt-2 text-center text-secondary">
                                                 No Entries
                                             </h3>
                                         <?php }
@@ -232,7 +232,7 @@ foreach ($files as $file) {
                     <!-- end first table -->
 
                     <!-- second table -->
-                        <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
+                        <div class="card p-0 me-2 text-white" style="width: 25rem; background-color: #333333;">
                             <div class="card-header">
                                 <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
                             </div>
@@ -252,7 +252,7 @@ foreach ($files as $file) {
                                                 $company        = $row['company'];
                                                 ?>
                                                 <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
-                                                    <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                                    <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-secondary" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                                     <?php if($row['status'] == 'Applied'){ ?>
                                                         <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                     <?php } else if($row['status'] == 'Interviewed') { ?>
@@ -269,7 +269,7 @@ foreach ($files as $file) {
                                             <?php 
                                             }
                                         } else { ?>
-                                            <h3 class="mt-2 text-center text-muted">
+                                            <h3 class="mt-2 text-center text-secondary">
                                                 No Entries
                                             </h3>
                                         <?php }
@@ -281,7 +281,7 @@ foreach ($files as $file) {
                     <!-- end second table -->
 
                     <!-- third table -->
-                        <div class="card p-0" style="width: 25rem; background-color: #333333;">
+                        <div class="card p-0 text-white" style="width: 25rem; background-color: #333333;">
                             <div class="card-header">
                                 <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest updated</span>
                             </div>
@@ -346,7 +346,7 @@ foreach ($files as $file) {
                                                 $time_ago = time_elapsed_string($updated_at);
                                                 ?>
                                                 <li class="list-group-item text-white" style="background-color: #333333; border-color: #444444;">
-                                                <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                                <p class="float-start"><div class="d-inline-block text-truncate" style="max-width: 180px;"><?php echo $job_title; ?></div> <br> <span class="text-secondary" style="font-size: 11px;"><?php echo $company; ?></span> </p>
                                                     <?php if($row['status'] == 'Applied'){ ?>
                                                         <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                     <?php } else if($row['status'] == 'Interviewed') { ?>
@@ -359,12 +359,12 @@ foreach ($files as $file) {
                                                         <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                     <?php } ?>
                                                     <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
-                                                    <p class="float-end text-muted" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
+                                                    <p class="float-end text-secondary" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
                                                 </li>
                                             <?php
                                             }
                                         } else { ?>
-                                            <h3 class="mt-2 text-center text-muted">
+                                            <h3 class="mt-2 text-center text-secondary">
                                                 No Entries
                                             </h3>
                                     <?php }
