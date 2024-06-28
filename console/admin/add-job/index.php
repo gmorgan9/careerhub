@@ -69,9 +69,10 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
  <!-- main-container -->
+  <br><br><br>
  <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;">
 
-<br><br><br><br><br>
+<br><br>
 
     <form method="POST" action="">
 
