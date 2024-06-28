@@ -66,12 +66,12 @@ $result = mysqli_query($conn, $sql);
         </nav>
     <!-- End Navbar -->
 
-    <div class="container w-100" style="margin-left: 180px !important;">
+    <div class="content w-100" style="margin-left: 180px !important;">
     <div class="page_title">    
         <h2 class="text-white title">Open Jobs</h2>
     </div>
 
-    <!-- <div class="content text-white" style="margin-top: 55px;"> -->
+    <div class="content text-white" style="margin-top: 55px;">
         <table class="table text-white">
             <thead>
                 <tr>
@@ -129,7 +129,8 @@ $result = mysqli_query($conn, $sql);
                 ?>
             </tbody>
         </table>
-        
+    </div>
+
         <?php
         // Pagination links
         $sql_count = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Applied'";
