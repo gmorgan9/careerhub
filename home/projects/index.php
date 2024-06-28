@@ -205,6 +205,8 @@ if ($project_result) {
 
 <?php
     } // end while
+} else {
+    echo "no projects";
 } // end if
 ?>
 
