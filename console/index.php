@@ -181,7 +181,7 @@ foreach ($files as $file) {
             <div class="mt-5"></div>
 
             <!-- Bottom Row -->
-                <div class="row justify-content-center mx-auto" style="margin-left: 2% !important;">
+                <div class="row justify-content-center mx-auto text-white" style="margin-left: 2% !important;">
                     <!-- first table -->
                         <div class="card p-0 me-2" style="width: 25rem; background-color: #333333;">
                             <div class="card-header">
