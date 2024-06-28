@@ -89,7 +89,7 @@ foreach ($files as $file) {
                 while ($project = mysqli_fetch_assoc($project_result)) {
                     $project_id            = $project['project_id'];
                     $project_idno          = $project['idno'];  
-                    $project_title         = $project['project_title']; 
+                    $project_name          = $project['project_name']; 
                     $project_description   = $project['project_description'];
                     $project_github        = $project['project_github'];
                     $project_url           = $project['project_url'];
