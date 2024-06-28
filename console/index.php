@@ -132,12 +132,12 @@ foreach ($files as $file) {
         <!-- Open/Awaiting -->
             
             <div class="card top-card me-2" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                <a class="text-decoration-none text-white stretched-link" href="open-app.php">
+                <a class="text-decoration-none stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
-                            <i class="bi bi-clipboard d-block mx-auto my-3 ms-4 me-4" style=" margin-top: 20px !important; font-size: 48px;"></i>
+                            <i class="bi bi-clipboard d-block mx-auto my-3 ms-4 me-4 text-black" style=" margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
-                        <div class="right float-end mt-2" style="margin-right: 30px !important;">
+                        <div class="right float-end mt-2 text-white" style="margin-right: 30px !important;">
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
