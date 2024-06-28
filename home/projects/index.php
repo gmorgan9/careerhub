@@ -114,83 +114,89 @@ logoutUser($conn);
                         </figure>
                     </div>
 
-                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
-                        <div class="portfolio-page-content">
-                            <div class="portfolio-page-wrapper">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+                        <?php
+                            $idno = $_GET['key'];
+                            $projet_sql = "SELECT * FROM projects WHERE idno = $idno";
+                            $project_result = mysqli_query($conn, $projet_sql);
+                            if($project_result) {
+                                $num_rows = mysqli_num_rows($project_result);
+                                if($num_rows > 0) {
+                                    while ($project = mysqli_fetch_assoc($project_result)) {
+                                        $project_id            = $project['project_id'];
+                                        $project_idno          = $project['idno'];  
+                                        $project_name          = $project['project_name']; 
+                                        $project_short_name    = $project['project_short_name']; 
+                                        $project_description   = $project['project_description'];
+                                        $project_github_link   = $project['project_github_link'];
+                                        $project_github_user   = $project['project_github_user'];
+                                        $project_url           = $project['project_url'];
+                                        $project_release       = $project['project_release'];
+                                        $project_tech          = $project['project_tech'];
+                                        $project_content       = $project['project_content'];
+                                        $technologies          = explode(", ", $project_tech);
+                                    
+                                        $f_release_date = date("F j, Y", strtotime($project_release));
 
-                                <nav class="portfolio-page-nav">
-                                  <div class="nav-item portfolio-page-close-button">
-                                      <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
-                                          <i class="bi bi-x"></i>
-                                      </a>
-                                  </div>
-                                </nav>
+                                    }
+                                }
+                            }
+                        ?>
 
-                                <div class="offcanvas-body">
-                                    <div class="portfolio-page-title">
-                                        <h2>Full Project 2</h2>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-8 portfolio-block">
-
+                        <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+                            <div class="portfolio-page-content mt-5">
+                                <div class="portfolio-page-wrapper">
+                                    <div class="body">
+                                        <div class="portfolio-page-title">
+                                            <h2><?php echo $project_name; ?></h2>
                                         </div>
-                                        <div class="col-sm-12 col-md-4 portfolio-block">
-                                            <div class="project-description">
-                                                <div class="block-title">
-                                                    <h3>Description</h3>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-8 portfolio-block">
+                                                <div class="project-content">
+                                                    <?php echo $project_content; ?>
                                                 </div>
-                                                <a href="https://careerhub.morganserver.com/home/projects/project-page.php">test</a>
-                                                <ul class="project-general-info">
-                                                    <li>
-                                                        <p>
-                                                            <i class="bi bi-github"></i> &nbsp; 
-                                                            <a href="https://github.com/MorganServer/emergencyprep.git" target="_blank" class="">gmorgan9</a>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <i class="bi bi-globe"></i> &nbsp; 
-                                                            <a href="https://emergencyprep.morganserver.com" target="_blank">EmergencyPrep</a>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <i class="bi bi-calendar3"></i> &nbsp; 
-                                                            March 7, 2024
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                                <div class="text-justify">
-                                                    <p>
-                                                        This website serves as a vital resource hub for a church organization, offering essential information and tools for emergency preparedness.
-                                                    </p>
-                                                </div>
-                                                <div class="tags-block">
+                                            </div>
+                                            <div class="col-sm-12 col-md-4 portfolio-block">
+                                                <div class="project-description">
                                                     <div class="block-title">
-                                                        <h3>Technology</h3>
+                                                        <h3>Description</h3>
                                                     </div>
-                                                    <ul class="tags">
-                                                        <li><a href="">HTML</a></li>
-                                                        <li><a href="">CSS</a></li>
-                                                        <li><a href="">EmergencyPrep</a></li>
-                                                        <li><a href="">Website</a></li>
+                                                    <ul class="project-general-info">
+                                                        <li>
+                                                            <p>
+                                                                <i class="bi bi-github"></i> &nbsp; 
+                                                                <a href="<?php echo $project_github_link; ?>" target="_blank" class=""><?php echo $project_github_user; ?></a>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="bi bi-globe"></i> &nbsp; 
+                                                                <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_short_name; ?></a>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <i class="bi bi-calendar3"></i> &nbsp; 
+                                                                <?php echo $f_release_date; ?>
+                                                            </p>
+                                                        </li>
                                                     </ul>
-                                                </div>
-                                                <div class="share-buttons">
-                                                    <div class="block-title">
-                                                        <h3>Share</h3>
+                                                    <div class="text-justify">
+                                                        <p>
+                                                            <?php echo $project_description; ?>
+                                                        </p>
                                                     </div>
-                                                    <div class="btn-group">
-                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Facebook">
-                                                            <i class="bi bi-facebook"></i>
-                                                        </a>
-                                                        <a href="https://twitter.com/share?url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
-                                                            <i class="bi bi-twitter"></i>
-                                                        </a>
-                                                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
-                                                            <i class="bi bi-linkedin"></i>
-                                                        </a>
+                                                    <div class="tags-block">
+                                                        <div class="block-title">
+                                                            <h3>Technology</h3>
+                                                        </div>
+                                                        <ul class="tags">
+                                                            <?php foreach ($technologies as $tech): ?>
+                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                            <?php endforeach; ?>
+                                                        </ul>
                                                     </div>
+                                                            
                                                 </div>
                                             </div>
                                         </div>
