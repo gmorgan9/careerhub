@@ -211,7 +211,7 @@ foreach ($files as $file) {
                             <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
 
-                        <div class="right float-end mt-2 text-white" style="margin-right: 40px !important;">
+                        <div class="right float-end mt-2 text-white" style="margin-right: 55px !important;">
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
@@ -243,7 +243,7 @@ foreach ($files as $file) {
                             <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
 
-                        <div class="right float-end mt-2 text-white" style="margin-right: 18px !important;">
+                        <div class="right float-end mt-2 text-white" style="margin-right: 55px !important;">
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
