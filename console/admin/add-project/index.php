@@ -104,7 +104,7 @@ foreach ($files as $file) {
                             <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required>
                         </div>
                         <div class="form-group">
-                            <select class="form-input" name="project_category" required>
+                            <select id="project_input" class="form-input" name="project_category" required>
                                 <option value="">Select an option...</option>
                                 <option value="Website">Website</option>
                                 <option value="Scriptin">Scripting</option>
