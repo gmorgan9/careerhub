@@ -106,9 +106,7 @@ foreach ($files as $file) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
-                                </div>
+                                <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
                                 <textarea id="project_content" name="project_content" class="" placeholder="" rows="7" required="required"></textarea>
                                 <input type="submit" class="form-btn mt-5" value="Send message">
                             </form>
