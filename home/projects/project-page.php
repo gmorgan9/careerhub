@@ -79,93 +79,106 @@ foreach ($files as $file) {
         </nav>
     <!-- End Navbar -->
 
+    <?php
+        $idno = $_GET['key'];
+        $projet_sql = "SELECT * FROM projects WHERE idno = $idno";
+        $project_result = mysqli_query($conn, $projet_sql);
+        if($project_result) {
+            $num_rows = mysqli_num_rows($project_result);
+            if($num_rows > 0) {
+                while ($project = mysqli_fetch_assoc($project_result)) {
+                    $project_id            = $project['project_id'];
+                    $project_idno          = $project['idno'];  
+                    $project_title         = $project['project_title']; 
+                    $project_description   = $project['project_description'];
+                    $project_github        = $project['project_github'];
+                    $project_url           = $project['project_url'];
+                    $project_release       = $project['project_release'];
+                    $project_tech          = $project['project_tech'];
+                    $project_share_link    = $project['project_share_link'];
+                    $project_content       = $project['project_content'];
 
-                    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+                    
+                }
+            }}
+            ?>
 
-
-                        <div class="portfolio-page-content mt-5">
-                            <div class="portfolio-page-wrapper">
-
-                                <div class="body">
-                                    <div class="portfolio-page-title">
-                                        <h2>Full Project 2</h2>
+    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+        <div class="portfolio-page-content mt-5">
+            <div class="portfolio-page-wrapper">
+                <div class="body">
+                    <div class="portfolio-page-title">
+                        <h2><?php echo $project_title; ?></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 portfolio-block">
+                        </div>
+                        <div class="col-sm-12 col-md-4 portfolio-block">
+                            <div class="project-description">
+                                <div class="block-title">
+                                    <h3>Description</h3>
+                                </div>
+                                <a href="https://careerhub.morganserver.com/home/projects/test.php">test</a>
+                                <ul class="project-general-info">
+                                    <li>
+                                        <p>
+                                            <i class="bi bi-github"></i> &nbsp; 
+                                            <a href="https://github.com/MorganServer/emergencyprep.git" target="_blank" class="">gmorgan9</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <i class="bi bi-globe"></i> &nbsp; 
+                                            <a href="https://emergencyprep.morganserver.com" target="_blank">EmergencyPrep</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <i class="bi bi-calendar3"></i> &nbsp; 
+                                            March 7, 2024
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="text-justify">
+                                    <p>
+                                        This website serves as a vital resource hub for a church organization, offering essential information and tools for emergency preparedness.
+                                    </p>
+                                </div>
+                                <div class="tags-block">
+                                    <div class="block-title">
+                                        <h3>Technology</h3>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-12 col-md-8 portfolio-block">
-
-                                        </div>
-                                        <div class="col-sm-12 col-md-4 portfolio-block">
-                                            <div class="project-description">
-                                                <div class="block-title">
-                                                    <h3>Description</h3>
-                                                </div>
-                                                <a href="https://careerhub.morganserver.com/home/projects/test.php">test</a>
-                                                <ul class="project-general-info">
-                                                    <li>
-                                                        <p>
-                                                            <i class="bi bi-github"></i> &nbsp; 
-                                                            <a href="https://github.com/MorganServer/emergencyprep.git" target="_blank" class="">gmorgan9</a>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <i class="bi bi-globe"></i> &nbsp; 
-                                                            <a href="https://emergencyprep.morganserver.com" target="_blank">EmergencyPrep</a>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <i class="bi bi-calendar3"></i> &nbsp; 
-                                                            March 7, 2024
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                                <div class="text-justify">
-                                                    <p>
-                                                        This website serves as a vital resource hub for a church organization, offering essential information and tools for emergency preparedness.
-                                                    </p>
-                                                </div>
-                                                <div class="tags-block">
-                                                    <div class="block-title">
-                                                        <h3>Technology</h3>
-                                                    </div>
-                                                    <ul class="tags">
-                                                        <li><a href="">HTML</a></li>
-                                                        <li><a href="">CSS</a></li>
-                                                        <li><a href="">EmergencyPrep</a></li>
-                                                        <li><a href="">Website</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="share-buttons">
-                                                    <div class="block-title">
-                                                        <h3>Share</h3>
-                                                    </div>
-                                                    <div class="btn-group">
-                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Facebook">
-                                                            <i class="bi bi-facebook"></i>
-                                                        </a>
-                                                        <a href="https://twitter.com/share?url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
-                                                            <i class="bi bi-twitter"></i>
-                                                        </a>
-                                                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
-                                                            <i class="bi bi-linkedin"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <ul class="tags">
+                                        <li><a href="">HTML</a></li>
+                                        <li><a href="">CSS</a></li>
+                                        <li><a href="">EmergencyPrep</a></li>
+                                        <li><a href="">Website</a></li>
+                                    </ul>
+                                </div>
+                                <div class="share-buttons">
+                                    <div class="block-title">
+                                        <h3>Share</h3>
+                                    </div>
+                                    <div class="btn-group">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Facebook">
+                                            <i class="bi bi-facebook"></i>
+                                        </a>
+                                        <a href="https://twitter.com/share?url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
+                                            <i class="bi bi-twitter"></i>
+                                        </a>
+                                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://lmpixels.com/wp/leven-wp/full-width-dark/project/full-project-2/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
                    
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

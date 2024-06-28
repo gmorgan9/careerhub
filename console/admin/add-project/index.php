@@ -70,70 +70,58 @@ foreach ($files as $file) {
     <!-- End Navbar -->
 
 
-                    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
-
-                        <div class="page_title">
-                            <h2 class="text-white title">
-                                Add Project
-                            </h2>
+    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+        <div class="page_title">
+            <h2 class="text-white title">
+                Add Project
+            </h2>
+        </div>
+        <div class="form">
+            <form action="" method="POST">
+                <div class="controls two-columns">
+                    <div class="left-column">
+                        <div class="form-group">
+                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
                         </div>
-
-
-                        <div class="form">
-                            <form action="" method="POST">
-                                <div class="controls two-columns">
-                                    <div class="left-column">
-                                        <div class="form-group">
-                                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
-                                        </div>
-                                        <div class="form-group">
-                                            <input id="project_github" type="text" name="project_github" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
-                                        </div>
-                                        <div class="form-group">
-                                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
-                                        </div>
-                                    </div>
-                                    <div class="right-column">
-                                        <div class="form-group">
-                                            <input id="project_release" type="date" name="project_release" class="form-input" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
-                                        </div>
-                                        <div class="form-group">
-                                            <input id="project_share_link" type="text" name="project_share_link" class="form-input" placeholder="Project Share Link" required="required">
-                                        </div>
-                                    </div>
-                                </div>
-                                <textarea id="project_description" name="project_description" class="form-input mb-3" placeholder="Project Description" rows="2"></textarea>
-                                <textarea id="project_content" name="project_content" class="" placeholder="" rows="7"></textarea>
-                                <input type="submit" name="add-project" class="form-btn mt-5" value="Send message">
-                            </form>
+                        <div class="form-group">
+                            <input id="project_github" type="text" name="project_github" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
                         </div>
-                        
-
-
+                        <div class="form-group">
+                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
+                        </div>
                     </div>
-
-
-                    <footer class="site-footer" style="margin-left: 0px !important;">
-                        <div class="footer-socials">
-                            <ul class="footer-social-links">
-                                <li><a href="#" target="_blank">Twitter</a></li>
-                                <li><a href="#" target="_blank">Facebook</a></li>
-                                <li><a href="#" target="_blank">Instagram</a></li>
-                            </ul>
-
+                    <div class="right-column">
+                        <div class="form-group">
+                            <input id="project_release" type="date" name="project_release" class="form-input" required="required">
                         </div>
-                        <div class="footer-copyright">
-                            <p>© 2024 All rights reserved.</p>
+                        <div class="form-group">
+                            <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
                         </div>
-                    </footer>
+                        <div class="form-group">
+                            <input id="project_share_link" type="text" name="project_share_link" class="form-input" placeholder="Project Share Link" required="required">
+                        </div>
+                    </div>
+                </div>
+                <textarea id="project_description" name="project_description" class="form-input mb-3" placeholder="Project Description" rows="2"></textarea>
+                <textarea id="project_content" name="project_content" class="" placeholder="" rows="7"></textarea>
+                <input type="submit" name="add-project" class="form-btn mt-5" value="Send message">
+            </form>
+        </div> 
+    </div>
+
+    <footer class="site-footer" style="margin-left: 0px !important;">
+        <div class="footer-socials">
+            <ul class="footer-social-links">
+                <li><a href="#" target="_blank">Twitter</a></li>
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2024 All rights reserved.</p>
+        </div>
+    </footer>
                    
-
-
-
-
 
     <script>
         tinymce.init({
