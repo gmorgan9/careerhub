@@ -123,7 +123,7 @@ foreach ($files as $file) {
                     <td><?php echo $location ? $location : '-'; ?></td>
                     <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                     <td><?php echo $status ? $status : '-'; ?></td>
-                    <td style="font-size: 20px;">
+                    <td style="font-size: 20px; text-decoration: none;">
                         <a href="<?php echo BASE_URL; ?>/console/jobs/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>">
                             <i class="bi bi-eye text-success"></i>
                         </a>
