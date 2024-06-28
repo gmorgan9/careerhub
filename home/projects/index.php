@@ -126,82 +126,80 @@ if ($project_result) {
         <div class="portfolio-grid three-columns shuffle" style="height: 905.765625px; transition: height 450ms ease-out;">
             <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
                 <div class="portfolio-item-img">
-                    <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/emergency-prep.png" alt="">
-                    <a href="#" data-bs-toggle="offcanvas-<?php echo $project_id; ?>" data-bs-target="#offcanvas-<?php echo $project_id; ?>"></a>
+                    <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" alt="">
+                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-<?php echo $project_id; ?>"></a> <!-- Adjust data-bs-target -->
                 </div>
             </figure>
         </div>
-<?php
-    } // end while
-} // end if
-?>
-            
 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-<?php echo $project_id; ?>" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
-                        
-
-                        <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
-                            <div class="portfolio-page-content mt-5">
-                                <div class="portfolio-page-wrapper">
-                                    <div class="body">
-                                        <div class="portfolio-page-title">
-                                            <h2><?php echo $project_name; ?></h2>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-<?php echo $project_id; ?>" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
+            <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+                <div class="portfolio-page-content mt-5">
+                    <div class="portfolio-page-wrapper">
+                        <div class="body">
+                            <div class="portfolio-page-title">
+                                <h2><?php echo $project_name; ?></h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-8 portfolio-block">
+                                    <div class="project-content">
+                                        <?php echo $project_content; ?>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4 portfolio-block">
+                                    <div class="project-description">
+                                        <div class="block-title">
+                                            <h3>Description</h3>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-8 portfolio-block">
-                                                <div class="project-content">
-                                                    <?php echo $project_content; ?>
-                                                </div>
+                                        <ul class="project-general-info">
+                                            <li>
+                                                <p>
+                                                    <i class="bi bi-github"></i> &nbsp; 
+                                                    <a href="<?php echo $project_github_link; ?>" target="_blank" class=""><?php echo $project_github_user; ?></a>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <i class="bi bi-globe"></i> &nbsp; 
+                                                    <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_short_name; ?></a>
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <i class="bi bi-calendar3"></i> &nbsp; 
+                                                    <?php echo $formatted_release_date; ?>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <div class="text-justify">
+                                            <p>
+                                                <?php echo $project_description; ?>
+                                            </p>
+                                        </div>
+                                        <div class="tags-block">
+                                            <div class="block-title">
+                                                <h3>Technology</h3>
                                             </div>
-                                            <div class="col-sm-12 col-md-4 portfolio-block">
-                                                <div class="project-description">
-                                                    <div class="block-title">
-                                                        <h3>Description</h3>
-                                                    </div>
-                                                    <ul class="project-general-info">
-                                                        <li>
-                                                            <p>
-                                                                <i class="bi bi-github"></i> &nbsp; 
-                                                                <a href="<?php echo $project_github_link; ?>" target="_blank" class=""><?php echo $project_github_user; ?></a>
-                                                            </p>
-                                                        </li>
-                                                        <li>
-                                                            <p>
-                                                                <i class="bi bi-globe"></i> &nbsp; 
-                                                                <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_short_name; ?></a>
-                                                            </p>
-                                                        </li>
-                                                        <li>
-                                                            <p>
-                                                                <i class="bi bi-calendar3"></i> &nbsp; 
-                                                                <?php echo $f_release_date; ?>
-                                                            </p>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="text-justify">
-                                                        <p>
-                                                            <?php echo $project_description; ?>
-                                                        </p>
-                                                    </div>
-                                                    <div class="tags-block">
-                                                        <div class="block-title">
-                                                            <h3>Technology</h3>
-                                                        </div>
-                                                        <ul class="tags">
-                                                            <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
-                                                            <?php endforeach; ?>
-                                                        </ul>
-                                                    </div>
-                                                            
-                                                </div>
-                                            </div>
+                                            <ul class="tags">
+                                                <?php foreach ($technologies as $tech): ?>
+                                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                <?php endforeach; ?>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+<?php
+    } // end while
+} // end if
+?>
+
 
 
                 </div>
