@@ -78,7 +78,7 @@ foreach ($files as $file) {
     <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
 
 
-    <div class="container-fluid main">
+    <!-- <div class="container-fluid main"> -->
 
         <table class="table text-white">
             <thead>
