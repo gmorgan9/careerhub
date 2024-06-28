@@ -62,22 +62,9 @@ logoutUser($conn);
                     <li class="nav-item">
                         <a class="nav-link text-secondary" href="/home/contact">Contact</a>
                     </li>
-                    <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 1) { ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bi bi-person-circle"></i>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                                <a class="dropdown-item" href="/console">Console</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index.php?logout=1">Logout</a>
-                            </div>
-                        </li>  
-                    <?php } else { ?>
-                        <li class="nav-item">
-                            <a class="nav-link text-secondary" href="/login">Login</a>
-                        </li>
-                    <?php } ?>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/console">Console</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -102,123 +89,17 @@ logoutUser($conn);
                         <li><a class="filter btn btn-sm btn-link" data-group="category_youtube-video">YouTube Video</a></li>
                     </ul>
 
-                    <?php
-$projet_sql = "SELECT * FROM projects";
-$project_result = mysqli_query($conn, $projet_sql);
-
-if (mysqli_num_rows($project_result) > 0) {
-    while ($project = mysqli_fetch_assoc($project_result)) {
-        $project_id            = $project['project_id'];
-        $project_idno          = $project['idno'];  
-        $project_name          = $project['project_name']; 
-        $project_short_name    = $project['project_short_name']; 
-        $project_description   = $project['project_description'];
-        $project_github_link   = $project['project_github_link'];
-        $project_github_user   = $project['project_github_user'];
-        $project_url           = $project['project_url'];
-        $project_release       = $project['project_release'];
-        $project_tech          = $project['project_tech'];
-        $project_content       = $project['project_content'];
-        $technologies          = explode(", ", $project_tech);
-        
-        // Format release date
-        $formatted_release_date = date("F j, Y", strtotime($project_release));
-?>
-        <div class="portfolio-grid three-columns shuffle" style="height: 905.765625px; transition: height 450ms ease-out;">
-            <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
-                <div class="portfolio-item-img">
-                    <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" alt="">
-                    <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-<?php echo $project_id; ?>"></a> <!-- Adjust data-bs-target -->
-                </div>
-            </figure>
-        </div>
-
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-<?php echo $project_id; ?>" aria-labelledby="offcanvasTopLabel" style="width: 100vw;">
-            <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
-                <div class="portfolio-page-content mt-5">
-                    <div class="portfolio-page-wrapper">
-                        <div class="body">
-                        <nav class="portfolio-page-nav">
-                                  <div class="nav-item portfolio-page-close-button">
-                                      <a href="" id="portfolio-page-close-button" data-bs-dismiss="offcanvas">
-                                          <i class="bi bi-x"></i>
-                                      </a>
-                                  </div>
-                                </nav>
-                            <div class="portfolio-page-title">
-                                <h2><?php echo $project_name; ?></h2>
+                    
+                    <div class="portfolio-grid three-columns shuffle" style="height: 905.765625px; transition: height 450ms ease-out;">
+                        <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
+                            <div class="portfolio-item-img">
+                                <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" alt="">
+                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-<?php echo $project_id; ?>"></a> <!-- Adjust data-bs-target -->
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-8 portfolio-block">
-                                    <div class="project-content">
-                                        <?php echo $project_content; ?>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-4 portfolio-block">
-                                    <div class="project-description">
-                                        <div class="block-title">
-                                            <h3>Description</h3>
-                                        </div>
-                                        <ul class="project-general-info">
-                                            <li>
-                                                <p>
-                                                    <i class="bi bi-github"></i> &nbsp; 
-                                                    <a href="<?php echo $project_github_link; ?>" target="_blank" class=""><?php echo $project_github_user; ?></a>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <i class="bi bi-globe"></i> &nbsp; 
-                                                    <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_short_name; ?></a>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <i class="bi bi-calendar3"></i> &nbsp; 
-                                                    <?php echo $formatted_release_date; ?>
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <div class="text-justify">
-                                            <p>
-                                                <?php echo $project_description; ?>
-                                            </p>
-                                        </div>
-                                        <div class="tags-block">
-                                            <div class="block-title">
-                                                <h3>Technology</h3>
-                                            </div>
-                                            <ul class="tags">
-                                                <?php foreach ($technologies as $tech): ?>
-                                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </figure>
                     </div>
-                </div>
-            </div>
-        </div>
-
-<?php
-    } 
-} else {
-    // If no projects found, display a message
-?>
-    <div class="portfolio-grid three-columns shuffle">
-        <p>No current projects.</p>
-    </div>
-<?php
-}
-?>
-
-
-                  
-
-
+                            
+                                
                 </div>
             </div>
             
