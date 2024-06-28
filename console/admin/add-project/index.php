@@ -110,7 +110,7 @@ foreach ($files as $file) {
                                     <textarea id="project_description" name="project_description" class="form-input" placeholder="Project Description" rows="2" required="required" data-error="Project Description is required."></textarea>
                                 </div>
                                 <textarea id="project_content" name="project_content" class="" placeholder="" rows="7" required="required"></textarea>
-                                <input type="submit" class="form-btn" value="Send message">
+                                <input type="submit" class="form-btn mt-3" value="Send message">
                             </form>
                         </div>
                         
