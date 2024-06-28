@@ -97,7 +97,6 @@ foreach ($files as $file) {
                     $project_url           = $project['project_url'];
                     $project_release       = $project['project_release'];
                     $project_tech          = $project['project_tech'];
-                    $project_share_link    = $project['project_share_link'];
                     $project_content       = $project['project_content'];
                     $technologies          = explode(", ", $project_tech);
 
