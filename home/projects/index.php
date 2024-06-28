@@ -102,7 +102,7 @@ logoutUser($conn);
                         <li><a class="filter btn btn-sm btn-link" data-group="category_youtube-video">YouTube Video</a></li>
                     </ul>
                     <?php
-                            $idno = $_GET['key'];
+                            // $idno = $_GET['key'];
                             $projet_sql = "SELECT * FROM projects WHERE idno = $idno";
                             $project_result = mysqli_query($conn, $projet_sql);
                             if($project_result) {
