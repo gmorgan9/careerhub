@@ -114,7 +114,7 @@ foreach ($files as $file) {
     <!-- Search form -->
         <!-- <div class="container"> -->
 
-        <div class="content text-white" style=" margin: 0 auto; margin-top: 55px;">
+        <div class="content text-white" style=" margin: 0; margin-top: 55px;">
         <div class="page_title">
             <h2 class="text-white title">
                 Rejected Jobs
