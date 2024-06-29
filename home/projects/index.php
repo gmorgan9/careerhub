@@ -44,7 +44,7 @@ foreach ($files as $file) {
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
 
             <div class="row">
-                <div class=" col-xs-12 col-sm-12 ">
+                <div class=" col-xs-12 col-md-6 ">
                 <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                   <li class="nav-item project-filter-item" role="presentation">
                     <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
@@ -63,19 +63,7 @@ foreach ($files as $file) {
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
 
-                    <div role="gridcell" id="cardHover" aria-label="Piggment The Gradients and colors for the next smart creator" tabindex="0" class="mansory-item__MansoryItemStyle-sc-luo7c4-0 gJKjnw" style="height: 310px;">
-                        <img alt="https://i.ibb.co/tCZFDhL/Screen-Recording-2020-06-11-at-1.gif" id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" srcset="" style="color: transparent;" src="../../assets/images/project-images/EmergencyPrep.png">
-                        <div class="content__slate">
-                            <h3>Piggment</h3>
-                            <p>The Gradients and colors for the next smart creator</p>
-                            <p class="d-flex flex-wrap">
-                                <span class="d-block mb-1">React</span>
-                                <span class="d-block mb-1">Sass &amp; CSS</span>
-                                <span class="d-block mb-1">Javascript</span>
-                                <span class="d-block mb-1">Context</span>
-                            </p>
-                        </div>
-                    </div>
+                    
                     
                   
 
