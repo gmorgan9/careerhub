@@ -74,7 +74,7 @@ foreach ($files as $file) {
                         </div>
                         <div class="form-group">
                             <select class="form-input" name="project_category">
-                                <option value="">Please select one...</option>
+                                <option value="" style="color: blue !important;">Please select one...</option>
                                 <option value="Web Development">Web Development</option>
                                 <option value="Scripting & Automation">Scripting & Automation</option>
                                 <option value="Software Development">Software Development</option>
