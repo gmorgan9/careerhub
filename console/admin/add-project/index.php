@@ -83,8 +83,8 @@ foreach ($files as $file) {
                     </div>
                 </div>
                 <textarea id="project_description" name="project_description" class="form-input mb-3" placeholder="Project Description" rows="2"></textarea>
-                <textarea id="project_content" name="project_content" class="" placeholder="" rows="7"></textarea>
-                <input type="submit" name="add-project" class="form-btn mt-5" value="Send message">
+                <!-- <textarea id="project_content" name="project_content" class="" placeholder="" rows="7"></textarea> -->
+                <input type="submit" name="add-project" class="form-btn mt-5" value="Add Project">
             </form>
         </div> 
     </div>
