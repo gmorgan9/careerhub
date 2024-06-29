@@ -489,7 +489,9 @@ min-height: 43px;
     background-color: var(--light-gray);
     color: white;
 }
-
+.off-canvas-close-btn {
+    background: 0;
+}
 /* .project-cell img::before {
     content: "";
     pointer-events: none;
