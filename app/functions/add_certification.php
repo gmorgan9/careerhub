@@ -18,7 +18,7 @@ if (isset($_POST['add-certification'])) {
     if (mysqli_num_rows($result) > 0) {
         $error[] = 'The certification already exists!';
     } else {
-        $insert = "INSERT INTO certifications (idno, cert_name, cert_issued, cert_expire, cert_renewed, cred_id, cert_provider) VALUES ('$idno', NULLIF('$cert_name',''), NULLIF('$cert_issued',''), NULLIF('$cert_expire',''), NULLIF('$cert_renewed',''), NULLIF('$cert_status',''), NULLIF('$cert_provider',''))";
+        $insert = "INSERT INTO certifications (idno, cert_name, cert_issued, cert_expire, cert_renewed, cred_id, cert_provider) VALUES ('$idno', NULLIF('$cert_name',''), NULLIF('$cert_issued',''), NULLIF('$cert_expire',''), NULLIF('$cert_renewed',''), NULLIF('$cred_id',''), NULLIF('$cert_provider',''))";
         mysqli_query($conn, $insert);
         header('location:' . BASE_URL . '/home/resume');
     }
