@@ -76,11 +76,38 @@ foreach ($files as $file) {
                             <div class="row">
                                 <div class="col-md-6">
                                     <!-- Content for the first column of Tab 1 -->
-                                    <p>Column 1 content for Tab 1</p>
+
+                                    <div style="height:400px" role="gridcell" id="cardHover" aria-label="Piggment The Gradients and colors for the next smart creator" tabindex="0" class="mansory-item__MansoryItemStyle-sc-luo7c4-0 gJKjnw">
+                                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/EmergencyPrep.png">
+                                        <div class="content__slate">
+                                            <h3>Piggment</h3>
+                                            <p>The Gradients and colors for the next smart creator</p>
+                                            <p class="d-flex flex-wrap">
+                                                <span class="d-block mb-1">React</span>
+                                                <span class="d-block mb-1">Sass &amp; CSS</span>
+                                                <span class="d-block mb-1">Javascript</span>
+                                                <span class="d-block mb-1">Context</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-6">
-                                    <!-- Content for the second column of Tab 1 -->
-                                    <p>Column 2 content for Tab 1</p>
+
+                                    <div style="height:400px" role="gridcell" id="cardHover" aria-label="Piggment The Gradients and colors for the next smart creator" tabindex="0" class="mansory-item__MansoryItemStyle-sc-luo7c4-0 gJKjnw">
+                                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/EmergencyPrep.png">
+                                        <div class="content__slate">
+                                            <h3>Piggment</h3>
+                                            <p>The Gradients and colors for the next smart creator</p>
+                                            <p class="d-flex flex-wrap">
+                                                <span class="d-block mb-1">React</span>
+                                                <span class="d-block mb-1">Sass &amp; CSS</span>
+                                                <span class="d-block mb-1">Javascript</span>
+                                                <span class="d-block mb-1">Context</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
