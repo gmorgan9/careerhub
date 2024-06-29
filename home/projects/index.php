@@ -63,7 +63,9 @@ foreach ($files as $file) {
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
 
-                    
+                    <div class="project-cell" style="width: 448px;">
+                        <img src="../../assets/images/project-images/EmergencyPrep.png" style="height: 500px;" alt="">
+                    </div>
                     
                   
 
