@@ -216,7 +216,7 @@ if ($conn->connect_error) {
                                             <!-- end PHP code for Web Development - Odd Results -->
                                                     
                                             <div>
-                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#web-dev-<?php echo $project_id; ?>">
                                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                                     <div class="content__slate">
                                                         <h3><?php echo $project_name; ?></h3>
@@ -230,7 +230,7 @@ if ($conn->connect_error) {
                                                 </div>
                                                             
                                                 <!-- CANVAS -->
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="web-dev-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
                                                         <div class="offcanvas-header">
                                                             <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -273,7 +273,7 @@ if ($conn->connect_error) {
                                             <!-- end PHP code for Web Development - Even Results -->
                                                     
                                             <div>
-                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#web-dev-<?php echo $project_id; ?>">
                                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                                     <div class="content__slate">
                                                         <h3><?php echo $project_name; ?></h3>
@@ -287,7 +287,7 @@ if ($conn->connect_error) {
                                                 </div>
                                                             
                                                 <!-- CANVAS -->
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="web-dev-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
                                                         <div class="offcanvas-header">
                                                             <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
