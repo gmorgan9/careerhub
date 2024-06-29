@@ -121,7 +121,27 @@ $result = mysqli_query($conn, $sql);
                                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                       </div>
                                       <div class="offcanvas-body">
-                                        ...
+                                        <?php
+                                            $o_sql = "SELECT * FROM projects WHERE project_id = $project_id";
+                                            $o_result = mysqli_query($conn, $o_sql);
+                                            if (mysqli_num_rows($o_result) > 0) {
+                                                while ($o_row = mysqli_fetch_assoc($o_result)) {
+                                                    $o_project_id            = $o_row['project_id'];
+                                                    $o_project_idno          = $o_row['idno'];  
+                                                    $o_project_name          = $o_row['project_name']; 
+                                                    $o_project_short_name    = $o_row['project_short_name']; 
+                                                    $o_project_description   = $o_row['project_description'];
+                                                    $o_project_github_link   = $o_row['project_github_link'];
+                                                    $o_project_github_user   = $o_row['project_github_user'];
+                                                    $o_project_url           = $o_row['project_url'];
+                                                    $o_project_release       = $o_row['project_release'];
+                                                    $o_project_tech          = $o_row['project_tech'];
+                                                    $o_project_content       = $o_row['project_content'];
+                                                    $o_technologies          = explode(", ", $project_tech);
+                                                }}
+                                        ?>
+
+                                        <?php echo $o_project_name; ?>
                                       </div>
                                     </div>
                                     
