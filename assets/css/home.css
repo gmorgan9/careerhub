@@ -449,6 +449,29 @@ min-height: 43px;
     transition-property: all !important;
     border-top-style: none !important;
 }
+.gJKjnw {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 1.5em;
+    position: relative;
+    cursor: pointer;
+    object-fit: cover;
+    background-color: var(--button-index);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 1.4rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: flex-end;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    break-inside: avoid;
+    }
 .gJKjnw img {
     position: absolute;
     object-fit: cover;
