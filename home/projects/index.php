@@ -139,7 +139,7 @@ if ($conn->connect_error) {
                                                                     Website
                                                                 </h4>
                                                                 <p>
-                                                                    <a href="<?php echo $project_url; ?>"><?php echo $project_short_name; ?></a>
+                                                                    <a href="<?php echo $project_url; ?>"><?php echo $project_name; ?></a>
                                                                 </p>
                                                                 <h4>
                                                                     <i class="bi bi-github"></i> &nbsp;
