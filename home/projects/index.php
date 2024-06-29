@@ -65,11 +65,19 @@ $result = mysqli_query($conn, $sql);
                     <?php
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $id                     = $row['project_id'];
-                            $idno                   = $row['idno'];
-                            $project_name           = $row['project_name'];
-                            $project_short_name     = $row['project_short_name'];
-                            $project_description    = $row['project_description'];
+                            $project_id            = $project['project_id'];
+                            $project_idno          = $project['idno'];  
+                            $project_name          = $project['project_name']; 
+                            $project_short_name    = $project['project_short_name']; 
+                            $project_description   = $project['project_description'];
+                            $project_github_link   = $project['project_github_link'];
+                            $project_github_user   = $project['project_github_user'];
+                            $project_url           = $project['project_url'];
+                            $project_release       = $project['project_release'];
+                            $project_tech          = $project['project_tech'];
+                            $project_content       = $project['project_content'];
+                            $technologies          = explode(", ", $project_tech);
+
                             // $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
                             // $created_at->setTimezone(new DateTimeZone('America/Denver'));
                             // $formatted_date = $created_at->format('M d, Y');
@@ -99,12 +107,17 @@ $result = mysqli_query($conn, $sql);
                                         <div class="content__slate">
                                             <h3><?php echo $project_name; ?></h3>
                                             <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
-                                            <p class="d-flex flex-wrap">
+                                            <ul class="tags">
+                                                <?php foreach ($technologies as $tech): ?>
+                                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                            <!-- <p class="d-flex flex-wrap">
                                                 <span class="d-block mb-1">React</span>
                                                 <span class="d-block mb-1">Sass &amp; CSS</span>
                                                 <span class="d-block mb-1">Javascript</span>
                                                 <span class="d-block mb-1">Context</span>
-                                            </p>
+                                            </p> -->
                                         </div>
                                     </div>
                                     
