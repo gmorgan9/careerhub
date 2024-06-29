@@ -545,7 +545,7 @@ min-height: 43px;
     transition-property: opacity, transform;
 }
 
-.content__slate {
+.content__slate:hover {
     position: absolute;
     bottom: 0;
     width: 100%;
