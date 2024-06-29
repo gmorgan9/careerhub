@@ -141,7 +141,7 @@ $result = mysqli_query($conn, $sql);
             
             <div class="col-md-6">
                 <?php
-                if (mysqli_num_rows($result) > 1) {
+                if (mysqli_num_rows($result) > 0) {
                     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     $total_rows = count($rows);
                     
