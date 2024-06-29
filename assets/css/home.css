@@ -429,7 +429,14 @@ img {
 }
 
 /* Projects */
-.layout {
+.project-layout {
+    display: grid;
+    height: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px;
+    column-gap: 20px;
+}
+/* .layout {
     margin-top: 1.5em;
 margin-right: 0px;
 animation-duration: 1s;
@@ -520,7 +527,7 @@ min-height: 43px;
     height: 100%;
     left: 0px;
     top: 0px;
-}
+} */
 /* .project-filter-item .active {
     background-color: rgb(51, 51, 51) !important;
     border-radius: 50px !important;
