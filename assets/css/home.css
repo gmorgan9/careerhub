@@ -501,8 +501,6 @@ min-height: 43px;
 .main-project-details img {
     border-radius: 9px;
     width: 95% !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
 }
 .main-project-details h4 {
     margin-top: 2em;
