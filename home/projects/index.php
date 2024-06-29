@@ -160,7 +160,7 @@ $result = mysqli_query($conn, $sql);
                 }
                 ?>
 
-                                <div class="col-md-6 mt-5">
+                                <!-- <div class="col-md-6 mt-5">
 
                                     <div style="height:400px; position: relative;" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
                                         <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
@@ -176,7 +176,7 @@ $result = mysqli_query($conn, $sql);
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>
