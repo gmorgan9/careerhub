@@ -499,7 +499,7 @@ min-height: 43px;
     font-size: 20px;
 }
 .project-offcanvas {
-    width: 480px;
+    width: 480px !important;
 }
 /* .project-cell img::before {
     content: "";
