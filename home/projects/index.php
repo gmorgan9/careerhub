@@ -126,6 +126,26 @@ if ($conn->connect_error) {
                                                                 <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
                                                                 <h4>About</h4>
                                                                 <p><?php echo $project_description; ?></p>
+                                                                <h4>Technologies</h4>
+                                                                <ul class="tags">
+                                                                    <?php foreach ($technologies as $tech): ?>
+                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                    <?php endforeach; ?>
+                                                                </ul>
+                                                                <h4>
+                                                                    <i class="bi bi-globe2"></i> &nbsp; 
+                                                                    Website
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="<?php echo $project_url; ?>"><?php echo $project_short_name; ?></a>
+                                                                </p>
+                                                                <h4>
+                                                                    <i class="bi bi-github"></i> &nbsp;
+                                                                    Github
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="<?php echo $project_github_link ?>"><?php echo $project_github_user; ?></a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>

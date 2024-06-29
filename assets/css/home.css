@@ -502,6 +502,7 @@ min-height: 43px;
     border-radius: 9px;
 }
 .main-project-details h4 {
+    margin-top: 2em;
     font-size: 18px;
 }
 .project-offcanvas {
