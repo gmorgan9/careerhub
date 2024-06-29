@@ -52,12 +52,12 @@ if ($conn->connect_error) {
                 <div class=" col-xs-12 col-md-10 mx-auto">
                     
                     <!-- Project Filters -->
-                        <ul class="project-filters nav nav-pills" id="pills-tab" role="tablist">
+                    <ul class="project-filters nav nav-pills" id="pills-tab" role="tablist">
                             <li class="nav-item project-filter-item" role="presentation">
-                                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                                <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
                             </li>
                             <li class="nav-item project-filter-item" role="presentation">
-                                <button class="nav-link" id="webdev-tab" data-bs-toggle="pill" data-bs-target="#webdev" type="button" role="tab" aria-selected="false">Web Development</button>
+                                <button class="nav-link" id="webdev-tab" data-bs-toggle="pill" data-bs-target="#webdev" type="button" role="tab" aria-controls="webdev" aria-selected="false">Web Development</button>
                             </li>
                             <li class="nav-item project-filter-item" role="presentation">
                                 <button class="nav-link" id="scripting-automation-tab" data-bs-toggle="pill" data-bs-target="#scripting-automation" type="button" role="tab" aria-controls="scripting-automation" aria-selected="false">Scripting & Automation</button>
