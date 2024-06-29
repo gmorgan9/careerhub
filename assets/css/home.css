@@ -539,7 +539,7 @@ min-height: 43px;
     background-attachment: scroll;
     background-origin: padding-box;
     background-clip: border-box;
-    background-color: rgb(63, 86, 110);
+    background-color: var(--light-gray);
 }
 /* .project-cell img::before {
     content: "";
