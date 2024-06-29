@@ -542,7 +542,7 @@ min-height: 43px;
 }
 .content__slate:hover {
     opacity: .7!important;
-    background-color: #222;
+    background-color: #a5a5a5;
     height: 100%;
     width: 100%;
     /* transform: translateY(10%);
