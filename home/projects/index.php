@@ -57,6 +57,9 @@ if ($conn->connect_error) {
                                 <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
                             </li>
                             <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link" id="webdev-tab" data-bs-toggle="pill" data-bs-target="#webdev" type="button" role="tab" aria-controls="webdev" aria-selected="false">Web</button>
+                            </li>
+                            <li class="nav-item project-filter-item" role="presentation">
                                 <button class="nav-link" id="webdev-tab" data-bs-toggle="pill" data-bs-target="#webdev" type="button" role="tab" aria-controls="webdev" aria-selected="false">Web Development</button>
                             </li>
                             <li class="nav-item project-filter-item" role="presentation">
