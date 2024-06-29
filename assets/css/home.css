@@ -490,7 +490,7 @@ min-height: 43px;
     border-bottom-left-radius: 9px;
     break-inside: avoid;
 }
-.project-cell img::before {
+/* .project-cell img::before {
     content: "";
     pointer-events: none;
     display: block;
@@ -501,7 +501,7 @@ min-height: 43px;
     left: 0px;
     z-index: -1;
     background-image: radial-gradient(circle, white 10%, whitesmoke 11%, whitesmoke 100%);
-}
+} */
 /* .project-cell img::after {
     content: "";
     pointer-events: none;
