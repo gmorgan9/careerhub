@@ -79,30 +79,26 @@ $result = mysqli_query($conn, $sql);
                             
                             <div class="row">
 
-                            <?php
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $project_id            = $row['project_id'];
-                            $project_idno          = $row['idno'];  
-                            $project_name          = $row['project_name']; 
-                            $project_short_name    = $row['project_short_name']; 
-                            $project_description   = $row['project_description'];
-                            $project_github_link   = $row['project_github_link'];
-                            $project_github_user   = $row['project_github_user'];
-                            $project_url           = $row['project_url'];
-                            $project_release       = $row['project_release'];
-                            $project_tech          = $row['project_tech'];
-                            $project_content       = $row['project_content'];
-                            $technologies          = explode(", ", $project_tech);
+                                <?php
+                                    if (mysqli_num_rows($result) > 0) {
+                                        $count = 0;
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            $count++;
+                                            $project_id            = $row['project_id'];
+                                            $project_idno          = $row['idno'];  
+                                            $project_name          = $row['project_name']; 
+                                            $project_short_name    = $row['project_short_name']; 
+                                            $project_description   = $row['project_description'];
+                                            $project_github_link   = $row['project_github_link'];
+                                            $project_github_user   = $row['project_github_user'];
+                                            $project_url           = $row['project_url'];
+                                            $project_release       = $row['project_release'];
+                                            $project_tech          = $row['project_tech'];
+                                            $project_content       = $row['project_content'];
+                                            $technologies          = explode(", ", $project_tech);
+                                ?>
 
-                            // $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
-                            // $created_at->setTimezone(new DateTimeZone('America/Denver'));
-                            // $formatted_date = $created_at->format('M d, Y');
-
-
-                    ?>
-
-                                <div class="col-md-6">
+                                <div class="col-md-6 <?php if ($count == 2) echo 'mt-5'; ?>">
 
                                     <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
                                         <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
@@ -118,68 +114,52 @@ $result = mysqli_query($conn, $sql);
                                     </div>
 
                                     <!-- CANVAS -->
-                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                                        <?php
-                                            $o_sql = "SELECT * FROM projects WHERE project_id = $project_id";
-                                            $o_result = mysqli_query($conn, $o_sql);
-                                            if (mysqli_num_rows($o_result) > 0) {
-                                                while ($o_row = mysqli_fetch_assoc($o_result)) {
-                                                    $o_project_id            = $o_row['project_id'];
-                                                    $o_project_idno          = $o_row['idno'];  
-                                                    $o_project_name          = $o_row['project_name']; 
-                                                    $o_project_short_name    = $o_row['project_short_name']; 
-                                                    $o_project_description   = $o_row['project_description'];
-                                                    $o_project_github_link   = $o_row['project_github_link'];
-                                                    $o_project_github_user   = $o_row['project_github_user'];
-                                                    $o_project_url           = $o_row['project_url'];
-                                                    $o_project_release       = $o_row['project_release'];
-                                                    $o_project_tech          = $o_row['project_tech'];
-                                                    $o_project_content       = $o_row['project_content'];
-                                                    $o_technologies          = explode(", ", $project_tech);
-                                                }}
-                                        ?>
-                                        <div class="offcanvas-header">
-                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                            <?php
+                                                $o_sql = "SELECT * FROM projects WHERE project_id = $project_id";
+                                                $o_result = mysqli_query($conn, $o_sql);
+                                                if (mysqli_num_rows($o_result) > 0) {
+                                                    while ($o_row = mysqli_fetch_assoc($o_result)) {
+                                                        $o_project_id            = $o_row['project_id'];
+                                                        $o_project_idno          = $o_row['idno'];  
+                                                        $o_project_name          = $o_row['project_name']; 
+                                                        $o_project_short_name    = $o_row['project_short_name']; 
+                                                        $o_project_description   = $o_row['project_description'];
+                                                        $o_project_github_link   = $o_row['project_github_link'];
+                                                        $o_project_github_user   = $o_row['project_github_user'];
+                                                        $o_project_url           = $o_row['project_url'];
+                                                        $o_project_release       = $o_row['project_release'];
+                                                        $o_project_tech          = $o_row['project_tech'];
+                                                        $o_project_content       = $o_row['project_content'];
+                                                        $o_technologies          = explode(", ", $project_tech);
+                                                    }}
+                                            ?>
+                                            <div class="offcanvas-header">
+                                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body">
+                                                <?php echo $o_project_name; ?>
+                                            </div>
                                         </div>
-                                        <div class="offcanvas-body">
-                                            <?php echo $o_project_name; ?>
-                                        </div>
-                                    </div>
                                     <!-- end CANVAS -->
                                     
                                 </div>
+
                                 <?php
-                    }
-                } else {
-                ?>
-                    <div>
-                        <p class="text-center">No jobs found.</p>
-                    </div>
-                <?php
-                }
-                ?>
-
-                                <!-- <div class="col-md-6 mt-5">
-
-                                    <div style="height:400px; position: relative;" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
-                                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
-                                        <div class="content__slate">
-                                            <h3>Piggment</h3>
-                                            <p>The Gradients and colors for the next smart creator</p>
-                                            <p class="d-flex flex-wrap">
-                                                <span class="d-block mb-1">React</span>
-                                                <span class="d-block mb-1">Sass &amp; CSS</span>
-                                                <span class="d-block mb-1">Javascript</span>
-                                                <span class="d-block mb-1">Context</span>
-                                            </p>
-                                        </div>
+                                        }
+                                    } else {
+                                ?>
+                                    <div>
+                                        <p class="text-center">No jobs found.</p>
                                     </div>
-
-                                </div> -->
+                                <?php
+                                    }
+                                ?>
 
                             </div>
                         </div>
+                        <!-- end tab 1 -->
 
                         <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                             <div class="row">
