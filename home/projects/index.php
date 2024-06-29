@@ -92,7 +92,7 @@ foreach ($files as $file) {
                                     </div>
                                     
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-4">
 
                                 <div style="height:400px; position: relative;" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
@@ -112,6 +112,7 @@ foreach ($files as $file) {
                                 </div>
                             </div>
                         </div>
+
                         <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                             <div class="row">
                                 <div class="col-md-6">
@@ -124,6 +125,7 @@ foreach ($files as $file) {
                                 </div>
                             </div>
                         </div>
+
                         <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                             <div class="row">
                                 <div class="col-md-6">
@@ -136,6 +138,7 @@ foreach ($files as $file) {
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                             
