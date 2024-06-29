@@ -197,7 +197,7 @@ if ($conn->connect_error) {
                                 <div class="row">
 
                                     <?php if($count_wd == 0) { ?>
-                                        <div class="alert alert-secondary" role="alert">
+                                        <div class="alert alert-secondary" role="alert" style="background-color: #33333;">
                                             No current Web Development projects.
                                         </div>
                                     <?php } ?>
@@ -574,10 +574,6 @@ if ($conn->connect_error) {
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha384+MdS9E5PLPuPkQsVEWyFtUVvihJpLiKuDO/n9+5dtI9Tf/8MpGdqc1BqumOq/n3h"
-    crossorigin="anonymous">
-</script>
+    
 </body>
 </html>
