@@ -49,7 +49,7 @@ foreach ($files as $file) {
             <form action="" method="POST">
                 <div class="form-group">
                     <label class="form-label text-white" for="cert_name">Certification Name</label>
-                    <input id="cert_name" type="text" name="cert_name" class="form-input" placeholder="Certification Name" required>
+                    <input id="cert_name" type="text" name="cert_name" class="form-input" required>
                 </div>
                 <div class="form-group">
                     <input id="cert_issued" type="date" name="cert_issued" class="form-input" style="padding-bottom: 0 !important;">
