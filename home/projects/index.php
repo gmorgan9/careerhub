@@ -65,9 +65,11 @@ $result = mysqli_query($conn, $sql);
                     <?php
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $id             = $row['project_id'];
-                            $idno           = $row['idno'];
-                            $project_name   = $row['project_name'];
+                            $id                     = $row['project_id'];
+                            $idno                   = $row['idno'];
+                            $project_name           = $row['project_name'];
+                            $project_short_name     = [$row['project_short_name']];
+                            $project_description    = $row['project_description'];
                             // $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
                             // $created_at->setTimezone(new DateTimeZone('America/Denver'));
                             // $formatted_date = $created_at->format('M d, Y');
@@ -93,10 +95,10 @@ $result = mysqli_query($conn, $sql);
                                 <div class="col-md-6">
 
                                     <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
-                                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
+                                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                         <div class="content__slate">
-                                            <h3>Piggment</h3>
-                                            <p>The Gradients and colors for the next smart creator</p>
+                                            <h3><?php echo $project_name; ?></h3>
+                                            <p><?php echo $project_description; ?></p>
                                             <p class="d-flex flex-wrap">
                                                 <span class="d-block mb-1">React</span>
                                                 <span class="d-block mb-1">Sass &amp; CSS</span>
