@@ -82,7 +82,7 @@ $odd_result = mysqli_query($conn, $odd_sql);
                                 <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
                             </li>
                             <li class="nav-item project-filter-item" role="presentation">
-                                <button class="nav-link" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</button>
+                                <button class="nav-link" id="webdev-tab" data-bs-toggle="pill" data-bs-target="#webdev" type="button" role="tab" aria-controls="webdev" aria-selected="false">Web Development</button>
                             </li>
                             <li class="nav-item project-filter-item" role="presentation">
                                 <button class="nav-link" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</button>
@@ -214,7 +214,7 @@ $odd_result = mysqli_query($conn, $odd_sql);
                     <!-- end Tab 1 Content -->
 
                     <!-- Tab 2 Content -->
-                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <div class="tab-pane fade" id="webdev" role="tabpanel" aria-labelledby="webdev-tab">
                             <div class="row">
                                 <div class="col-md-6">
                                     <!-- Content for the first column of Tab 2 -->
