@@ -531,6 +531,8 @@ min-height: 43px;
 .content__slate {
     position: absolute;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     transform: translateY(10%);
     transition-duration: 300ms, 300ms;
