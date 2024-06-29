@@ -76,7 +76,10 @@ $result = mysqli_query($conn, $sql);
                     </ul>
                     <div class="tab-content project-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                        <?php
+                            
+                            <div class="row">
+
+                            <?php
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
                             $project_id            = $row['project_id'];
@@ -99,7 +102,6 @@ $result = mysqli_query($conn, $sql);
 
                     ?>
 
-                            <div class="row">
 
                                 <div class="col-md-6">
 
