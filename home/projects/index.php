@@ -191,30 +191,30 @@ if (mysqli_num_rows($odd_result) > 0) {
             <div class="col-md-6">
                 <?php
                 if (mysqli_num_rows($even_result) > 0) {
-                    while ($row = mysqli_fetch_assoc($even_result)) {
-                        $project_id            = $row['project_id'];
-                        $project_idno          = $row['idno'];  
-                        $project_name          = $row['project_name']; 
-                        $project_short_name    = $row['project_short_name']; 
-                        $project_description   = $row['project_description'];
-                        $project_github_link   = $row['project_github_link'];
-                        $project_github_user   = $row['project_github_user'];
-                        $project_url           = $row['project_url'];
-                        $project_release       = $row['project_release'];
-                        $project_tech          = $row['project_tech'];
-                        $project_content       = $row['project_content'];
-                        $technologies          = explode(", ", $project_tech);
+                    while ($e_row = mysqli_fetch_assoc($even_result)) {
+                        $e_project_id            = $e_row['project_id'];
+                        $e_project_idno          = $e_row['idno'];  
+                        $e_project_name          = $e_row['project_name']; 
+                        $e_project_short_name    = $e_row['project_short_name']; 
+                        $e_project_description   = $e_row['project_description'];
+                        $e_project_github_link   = $e_row['project_github_link'];
+                        $e_project_github_user   = $e_row['project_github_user'];
+                        $e_project_url           = $e_row['project_url'];
+                        $e_project_release       = $e_row['project_release'];
+                        $e_project_tech          = $e_row['project_tech'];
+                        $e_project_content       = $e_row['project_content'];
+                        $e_technologies          = explode(", ", $e_project_tech);
                 ?>
                 
                 <div>
-                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
-                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
+                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $e_project_id; ?>">
+                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $e_project_short_name; ?>.png">
                         <div class="content__slate">
-                            <h3><?php echo $project_name; ?></h3>
-                            <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
+                            <h3><?php echo $e_project_name; ?></h3>
+                            <p class="text-truncate" style="width: 350px;"><?php echo $e_project_description; ?></p>
                             <ul class="tags">
-                                <?php foreach ($technologies as $tech): ?>
-                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                <?php foreach ($e_technologies as $e_tech): ?>
+                                    <li><a href=""><?php echo htmlspecialchars($e_tech); ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
