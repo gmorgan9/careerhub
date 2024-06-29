@@ -151,27 +151,27 @@ if (mysqli_num_rows($odd_result) > 0) {
     <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
         <div class="row">
             <div class="col-md-6">
-                <?php
-                if (mysqli_num_rows($even_result) > 0) {
-                    $e_rows = mysqli_fetch_all($even_result, MYSQLI_ASSOC);
-                    $e_total_rows = count($e_rows);
-                    
-                    // Iterate through each row for the first column (odd rows)
-                    for ($i = 0; $i < $e_total_rows; $i += 2) {
-                        $e_row = $e_rows[$i];
-                        $e_project_id            = $e_row['project_id'];
-                        $e_project_idno          = $e_row['idno'];  
-                        $e_project_name          = $e_row['project_name']; 
-                        $e_project_short_name    = $e_row['project_short_name']; 
-                        $e_project_description   = $e_row['project_description'];
-                        $e_project_github_link   = $e_row['project_github_link'];
-                        $e_project_github_user   = $e_row['project_github_user'];
-                        $e_project_url           = $e_row['project_url'];
-                        $e_project_release       = $e_row['project_release'];
-                        $e_project_tech          = $e_row['project_tech'];
-                        $e_project_content       = $e_row['project_content'];
-                        $e_technologies          = explode(", ", $e_project_tech);
-                ?>
+            <?php
+if (mysqli_num_rows($odd_result) > 0) {
+    $o_rows = mysqli_fetch_all($odd_result, MYSQLI_ASSOC);
+    $o_total_rows = count($o_rows);
+    
+    // Iterate through each row for the first column (odd rows)
+    for ($o = 0; $o < $o_total_rows; $o++) {
+        $o_row = $o_rows[$o];
+        $o_project_id            = $o_row['project_id'];
+        $o_project_idno          = $o_row['idno'];  
+        $o_project_name          = $o_row['project_name']; 
+        $o_project_short_name    = $o_row['project_short_name']; 
+        $o_project_description   = $o_row['project_description'];
+        $o_project_github_link   = $o_row['project_github_link'];
+        $o_project_github_user   = $o_row['project_github_user'];
+        $o_project_url           = $o_row['project_url'];
+        $o_project_release       = $o_row['project_release'];
+        $o_project_tech          = $o_row['project_tech'];
+        $o_project_content       = $o_row['project_content'];
+        $o_technologies          = explode(", ", $o_project_tech);
+?>
                 
                 <div>
                     <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $e_project_id; ?>">
