@@ -31,10 +31,6 @@ WHERE MOD(row_num, 2) = 0;";
 
 $even_result = mysqli_query($conn, $even_sql);
 
-if (!$even_result) {
-    die("Query failed: " . mysqli_error($conn));
-}
-
 // Debug and handle errors for odd rows
 $odd_sql = "SELECT *
 FROM (
@@ -47,29 +43,6 @@ WHERE MOD(row_num, 2) = 1;";
 
 $odd_result = mysqli_query($conn, $odd_sql);
 
-if (!$odd_result) {
-    die("Query failed: " . mysqli_error($conn));
-}
-
-// Process even rows
-// if (mysqli_num_rows($even_result) > 0) {
-//     while ($row = mysqli_fetch_assoc($even_result)) {
-//         // Process your even rows here
-//         echo "Even row: " . $row['project_name'] . "<br>";
-//     }
-// } else {
-//     echo "No even rows found.<br>";
-// }
-
-// Process odd rows
-// if (mysqli_num_rows($odd_result) > 0) {
-//     while ($row = mysqli_fetch_assoc($odd_result)) {
-//         // Process your odd rows here
-//         echo "Odd row: " . $row['project_name'] . "<br>";
-//     }
-// } else {
-//     echo "No odd rows found.<br>";
-// }
 
 ?>
 
@@ -134,8 +107,7 @@ if (!$odd_result) {
             <div class="col-md-6">
                 <?php
                 if (mysqli_num_rows($odd_result) > 0) {
-                    $rows = mysqli_fetch_all($odd_result, MYSQLI_ASSOC);
-                    foreach ($rows as $row) {
+                    while ($row = mysqli_fetch_assoc($odd_result)) {
                         // Process and display each odd row
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
@@ -190,7 +162,7 @@ if (!$odd_result) {
                 ?>
             </div>
             
-            <div class="col-md-6">
+            <div class="col-md-6 mt-5">
                 <?php
                 if (mysqli_num_rows($even_result) > 0) {
                     while ($row = mysqli_fetch_assoc($even_result)) {
