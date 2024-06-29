@@ -546,7 +546,7 @@ min-height: 43px;
     transition-property: opacity, transform; */
 }
 .project-cell:hover {
-    opacity: .5;
+    /* opacity: .5; */
     /* transform: translateY(10%);
     transition-duration: 300ms, 300ms;
     transition-timing-function: ease-in-out, ease-in-out;
