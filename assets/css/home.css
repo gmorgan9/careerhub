@@ -529,6 +529,7 @@ min-height: 43px;
     top: 0px;
 }
 .content__slate {
+    position: absolute;
     opacity: 0;
     transform: translateY(10%);
     transition-duration: 300ms, 300ms;
