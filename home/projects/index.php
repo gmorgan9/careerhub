@@ -73,6 +73,12 @@ if ($conn->connect_error) {
                             <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
                                 <div class="row">
 
+                                    <?php if($count_all == 0) { ?>
+                                        <div class="alert project-alert" role="alert">
+                                            No current projects.
+                                        </div>
+                                    <?php } ?>
+
                                     <!-- Column 1 (Odd Results) -->
                                         <div class="col-md-6">
                                             <!-- PHP code for Odd Results -->
@@ -201,6 +207,7 @@ if ($conn->connect_error) {
                                             No current Web Development projects.
                                         </div>
                                     <?php } ?>
+
                                     <!-- Column 1 (Web Development - Odd Results) -->
                                         <div class="col-md-6">
                                             <!-- PHP code for Web Development - Odd Results -->
@@ -323,6 +330,12 @@ if ($conn->connect_error) {
                         <div class="tab-content project-content" id="myTabContent">
                             <div class="tab-pane fade" id="scripting-automation" role="tabpanel" aria-labelledby="scripting-automation-tab">
                                 <div class="row">
+
+                                    <?php if($count_sa == 0) { ?>
+                                        <div class="alert project-alert" role="alert">
+                                            No current Web Development projects.
+                                        </div>
+                                    <?php } ?>
 
                                     <!-- Column 1 (Scripting & Automation - Odd Results) -->
                                         <div class="col-md-6">
