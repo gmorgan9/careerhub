@@ -514,6 +514,7 @@ min-height: 43px;
 .main-project-details h4 {
     margin-top: 2em;
     font-size: 18px;
+    margin-bottom: 0.8rem;
 }
 .project-offcanvas {
     width: 34em !important;
