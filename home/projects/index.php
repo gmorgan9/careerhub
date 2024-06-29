@@ -45,28 +45,28 @@ foreach ($files as $file) {
 
             <div class="row">
                 <div class=" col-xs-12 col-sm-12 ">
-                    <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all-tab" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
-                      </li>
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-web-dev-tab" data-bs-toggle="pill" data-bs-target="#pills-web-dev" type="button" role="tab" aria-controls="pills-web-dev" aria-selected="false">Web Development</button>
-                      </li>
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-scripting-tab" data-bs-toggle="pill" data-bs-target="#pills-scripting" type="button" role="tab" aria-controls="pills-scripting" aria-selected="false">Scripting</button>
-                      </li>
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-open-source-tab" data-bs-toggle="pill" data-bs-target="#pills-open-source" type="button" role="tab" aria-controls="pills-open-source" aria-selected="false">Open Source</button>
-                      </li>
-                    </ul>
+                <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                  <li class="nav-item project-filter-item" role="presentation">
+                    <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
+                  </li>
+                  <li class="nav-item project-filter-item" role="presentation">
+                    <button class="nav-link" id="pills-web-dev-tab" data-bs-toggle="pill" data-bs-target="#pills-web-dev" type="button" role="tab" aria-controls="pills-web-dev" aria-selected="false">Web Development</button>
+                  </li>
+                  <li class="nav-item project-filter-item" role="presentation">
+                    <button class="nav-link" id="pills-scripting-tab" data-bs-toggle="pill" data-bs-target="#pills-scripting" type="button" role="tab" aria-controls="pills-scripting" aria-selected="false">Scripting</button>
+                  </li>
+                  <li class="nav-item project-filter-item" role="presentation">
+                    <button class="nav-link" id="pills-open-source-tab" data-bs-toggle="pill" data-bs-target="#pills-open-source" type="button" role="tab" aria-controls="pills-open-source" aria-selected="false">Open Source</button>
+                  </li>
+                </ul>
+                
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">All</div>
+                  <div class="tab-pane fade" id="pills-web-dev" role="tabpanel" aria-labelledby="pills-web-dev-tab" tabindex="0">Web Development</div>
+                  <div class="tab-pane fade" id="pills-scripting" role="tabpanel" aria-labelledby="pills-scripting-tab" tabindex="0">Scripting</div>
+                  <div class="tab-pane fade" id="pills-open-source" role="tabpanel" aria-labelledby="pills-open-source-tab" tabindex="0">Open Source</div>
+                </div>
 
-                    
-                    <div class="tab-content" id="pills-tabContent">
-                      <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">All</div>
-                      <div class="tab-pane fade" id="pills-web-dev" role="tabpanel" aria-labelledby="pills-web-dev-tab" tabindex="0">Web Dev</div>
-                      <div class="tab-pane fade" id="pills-scripting" role="tabpanel" aria-labelledby="pills-scripting-tab" tabindex="0">Scripting</div>
-                      <div class="tab-pane fade" id="pills-open-source" role="tabpanel" aria-labelledby="pills-open-source-tab" tabindex="0">Open Source</div>
-                    </div>
                             
                                 
                 </div>
