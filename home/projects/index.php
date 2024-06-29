@@ -193,8 +193,7 @@ if (mysqli_num_rows($odd_result) > 0) {
             <div class="col-md-6">
                 <?php
                 if (mysqli_num_rows($even_result) > 0) {
-                    $rows = mysqli_fetch_all($even_result, MYSQLI_ASSOC);
-                    foreach ($rows as $row) {
+                    while ($row = mysqli_fetch_assoc($even_result)) {
                         // Process and display each even row
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
