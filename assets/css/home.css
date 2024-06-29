@@ -521,7 +521,7 @@ min-height: 43px;
     width: 34em !important;
 }
 .open__project {
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0px;
     bottom: 0px;
