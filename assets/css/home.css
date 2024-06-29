@@ -429,12 +429,7 @@ img {
 }
 
 /* Projects */
-/* .project-layout {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px;
-    column-gap: 20px;
-} */
+
 /* .layout {
     margin-top: 1.5em;
 margin-right: 0px;
@@ -446,14 +441,14 @@ column-gap: 1.5em;
 /* .tab-content {
     display: block;
 } */
-/* .project-filters {
+.project-filters {
     -webkit-box-align: center;
 align-items: center;
 -webkit-box-pack: center;
 justify-content: center;
 min-height: 43px;
-} */
-/* .project-filter-item button {
+}
+.project-filter-item button {
     color: #c6c6c6 !important;
     margin-top: 0px !important;
     margin-right: 1rem !important;
@@ -465,7 +460,7 @@ min-height: 43px;
     transition-delay: 0s !important;
     transition-property: all !important;
     border-top-style: none !important;
-} */
+}
 /* .project-filter-item .active {
     padding-top: 5px !important;
     padding-right: 22px !important;
