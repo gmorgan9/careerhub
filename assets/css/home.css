@@ -433,7 +433,7 @@ img {
     background-color: rgb(51, 51, 51) !important;
     border-radius: 50px !important;
     border: 2px solid var(--primary-color) !important;
-    padding: 10px 25px !important;
+    /* padding: 10px 25px !important; */
     text-decoration: none !important;
     color: white !important;
 }
