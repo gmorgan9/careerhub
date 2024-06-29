@@ -448,7 +448,10 @@ border-top-left-radius: 5px !important;
 border-top-right-radius: 5px !important;
 border-bottom-right-radius: 5px !important;
 border-bottom-left-radius: 5px !important;
--webkit-appearance: button !important;
+margin: 0;
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
 }
 .project-filter-item .active {
     padding-top: 5px !important;
