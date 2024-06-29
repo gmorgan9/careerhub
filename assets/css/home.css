@@ -535,7 +535,7 @@ min-height: 43px;
     transition-property: opacity, transform;
 }
 .content__slate:hover {
-    opacity: 1;
+    opacity: 1 !important;
     /* transform: translateY(10%);
     transition-duration: 300ms, 300ms;
     transition-timing-function: ease-in-out, ease-in-out;
