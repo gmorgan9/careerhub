@@ -195,7 +195,7 @@ if ($conn->connect_error) {
                     <!-- end All Content -->
 
                     <!-- Web Development Content -->
-                        <div class="tab-content project-content" id="myTabContent">
+                        <!-- <div class="tab-content project-content" id="myTabContent"> -->
                             <div class="tab-pane fade" id="webdev" role="tabpanel" aria-labelledby="webdev-tab">
                                 <div class="row">
 
@@ -314,7 +314,7 @@ if ($conn->connect_error) {
                                     
                                 </div> <!-- end row  -->
                             </div> <!-- end tab-pane -->
-                        </div>
+                        <!-- </div> -->
                     <!-- end Web Development Content -->
 
                     <!-- Scripting & Automation Content -->
