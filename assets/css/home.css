@@ -491,6 +491,8 @@ min-height: 43px;
 }
 .off-canvas-close-btn {
     background: 0;
+    border: none;
+    color: var(--light-gray);
 }
 /* .project-cell img::before {
     content: "";
