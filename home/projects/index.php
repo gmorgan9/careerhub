@@ -45,7 +45,7 @@ foreach ($files as $file) {
 
             <div class="row">
                 <div class=" col-xs-12 col-md-10 mx-auto">
-                    <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                    <!-- <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                       <li class="nav-item project-filter-item" role="presentation">
                         <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
                       </li>
@@ -58,27 +58,57 @@ foreach ($files as $file) {
                       <li class="nav-item project-filter-item" role="presentation">
                         <button class="nav-link" id="pills-open-source-tab" data-bs-toggle="pill" data-bs-target="#pills-open-source" type="button" role="tab" aria-controls="pills-open-source" aria-selected="false">Open Source</button>
                       </li>
+                    </ul> -->
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</button>
+                        </li>
                     </ul>
-
-                    <div class="tab-content mx-auto" id="pills-tabContent">
-
-                        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
-
-                            <div class="project-layout">
-                                <div class="project-cell" style="height: 400px; width: 448px !important;">
-                                    <img src="../../assets/images/project-images/EmergencyPrep.png" style="height: 500px;" alt="">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Content for the first column of Tab 1 -->
+                                    <p>Column 1 content for Tab 1</p>
                                 </div>
-                                <div class="project-cell" style="height: 400px; width: 448px !important;">
-                                    <img src="../../assets/images/project-images/EmergencyPrep.png" style="height: 500px;" alt="">
+                                <div class="col-md-6">
+                                    <!-- Content for the second column of Tab 1 -->
+                                    <p>Column 2 content for Tab 1</p>
                                 </div>
                             </div>
-
                         </div>
-
-                  <div class="tab-pane fade" id="pills-web-dev" role="tabpanel" aria-labelledby="pills-web-dev-tab" tabindex="0">Web Development</div>
-                  <div class="tab-pane fade" id="pills-scripting" role="tabpanel" aria-labelledby="pills-scripting-tab" tabindex="0">Scripting</div>
-                  <div class="tab-pane fade" id="pills-open-source" role="tabpanel" aria-labelledby="pills-open-source-tab" tabindex="0">Open Source</div>
-                </div>
+                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Content for the first column of Tab 2 -->
+                                    <p>Column 1 content for Tab 2</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Content for the second column of Tab 2 -->
+                                    <p>Column 2 content for Tab 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Content for the first column of Tab 3 -->
+                                    <p>Column 1 content for Tab 3</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Content for the second column of Tab 3 -->
+                                    <p>Column 2 content for Tab 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                             
                                 
