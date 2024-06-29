@@ -47,31 +47,25 @@ foreach ($files as $file) {
                 <div class=" col-xs-12 col-sm-12 ">
                     <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                       <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                        <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#all-projects" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
                       </li>
                       <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                        <button class="nav-link" id="pills-web-dev-tab" data-bs-toggle="pill" data-bs-target="#pills-web-dev" type="button" role="tab" aria-controls="pills-web-dev" aria-selected="false">Web Development</button>
                       </li>
                       <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                        <button class="nav-link" id="pills-scripting-tab" data-bs-toggle="pill" data-bs-target="#pills-scripting" type="button" role="tab" aria-controls="pills-scripting" aria-selected="false">Scripting</button>
                       </li>
                       <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+                        <button class="nav-link" id="pills-open-source-tab" data-bs-toggle="pill" data-bs-target="#pills-open-source" type="button" role="tab" aria-controls="pills-open-source" aria-selected="false">Open Source</button>
                       </li>
                     </ul>
 
                     
-                    <div class="portfolio-grid three-columns shuffle" style="height: 905.765625px; transition: height 450ms ease-out;">
-
-
-                        <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
-                            <div class="portfolio-item-img">
-                                <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" alt="">
-                                <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-<?php echo $project_id; ?>"></a> <!-- Adjust data-bs-target -->
-                            </div>
-                        </figure>
-
-
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">All</div>
+                      <div class="tab-pane fade" id="pills-web-dev" role="tabpanel" aria-labelledby="pills-web-dev-tab" tabindex="0">Web Dev</div>
+                      <div class="tab-pane fade" id="pills-scripting" role="tabpanel" aria-labelledby="pills-scripting-tab" tabindex="0">Scripting</div>
+                      <div class="tab-pane fade" id="pills-open-source" role="tabpanel" aria-labelledby="pills-open-source-tab" tabindex="0">Open Source</div>
                     </div>
                             
                                 
