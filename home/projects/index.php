@@ -102,7 +102,6 @@ $result = mysqli_query($conn, $sql);
 
                     ?>
 
-
                                 <div class="col-md-6">
 
                                     <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
@@ -150,6 +149,16 @@ $result = mysqli_query($conn, $sql);
                                     <!-- end CANVAS -->
                                     
                                 </div>
+                                <?php
+                    }
+                } else {
+                ?>
+                    <div>
+                        <p class="text-center">No jobs found.</p>
+                    </div>
+                <?php
+                }
+                ?>
 
                                 <div class="col-md-6 mt-5">
 
@@ -199,16 +208,7 @@ $result = mysqli_query($conn, $sql);
                         </div>
 
                     </div>
-                    <?php
-                    }
-                } else {
-                ?>
-                    <div>
-                        <p class="text-center">No jobs found.</p>
-                    </div>
-                <?php
-                }
-                ?>
+                    
 
                             
                                 
