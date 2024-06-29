@@ -514,10 +514,10 @@ min-height: 43px;
     opacity: 0.3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
 }
-img#cardHover:hover {
+/* img#cardHover:hover {
     width: 500px;
     height: 500px;
-    }
+    } */
 .project-cell img {
     position: absolute;
     object-fit: cover;
@@ -536,6 +536,14 @@ img#cardHover:hover {
 }
 .content__slate:hover {
     opacity: 1;
+    /* transform: translateY(10%);
+    transition-duration: 300ms, 300ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s;
+    transition-property: opacity, transform; */
+}
+.project-cell:hover {
+    opacity: .5;
     /* transform: translateY(10%);
     transition-duration: 300ms, 300ms;
     transition-timing-function: ease-in-out, ease-in-out;
