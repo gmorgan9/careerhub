@@ -48,7 +48,7 @@ foreach ($files as $file) {
         <div class="form">
             <form action="" method="POST">
                 <div class="form-group">
-                    <label class="form-label" for="cert_name">Certification Name</label>
+                    <label class="form-label text-white" for="cert_name">Certification Name</label>
                     <input id="cert_name" type="text" name="cert_name" class="form-input" placeholder="Certification Name" required>
                 </div>
                 <div class="form-group">
