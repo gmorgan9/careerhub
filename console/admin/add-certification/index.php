@@ -69,7 +69,7 @@ foreach ($files as $file) {
                             <input id="cred_id" type="text" name="cred_id" class="form-input">
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="cert_provider">Certification Provider</label>
+                            <label class="form-label text-white" for="cert_provider">Certification Provider <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
                             <input id="cert_provider" type="text" name="cert_provider" class="form-input" required>
                         </div>
                     </div>
