@@ -40,7 +40,7 @@ foreach ($files as $file) {
         <h2 class="text-white title">Projects</h2>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="height: 100vh !important;">
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
 
             <div class="row">
