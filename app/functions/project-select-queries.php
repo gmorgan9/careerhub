@@ -33,9 +33,16 @@
 // end All - odd projects
 
 // Web Development - (count) web development projects
-    $count_wd_sql = "SELECT COUNT(*) FROM projects WHERE project_category = 'Web Development';";
+$count_wd_sql = "SELECT COUNT(*) AS count FROM projects WHERE project_category = 'Web Development';";
+$count_wd_result = mysqli_query($conn, $count_wd_sql);
 
-    $count_wd_result = mysqli_query($conn, $count_wd_sql);
+if ($count_wd_result) {
+    $row = mysqli_fetch_assoc($count_wd_result);
+    $count_wd = $row['count'];
+    echo "Count of Web Development projects: " . $count_wd;
+} else {
+    echo "Query failed: " . mysqli_error($conn);
+}
 // end Web Development - (count) web development projects
 
 // Web Development - even projects
