@@ -197,7 +197,7 @@ if ($conn->connect_error) {
                                 <div class="row">
 
                                     <?php if($count_wd == 0) { ?>
-                                        <div class="alert alert-light" role="alert">
+                                        <div class="alert alert-dark" role="alert">
                                             No current Web Development projects.
                                         </div>
                                     <?php } ?>
