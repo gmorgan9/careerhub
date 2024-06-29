@@ -472,6 +472,14 @@ min-height: 43px;
     border-bottom-left-radius: 9px;
     break-inside: avoid;
     }
+    .gJKjnw div.content__slate {
+        opacity: 0;
+        transform: translateY(10%);
+        transition-duration: 300ms, 300ms;
+        transition-timing-function: ease-in-out, ease-in-out;
+        transition-delay: 0s, 0s;
+        transition-property: opacity, transform;
+        }
 .gJKjnw img {
     position: absolute;
     object-fit: cover;
