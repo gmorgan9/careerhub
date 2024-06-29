@@ -530,6 +530,14 @@ min-height: 43px;
     transition-delay: 0s, 0s;
     transition-property: opacity, transform;
 }
+.content__slate:hover {
+    opacity: 1;
+    /* transform: translateY(10%);
+    transition-duration: 300ms, 300ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s;
+    transition-property: opacity, transform; */
+}
 /* .project-filter-item .active {
     background-color: rgb(51, 51, 51) !important;
     border-radius: 50px !important;
