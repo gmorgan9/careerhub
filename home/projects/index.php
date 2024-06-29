@@ -84,7 +84,7 @@ $result = mysqli_query($conn, $sql);
                     $total_rows = count($rows);
                     
                     // Iterate through each row for the first column (odd rows)
-                    for ($i = 0; $i < $total_rows; $i += 1) {
+                    for ($i = 0; $i < $total_rows; $i += 2) {
                         $row = $rows[$i];
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
@@ -146,7 +146,7 @@ $result = mysqli_query($conn, $sql);
                     $total_rows = count($rows);
                     
                     // Iterate through each row for the second column (even rows)
-                    for ($i = 0; $i < $total_rows; $i += 2) {
+                    for ($i = 1; $i < $total_rows; $i += 2) {
                         $row = $rows[$i];
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
