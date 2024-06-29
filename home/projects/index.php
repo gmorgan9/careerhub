@@ -123,7 +123,7 @@ if ($conn->connect_error) {
                                                             <hr>
                                                             <div class="main-project-details">
                                                                 <h3 class="mt-5"><?php echo $project_name; ?></h3>
-                                                                <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" alt="">
+                                                                <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
                                                             </div>
                                                         </div>
                                                     </div>
