@@ -449,6 +449,14 @@ min-height: 43px;
     transition-property: all !important;
     border-top-style: none !important;
 }
+.gJKjnw img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    }
 .gJKjnw::before {
     content: "";
     pointer-events: none;
