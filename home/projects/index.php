@@ -122,7 +122,8 @@ if ($conn->connect_error) {
                                                             <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
                                                             <hr>
                                                             <div class="main-project-details">
-                                                                <h3 class="mt-4"><?php echo $project_name; ?></h3>
+                                                                <h3 class="mt-5"><?php echo $project_name; ?></h3>
+                                                                <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" alt="">
                                                             </div>
                                                         </div>
                                                     </div>
