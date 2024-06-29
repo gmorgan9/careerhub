@@ -196,6 +196,9 @@ if ($conn->connect_error) {
                             <div class="tab-pane fade" id="webdev" role="tabpanel" aria-labelledby="webdev-tab">
                                 <div class="row">
 
+                                    <?php if($count_wd_result == 0) { ?>
+                                        no Results
+                                    <?php } ?>
                                     <!-- Column 1 (Web Development - Odd Results) -->
                                         <div class="col-md-6">
                                             <!-- PHP code for Web Development - Odd Results -->

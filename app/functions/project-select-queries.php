@@ -1,5 +1,11 @@
 <?php
 
+// All - (count) all projects
+    $count_all_sql = "SELECT COUNT(*) FROM projects;";
+
+    $count_all_result = mysqli_query($conn, $count_all_sql);
+// end All - (count) all projects
+
 // All - even projects
     $even_sql = "SELECT *
     FROM (
@@ -25,6 +31,12 @@
 
     $odd_result = mysqli_query($conn, $odd_sql);
 // end All - odd projects
+
+// Web Development - (count) web development projects
+    $count_wd_sql = "SELECT COUNT(*) FROM projects WHERE project_category = 'Web Development';";
+
+    $count_wd_result = mysqli_query($conn, $count_wd_sql);
+// end Web Development - (count) web development projects
 
 // Web Development - even projects
     $even_wd_sql = "SELECT *
