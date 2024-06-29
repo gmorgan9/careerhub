@@ -121,7 +121,7 @@ if ($conn->connect_error) {
                                                             <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                                                         </div>
                                                         <div class="offcanvas-body">
-                                                            <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
                                                             <hr>
                                                             <?php echo $project_name; ?>
                                                         </div>
