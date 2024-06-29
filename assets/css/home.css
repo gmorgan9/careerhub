@@ -493,6 +493,9 @@ min-height: 43px;
     background: 0;
     border: none;
     color: white;
+    font-size: 24px;
+}
+.main-project-details h3 {
     font-size: 20px;
 }
 /* .project-cell img::before {
