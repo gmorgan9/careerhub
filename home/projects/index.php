@@ -115,12 +115,8 @@ $result = mysqli_query($conn, $sql);
                                         </div>
                                     </div>
 
+                                    <!-- CANVAS -->
                                     <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                                      <div class="offcanvas-header">
-                                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                      </div>
-                                      <div class="offcanvas-body">
                                         <?php
                                             $o_sql = "SELECT * FROM projects WHERE project_id = $project_id";
                                             $o_result = mysqli_query($conn, $o_sql);
@@ -140,10 +136,15 @@ $result = mysqli_query($conn, $sql);
                                                     $o_technologies          = explode(", ", $project_tech);
                                                 }}
                                         ?>
-
-                                        <?php echo $o_project_name; ?>
-                                      </div>
+                                        <div class="offcanvas-header">
+                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <?php echo $o_project_name; ?>
+                                        </div>
                                     </div>
+                                    <!-- end CANVAS -->
                                     
                                 </div>
 
