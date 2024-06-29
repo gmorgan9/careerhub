@@ -1,29 +1,29 @@
 <?php
 
 // All - even projects
-    $even_sql = "SELECT *
-    FROM (
-        SELECT 
-            @row_number := @row_number + 1 AS row_num, 
-            projects.*
-        FROM projects, (SELECT @row_number := 0) AS t
-    ) AS numbered_projects
-    WHERE MOD(row_num, 2) = 0;";
+    // $even_sql = "SELECT *
+    // FROM (
+    //     SELECT 
+    //         @row_number := @row_number + 1 AS row_num, 
+    //         projects.*
+    //     FROM projects, (SELECT @row_number := 0) AS t
+    // ) AS numbered_projects
+    // WHERE MOD(row_num, 2) = 0;";
 
-    $even_result = mysqli_query($conn, $even_sql);
+    // $even_result = mysqli_query($conn, $even_sql);
 // end All - even projects
 
 // All - odd projects
-    $odd_sql = "SELECT *
-    FROM (
-        SELECT 
-            @row_number := @row_number + 1 AS row_num, 
-            projects.*
-        FROM projects, (SELECT @row_number := 0) AS t
-    ) AS numbered_projects
-    WHERE MOD(row_num, 2) = 1;";
+    // $odd_sql = "SELECT *
+    // FROM (
+    //     SELECT 
+    //         @row_number := @row_number + 1 AS row_num, 
+    //         projects.*
+    //     FROM projects, (SELECT @row_number := 0) AS t
+    // ) AS numbered_projects
+    // WHERE MOD(row_num, 2) = 1;";
 
-    $odd_result = mysqli_query($conn, $odd_sql);
+    // $odd_result = mysqli_query($conn, $odd_sql);
 // end All - odd projects
 
 // Web Development - even projects
