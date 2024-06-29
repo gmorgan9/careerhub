@@ -61,6 +61,7 @@ foreach ($files as $file) {
                             <label class="form-label text-white" for="cert_expire">Certification Expiry Date</label>
                             <input id="cert_expire" type="date" name="cert_expire" class="form-input" style="padding-bottom: 0 !important;">
                         </div>
+                        <input type="submit" name="add-certification" class="form-btn mt-5" value="Add Certification">
                     </div>
                     <div class="right-column">
                         <div class="form-group">
@@ -73,7 +74,6 @@ foreach ($files as $file) {
                         </div>
                     </div>
                 </div>
-                <input type="submit" name="add-certification" class="form-btn mt-5" value="Add Certification">
             </form>
         </div> 
     </div>
