@@ -431,6 +431,15 @@ img {
 /* Projects */
 .project-filter-item button {
     color: #c6c6c6 !important;
+    margin-top: 0px !important;
+    margin-right: 1rem !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    font-size: 14.9px !important;
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease !important;
+    transition-delay: 0s !important;
+    transition-property: all !important;
 }
 .project-filter-item .active {
     padding-top: 5px !important;
