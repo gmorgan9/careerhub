@@ -429,6 +429,9 @@ img {
 }
 
 /* Projects */
+.project-filter-item {
+    color: #c6c6c6;
+}
 .project-filter-item .active {
     background-color: rgb(51, 51, 51) !important;
     border-radius: 50px !important;
