@@ -522,7 +522,7 @@ min-height: 43px;
     left: 0px;
     top: 0px;
 }
-.project-cell div.content__slate {
+.content__slate {
     opacity: 0;
     transform: translateY(10%);
     transition-duration: 300ms, 300ms;
