@@ -52,24 +52,23 @@ if ($conn->connect_error) {
                 <div class=" col-xs-12 col-md-10 mx-auto">
                     
                     <!-- Project Filters -->
-                    <ul class="project-filters nav nav-pills" id="pills-tab" role="tablist">
-    <li class="nav-item project-filter-item" role="presentation">
-        <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
-    </li>
-    <li class="nav-item project-filter-item" role="presentation">
-        <button class="nav-link" id="webdev-tab" data-bs-toggle="pill" data-bs-target="#webdev" type="button" role="tab" aria-controls="webdev" aria-selected="false">Web Development</button>
-    </li>
-    <li class="nav-item project-filter-item" role="presentation">
-        <button class="nav-link" id="scripting-automation-tab" data-bs-toggle="pill" data-bs-target="#scripting-automation" type="button" role="tab" aria-controls="scripting-automation" aria-selected="false">Scripting & Automation</button>
-    </li>
-    <li class="nav-item project-filter-item" role="presentation">
-        <button class="nav-link" id="software-dev-tab" data-bs-toggle="pill" data-bs-target="#software-dev" type="button" role="tab" aria-controls="software-dev" aria-selected="false">Software Development</button>
-    </li>
-    <li class="nav-item project-filter-item" role="presentation">
-        <button class="nav-link" id="open-source-tab" data-bs-toggle="pill" data-bs-target="#open-source" type="button" role="tab" aria-controls="open-source" aria-selected="false">Open Source</button>
-    </li>
-</ul>
-
+                        <ul class="project-filters nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link" id="webdev-tab" data-bs-toggle="pill" data-bs-target="#webdev" type="button" role="tab" aria-selected="false">Web Development</button>
+                            </li>
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link" id="scripting-automation-tab" data-bs-toggle="pill" data-bs-target="#scripting-automation" type="button" role="tab" aria-controls="scripting-automation" aria-selected="false">Scripting & Automation</button>
+                            </li>
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link" id="software-dev-tab" data-bs-toggle="pill" data-bs-target="#software-dev" type="button" role="tab" aria-controls="software-dev" aria-selected="false">Software Development</button>
+                            </li>
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link" id="open-source-tab" data-bs-toggle="pill" data-bs-target="#open-source" type="button" role="tab" aria-controls="open-source" aria-selected="false">Open Source</button>
+                            </li>
+                        </ul>
                     <!-- end Project Filters -->
                     
                     <!-- All Content -->
@@ -692,9 +691,6 @@ if ($conn->connect_error) {
 
         </div>
     </div>
-                                        </div>
-                                        </div>
-                                        
 
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
  
