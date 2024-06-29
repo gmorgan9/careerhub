@@ -449,6 +449,30 @@ min-height: 43px;
     transition-property: all !important;
     border-top-style: none !important;
 }
+.gJKjnw::before {
+    content: "";
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    background-image: radial-gradient(circle, white 10%, whitesmoke 11%, whitesmoke 100%);
+}
+.gJKjnw::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
+    }
 .project-filter-item .active {
     padding-top: 5px !important;
     padding-right: 22px !important;
