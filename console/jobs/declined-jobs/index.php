@@ -35,36 +35,8 @@ $result = mysqli_query($conn, $sql);
 <body style="background-color: rgb(34,34,34);">
 
 
-    <!-- Navbar -->
-        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
-            <div class="left">
-                <a href="/home" class="text-white text-decoration-none">
-                    <img src="../../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
-                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
-                </a>
-            </div>
-            <div class="right">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="/">Career Hub</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary active" href="/console">Console</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Admin
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
-                            <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index.php?logout=1">Settings</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    <!-- End Navbar -->
+    <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
+
 
     <div class="page_title">    
             <h2 class="text-white title">Rejected Jobs</h2>
