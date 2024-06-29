@@ -75,153 +75,145 @@ $odd_result = mysqli_query($conn, $odd_sql);
 
             <div class="row">
                 <div class=" col-xs-12 col-md-10 mx-auto">
-                    <!-- <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
-                      </li>
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-web-dev-tab" data-bs-toggle="pill" data-bs-target="#pills-web-dev" type="button" role="tab" aria-controls="pills-web-dev" aria-selected="false">Web Development</button>
-                      </li>
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-scripting-tab" data-bs-toggle="pill" data-bs-target="#pills-scripting" type="button" role="tab" aria-controls="pills-scripting" aria-selected="false">Scripting</button>
-                      </li>
-                      <li class="nav-item project-filter-item" role="presentation">
-                        <button class="nav-link" id="pills-open-source-tab" data-bs-toggle="pill" data-bs-target="#pills-open-source" type="button" role="tab" aria-controls="pills-open-source" aria-selected="false">Open Source</button>
-                      </li>
-                    </ul> -->
                     
-                    <ul class="project-filters nav nav-pills" id="pills-tab" role="tablist">
-                        <li class="nav-item project-filter-item" role="presentation">
-                            <button class="nav-link active" id="tab1-tab" data-bs-toggle="pill" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</button>
-                        </li>
-                        <li class="nav-item project-filter-item" role="presentation">
-                            <button class="nav-link" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</button>
-                        </li>
-                        <li class="nav-item project-filter-item" role="presentation">
-                            <button class="nav-link" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content project-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-        <div class="row">
-            <div class="col-md-6">
-                <?php
-                if (mysqli_num_rows($odd_result) > 0) {
-                    while ($row = mysqli_fetch_assoc($odd_result)) {
-                        // Process and display each odd row
-                        $project_id            = $row['project_id'];
-                        $project_idno          = $row['idno'];  
-                        $project_name          = $row['project_name']; 
-                        $project_short_name    = $row['project_short_name']; 
-                        $project_description   = $row['project_description'];
-                        $project_github_link   = $row['project_github_link'];
-                        $project_github_user   = $row['project_github_user'];
-                        $project_url           = $row['project_url'];
-                        $project_release       = $row['project_release'];
-                        $project_tech          = $row['project_tech'];
-                        $project_content       = $row['project_content'];
-                        $technologies          = explode(", ", $project_tech);
-                ?>
-                
-                <div>
-                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
-                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
-                        <div class="content__slate">
-                            <h3><?php echo $project_name; ?></h3>
-                            <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
-                            <ul class="tags">
-                                <?php foreach ($technologies as $tech): ?>
-                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    </div>
+                    <!-- Project Filters -->
+                        <ul class="project-filters nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</button>
+                            </li>
+                            <li class="nav-item project-filter-item" role="presentation">
+                                <button class="nav-link" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</button>
+                            </li>
+                        </ul>
+                    <!-- end Project Filters -->
+                    
+                    <!-- Tab 1 Content -->
+                        <div class="tab-content project-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                                <div class="row">
 
-                    <!-- CANVAS -->
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <?php echo $project_name; ?>
-                        </div>
-                    </div>
-                    <!-- end CANVAS -->
-                </div>
-                
-                <?php
-                    }
-                } else {
-                ?>
-                <div>
-                    <p class="text-center">No jobs found.</p>
-                </div>
-                <?php
-                }
-                ?>
-            </div>
-            
-            <div class="col-md-6 mt-5">
-                <?php
-                if (mysqli_num_rows($even_result) > 0) {
-                    while ($row = mysqli_fetch_assoc($even_result)) {
-                        // Process and display each even row
-                        $project_id            = $row['project_id'];
-                        $project_idno          = $row['idno'];  
-                        $project_name          = $row['project_name']; 
-                        $project_short_name    = $row['project_short_name']; 
-                        $project_description   = $row['project_description'];
-                        $project_github_link   = $row['project_github_link'];
-                        $project_github_user   = $row['project_github_user'];
-                        $project_url           = $row['project_url'];
-                        $project_release       = $row['project_release'];
-                        $project_tech          = $row['project_tech'];
-                        $project_content       = $row['project_content'];
-                        $technologies          = explode(", ", $project_tech);
-                ?>
-                
-                <div>
-                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
-                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
-                        <div class="content__slate">
-                            <h3><?php echo $project_name; ?></h3>
-                            <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
-                            <ul class="tags">
-                                <?php foreach ($technologies as $tech): ?>
-                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                    </div>
+                                    <!-- Column 1 (Odd Results) -->
+                                        <div class="col-md-6">
+                                            <!-- PHP code for Odd Results -->
+                                                <?php
+                                                if (mysqli_num_rows($odd_result) > 0) {
+                                                    while ($row = mysqli_fetch_assoc($odd_result)) {
+                                                        // Process and display each odd row
+                                                        $project_id            = $row['project_id'];
+                                                        $project_idno          = $row['idno'];  
+                                                        $project_name          = $row['project_name']; 
+                                                        $project_short_name    = $row['project_short_name']; 
+                                                        $project_description   = $row['project_description'];
+                                                        $project_github_link   = $row['project_github_link'];
+                                                        $project_github_user   = $row['project_github_user'];
+                                                        $project_url           = $row['project_url'];
+                                                        $project_release       = $row['project_release'];
+                                                        $project_tech          = $row['project_tech'];
+                                                        $project_content       = $row['project_content'];
+                                                        $technologies          = explode(", ", $project_tech);
+                                                ?>
+                                            <!-- end PHP code for Odd Results -->
+                                                    
+                                            <div>
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
+                                                    <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
+                                                    <div class="content__slate">
+                                                        <h3><?php echo $project_name; ?></h3>
+                                                        <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
+                                                        <ul class="tags">
+                                                            <?php foreach ($technologies as $tech): ?>
+                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                            <?php endforeach; ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                            
+                                                <!-- CANVAS -->
+                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                                        <div class="offcanvas-header">
+                                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="offcanvas-body">
+                                                            <?php echo $project_name; ?>
+                                                        </div>
+                                                    </div>
+                                                <!-- end CANVAS -->
+                                                            
+                                            </div>
+                                                            
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </div>
+                                    <!-- end Column 1 (Odd Results) -->
+                                        
+                                    <!-- Column 2 (Even Results) -->
+                                        <div class="col-md-6 mt-5">
+                                            <!-- PHP code for Even Results -->
+                                                <?php
+                                                if (mysqli_num_rows($even_result) > 0) {
+                                                    while ($row = mysqli_fetch_assoc($even_result)) {
+                                                        // Process and display each even row
+                                                        $project_id            = $row['project_id'];
+                                                        $project_idno          = $row['idno'];  
+                                                        $project_name          = $row['project_name']; 
+                                                        $project_short_name    = $row['project_short_name']; 
+                                                        $project_description   = $row['project_description'];
+                                                        $project_github_link   = $row['project_github_link'];
+                                                        $project_github_user   = $row['project_github_user'];
+                                                        $project_url           = $row['project_url'];
+                                                        $project_release       = $row['project_release'];
+                                                        $project_tech          = $row['project_tech'];
+                                                        $project_content       = $row['project_content'];
+                                                        $technologies          = explode(", ", $project_tech);
+                                                ?>
+                                            <!-- end PHP code for Even Results -->
+                                                    
+                                            <div>
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
+                                                    <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
+                                                    <div class="content__slate">
+                                                        <h3><?php echo $project_name; ?></h3>
+                                                        <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
+                                                        <ul class="tags">
+                                                            <?php foreach ($technologies as $tech): ?>
+                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                            <?php endforeach; ?>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                            
+                                                <!-- CANVAS -->
+                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                                        <div class="offcanvas-header">
+                                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="offcanvas-body">
+                                                            <?php echo $project_name; ?>
+                                                        </div>
+                                                    </div>
+                                                <!-- end CANVAS -->
+                                            </div>
+                                                            
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </div>
+                                    <!-- end Column 2 (Even Results) -->
 
-                    <!-- CANVAS -->
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <?php echo $project_name; ?>
-                        </div>
-                    </div>
-                    <!-- end CANVAS -->
-                </div>
-                
-                <?php
-                    }
-                }
-                ?>
-            </div>
-        </div>
-    </div>
-</div>
+                                </div> <!-- end row  -->
+                            </div> <!-- end tab-pane -->
+                        </div> 
+                    <!-- end Tab 1 Content -->
 
-
-                            </div>
-                        </div>
-                        <!-- end tab 1 -->
-
+                    <!-- Tab 2 Content -->
                         <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                             <div class="row">
                                 <div class="col-md-6">
@@ -234,7 +226,9 @@ $odd_result = mysqli_query($conn, $odd_sql);
                                 </div>
                             </div>
                         </div>
+                    <!-- end Tab 2 Content -->
 
+                    <!-- Tab 3 Content -->
                         <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                             <div class="row">
                                 <div class="col-md-6">
@@ -247,12 +241,8 @@ $odd_result = mysqli_query($conn, $odd_sql);
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-                    
-
-                            
-                                
+                    <!-- end Tab 3 Content -->
+                             
                 </div>
             </div>
 
