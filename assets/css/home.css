@@ -431,7 +431,7 @@ img {
 /* Projects */
 .project-layout {
     display: grid;
-    height: 100px;
+    /* height: 100px; */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px;
     column-gap: 20px;
@@ -443,10 +443,10 @@ animation-duration: 1s;
 animation-name: fadeInUp;
 animation-fill-mode: both;
 column-gap: 1.5em;
-}
-.tab-content {
+} */
+/* .tab-content {
     display: block;
-}
+} */
 .project-filters {
     -webkit-box-align: center;
 align-items: center;
@@ -473,7 +473,7 @@ min-height: 43px;
     font-weight: 900 !important;
     background-color: rgb(52, 58, 64) !important;
 }
-.project-cell {
+/* .project-cell {
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 1.5em;
@@ -495,8 +495,8 @@ min-height: 43px;
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
     break-inside: avoid;
-}
-.project-cell img::before {
+} */
+/* .project-cell img::before {
     content: "";
     pointer-events: none;
     display: block;
@@ -507,8 +507,8 @@ min-height: 43px;
     left: 0px;
     z-index: -1;
     background-image: radial-gradient(circle, white 10%, whitesmoke 11%, whitesmoke 100%);
-}
-.project-cell img::after {
+} */
+/* .project-cell img::after {
     content: "";
     pointer-events: none;
     position: absolute;
@@ -519,8 +519,8 @@ min-height: 43px;
     left: 0px;
     opacity: 0.3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
-}
-.project-cell img {
+} */
+/* .project-cell img {
     position: absolute;
     object-fit: cover;
     width: 100%;
