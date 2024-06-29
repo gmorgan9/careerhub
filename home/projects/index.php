@@ -134,7 +134,9 @@ if (mysqli_num_rows($odd_result) > 0) {
             <div class="col-md-6">
                 <?php
                 if (mysqli_num_rows($odd_result) > 0) {
-                    while ($row = mysqli_fetch_assoc($odd_result)) {
+                    $rows = mysqli_fetch_all($odd_result, MYSQLI_ASSOC);
+                    foreach ($rows as $row) {
+                        // Process and display each odd row
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
                         $project_name          = $row['project_name']; 
