@@ -537,6 +537,9 @@ min-height: 43px;
     transition-delay: 0s, 0s;
     transition-property: opacity, transform;
 }
+.content__slate p {
+    text-align: bottom;
+}
 .content__slate:hover {
     opacity: .7!important;
     background-color: #222;
