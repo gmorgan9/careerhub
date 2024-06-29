@@ -543,7 +543,7 @@ min-height: 43px;
 }
 
 .project-cell:hover .content__slate {
-    opacity: 0.7 !important;
+    opacity: 1 !important;
     transform: translateY(0);
 }
 
