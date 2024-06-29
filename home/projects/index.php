@@ -333,7 +333,7 @@ if ($conn->connect_error) {
 
                                     <?php if($count_sa == 0) { ?>
                                         <div class="alert project-alert" role="alert">
-                                            No current Web Development projects.
+                                            No current Scripting & Automation projects.
                                         </div>
                                     <?php } ?>
 
@@ -459,6 +459,12 @@ if ($conn->connect_error) {
                         <div class="tab-content project-content" id="myTabContent">
                             <div class="tab-pane fade" id="software-dev" role="tabpanel" aria-labelledby="software-dev-tab">
                                 <div class="row">
+
+                                    <?php if($count_sd == 0) { ?>
+                                        <div class="alert project-alert" role="alert">
+                                            No current Software Development projects.
+                                        </div>
+                                    <?php } ?>
 
                                     <!-- Column 1 (Software Development - Odd Results) -->
                                         <div class="col-md-6">
