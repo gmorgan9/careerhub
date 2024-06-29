@@ -45,22 +45,33 @@ foreach ($files as $file) {
 
             <div class="row">
                 <div class=" col-xs-12 col-sm-12 ">
-                    <ul class="portfolio-filters">
-                        <li class="active"><a class="filter btn btn-sm btn-link" data-group="category_all">All</a></li>
-                        <li><a class="filter btn btn-sm btn-link" data-group="category_detailed">Website</a></li>
-                        <li><a class="filter btn btn-sm btn-link" data-group="category_direct-url">Coding</a></li>
-                        <li><a class="filter btn btn-sm btn-link" data-group="category_image">CyberSecurity</a></li>
-                        <li><a class="filter btn btn-sm btn-link" data-group="category_youtube-video">YouTube Video</a></li>
+                    <ul class="project-filters nav nav-pills mb-3" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+                      </li>
                     </ul>
 
                     
                     <div class="portfolio-grid three-columns shuffle" style="height: 905.765625px; transition: height 450ms ease-out;">
+
+
                         <figure class="item standard shuffle-item filtered" data-groups="[&quot;category_all&quot;, &quot;category_detailed&quot;]" style="position: absolute; top: 0px; left: 0px; visibility: visible; transition: transform 450ms ease-out, opacity 450ms ease-out;">
                             <div class="portfolio-item-img">
                                 <img fetchpriority="high" decoding="async" width="1280" height="853" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" alt="">
                                 <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-<?php echo $project_id; ?>"></a> <!-- Adjust data-bs-target -->
                             </div>
                         </figure>
+
+
                     </div>
                             
                                 
