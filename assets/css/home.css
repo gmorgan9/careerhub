@@ -502,7 +502,7 @@ min-height: 43px;
     z-index: -1;
     background-image: radial-gradient(circle, white 10%, whitesmoke 11%, whitesmoke 100%);
 }
-.project-cell img::after {
+/* .project-cell img::after {
     content: "";
     pointer-events: none;
     position: absolute;
@@ -515,7 +515,7 @@ min-height: 43px;
     left: 0px;
     opacity: 0.3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
-}
+} */
 .project-cell img {
     position: absolute;
     object-fit: cover;
