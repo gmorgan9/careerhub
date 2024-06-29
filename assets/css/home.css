@@ -4,6 +4,7 @@
     --light-gray: #333333;
     --background-color: #222222;
     --light-color: #c6c6c6;
+    --light-font: 400;
 }
 
 .nav-link:hover {
@@ -504,6 +505,7 @@ min-height: 43px;
 }
 .main-project-details p {
     color: var(--light-color);
+    font-weight: var(--light-font);
 }
 .main-project-details img {
     border-radius: 9px;
