@@ -62,14 +62,14 @@ if (!$odd_result) {
 // }
 
 // Process odd rows
-if (mysqli_num_rows($odd_result) > 0) {
-    while ($row = mysqli_fetch_assoc($odd_result)) {
-        // Process your odd rows here
-        echo "Odd row: " . $row['project_name'] . "<br>";
-    }
-} else {
-    echo "No odd rows found.<br>";
-}
+// if (mysqli_num_rows($odd_result) > 0) {
+//     while ($row = mysqli_fetch_assoc($odd_result)) {
+//         // Process your odd rows here
+//         echo "Odd row: " . $row['project_name'] . "<br>";
+//     }
+// } else {
+//     echo "No odd rows found.<br>";
+// }
 
 ?>
 
