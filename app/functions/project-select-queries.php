@@ -27,7 +27,7 @@
 // end All - odd projects
 
 // Web Development - even projects
-    $even_sa_sql = "SELECT *
+    $even_wd_sql = "SELECT *
                     FROM (
                     SELECT projects.*,
                     ROW_NUMBER() OVER() AS row_num
