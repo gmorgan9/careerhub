@@ -14,8 +14,27 @@ foreach ($files as $file) {
     require_once $file;
 }
 
-$sql = "SELECT * FROM projects";
-$result = mysqli_query($conn, $sql);
+$even_sql = "SELECT *
+FROM (
+    SELECT 
+        @row_number := @row_number + 1 AS row_num, 
+        projects.*
+    FROM projects, (SELECT @row_number := 0) AS t
+) AS numbered_projects
+WHERE MOD(row_num, 2) = 0;"
+$even_result = mysqli_query($conn, $even_sql);
+
+$odd_sql = "SELECT *
+FROM (
+    SELECT 
+        @row_number := @row_number + 1 AS row_num, 
+        projects.*
+    FROM projects, (SELECT @row_number := 0) AS t
+) AS numbered_projects
+WHERE MOD(row_num, 2) = 1;
+"
+// $sql = "SELECT * FROM projects";
+$odd_result = mysqli_query($conn, $odd_sql);
 
 ?>
 
@@ -79,36 +98,36 @@ $result = mysqli_query($conn, $sql);
         <div class="row">
             <div class="col-md-6">
                 <?php
-                if (mysqli_num_rows($result) > 0) {
-                    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                    $total_rows = count($rows);
+                if (mysqli_num_rows($even_result) > 0) {
+                    $e_rows = mysqli_fetch_all($even_result, MYSQLI_ASSOC);
+                    $e_total_rows = count($e_rows);
                     
                     // Iterate through each row for the first column (odd rows)
-                    for ($i = 0; $i < $total_rows; $i += 2) {
-                        $row = $rows[$i];
-                        $project_id            = $row['project_id'];
-                        $project_idno          = $row['idno'];  
-                        $project_name          = $row['project_name']; 
-                        $project_short_name    = $row['project_short_name']; 
-                        $project_description   = $row['project_description'];
-                        $project_github_link   = $row['project_github_link'];
-                        $project_github_user   = $row['project_github_user'];
-                        $project_url           = $row['project_url'];
-                        $project_release       = $row['project_release'];
-                        $project_tech          = $row['project_tech'];
-                        $project_content       = $row['project_content'];
-                        $technologies          = explode(", ", $project_tech);
+                    for ($i = 0; $i < $e_total_rows; $i += 2) {
+                        $e_row = $e_rows[$i];
+                        $e_project_id            = $e_row['project_id'];
+                        $e_project_idno          = $e_row['idno'];  
+                        $e_project_name          = $e_row['project_name']; 
+                        $e_project_short_name    = $e_row['project_short_name']; 
+                        $e_project_description   = $e_row['project_description'];
+                        $e_project_github_link   = $e_row['project_github_link'];
+                        $e_project_github_user   = $e_row['project_github_user'];
+                        $e_project_url           = $e_row['project_url'];
+                        $e_project_release       = $e_row['project_release'];
+                        $e_project_tech          = $e_row['project_tech'];
+                        $e_project_content       = $e_row['project_content'];
+                        $e_technologies          = explode(", ", $e_project_tech);
                 ?>
                 
                 <div>
-                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
-                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
+                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $e_project_id; ?>">
+                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $e_project_short_name; ?>.png">
                         <div class="content__slate">
-                            <h3><?php echo $project_name; ?></h3>
-                            <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
+                            <h3><?php echo $e_project_name; ?></h3>
+                            <p class="text-truncate" style="width: 350px;"><?php echo $e_project_description; ?></p>
                             <ul class="tags">
-                                <?php foreach ($technologies as $tech): ?>
-                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                <?php foreach ($e_technologies as $e_tech): ?>
+                                    <li><a href=""><?php echo htmlspecialchars($e_tech); ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
