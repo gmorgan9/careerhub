@@ -3,6 +3,7 @@
     --primary-color-fade:rgba(153, 78, 78, 0.1);
     --light-gray: #333333;
     --background-color: #222222;
+    --light-color: #c6c6c6;
 }
 
 .nav-link:hover {
@@ -500,6 +501,9 @@ min-height: 43px;
 }
 .main-project-details h3 {
     font-size: 20px;
+}
+.main-project-details p {
+    color: var(--light-color);
 }
 .main-project-details img {
     border-radius: 9px;
