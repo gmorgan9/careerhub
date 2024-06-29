@@ -68,7 +68,7 @@ $result = mysqli_query($conn, $sql);
                             $id                     = $row['project_id'];
                             $idno                   = $row['idno'];
                             $project_name           = $row['project_name'];
-                            $project_short_name     = [$row['project_short_name']];
+                            $project_short_name     = $row['project_short_name'];
                             $project_description    = $row['project_description'];
                             // $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
                             // $created_at->setTimezone(new DateTimeZone('America/Denver'));
@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $sql);
                                         <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                         <div class="content__slate">
                                             <h3><?php echo $project_name; ?></h3>
-                                            <p class="text-truncate" style="width: 250px;"><?php echo $project_description; ?></p>
+                                            <p class="text-truncate" style="width: 500px;"><?php echo $project_description; ?></p>
                                             <p class="d-flex flex-wrap">
                                                 <span class="d-block mb-1">React</span>
                                                 <span class="d-block mb-1">Sass &amp; CSS</span>
