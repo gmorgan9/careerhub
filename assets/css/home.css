@@ -514,7 +514,7 @@ min-height: 43px;
     opacity: 0.3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
 }
-img#cardHover {
+img#cardHover:hover {
     width: 500px;
     height: 500px;
     }
