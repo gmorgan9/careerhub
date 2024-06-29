@@ -45,7 +45,7 @@ foreach ($files as $file) {
         </div>
     <div class="container-fluid" style="max-width: 1320px; margin: 0 auto; height: calc(100vh - 505px);">
         
-        <div class="form">
+        <div class="form mb-5">
             <form action="" method="POST">
                 <div class="form-group">
                     <label class="form-label text-white" for="cert_name">Certification Name</label>
