@@ -486,7 +486,7 @@ if ($conn->connect_error) {
                                             <!-- end PHP code for Scripting & Automation - Odd Results -->
                                                     
                                             <div>
-                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#web-dev-<?php echo $project_id; ?>">
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#sa-<?php echo $project_id; ?>">
                                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                                     <div class="content__slate">
                                                         <h3><?php echo $project_name; ?></h3>
@@ -500,13 +500,44 @@ if ($conn->connect_error) {
                                                 </div>
                                                             
                                                 <!-- CANVAS -->
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="web-dev-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                                                        <div class="offcanvas-header">
-                                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                                        </div>
+                                                    <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="sa-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                               
                                                         <div class="offcanvas-body">
-                                                            <?php echo $project_name; ?>
+                                                            <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
+                                                            <hr>
+                                                            <div class="main-project-details">
+                                                                <h3 class="mt-5"><?php echo $project_name; ?></h3>
+                                                                <div class="project-image d-flex justify-content-center">
+                                                                    <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
+                                                                </div>
+                                                                <h4>About</h4>
+                                                                <p><?php echo $project_description; ?></p>
+                                                                <h4>Technologies</h4>
+                                                                <ul class="tags">
+                                                                    <?php foreach ($technologies as $tech): ?>
+                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                    <?php endforeach; ?>
+                                                                </ul>
+                                                                <h4>
+                                                                    <i class="bi bi-globe2"></i> &nbsp; 
+                                                                    Website
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_name; ?></a>
+                                                                </p>
+                                                                <h4>
+                                                                    <i class="bi bi-github"></i> &nbsp;
+                                                                    Github
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="https://github.com/<?php echo $project_github_user ?>" target="_blank"><?php echo $project_github_user; ?></a>
+                                                                </p>
+                                                                <a href="<?php echo $project_github_link; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
+                                                                    Open Project &nbsp; 
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                                    
                                                         </div>
                                                     </div>
                                                 <!-- end CANVAS -->
@@ -543,7 +574,7 @@ if ($conn->connect_error) {
                                             <!-- end PHP code for Scripting & Automation - Even Results -->
                                                     
                                             <div>
-                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#web-dev-<?php echo $project_id; ?>">
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#sa-<?php echo $project_id; ?>">
                                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                                     <div class="content__slate">
                                                         <h3><?php echo $project_name; ?></h3>
@@ -557,16 +588,48 @@ if ($conn->connect_error) {
                                                 </div>
                                                             
                                                 <!-- CANVAS -->
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="web-dev-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                                                        <div class="offcanvas-header">
-                                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                                        </div>
+                                                    <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="sa-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                               
                                                         <div class="offcanvas-body">
-                                                            <?php echo $project_name; ?>
+                                                            <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
+                                                            <hr>
+                                                            <div class="main-project-details">
+                                                                <h3 class="mt-5"><?php echo $project_name; ?></h3>
+                                                                <div class="project-image d-flex justify-content-center">
+                                                                    <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
+                                                                </div>
+                                                                <h4>About</h4>
+                                                                <p><?php echo $project_description; ?></p>
+                                                                <h4>Technologies</h4>
+                                                                <ul class="tags">
+                                                                    <?php foreach ($technologies as $tech): ?>
+                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                    <?php endforeach; ?>
+                                                                </ul>
+                                                                <h4>
+                                                                    <i class="bi bi-globe2"></i> &nbsp; 
+                                                                    Website
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_name; ?></a>
+                                                                </p>
+                                                                <h4>
+                                                                    <i class="bi bi-github"></i> &nbsp;
+                                                                    Github
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="https://github.com/<?php echo $project_github_user ?>" target="_blank"><?php echo $project_github_user; ?></a>
+                                                                </p>
+                                                                <a href="<?php echo $project_github_link; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
+                                                                    Open Project &nbsp; 
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                           
                                                         </div>
                                                     </div>
                                                 <!-- end CANVAS -->
+
                                             </div>
                                                             
                                             <?php
@@ -615,7 +678,7 @@ if ($conn->connect_error) {
                                             <!-- end PHP code for Software Development - Odd Results -->
                                                     
                                             <div>
-                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#web-dev-<?php echo $project_id; ?>">
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#sd-<?php echo $project_id; ?>">
                                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                                     <div class="content__slate">
                                                         <h3><?php echo $project_name; ?></h3>
@@ -629,13 +692,44 @@ if ($conn->connect_error) {
                                                 </div>
                                                             
                                                 <!-- CANVAS -->
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="web-dev-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                                                        <div class="offcanvas-header">
-                                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                                        </div>
+                                                    <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="sd-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                               
                                                         <div class="offcanvas-body">
-                                                            <?php echo $project_name; ?>
+                                                            <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
+                                                            <hr>
+                                                            <div class="main-project-details">
+                                                                <h3 class="mt-5"><?php echo $project_name; ?></h3>
+                                                                <div class="project-image d-flex justify-content-center">
+                                                                    <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
+                                                                </div>
+                                                                <h4>About</h4>
+                                                                <p><?php echo $project_description; ?></p>
+                                                                <h4>Technologies</h4>
+                                                                <ul class="tags">
+                                                                    <?php foreach ($technologies as $tech): ?>
+                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                    <?php endforeach; ?>
+                                                                </ul>
+                                                                <h4>
+                                                                    <i class="bi bi-globe2"></i> &nbsp; 
+                                                                    Website
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_name; ?></a>
+                                                                </p>
+                                                                <h4>
+                                                                    <i class="bi bi-github"></i> &nbsp;
+                                                                    Github
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="https://github.com/<?php echo $project_github_user ?>" target="_blank"><?php echo $project_github_user; ?></a>
+                                                                </p>
+                                                                <a href="<?php echo $project_github_link; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
+                                                                    Open Project &nbsp; 
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                           
                                                         </div>
                                                     </div>
                                                 <!-- end CANVAS -->
@@ -672,7 +766,7 @@ if ($conn->connect_error) {
                                             <!-- end PHP code for Software Development - Even Results -->
                                                     
                                             <div>
-                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#web-dev-<?php echo $project_id; ?>">
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#sa-<?php echo $project_id; ?>">
                                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                                     <div class="content__slate">
                                                         <h3><?php echo $project_name; ?></h3>
@@ -686,16 +780,48 @@ if ($conn->connect_error) {
                                                 </div>
                                                             
                                                 <!-- CANVAS -->
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="web-dev-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
-                                                        <div class="offcanvas-header">
-                                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                                        </div>
+                                                    <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="sd-<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                               
                                                         <div class="offcanvas-body">
-                                                            <?php echo $project_name; ?>
+                                                            <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
+                                                            <hr>
+                                                            <div class="main-project-details">
+                                                                <h3 class="mt-5"><?php echo $project_name; ?></h3>
+                                                                <div class="project-image d-flex justify-content-center">
+                                                                    <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
+                                                                </div>
+                                                                <h4>About</h4>
+                                                                <p><?php echo $project_description; ?></p>
+                                                                <h4>Technologies</h4>
+                                                                <ul class="tags">
+                                                                    <?php foreach ($technologies as $tech): ?>
+                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                    <?php endforeach; ?>
+                                                                </ul>
+                                                                <h4>
+                                                                    <i class="bi bi-globe2"></i> &nbsp; 
+                                                                    Website
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_name; ?></a>
+                                                                </p>
+                                                                <h4>
+                                                                    <i class="bi bi-github"></i> &nbsp;
+                                                                    Github
+                                                                </h4>
+                                                                <p>
+                                                                    <a href="https://github.com/<?php echo $project_github_user ?>" target="_blank"><?php echo $project_github_user; ?></a>
+                                                                </p>
+                                                                <a href="<?php echo $project_github_link; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
+                                                                    Open Project &nbsp; 
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                  
                                                         </div>
                                                     </div>
                                                 <!-- end CANVAS -->
+
                                             </div>
                                                             
                                             <?php
