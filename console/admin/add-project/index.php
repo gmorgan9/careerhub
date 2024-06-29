@@ -72,6 +72,15 @@ foreach ($files as $file) {
                         <div class="form-group">
                             <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
                         </div>
+                        <div class="col">
+                            <label class="form-label" for="project_category">Project Category</label>
+                            <select class="form-input" name="project_category">
+                                <option value="">Please select one...</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Scripting & Automation">Scripting & Automation</option>
+                                <option value="Software Development">Software Development</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <textarea id="project_description" name="project_description" class="form-input mb-3" placeholder="Project Description" rows="2"></textarea>

@@ -6,7 +6,6 @@
 		if(isset($_POST['project_name'])) { $project_name = mysqli_real_escape_string($conn, $_POST['project_name']); } else { $project_name = ""; }
 		if(isset($_POST['project_short_name'])) { $project_short_name = mysqli_real_escape_string($conn, $_POST['project_short_name']); } else { $project_short_name = ""; }
 		if(isset($_POST['project_description'])) { $project_description = mysqli_real_escape_string($conn, $_POST['project_description']); } else { $project_description = ""; }
-		if(isset($_POST['project_description'])) { $project_description = mysqli_real_escape_string($conn, $_POST['project_description']); } else { $project_description = ""; }
 		if(isset($_POST['project_github_link'])) { $project_github_link = mysqli_real_escape_string($conn, $_POST['project_github_link']); } else { $project_github_link = ""; }
 		if(isset($_POST['project_github_user'])) { $project_github_user = mysqli_real_escape_string($conn, $_POST['project_github_user']); } else { $project_github_user = ""; }
 		if(isset($_POST['project_url'])) { $project_url = mysqli_real_escape_string($conn, $_POST['project_url']); } else { $project_url = ""; }
