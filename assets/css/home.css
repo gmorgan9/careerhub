@@ -473,7 +473,7 @@ min-height: 43px;
     font-weight: 900 !important;
     background-color: rgb(52, 58, 64) !important;
 }
-/* .project-cell {
+.project-cell {
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 1.5em;
@@ -495,7 +495,7 @@ min-height: 43px;
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
     break-inside: avoid;
-} */
+}
 /* .project-cell img::before {
     content: "";
     pointer-events: none;
