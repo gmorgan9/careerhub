@@ -692,6 +692,9 @@ if ($conn->connect_error) {
 
         </div>
     </div>
+                                        </div>
+                                        </div>
+                                        
 
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
  
