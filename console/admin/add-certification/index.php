@@ -45,7 +45,7 @@ foreach ($files as $file) {
         </div>
     <div class="container-fluid" style="max-width: 1320px; margin: 0 auto; height: calc(100vh - 505px);">
         
-        <div class="form mb-5">
+        <div class="form">
             <form action="" method="POST">
                 <div class="form-group">
                     <label class="form-label text-white" for="cert_name">Certification Name</label>
@@ -67,10 +67,12 @@ foreach ($files as $file) {
                     <label class="form-label text-white" for="cert_provider">Certification Provider</label>
                     <input id="cert_provider" type="text" name="cert_provider" class="form-input" required>
                 </div>
-                <input type="submit" name="add-certification" class="form-btn mt-5" value="Add Certification">
+                <input type="submit" name="add-certification" class="form-btn mt-2" value="Add Certification">
             </form>
         </div> 
     </div>
+
+    <div class="mt-5"></div>
 
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
                    
