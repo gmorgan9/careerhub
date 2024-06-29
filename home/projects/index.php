@@ -14,6 +14,9 @@ foreach ($files as $file) {
     require_once $file;
 }
 
+$sql = "SELECT * FROM projects";
+$result = mysqli_query($conn, $sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +62,20 @@ foreach ($files as $file) {
                         <button class="nav-link" id="pills-open-source-tab" data-bs-toggle="pill" data-bs-target="#pills-open-source" type="button" role="tab" aria-controls="pills-open-source" aria-selected="false">Open Source</button>
                       </li>
                     </ul> -->
+                    <?php
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $id             = $row['job_id'];
+                            $idno = $row['idno'];
+                            $job_title = $row['job_title'];
+                            $company = $row['company'];
+                            $location = $row['location'];
+                            $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
+                            $created_at->setTimezone(new DateTimeZone('America/Denver'));
+                            $formatted_date = $created_at->format('M d, Y');
+
+
+                    ?>
 
                     <ul class="project-filters nav nav-pills" id="pills-tab" role="tablist">
                         <li class="nav-item project-filter-item" role="presentation">
@@ -74,8 +91,8 @@ foreach ($files as $file) {
                     <div class="tab-content project-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                             <div class="row">
+
                                 <div class="col-md-6">
-                                    <!-- Content for the first column of Tab 1 -->
 
                                     <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
                                         <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
@@ -92,24 +109,25 @@ foreach ($files as $file) {
                                     </div>
                                     
                                 </div>
-                                <div class="col-md-6 mt-4">
 
-                                <div style="height:400px; position: relative;" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
-                                    <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
-                                    <div class="content__slate">
-                                        <h3>Piggment</h3>
-                                        <p>The Gradients and colors for the next smart creator</p>
-                                        <p class="d-flex flex-wrap">
-                                            <span class="d-block mb-1">React</span>
-                                            <span class="d-block mb-1">Sass &amp; CSS</span>
-                                            <span class="d-block mb-1">Javascript</span>
-                                            <span class="d-block mb-1">Context</span>
-                                        </p>
+                                <div class="col-md-6 mt-5">
+
+                                    <div style="height:400px; position: relative;" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
+                                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
+                                        <div class="content__slate">
+                                            <h3>Piggment</h3>
+                                            <p>The Gradients and colors for the next smart creator</p>
+                                            <p class="d-flex flex-wrap">
+                                                <span class="d-block mb-1">React</span>
+                                                <span class="d-block mb-1">Sass &amp; CSS</span>
+                                                <span class="d-block mb-1">Javascript</span>
+                                                <span class="d-block mb-1">Context</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-
 
                                 </div>
+
                             </div>
                         </div>
 
@@ -140,6 +158,16 @@ foreach ($files as $file) {
                         </div>
 
                     </div>
+                    <?php
+                    }
+                } else {
+                ?>
+                    <div>
+                        <p class="text-center">No jobs found.</p>
+                    </div>
+                <?php
+                }
+                ?>
 
                             
                                 
