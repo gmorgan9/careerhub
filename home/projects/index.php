@@ -94,19 +94,20 @@ foreach ($files as $file) {
                                 </div>
                                 <div class="col-md-6">
 
-                                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
-                                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
-                                        <div class="content__slate">
-                                            <h3>Piggment</h3>
-                                            <p>The Gradients and colors for the next smart creator</p>
-                                            <p class="d-flex flex-wrap">
-                                                <span class="d-block mb-1">React</span>
-                                                <span class="d-block mb-1">Sass &amp; CSS</span>
-                                                <span class="d-block mb-1">Javascript</span>
-                                                <span class="d-block mb-1">Context</span>
-                                            </p>
-                                        </div>
+                                <div style="height:400px; position: relative;" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
+                                    <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
+                                    <div class="content__slate">
+                                        <h3>Piggment</h3>
+                                        <p>The Gradients and colors for the next smart creator</p>
+                                        <p class="d-flex flex-wrap">
+                                            <span class="d-block mb-1">React</span>
+                                            <span class="d-block mb-1">Sass &amp; CSS</span>
+                                            <span class="d-block mb-1">Javascript</span>
+                                            <span class="d-block mb-1">Context</span>
+                                        </p>
                                     </div>
+                                </div>
+
 
                                 </div>
                             </div>
