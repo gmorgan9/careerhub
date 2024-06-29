@@ -80,26 +80,26 @@
 
 // Software Development - even projects
     $even_sd_sql = "SELECT *
-    FROM (
-        SELECT 
-            @row_number := @row_number + 1 AS row_num, 
-            projects.*
-        FROM projects, (SELECT @row_number := 0) AS t
-    ) AS numbered_projects
-    WHERE MOD(row_num, 2) = 0 AND project_category = 'Software Development';";
+                    FROM (
+                    SELECT projects.*,
+                    ROW_NUMBER() OVER() AS row_num
+                    FROM projects
+                    WHERE project_category = 'Software Development'
+                    ) AS numbered_projects
+                    WHERE MOD(row_num, 2) = 0;";
 
     $even_sd_result = mysqli_query($conn, $even_sd_sql);
 // end Software Development - even projects
 
 // Software Development - odd projects
     $odd_sd_sql = "SELECT *
-    FROM (
-        SELECT 
-            @row_number := @row_number + 1 AS row_num, 
-            projects.*
-        FROM projects, (SELECT @row_number := 0) AS t
-    ) AS numbered_projects
-    WHERE MOD(row_num, 2) = 1 AND project_category = 'Software Development';";
+                   FROM (
+                   SELECT projects.*,
+                   ROW_NUMBER() OVER() AS row_num
+                   FROM projects
+                   WHERE project_category = 'Software Development'
+                   ) AS numbered_projects
+                   WHERE MOD(row_num, 2) = 1;";
 
     $odd_sd_result = mysqli_query($conn, $odd_sd_sql);
 // end Software Development - odd projects
