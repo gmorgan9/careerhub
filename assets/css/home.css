@@ -461,12 +461,12 @@ min-height: 43px;
     transition-property: all !important;
     border-top-style: none !important;
 }
-/* .project-filter-item .active {
+.project-filter-item .active {
     padding-top: 5px !important;
     padding-right: 22px !important;
     font-weight: 900 !important;
     background-color: rgb(52, 58, 64) !important;
-} */
+}
 .project-cell {
     margin-top: 0px;
     margin-right: 0px;
