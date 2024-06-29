@@ -63,7 +63,7 @@ foreach ($files as $file) {
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
 
-                  <img alt="https://i.ibb.co/tCZFDhL/Screen-Recording-2020-06-11-at-1.gif" id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" srcset="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FtCZFDhL%2FScreen-Recording-2020-06-11-at-1.gif&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fi.ibb.co%2FtCZFDhL%2FScreen-Recording-2020-06-11-at-1.gif&amp;w=1080&amp;q=75 2x" style="color: transparent;" src="/_next/image?url=https%3A%2F%2Fi.ibb.co%2FtCZFDhL%2FScreen-Recording-2020-06-11-at-1.gif&amp;w=1080&amp;q=75">
+                  <img alt="https://i.ibb.co/tCZFDhL/Screen-Recording-2020-06-11-at-1.gif" id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" srcset="" style="color: transparent;" src="/assets/images/project-images/EmergencyPrep.png">
 
                   </div>
                   <div class="tab-pane fade" id="pills-web-dev" role="tabpanel" aria-labelledby="pills-web-dev-tab" tabindex="0">Web Development</div>
