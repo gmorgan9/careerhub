@@ -1,5 +1,6 @@
 :root {
     --primary-color: #994E4E;
+    --primary-color-fade:rgba(153, 78, 78, 0.1);
     --light-gray: #333333;
     --background-color: #222222;
 }
@@ -481,7 +482,7 @@ min-height: 43px;
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
     break-inside: avoid;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 10px var(--primary-color-fade);
 }
 /* .project-cell img::before {
     content: "";
