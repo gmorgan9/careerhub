@@ -134,13 +134,13 @@ $odd_result = mysqli_query($conn, $odd_sql);
                     </div>
 
                     <!-- CANVAS -->
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $e_project_id; ?>" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
-                            <?php echo $project_name; ?>
+                            <?php echo $e_project_name; ?>
                         </div>
                     </div>
                     <!-- end CANVAS -->
@@ -160,49 +160,49 @@ $odd_result = mysqli_query($conn, $odd_sql);
             
             <div class="col-md-6">
                 <?php
-                if (mysqli_num_rows($result) > 0) {
-                    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                    $total_rows = count($rows);
+                if (mysqli_num_rows($odd_result) > 0) {
+                    $o_rows = mysqli_fetch_all($odd_result, MYSQLI_ASSOC);
+                    $o_total_rows = count($o_rows);
                     
                     // Iterate through each row for the even rows (indices 1, 3, 5, ...)
-                    for ($i = 1; $i < $total_rows; $i += 2) {
-                        $row = $rows[$i];
-                        $project_id            = $row['project_id'];
-                        $project_idno          = $row['idno'];  
-                        $project_name          = $row['project_name']; 
-                        $project_short_name    = $row['project_short_name']; 
-                        $project_description   = $row['project_description'];
-                        $project_github_link   = $row['project_github_link'];
-                        $project_github_user   = $row['project_github_user'];
-                        $project_url           = $row['project_url'];
-                        $project_release       = $row['project_release'];
-                        $project_tech          = $row['project_tech'];
-                        $project_content       = $row['project_content'];
-                        $technologies          = explode(", ", $project_tech);
+                    for ($i = 1; $i < $o_total_rows; $i += 2) {
+                        $o_row = $o_rows[$i];
+                        $o_project_id            = $o_row['project_id'];
+                        $o_project_idno          = $o_row['idno'];  
+                        $o_project_name          = $o_row['project_name']; 
+                        $o_project_short_name    = $o_row['project_short_name']; 
+                        $o_project_description   = $o_row['project_description'];
+                        $o_project_github_link   = $o_row['project_github_link'];
+                        $o_project_github_user   = $o_row['project_github_user'];
+                        $o_project_url           = $o_row['project_url'];
+                        $o_project_release       = $o_row['project_release'];
+                        $o_project_tech          = $o_row['project_tech'];
+                        $o_project_content       = $o_row['project_content'];
+                        $o_technologies          = explode(", ", $o_project_tech);
                 ?>
                 
                 <div>
-                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
-                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
+                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $o_project_id; ?>">
+                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $o_project_short_name; ?>.png">
                         <div class="content__slate">
-                            <h3><?php echo $project_name; ?></h3>
-                            <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
+                            <h3><?php echo $o_project_name; ?></h3>
+                            <p class="text-truncate" style="width: 350px;"><?php echo $o_project_description; ?></p>
                             <ul class="tags">
-                                <?php foreach ($technologies as $tech): ?>
-                                    <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                <?php foreach ($o_technologies as $o_tech): ?>
+                                    <li><a href=""><?php echo htmlspecialchars($o_tech); ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
 
                     <!-- CANVAS -->
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $o_project_id; ?>" aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
-                            <?php echo $project_name; ?>
+                            <?php echo $o_project_name; ?>
                         </div>
                     </div>
                     <!-- end CANVAS -->
