@@ -766,7 +766,7 @@ if ($conn->connect_error) {
                                             <!-- end PHP code for Software Development - Even Results -->
                                                     
                                             <div>
-                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#sa-<?php echo $project_id; ?>">
+                                                <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#sd-<?php echo $project_id; ?>">
                                                     <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
                                                     <div class="content__slate">
                                                         <h3><?php echo $project_name; ?></h3>
