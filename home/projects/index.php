@@ -79,6 +79,7 @@ $result = mysqli_query($conn, $sql);
                             
                             <div class="row">
 
+                            <div class="col-md-6">
                                 <?php
                                     if (mysqli_num_rows($result) > 0) {
                                         $count = 0;
@@ -98,7 +99,7 @@ $result = mysqli_query($conn, $sql);
                                             $technologies          = explode(", ", $project_tech);
                                 ?>
 
-                                <div class="col-md-6 <?php if ($count == 2) echo 'mt-5'; ?>">
+                                <div class="<?php if ($count == 2) echo 'mt-5'; ?>">
 
                                     <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $project_id; ?>">
                                         <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png">
@@ -156,6 +157,7 @@ $result = mysqli_query($conn, $sql);
                                 <?php
                                     }
                                 ?>
+                                </div>
 
                             </div>
                         </div>
