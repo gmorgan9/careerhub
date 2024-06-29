@@ -5,6 +5,7 @@
     --background-color: #222222;
     --light-color: #c6c6c6;
     --light-font: 300;
+    --font-sm: 0.875em;
 }
 
 .nav-link:hover {
@@ -518,6 +519,17 @@ min-height: 43px;
 }
 .project-offcanvas {
     width: 34em !important;
+}
+.open__project {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    padding-top: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-align: center;
+    font-size: var(--font-sm);
 }
 /* .project-cell img::before {
     content: "";
