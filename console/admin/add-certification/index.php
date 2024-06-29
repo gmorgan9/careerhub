@@ -54,7 +54,7 @@ foreach ($files as $file) {
                             <input id="cert_name" type="text" name="cert_name" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="cert_issued">Certification Issue Date <span class="text-secondary" style="font-size: 12px;">Optional</span></label>
+                            <label class="form-label text-white" for="cert_issued">Certification Issue Date <span class="text-secondary" style="font-size: 12px;">&nbsp;Optional</span></label>
                             <input id="cert_issued" type="date" name="cert_issued" class="form-input" style="padding-bottom: 0 !important;">
                         </div>
                         <div class="form-group">
