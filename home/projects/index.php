@@ -121,9 +121,10 @@ if ($conn->connect_error) {
                                                             <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="color: white !important;"></button>
                                                             <br>
-                                                            <hr style="border: 2px solid white !important; width: 50% !important;">
+                                                            
                                                         </div>
                                                         <div class="offcanvas-body">
+                                                            <hr>
                                                             <?php echo $project_name; ?>
                                                         </div>
                                                     </div>
