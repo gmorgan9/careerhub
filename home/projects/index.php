@@ -77,7 +77,7 @@ foreach ($files as $file) {
                                 <div class="col-md-6">
                                     <!-- Content for the first column of Tab 1 -->
 
-                                    <div style="height:400px" role="gridcell" id="cardHover" aria-label="Piggment The Gradients and colors for the next smart creator" tabindex="0" class="mansory-item__MansoryItemStyle-sc-luo7c4-0 gJKjnw">
+                                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
                                         <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
                                         <div class="content__slate">
                                             <h3>Piggment</h3>
@@ -94,7 +94,7 @@ foreach ($files as $file) {
                                 </div>
                                 <div class="col-md-6">
 
-                                    <div style="height:400px" role="gridcell" id="cardHover" aria-label="Piggment The Gradients and colors for the next smart creator" tabindex="0" class="mansory-item__MansoryItemStyle-sc-luo7c4-0 gJKjnw">
+                                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell">
                                         <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/EmergencyPrep.png">
                                         <div class="content__slate">
                                             <h3>Piggment</h3>
