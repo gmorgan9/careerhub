@@ -197,7 +197,9 @@ if ($conn->connect_error) {
                                 <div class="row">
 
                                     <?php if($count_wd == 0) { ?>
-                                        no Results
+                                        <div class="alert alert-light" role="alert">
+                                            No current Web Development projects.
+                                        </div>
                                     <?php } ?>
                                     <!-- Column 1 (Web Development - Odd Results) -->
                                         <div class="col-md-6">
