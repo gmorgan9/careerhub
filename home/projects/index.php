@@ -65,17 +65,17 @@ $result = mysqli_query($conn, $sql);
                     <?php
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $project_id            = $project['project_id'];
-                            $project_idno          = $project['idno'];  
-                            $project_name          = $project['project_name']; 
-                            $project_short_name    = $project['project_short_name']; 
-                            $project_description   = $project['project_description'];
-                            $project_github_link   = $project['project_github_link'];
-                            $project_github_user   = $project['project_github_user'];
-                            $project_url           = $project['project_url'];
-                            $project_release       = $project['project_release'];
-                            $project_tech          = $project['project_tech'];
-                            $project_content       = $project['project_content'];
+                            $project_id            = $row['project_id'];
+                            $project_idno          = $row['idno'];  
+                            $project_name          = $row['project_name']; 
+                            $project_short_name    = $row['project_short_name']; 
+                            $project_description   = $row['project_description'];
+                            $project_github_link   = $row['project_github_link'];
+                            $project_github_user   = $row['project_github_user'];
+                            $project_url           = $row['project_url'];
+                            $project_release       = $row['project_release'];
+                            $project_tech          = $row['project_tech'];
+                            $project_content       = $row['project_content'];
                             $technologies          = explode(", ", $project_tech);
 
                             // $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
