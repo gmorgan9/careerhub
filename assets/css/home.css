@@ -429,7 +429,7 @@ img {
 }
 
 /* Projects */
-.project-filter-item {
+.project-filter-item button {
     color: #c6c6c6 !important;
 }
 .project-filter-item .active {
