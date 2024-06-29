@@ -79,9 +79,12 @@ $result = mysqli_query($conn, $sql);
         <div class="row">
             <?php
             if (mysqli_num_rows($result) > 0) {
-                $count = 0;
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $count++;
+                $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                $total_rows = count($rows);
+                
+                // Iterate through each row
+                for ($i = 0; $i < $total_rows; $i++) {
+                    $row = $rows[$i];
                     $project_id            = $row['project_id'];
                     $project_idno          = $row['idno'];  
                     $project_name          = $row['project_name']; 
@@ -95,8 +98,8 @@ $result = mysqli_query($conn, $sql);
                     $project_content       = $row['project_content'];
                     $technologies          = explode(", ", $project_tech);
                     
-                    // Determine the class for alternating columns
-                    $col_class = ($count % 2 == 0) ? 'col-md-6 mt-5' : 'col-md-6';
+                    // Determine the column class based on odd/even index
+                    $col_class = ($i % 2 == 0) ? 'col-md-6' : 'col-md-6 mt-5';
             ?>
             
             <div class="<?php echo $col_class; ?>">
