@@ -89,18 +89,7 @@ foreach ($files as $file) {
         </div> 
     </div>
 
-    <footer class="site-footer" style="margin-left: 0px !important;">
-        <div class="footer-socials">
-            <ul class="footer-social-links">
-                <li><a href="#" target="_blank">Twitter</a></li>
-                <li><a href="#" target="_blank">Facebook</a></li>
-                <li><a href="#" target="_blank">Instagram</a></li>
-            </ul>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2024 All rights reserved.</p>
-        </div>
-    </footer>
+    <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
                    
 
     <script>
