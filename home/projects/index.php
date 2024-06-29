@@ -63,12 +63,15 @@ foreach ($files as $file) {
                 <div class="tab-content" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
 
+                  <div class="layout">
                     <div class="project-cell" style="height: 400px; width: 448px !important;">
                         <img src="../../assets/images/project-images/EmergencyPrep.png" style="height: 500px;" alt="">
                     </div>
                     <div class="project-cell" style="height: 400px; width: 448px !important;">
                         <img src="../../assets/images/project-images/EmergencyPrep.png" style="height: 500px;" alt="">
                     </div>
+                  </div>
+                    
                     
                   
 

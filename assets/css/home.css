@@ -429,6 +429,14 @@ img {
 }
 
 /* Projects */
+.layout {
+    margin-top: 1.5em;
+margin-right: 0px;
+animation-duration: 1s;
+animation-name: fadeInUp;
+animation-fill-mode: both;
+column-gap: 1.5em;
+}
 .tab-content {
     display: block;
 }
