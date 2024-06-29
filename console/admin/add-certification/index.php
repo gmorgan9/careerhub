@@ -50,7 +50,7 @@ foreach ($files as $file) {
                 <div class="controls two-columns">
                     <div class="left-column">
                         <div class="form-group">
-                            <label class="form-label text-white" for="cert_name">Certification Name <span class="text-danger" style="font-size: 12px;">*</span></label>
+                            <label class="form-label text-white" for="cert_name">Certification Name <span class="text-danger" style="font-size: 12px;">&nbsp;*</span></label>
                             <input id="cert_name" type="text" name="cert_name" class="form-input" required>
                         </div>
                         <div class="form-group">
