@@ -75,8 +75,39 @@ foreach ($files as $file) {
 </head>
 <body style="background-color: rgb(34,34,34);">
 
-    <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
+    <!-- Navbar -->
+        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
+            <div class="left">
+                <a href="/home" class="text-white text-decoration-none">
+                    <img src="../../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+                </a>
+            </div>
+            <div class="right">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/">Career Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary active" href="/console">Console</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                            <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
+                            <a class="dropdown-item disabled" href="/console/admin/update-job">Update Job</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.php?logout=1">Settings</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- End Navbar -->
 
+        
     <!-- Search form -->
         <div class="page_title">
             <h2 class="text-white title">
@@ -89,13 +120,13 @@ foreach ($files as $file) {
         
         <form method="GET" action="" class="mb-3">
             <div class="input-group">
-                <input type="text" class="form-control" style="border: 2px solid #555 !important;font-size: 1em !important;color: inherit !important; background-color: transparent !important;" placeholder="Search" name="search" value="<?php echo $search; ?>">
-                <select class="form-select" style="border: 2px solid #555 !important;font-size: 1em !important;color: inherit !important; background-color: transparent !important;" name="search_field">
+                <input type="text" class="form-control" placeholder="Search" name="search" value="<?php echo $search; ?>">
+                <select class="form-select" name="search_field">
                     <?php foreach ($searchFields as $fieldName => $fieldLabel): ?>
                         <option value="<?php echo $fieldName; ?>" <?php if ($searchField === $fieldName) echo 'selected'; ?>><?php echo $fieldLabel; ?></option>
                     <?php endforeach; ?>
                 </select>
-                <button class="form-btn" type="submit">Search</button>
+                <button class="btn btn-primary" type="submit">Search</button>
             </div>
         </form>
     <!-- end Search form -->
@@ -117,7 +148,7 @@ foreach ($files as $file) {
                         $job_title      = $row['job_title'];
                         ?>
                         <?php //$job_id_data = $row['job_id']; ?>
-                        <li class="list-group-item float-end" style="border: 1px solid #555 !important; color: inherit !important; background-color: transparent !important;">
+                        <li class="list-group-item float-end">
                             <?php echo $row['job_title']; ?>
                             <a href="/console/jobs/view-job/?viewid=<?php echo $id; ?>" class="view float-end badge text-bg-secondary text-decoration-none">View</a>
                         </li>

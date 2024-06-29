@@ -36,8 +36,36 @@ foreach ($files as $file) {
 </head>
 <body style="background-color: rgb(34,34,34);">
 
-    <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
-
+    <!-- Navbar -->
+        <nav class="d-flex justify-content-between align-items-center" style="padding: 40px 70px 0px 70px;">
+            <div class="left">
+                <a href="/home" class="text-white text-decoration-none">
+                    <img src="../../assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
+                    &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+                </a>
+            </div>
+            <div class="right">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/">Career Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/console">Console</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                            <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.php?logout=1">Settings</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- End Navbar -->
 
     <div class="container w-100">
 
