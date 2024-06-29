@@ -60,7 +60,7 @@ foreach ($files as $file) {
                       </li>
                     </ul>
 
-                    <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-content mx-auto" id="pills-tabContent">
 
                         <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
 
