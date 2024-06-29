@@ -190,13 +190,8 @@ if (mysqli_num_rows($odd_result) > 0) {
             
             <div class="col-md-6">
                 <?php
-                if (mysqli_num_rows($result) > 0) {
-                    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                    $total_rows = count($rows);
-                    
-                    // Iterate through each row for the even rows (indices 1, 3, 5, ...)
-                    for ($i = 1; $i < $total_rows; $i += 2) {
-                        $row = $rows[$i];
+                if (mysqli_num_rows($even_result) > 0) {
+                    while ($row = mysqli_fetch_assoc($even_result)) {
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
                         $project_name          = $row['project_name']; 
