@@ -139,14 +139,14 @@ if ($conn->connect_error) {
                                                                     Website
                                                                 </h4>
                                                                 <p>
-                                                                    <a href="<?php echo $project_url; ?>"><?php echo $project_name; ?></a>
+                                                                    <a href="<?php echo $project_url; ?>" target="_blank"><?php echo $project_name; ?></a>
                                                                 </p>
                                                                 <h4>
                                                                     <i class="bi bi-github"></i> &nbsp;
                                                                     Github
                                                                 </h4>
                                                                 <p>
-                                                                    <a href="https://github.com/<?php echo $project_github_user ?>"><?php echo $project_github_user; ?></a>
+                                                                    <a href="https://github.com/<?php echo $project_github_user ?>" target="_blank"><?php echo $project_github_user; ?></a>
                                                                 </p>
                                                                 <a href="<?php echo $project_github_link; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
                                                                     Open Project &nbsp; 
