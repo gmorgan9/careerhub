@@ -83,8 +83,8 @@ $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     $total_rows = count($rows);
                     
-                    // Iterate through each row for the even rows (indices 1, 3, 5, ...)
-                    for ($i = 1; $i < $total_rows; $i += 2) {
+                    // Iterate through each row for the first column (odd rows)
+                    for ($i = 0; $i < $total_rows; $i += 2) {
                         $row = $rows[$i];
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
@@ -145,8 +145,8 @@ $result = mysqli_query($conn, $sql);
                     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     $total_rows = count($rows);
                     
-                    // Iterate through each row for the odd rows (indices 0, 2, 4, ...)
-                    for ($i = 0; $i < $total_rows; $i += 2) {
+                    // Iterate through each row for the even rows (indices 1, 3, 5, ...)
+                    for ($i = 1; $i < $total_rows; $i += 2) {
                         $row = $rows[$i];
                         $project_id            = $row['project_id'];
                         $project_idno          = $row['idno'];  
