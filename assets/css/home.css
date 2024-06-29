@@ -429,6 +429,13 @@ img {
 }
 
 /* Projects */
+.project-filters {
+    -webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center;
+justify-content: center;
+min-height: 43px;
+}
 .project-filter-item button {
     color: #c6c6c6 !important;
     margin-top: 0px !important;
