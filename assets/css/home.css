@@ -440,6 +440,14 @@ img {
     transition-timing-function: ease !important;
     transition-delay: 0s !important;
     transition-property: all !important;
+    border-top-style: none;
+border-right-style: none;
+border-bottom-style: none;
+border-left-style: none;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
 }
 .project-filter-item .active {
     padding-top: 5px !important;
