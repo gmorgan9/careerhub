@@ -54,19 +54,19 @@ foreach ($files as $file) {
                             <input id="cert_name" type="text" name="cert_name" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="cert_issued">Certification Issue Date <span class="text-secondary" style="font-size: 12px;">&nbsp;Optional</span></label>
+                            <label class="form-label text-white" for="cert_issued">Certification Issue Date <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                             <input id="cert_issued" type="date" name="cert_issued" class="form-input" style="padding-bottom: 0 !important;">
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="cert_expire">Certification Expiry Date</label>
+                            <label class="form-label text-white" for="cert_expire">Certification Expiry Date <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                             <input id="cert_expire" type="date" name="cert_expire" class="form-input" style="padding-bottom: 0 !important;">
                         </div>
                         <input type="submit" name="add-certification" class="form-btn mt-2" value="Add Certification">
                     </div>
                     <div class="right-column">
                         <div class="form-group">
-                            <label class="form-label text-white" for="cred_id">Credential ID</label>
-                            <input id="cred_id" type="text" name="cred_id" class="form-input" required>
+                            <label class="form-label text-white" for="cred_id">Credential ID <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
+                            <input id="cred_id" type="text" name="cred_id" class="form-input">
                         </div>
                         <div class="form-group">
                             <label class="form-label text-white" for="cert_provider">Certification Provider</label>
