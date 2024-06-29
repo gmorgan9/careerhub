@@ -44,7 +44,7 @@ foreach ($files as $file) {
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
 
             <div class="row">
-                <div class=" col-xs-12 col-md-6 ">
+                <div class=" col-xs-12 col-md-10 mx-auto">
                 <ul class="project-filters nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                   <li class="nav-item project-filter-item" role="presentation">
                     <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
