@@ -149,6 +149,10 @@ if ($conn->connect_error) {
                                                                     <a href="<?php echo $project_github_link ?>"><?php echo $project_github_user; ?></a>
                                                                 </p>
                                                             </div>
+                                                            <a href="https://piggment.co" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
+                                                                Open Project &nbsp; 
+                                                                <i class="bi bi-box-arrow-up-right"></i>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 <!-- end CANVAS -->
