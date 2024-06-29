@@ -429,6 +429,9 @@ img {
 }
 
 /* Projects */
+.tab-content {
+    display: block;
+}
 .project-filters {
     -webkit-box-align: center;
 align-items: center;
