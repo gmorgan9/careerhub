@@ -14,6 +14,31 @@ foreach ($files as $file) {
     require_once $file;
 }
 
+// $even_sql = "SELECT *
+// FROM (
+//     SELECT 
+//         @row_number := @row_number + 1 AS row_num, 
+//         projects.*
+//     FROM projects, (SELECT @row_number := 0) AS t
+// ) AS numbered_projects
+// WHERE MOD(row_num, 2) = 0;"
+// $even_result = mysqli_query($conn, $even_sql);
+
+// $odd_sql = "SELECT *
+// FROM (
+//     SELECT 
+//         @row_number := @row_number + 1 AS row_num, 
+//         projects.*
+//     FROM projects, (SELECT @row_number := 0) AS t
+// ) AS numbered_projects
+// WHERE MOD(row_num, 2) = 1;"
+// $odd_result = mysqli_query($conn, $odd_sql);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Debug and handle errors for even rows
 $even_sql = "SELECT *
 FROM (
     SELECT 
@@ -21,9 +46,15 @@ FROM (
         projects.*
     FROM projects, (SELECT @row_number := 0) AS t
 ) AS numbered_projects
-WHERE MOD(row_num, 2) = 0;"
+WHERE MOD(row_num, 2) = 0;";
+
 $even_result = mysqli_query($conn, $even_sql);
 
+if (!$even_result) {
+    die("Query failed: " . mysqli_error($conn));
+}
+
+// Debug and handle errors for odd rows
 $odd_sql = "SELECT *
 FROM (
     SELECT 
@@ -31,10 +62,33 @@ FROM (
         projects.*
     FROM projects, (SELECT @row_number := 0) AS t
 ) AS numbered_projects
-WHERE MOD(row_num, 2) = 1;
-"
-// $sql = "SELECT * FROM projects";
+WHERE MOD(row_num, 2) = 1;";
+
 $odd_result = mysqli_query($conn, $odd_sql);
+
+if (!$odd_result) {
+    die("Query failed: " . mysqli_error($conn));
+}
+
+// Process even rows
+if (mysqli_num_rows($even_result) > 0) {
+    while ($row = mysqli_fetch_assoc($even_result)) {
+        // Process your even rows here
+        echo "Even row: " . $row['project_name'] . "<br>";
+    }
+} else {
+    echo "No even rows found.<br>";
+}
+
+// Process odd rows
+if (mysqli_num_rows($odd_result) > 0) {
+    while ($row = mysqli_fetch_assoc($odd_result)) {
+        // Process your odd rows here
+        echo "Odd row: " . $row['project_name'] . "<br>";
+    }
+} else {
+    echo "No odd rows found.<br>";
+}
 
 ?>
 
