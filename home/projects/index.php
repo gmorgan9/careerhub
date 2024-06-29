@@ -52,14 +52,14 @@ if (!$odd_result) {
 }
 
 // Process even rows
-if (mysqli_num_rows($even_result) > 0) {
-    while ($row = mysqli_fetch_assoc($even_result)) {
-        // Process your even rows here
-        echo "Even row: " . $row['project_name'] . "<br>";
-    }
-} else {
-    echo "No even rows found.<br>";
-}
+// if (mysqli_num_rows($even_result) > 0) {
+//     while ($row = mysqli_fetch_assoc($even_result)) {
+//         // Process your even rows here
+//         echo "Even row: " . $row['project_name'] . "<br>";
+//     }
+// } else {
+//     echo "No even rows found.<br>";
+// }
 
 // Process odd rows
 if (mysqli_num_rows($odd_result) > 0) {
