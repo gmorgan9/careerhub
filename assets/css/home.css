@@ -492,7 +492,8 @@ min-height: 43px;
 .off-canvas-close-btn {
     background: 0;
     border: none;
-    color: var(--light-gray);
+    color: white;
+    font-size: 20px;
 }
 /* .project-cell img::before {
     content: "";
