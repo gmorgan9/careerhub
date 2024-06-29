@@ -116,7 +116,7 @@ if ($conn->connect_error) {
                                                 </div>
                                                             
                                                 <!-- CANVAS -->
-                                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
+                                                    <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="<?php echo $project_id; ?>" aria-labelledby="offcanvasRightLabel">
                                                         <div class="offcanvas-header">
                                                             <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
                                                         </div>

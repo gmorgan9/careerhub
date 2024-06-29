@@ -498,6 +498,9 @@ min-height: 43px;
 .main-project-details h3 {
     font-size: 20px;
 }
+.project-offcanvas {
+    width: 480px;
+}
 /* .project-cell img::before {
     content: "";
     pointer-events: none;
