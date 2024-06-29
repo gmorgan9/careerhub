@@ -538,7 +538,7 @@ min-height: 43px;
     transition-property: opacity, transform;
 }
 .content__slate p {
-    text-align: bottom;
+    align-items: bottom;
 }
 .content__slate:hover {
     opacity: .7!important;
