@@ -65,14 +65,12 @@ $result = mysqli_query($conn, $sql);
                     <?php
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $id             = $row['job_id'];
-                            $idno = $row['idno'];
-                            $job_title = $row['job_title'];
-                            $company = $row['company'];
-                            $location = $row['location'];
-                            $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
-                            $created_at->setTimezone(new DateTimeZone('America/Denver'));
-                            $formatted_date = $created_at->format('M d, Y');
+                            $id             = $row['project_id'];
+                            $idno           = $row['idno'];
+                            $project_name   = $row['project_name'];
+                            // $created_at = new DateTime($row['created_at'], new DateTimeZone('UTC'));
+                            // $created_at->setTimezone(new DateTimeZone('America/Denver'));
+                            // $formatted_date = $created_at->format('M d, Y');
 
 
                     ?>
