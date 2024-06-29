@@ -480,6 +480,10 @@ min-height: 43px;
         transition-delay: 0s, 0s;
         transition-property: opacity, transform;
         }
+        img {
+            vertical-align: middle;
+            border-style: none;
+            }
 .gJKjnw img {
     position: absolute;
     object-fit: cover;
