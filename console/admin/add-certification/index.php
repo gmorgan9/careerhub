@@ -47,26 +47,20 @@ foreach ($files as $file) {
         
         <div class="form">
             <form action="" method="POST">
-                <div class="controls two-columns">
-                    <div class="left-column">
-                        <div class="form-group">
-                            <input id="cert_name" type="text" name="cert_name" class="form-input" placeholder="Certification Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input id="cert_issued" type="date" name="cert_issued" class="form-input" style="padding-bottom: 0 !important;">
-                        </div>
-                        <div class="form-group">
-                            <input id="cert_expire" type="date" name="cert_expire" class="form-input" style="padding-bottom: 0 !important;">
-                        </div>
-                        <div class="form-group">
-                            <input id="cred_id" type="text" name="cred_id" class="form-input" placeholder="Credential ID" required>
-                        </div>
-                    </div>
-                    <div class="right-column">
-                        <div class="form-group">
-                            <input id="cert_provider" type="text" name="cert_provider" class="form-input" placeholder="Certificate Provider" required>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <input id="cert_name" type="text" name="cert_name" class="form-input" placeholder="Certification Name" required>
+                </div>
+                <div class="form-group">
+                    <input id="cert_issued" type="date" name="cert_issued" class="form-input" style="padding-bottom: 0 !important;">
+                </div>
+                <div class="form-group">
+                    <input id="cert_expire" type="date" name="cert_expire" class="form-input" style="padding-bottom: 0 !important;">
+                </div>
+                <div class="form-group">
+                    <input id="cred_id" type="text" name="cred_id" class="form-input" placeholder="Credential ID" required>
+                </div>
+                <div class="form-group">
+                    <input id="cert_provider" type="text" name="cert_provider" class="form-input" placeholder="Certificate Provider" required>
                 </div>
                 <input type="submit" name="add-certification" class="form-btn mt-5" value="Add Certification">
             </form>
