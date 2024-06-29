@@ -1,4 +1,4 @@
-<footer class="site-footer w-100" style="height: 100vh;">
+<footer class="site-footer w-100">
     <div class="footer-socials">
         <ul class="footer-social-links">
             <li><a href="#" target="_blank">Twitter</a></li>

@@ -43,7 +43,7 @@ foreach ($files as $file) {
                 Add Project
             </h2>
         </div>
-    <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
+    <div class="container-fluid" style="max-width: 1320px; margin: 0 auto; height: 100vh;">
         
         <div class="form">
             <form action="" method="POST">
