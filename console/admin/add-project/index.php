@@ -67,14 +67,14 @@ foreach ($files as $file) {
                             <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
                         </div>
                         <div class="form-group">
-                            <input id="project_release" type="date" name="project_release" class="form-input" required="required">
+                            <input id="project_release" type="date" name="project_release" class="form-input" required="required" style="padding-bottom: 0 !important;">
                         </div>
                         <div class="form-group">
                             <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
                         </div>
                         <div class="form-group">
                             <select class="form-input" name="project_category">
-                                <option value="" style="color: black !important;">Please select one...</option>
+                                <option value="">Please select one...</option>
                                 <option value="Web Development">Web Development</option>
                                 <option value="Scripting & Automation">Scripting & Automation</option>
                                 <option value="Software Development">Software Development</option>
