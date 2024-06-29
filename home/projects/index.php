@@ -174,14 +174,14 @@ if (mysqli_num_rows($odd_result) > 0) {
 ?>
                 
                 <div>
-                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $e_project_id; ?>">
-                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $e_project_short_name; ?>.png">
+                    <div style="height:400px" role="gridcell" id="cardHover" tabindex="0" class="project-cell" data-bs-toggle="offcanvas" data-bs-target="#<?php echo $o_project_id; ?>">
+                        <img id="cardHover" loading="lazy" width="500" height="500" decoding="async" data-nimg="1" class="" style="color:transparent" src="../../assets/images/project-images/<?php echo $o_project_short_name; ?>.png">
                         <div class="content__slate">
-                            <h3><?php echo $e_project_name; ?></h3>
-                            <p class="text-truncate" style="width: 350px;"><?php echo $e_project_description; ?></p>
+                            <h3><?php echo $o_project_name; ?></h3>
+                            <p class="text-truncate" style="width: 350px;"><?php echo $o_project_description; ?></p>
                             <ul class="tags">
-                                <?php foreach ($e_technologies as $e_tech): ?>
-                                    <li><a href=""><?php echo htmlspecialchars($e_tech); ?></a></li>
+                                <?php foreach ($o_technologies as $o_tech): ?>
+                                    <li><a href=""><?php echo htmlspecialchars($o_tech); ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
