@@ -50,20 +50,24 @@ foreach ($files as $file) {
                 <div class="controls two-columns">
                     <div class="left-column">
                         <div class="form-group">
-                        <label class="form-label text-white" for="cert_name">Certification Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <label class="form-label text-white" for="cert_name">Certification Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
                             <input id="cert_name" type="text" name="cert_name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label text-white" for="cert_short_name">Certification Short Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="cert_short_name" type="text" name="cert_short_name" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label text-white" for="cert_issued">Certification Issue Date <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                             <input id="cert_issued" type="date" name="cert_issued" class="form-input" style="padding-bottom: 0 !important;">
                         </div>
+                        <input type="submit" name="add-certification" class="form-btn mt-2" value="Add Certification">
+                    </div>
+                    <div class="right-column">
                         <div class="form-group">
                             <label class="form-label text-white" for="cert_expire">Certification Expiry Date <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                             <input id="cert_expire" type="date" name="cert_expire" class="form-input" style="padding-bottom: 0 !important;">
                         </div>
-                        <input type="submit" name="add-certification" class="form-btn mt-2" value="Add Certification">
-                    </div>
-                    <div class="right-column">
                         <div class="form-group">
                             <label class="form-label text-white" for="cred_id">Credential ID <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                             <input id="cred_id" type="text" name="cred_id" class="form-input">
