@@ -3,8 +3,8 @@
 // All - (count) all projects
     $count_all_sql = "SELECT COUNT(*) AS count FROM projects;";
     $count_all_result = mysqli_query($conn, $count_all_sql);
-    $cout_all_row = mysqli_fetch_assoc($count_all_result);
-    $count_all = $cout_all_row['count'];
+    $count_all_row = mysqli_fetch_assoc($count_all_result);
+    $count_all = $count_all_row['count'];
 // end All - (count) all projects
 
 // All - even projects
@@ -36,8 +36,8 @@
 // Web Development - (count) web development projects
     $count_wd_sql = "SELECT COUNT(*) AS count FROM projects WHERE project_category = 'Web Development';";
     $count_wd_result = mysqli_query($conn, $count_wd_sql);
-    $cout_wd_row = mysqli_fetch_assoc($count_wd_result);
-    $count_wd = $cout_wd_row['count'];
+    $count_wd_row = mysqli_fetch_assoc($count_wd_result);
+    $count_wd = $count_wd_row['count'];
 // end Web Development - (count) web development projects
 
 // Web Development - even projects
@@ -69,8 +69,8 @@
 // Scripting & Automation - (count) scripting & automation projects
     $count_sa_sql = "SELECT COUNT(*) AS count FROM projects WHERE project_category = 'Scripting & Automation';";
     $count_sa_result = mysqli_query($conn, $count_sa_sql);
-    $cout_sa_row = mysqli_fetch_assoc($count_sa_result);
-    $count_sa = $cout_sa_row['count'];
+    $count_sa_row = mysqli_fetch_assoc($count_sa_result);
+    $count_sa = $count_sa_row['count'];
 // end Scripting & Automation - (count) scripting & automation projects
 
 // Scripting & Automation - even projects
@@ -102,8 +102,8 @@
 // Software Development - (count) software development projects
     $count_sd_sql = "SELECT COUNT(*) AS count FROM projects WHERE project_category = 'Software Development';";
     $count_sd_result = mysqli_query($conn, $count_sd_sql);
-    $cout_sd_row = mysqli_fetch_assoc($count_sd_result);
-    $count_sd = $cout_sd_row['count'];
+    $count_sd_row = mysqli_fetch_assoc($count_sd_result);
+    $count_sd = $count_sd_row['count'];
 // end Software Development - (count) software development projects
 
 // Software Development - even projects
@@ -135,8 +135,8 @@
 // Open Source - (count) open source projects
     $count_os_sql = "SELECT COUNT(*) AS count FROM projects WHERE project_category = 'Open Source';";
     $count_os_result = mysqli_query($conn, $count_os_sql);
-    $cout_os_row = mysqli_fetch_assoc($count_os_result);
-    $count_os = $cout_os_row['count'];
+    $count_os_row = mysqli_fetch_assoc($count_os_result);
+    $count_os = $count_os_row['count'];
 // end Open Source - (count) open source projects
 
 // Open Source - even projects

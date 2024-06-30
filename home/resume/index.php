@@ -12,6 +12,14 @@ foreach ($files as $file) {
     require_once $file;
 }
 
+$cert_sql = "SELECT * FROM certifications;";
+$cert_result = mysqli_query($conn, $cert_sql);
+
+$count_cert_sql = "SELECT COUNT(*) AS count FROM certifications;";
+$count_cert_result = mysqli_query($conn, $count_cert_sql);
+$count_cert_row = mysqli_fetch_assoc($count_cert_result);
+$count_cert = $count_cert_row['count'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -196,6 +204,30 @@ foreach ($files as $file) {
                     <h2>Certifications</h2>
                 </div>
                 <div class="row">
+
+                    <?php if($count_cert == 0) { ?>
+                        <div class="alert project-alert" role="alert">
+                            No current certifications.
+                        </div>
+                    <?php } ?>
+
+
+                    <?php
+                        if (mysqli_num_rows($cert_result) > 0) {
+                            while ($row = mysqli_fetch_assoc($cert_result)) {
+                                // Process and display each odd row
+                                $cert_id            = $row['cert_id'];
+                                $cert_idno          = $row['idno'];  
+                                $cert_name          = $row['cert_name']; 
+                                $cert_short_name    = $row['cert_short_name']; 
+                                $cert_issued        = $row['cert_issued'];
+                                $cert_expire        = $row['cert_expire'];
+                                $cert_renewed       = $row['cert_renewed'];
+                                $cred_id            = $row['cred_id'];
+                                $cert_provider      = $row['cert_provider'];
+                                $cert_recipient     = $row['cert_recipient'];
+                    ?>
+
                     <div class=" col-xs-12 col-sm-6 "> <!-- Network+ -->
                         <div class="certificate-item clearfix">
                             <div class="cert-logo">
@@ -204,28 +236,42 @@ foreach ($files as $file) {
                             <div class="cert-content">
                                 <div class="cert-title">
                                     <h4>
-                                        Network+ N10-008
+                                        <!-- Network+ N10-008 -->
+                                        <?php echo $cert_name; ?>
                                     </h4>
                                 </div>
                                 <div class="cert-id">
                                     <span>
-                                        Membership ID: ----
+                                        <?php if (is_null($cred_id)) { ?>
+                                        Credential ID: ----
+                                        <?php } else { ?>
+                                            Credential ID: <?php echo $cred_id; ?>
+                                        <?php } ?>
                                     </span>
                                 </div>
                                 <div class="cert-date">
                                     <span>
+                                        <?php if(is_null($cert_issued)) { ?>
                                         In-progress
+                                        <?php } else { ?>
+                                            Issued: <?php echo $cert_issued; ?>
+                                        <?php } ?>
                                     </span>
                                 </div>
                                 <div class="cert-company">
                                     <span>
-                                        CompTIA
+                                        <?php echo $cert_provider; ?>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class=" col-xs-12 col-sm-6 "> <!-- Security+ -->
+
+                    <?php } } ?>
+
+
+
+                    <!-- <div class=" col-xs-12 col-sm-6 "> 
                         <div class="certificate-item clearfix">
                             <div class="cert-logo">
                                 <img decoding="async" src="../../assets/images/cert-logos/securityplus-logo.png" alt="logo">
@@ -253,7 +299,8 @@ foreach ($files as $file) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
         </div>

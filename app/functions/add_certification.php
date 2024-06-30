@@ -9,9 +9,6 @@ if (isset($_POST['add-certification'])) {
     if(isset($_POST['cert_renewed'])) { $cert_renewed = mysqli_real_escape_string($conn, $_POST['cert_renewed']); } else { $cert_renewed = ""; }
     if(isset($_POST['cred_id'])) { $cred_id = mysqli_real_escape_string($conn, $_POST['cred_id']); } else { $cred_id = ""; }
     if(isset($_POST['cert_provider'])) { $cert_provider = mysqli_real_escape_string($conn, $_POST['cert_provider']); } else { $cert_provider = ""; }
-    // if(isset($_POST['cert_recipient'])) { $cert_recipient = mysqli_real_escape_string($conn, $_POST['cert_recipient']); } else { $cert_recipient = ""; }
-    // if(isset($_POST['cert_tags'])) { $cert_tags = mysqli_real_escape_string($conn, $_POST['cert_tags']); } else { $cert_tags = ""; }
-    // if(isset($_POST['notes'])) { $notes = mysqli_real_escape_string($conn, $_POST['notes']); } else { $notes = ""; }
 
     $select = "SELECT * FROM certifications WHERE idno = '$idno'";
     $result = mysqli_query($conn, $select);
