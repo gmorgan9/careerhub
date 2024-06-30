@@ -90,7 +90,7 @@ foreach ($files as $file) {
                     <div class="lm-info-block">
                         <i class="bi bi-cup-straw"></i>
                         <h4>Dr Peppers Consumed</h4>
-                        <span class="lm-info-block-value">256</span>
+                        <span class="lm-info-block-value">250+</span>
                     </div>
                 </div>
             </div>
