@@ -3,6 +3,7 @@
 if (isset($_POST['add-certification'])) {
     $idno = rand(1000000, 9999999);
     if(isset($_POST['cert_name'])) { $cert_name = mysqli_real_escape_string($conn, $_POST['cert_name']); } else { $cert_name = ""; }
+	if(isset($_POST['cert_short_name'])) { $cert_short_name = mysqli_real_escape_string($conn, $_POST['cert_short_name']); } else { $cert_short_name = ""; }
     if(isset($_POST['cert_issued'])) { $cert_issued = mysqli_real_escape_string($conn, $_POST['cert_issued']); } else { $cert_issued = ""; }
     if(isset($_POST['cert_expire'])) { $cert_expire = mysqli_real_escape_string($conn, $_POST['cert_expire']); } else { $cert_expire = ""; }
     if(isset($_POST['cert_renewed'])) { $cert_renewed = mysqli_real_escape_string($conn, $_POST['cert_renewed']); } else { $cert_renewed = ""; }
@@ -18,7 +19,7 @@ if (isset($_POST['add-certification'])) {
     if (mysqli_num_rows($result) > 0) {
         $error[] = 'The certification already exists!';
     } else {
-        $insert = "INSERT INTO certifications (idno, cert_name, cert_issued, cert_expire, cert_renewed, cred_id, cert_provider) VALUES ('$idno', NULLIF('$cert_name',''), NULLIF('$cert_issued',''), NULLIF('$cert_expire',''), NULLIF('$cert_renewed',''), NULLIF('$cred_id',''), NULLIF('$cert_provider',''))";
+        $insert = "INSERT INTO certifications (idno, cert_name, cert_short_name, cert_issued, cert_expire, cert_renewed, cred_id, cert_provider) VALUES ('$idno', NULLIF('$cert_name',''), NULLIF('$cert_short_name',''), NULLIF('$cert_issued',''), NULLIF('$cert_expire',''), NULLIF('$cert_renewed',''), NULLIF('$cred_id',''), NULLIF('$cert_provider',''))";
         mysqli_query($conn, $insert);
         header('location:' . BASE_URL . '/home/resume');
     }
