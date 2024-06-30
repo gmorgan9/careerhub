@@ -43,7 +43,7 @@ foreach ($files as $file) {
                 Add Certification
             </h2>Project Short Nam
         </div>
-    <div class="container-fluid" style="max-width: 1320px; margin: 0 auto; height: calc(100vh - 505px);">
+    <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
         
         <div class="form">
             <form action="" method="POST">
