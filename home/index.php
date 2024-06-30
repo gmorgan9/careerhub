@@ -81,7 +81,7 @@ foreach ($files as $file) {
                 </div>
                 <div class="col-xs-12 col-sm-3">
                     <div class="lm-info-block">
-                        <i class="bi bi-award"></i>
+                        <i class="bi bi-watch"></i>
                         <h4>Working Hours</h4>
                         <span class="lm-info-block-value">10,000+</span>
                     </div>
