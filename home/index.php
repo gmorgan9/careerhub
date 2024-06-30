@@ -67,23 +67,23 @@ foreach ($files as $file) {
             <div class="row">
                 <div class="col-xs-12 col-sm-3">
                     <div class="lm-info-block">
-                        <i class="bi bi-heart"></i>
-                        <h4>Happy Clients</h4>
-                        <span class="lm-info-block-value">578</span>
+                        <i class="bi bi-box"></i>
+                        <h4>HTB Machines Owned</h4>
+                        <span class="lm-info-block-value">10</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3">
                     <div class="lm-info-block">
-                        <i class="bi bi-watch"></i>
-                        <h4>Working Hours</h4>
-                        <span class="lm-info-block-value">4,780</span>
+                        <i class="bi bi-motherboard"></i>
+                        <h4>Technologies Explored</h4>
+                        <span class="lm-info-block-value">49</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3">
                     <div class="lm-info-block">
                         <i class="bi bi-award"></i>
-                        <h4>Awards Won</h4>
-                        <span class="lm-info-block-value">15</span>
+                        <h4>Working Hours</h4>
+                        <span class="lm-info-block-value">10,000+</span>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3">
