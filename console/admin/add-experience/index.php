@@ -53,7 +53,7 @@ foreach ($files as $file) {
                 </div>
                 <div class="form-group">
                     <label class="form-label text-white" for="ce_job_title">Experience Job Title <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                    <input id="cert_expire" type="text" name="cert_expire" class="form-input" required>
+                    <input id="ce_job_title" type="text" name="ce_job_title" class="form-input" required>
                 </div>
                 <div class="controls two-columns">
                     <div class="left-column">
@@ -68,19 +68,19 @@ foreach ($files as $file) {
                             <input id="ce_end" type="text" name="ce_end" class="form-input">
                         </div> 
                     </div>
-                        <div class="form-check">
+                        <div class="form-check text-white">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
                           <label class="form-check-label" for="ce_status1">
                             Active 1
                           </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check text-white">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
                           <label class="form-check-label" for="ce_status2">
                             Active 2
                           </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check text-white">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
                           <label class="form-check-label" for="ce_status3">
                             Active 3
