@@ -43,4 +43,13 @@
     $count_active3 = $count_active3_row['count'];
 // end Career Experience - Count active-3 Career Experience
 
+// DELETE
+    if(isset($_GET['deleteid'])) {
+        $id = $_GET['deleteid'];
+
+        $sql = "DELETE FROM career_experience WHERE ce_id=$id";
+        $result = mysqli_query($conn, $sql);
+    }
+// END DELETE
+
 ?>
