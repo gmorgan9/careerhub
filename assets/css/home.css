@@ -15,6 +15,9 @@
     text-decoration: none;
     color: white;
 }
+.all-btn:hover {
+    color: white !important;
+}
 
 .nav-link:hover {
     color: white !important;
