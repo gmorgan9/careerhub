@@ -456,9 +456,11 @@
 // Certification - Update Certification (renewal date)
     if (isset($_POST['cert-renewal'])) {
         $cert_id = isset($_POST['cert_id']) ? mysqli_real_escape_string($conn, $_POST['cert_id']) : "";
+        $cert_expire = isset($_POST['cert_expire']) ? mysqli_real_escape_string($conn, $_POST['cert_expire']) : "";
         $cert_renewed = isset($_POST['cert_renewed']) ? mysqli_real_escape_string($conn, $_POST['cert_renewed']) : "";
 
         $update = "UPDATE certifications SET 
+                    cert_expire = NULLIF('$cert_expire', ''),
                     cert_renewed = NULLIF('$cert_renewed', '')
                    WHERE cert_id = '$cert_id';";
 
