@@ -69,6 +69,7 @@ foreach ($files as $file) {
                 <div class="controls two-columns">
                     <div class="left-column">
                         <div class="form-group">
+                            <label class="form-label text-white" for="ce_company">Company Name</label>
                             <input id="project_name" type="text" name="project_name" class="form-input" value="<?php echo $project_name; ?>">
                         </div>
                         <div class="form-group">
