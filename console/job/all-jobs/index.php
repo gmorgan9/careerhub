@@ -118,7 +118,7 @@ $result = mysqli_query($conn, $sql);
                                                 <i class="bi bi-people"></i>
                                             <?php } ?>
                                         </div>
-                                        <h3 class="mt-5"><?php echo $job_title; ?></h3>
+                                        <h3 class="mt-2"><?php echo $job_title; ?></h3>
                                         
                                         <h4>Company Name</h4>
                                         <p><?php echo $company ?? '--'; ?></p>
