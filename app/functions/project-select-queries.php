@@ -1,5 +1,10 @@
 <?php
 
+// All - SELECT all projects
+    $all_sql = "SELECT * FROM projects;";
+    $all_result = mysqli_query($conn, $all_sql);
+// end All - SELECT all projects
+
 // All - (count) all projects
     $count_all_sql = "SELECT COUNT(*) AS count FROM projects;";
     $count_all_result = mysqli_query($conn, $count_all_sql);
