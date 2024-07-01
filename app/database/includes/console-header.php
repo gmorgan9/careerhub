@@ -26,7 +26,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                     <a class="dropdown-item" href="/console/admin/search-jobs">Search Jobs</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/console/admin/experience">Experience</a>
-                    <a class="dropdown-item" href="/console/admin/add-project">Add Project</a>
+                    <a class="dropdown-item" href="/console/admin/project">Projects</a>
                     <a class="dropdown-item" href="/console/admin/add-certification">Add Certification</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="index.php?logout=1">Settings</a>
