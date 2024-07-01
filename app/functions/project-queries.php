@@ -182,7 +182,6 @@
         $project_release = isset($_POST['project_release']) ? mysqli_real_escape_string($conn, $_POST['project_release']) : "";
         $project_tech = isset($_POST['project_tech']) ? mysqli_real_escape_string($conn, $_POST['project_tech']) : "";
         $project_category = isset($_POST['project_category']) ? mysqli_real_escape_string($conn, $_POST['project_category']) : "";
-        $project_content = isset($_POST['project_content']) ? mysqli_real_escape_string($conn, $_POST['project_content']) : "";
 
         // Update the project
         $update = "UPDATE projects SET 
@@ -194,8 +193,7 @@
                     project_url = NULLIF('$project_url', ''), 
                     project_release = NULLIF('$project_release', ''), 
                     project_tech = NULLIF('$project_tech', ''), 
-                    project_category = NULLIF('$project_category', ''), 
-                    project_content = NULLIF('$project_content', '')
+                    project_category = NULLIF('$project_category', '')
                    WHERE project_id = '$project_id';";
 
         $result = mysqli_query($conn, $update);
