@@ -69,25 +69,6 @@ foreach ($files as $file) {
                         </div> 
                     </div>
                 </div>
-                    <!-- <legend class="text-white" for="form-checks" style="font-size: 16px !important;">Active Career Experience <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></legend>
-                    <div class="form-check form-check-inline text-white">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
-                      <label class="form-check-label" for="ce_status1">
-                        Active 1
-                      </label>
-                    </div>
-                    <div class="form-check form-check-inline text-white">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
-                      <label class="form-check-label" for="ce_status2">
-                        Active 2
-                      </label>
-                    </div>
-                    <div class="form-check form-check-inline text-white mb-3">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
-                      <label class="form-check-label" for="ce_status3">
-                        Active 3
-                      </label>
-                    </div> -->
                 <label class="form-label text-white" for="ce_job_duties">Experience Job Duties <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
                 <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" rows="4" required></textarea>
                 <label class="form-label text-white" for="ce_notes">Experience Notes <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>

@@ -96,11 +96,11 @@ $result = mysqli_query($conn, $sql);
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/admin/experience/update-experience/?ce_id=<?php echo $ce_id; ?>" style="text-decoration: none;">
+                                <a href="/console/admin/experience/update-experience/?updateid=<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="open-app.php?deleteid=<?php echo $ce_id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="/console/admin/experience/?deleteid=<?php echo $ce_id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>
