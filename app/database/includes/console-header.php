@@ -18,7 +18,8 @@ $current_page = basename($_SERVER['REQUEST_URI']);
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Admin
+                    <!-- Admin -->
+                    <i class="bi bi-grid-fill"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
                     <span class="dropdown-item-text"><strong>Job Central</strong></span>
@@ -38,7 +39,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                     <a class="dropdown-item" href="/console/certification"><span>View</span></a>
                     <a class="dropdown-item" href="/console/certification/add-certification"><span>Add</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.php?logout=1">Settings</a>
+                    <a class="dropdown-item" href="/console/admin/settings">Settings</a>
                 </div>
             </li>
         </ul>
