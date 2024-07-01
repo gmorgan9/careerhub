@@ -118,7 +118,22 @@ $result = mysqli_query($conn, $sql);
                                                 <i class="bi bi-people"></i>
                                             <?php } ?>
                                         </div>
-                                        <h3 class="mt-2"><?php echo $job_title; ?></h3>
+                                        <br>
+                                            <hr>
+                                            <div class="ms-3 me-3">
+                                                <p class="float-start fw-bold">Status</p> 
+                                                <?php if ($status == 'Applied') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
+                                                <?php } else if ($status == 'Interviewed') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span></p>
+                                                <?php } else if ($status == 'Offered') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $status; ?></span></p>
+                                                <?php } else if ($status == 'Rejected') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span></p>
+                                                <?php } ?>
+                                            </div>
+
+                                        <h3 class="mt-3"><?php echo $job_title; ?></h3>
                                         
                                         <h4>Company Name</h4>
                                         <p><?php echo $company ?? '--'; ?></p>
