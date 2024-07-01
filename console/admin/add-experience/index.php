@@ -90,10 +90,8 @@ foreach ($files as $file) {
                     </div> -->
                 <label class="form-label text-white" for="ce_job_duties">Experience Job Duties <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
                 <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" rows="4" required></textarea>
-                <div class="form-group">
-                    <label class="form-label text-white" for="ce_notes">Experience Notes <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
-                    <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" rows="2"></textarea>
-                </div>
+                <label class="form-label text-white" for="ce_notes">Experience Notes <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
+                <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" rows="2"></textarea>
                 <input type="submit" name="add-experience" class="form-btn mt-2" value="Add Experience">
             </form>
         </div> 
