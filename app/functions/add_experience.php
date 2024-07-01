@@ -20,7 +20,7 @@ if (isset($_POST['add-experience'])) {
     } else {
         $insert = "INSERT INTO career_experience (idno, ce_company, ce_start, ce_end, ce_job_title, ce_job_duties, ce_status, ce_notes) VALUES ('$idno', NULLIF('$ce_company',''), NULLIF('$ce_start',''), NULLIF('$ce_end',''), NULLIF('$ce_job_title',''), NULLIF('$ce_job_duties',''), NULLIF('$ce_status',''), NULLIF('$ce_notes',''))";
         mysqli_query($conn, $insert);
-        header('location:' . BASE_URL . '/console/admin/experience');
+        header('location:' . BASE_URL . '/console/experience');
     }
 }
 

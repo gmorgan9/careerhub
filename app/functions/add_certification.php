@@ -18,7 +18,7 @@ if (isset($_POST['add-certification'])) {
     } else {
         $insert = "INSERT INTO certifications (idno, cert_name, cert_short_name, cert_issued, cert_expire, cert_renewed, cred_id, cert_provider) VALUES ('$idno', NULLIF('$cert_name',''), NULLIF('$cert_short_name',''), NULLIF('$cert_issued',''), NULLIF('$cert_expire',''), NULLIF('$cert_renewed',''), NULLIF('$cred_id',''), NULLIF('$cert_provider',''))";
         mysqli_query($conn, $insert);
-        header('location:' . BASE_URL . '/home/resume');
+        header('location:' . BASE_URL . '/console/certification');
     }
 }
 

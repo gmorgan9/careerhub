@@ -25,7 +25,7 @@ if (isset($_POST['update-experience'])) {
     if (!$result) {
         die('Error updating record: ' . mysqli_error($conn));
     }
-    header('location:' . BASE_URL . '/console/admin/experience');
+    header('location:' . BASE_URL . '/console/experience');
 }
 
 ?>

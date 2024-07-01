@@ -23,7 +23,7 @@
 		} else {
 			$insert = "INSERT INTO projects (idno, project_name, project_short_name, project_description, project_github_link, project_github_user, project_url, project_release, project_tech, project_category) VALUES ('$idno', NULLIF('$project_name',''), NULLIF('$project_short_name',''), NULLIF('$project_description',''), NULLIF('$project_github_link',''), NULLIF('$project_github_user',''), NULLIF('$project_url',''), NULLIF('$project_release',''), NULLIF('$project_tech',''), NULLIF('$project_category',''))";
 			mysqli_query($conn, $insert);
-			header('location:' . BASE_URL . '/home/projects');
+			header('location:' . BASE_URL . '/console/project');
 		}
 	}
 // END ADD FULL APPLICATION

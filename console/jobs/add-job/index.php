@@ -1,8 +1,8 @@
 <?php
 date_default_timezone_set('America/Denver');
-require_once "../../../app/database/connection.php";
+require_once "../../app/database/connection.php";
 // require_once "app/functions/add_app.php";
-require_once "../../../path.php";
+require_once "../../path.php";
 session_start();
 
 $files = glob("../../app/functions/*.php");
@@ -18,7 +18,7 @@ foreach ($files as $file) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../assets/css/home.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- Bootstrap Icons -->
@@ -40,7 +40,7 @@ foreach ($files as $file) {
         </h2>
     </div>  
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="height: calc(100vh - 502px);">
             
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
             
@@ -129,6 +129,8 @@ foreach ($files as $file) {
     </div>
 
     <div class="mt-5"></div>
+
+    <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
 
     <script>
         tinymce.init({
