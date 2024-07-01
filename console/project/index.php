@@ -112,7 +112,7 @@ $result = mysqli_query($conn, $sql);
                                        <h4>Technologies</h4>
                                        <ul class="tags">
                                            <?php foreach ($technologies as $tech): ?>
-                                               <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                               <li><?php echo htmlspecialchars($tech); ?></li>
                                            <?php endforeach; ?>
                                        </ul>
                                        <h4>
