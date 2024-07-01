@@ -30,7 +30,7 @@ foreach ($files as $file) {
     <link rel="stylesheet" href="../../assets/css/home.css?v=<?php echo time(); ?>">
 
 
-    <title>Admin - MorganServer Career Hub</title>
+    <title>Admin Settings - MorganServer Career Hub</title>
 
     
 </head>
@@ -39,7 +39,7 @@ foreach ($files as $file) {
     <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
 
 
-    <div class="container w-100">
+    <div class="container-fluid" style="height: calc(100vh - 502px);">
 
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
 
@@ -49,7 +49,7 @@ foreach ($files as $file) {
                    
 
 
-
+    <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
