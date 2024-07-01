@@ -110,27 +110,17 @@ $result = mysqli_query($conn, $sql);
                                     <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
                                     <hr>
                                     <div class="main-project-details">
-                                        <div class="small-details">
-                                            <?php if ($watchlist == 1) { ?>
-                                                <i class="bi bi-eye text-white"></i>
-                                            <?php } ?>
-                                            <?php if ($interview_set == 1) { ?>
-                                                <i class="bi bi-people"></i>
+                                        <div class="ms-3 me-3">
+                                            <?php if ($status == 'Applied') { ?>
+                                                <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
+                                            <?php } else if ($status == 'Interviewed') { ?>
+                                                <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span></p>
+                                            <?php } else if ($status == 'Offered') { ?>
+                                                <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $status; ?></span></p>
+                                            <?php } else if ($status == 'Rejected') { ?>
+                                                <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span></p>
                                             <?php } ?>
                                         </div>
-                                        <br>
-                                            <hr>
-                                            <div class="ms-3 me-3">
-                                                <?php if ($status == 'Applied') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
-                                                <?php } else if ($status == 'Interviewed') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $status; ?></span></p>
-                                                <?php } else if ($status == 'Offered') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $status; ?></span></p>
-                                                <?php } else if ($status == 'Rejected') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $status; ?></span></p>
-                                                <?php } ?>
-                                            </div>
 
                                         <h3 class="mt-3"><?php echo $job_title; ?></h3>
                                         
