@@ -88,19 +88,19 @@ foreach ($files as $file) {
                 </div>
                 <legend class="text-white" for="form-checks" style="font-size: 16px !important;">Active Career Experience <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Only 3 active experiences can be shown at a time</span></legend>
                 <div class="form-check form-check-inline text-white">
-                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1" <?php if ($ce_status == 'active-1') { ?> checked <?php } else {} ?> <?php echo ($count_active1 == 1 && $ce_id != $id) ? 'disabled' : ''; ?>>
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1" <?php if ($ce_status == 'active-1') { ?> checked <?php } else {} ?> <?php if ($count_active1 == 1 && $ce_id != $id) ? 'disabled' : ''; ?>>
                   <label class="form-check-label" for="ce_status1">
                     Active 1
                   </label>
                 </div>
                 <div class="form-check form-check-inline text-white">
-                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <?php } else {} ?> <?php echo ($count_active2 == 1 && $ce_id != $id) ? 'disabled' : ''; ?>>
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <?php } else {} ?> <?php if ($count_active2 == 1 && $ce_id != $id) ? 'disabled' : ''; ?>>
                   <label class="form-check-label" for="ce_status2">
                     Active 2
                   </label>
                 </div>
                 <div class="form-check form-check-inline text-white mb-3">
-                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3" <?php if ($ce_status == 'active-3') {?> checked <?php } else {} ?> <?php echo ($count_active3 == 1 && $ce_id != $id) ? 'disabled' : ''; ?>>
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3" <?php if ($ce_status == 'active-3') {?> checked <?php } else {} ?> <?php if ($count_active3 == 1 && $ce_id != $id) ? 'disabled' : ''; ?>>
                   <label class="form-check-label" for="ce_status3">
                     Active 3
                   </label>
