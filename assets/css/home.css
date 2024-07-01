@@ -328,6 +328,10 @@
     display: none;
 }
 
+.dropdown-menu a {
+    padding-left: 10px;
+}
+
 .lm-info-block {
     background-color: #333;
     border-color: #444;
