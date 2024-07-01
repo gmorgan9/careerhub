@@ -47,7 +47,7 @@ foreach ($files as $file) {
         
         <?php
             $id = $_GET['certupdid'];
-            $sql = "SELECT * FROM certification WHERE cert_id=$id";
+            $sql = "SELECT * FROM certifications WHERE cert_id=$id";
             $result = mysqli_query($conn, $sql);
             if($result) {
                 $num_rows = mysqli_num_rows($result);
