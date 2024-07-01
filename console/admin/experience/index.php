@@ -39,7 +39,7 @@ $result = mysqli_query($conn, $sql);
 
     <div class="page_title">   
         <h2 class="text-white title">Career Experience</h2> 
-        <div class="me-auto">
+        <div class="float-end">
             <a href="<?php echo BASE_URL; ?>/console/admin/expereince/add-experience">Add Experience</a>
         </div>
     </div>
