@@ -18,8 +18,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <!-- Admin -->
-                    <i class="bi bi-grid-fill" style="font-size: 20px;"></i>
+                    Operations
                 </a>
                 <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
                     <span class="dropdown-item-text"><strong>Job Central</strong></span>
