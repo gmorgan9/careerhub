@@ -22,4 +22,25 @@
     $ce_all_result = mysqli_query($conn, $ce_all_sql);
 // end Career Experience - SELECT all experience
 
+// Career Experience - Count active-1 Career Experience
+    $count_active1_sql = "SELECT COUNT(*) AS count FROM career_experience WHERE ce_status = 'active-1';";
+    $count_active1_result = mysqli_query($conn, $count_active1_sql);
+    $count_active1_row = mysqli_fetch_assoc($count_active1_result);
+    $count_active1 = $count_active1_row['count'];
+// end Career Experience - Count active-1 Career Experience
+
+// Career Experience - Count active-2 Career Experience
+    $count_active2_sql = "SELECT COUNT(*) AS count FROM career_experience WHERE ce_status = 'active-2';";
+    $count_active2_result = mysqli_query($conn, $count_active2_sql);
+    $count_active2_row = mysqli_fetch_assoc($count_active2_result);
+    $count_active2 = $count_active2_row['count'];
+// end Career Experience - Count active-2 Career Experience
+
+// Career Experience - Count active-3 Career Experience
+    $count_active3_sql = "SELECT COUNT(*) AS count FROM career_experience WHERE ce_status = 'active-3';";
+    $count_active3_result = mysqli_query($conn, $count_active3_sql);
+    $count_active3_row = mysqli_fetch_assoc($count_active3_result);
+    $count_active3 = $count_active3_row['count'];
+// end Career Experience - Count active-3 Career Experience
+
 ?>
