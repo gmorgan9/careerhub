@@ -215,9 +215,6 @@ $result = mysqli_query($conn, $sql);
                                                 <input type="submit" name="cert-renewal" class="all-btn mt-3" value="Renew Certification">
                                             </form>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
