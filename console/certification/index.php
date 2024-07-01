@@ -205,12 +205,14 @@ $result = mysqli_query($conn, $sql);
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-white">
-                                            Cert to be renewed: <?php echo $cert_name; ?>
+                                            <div class="alert alert-secondary">
+                                                Certification Renewal for: <?php echo $cert_name; ?>
+                                            </div>
                                             <form action="" method="POST">
                                                 <input type="hidden" name="cert_id" value="<?php echo $cert_id; ?>">
-                                                <input type="date" class="form-input" name="cert_renew" id="cert_renew" style="padding-bottom: 0 !important;">
+                                                <input type="date" class="form-input mt-e" name="cert_renew" id="cert_renew" style="padding-bottom: 0 !important;">
 
-                                                <input type="submit" name="cert-renewal" class="all-btn" value="Renew Certification">
+                                                <input type="submit" name="cert-renewal" class="all-btn mt-3" value="Renew Certification">
                                             </form>
                                         </div>
                                         <div class="modal-footer">
