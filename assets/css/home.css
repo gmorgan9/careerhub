@@ -328,7 +328,7 @@
     display: none;
 }
 
-.dropdown-item {
+.dropdown-item span {
     padding-left: 15px !important;
 }
 
