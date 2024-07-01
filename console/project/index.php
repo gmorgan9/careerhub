@@ -105,7 +105,7 @@ $result = mysqli_query($conn, $sql);
                                    <div class="main-project-details">
                                        <h3 class="mt-5"><?php echo $project_name; ?></h3>
                                        <div class="project-image d-flex justify-content-center">
-                                           <img src="<?php echo ROOT_PATH; ?>/assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
+                                           <img src="../../assets/images/project-images/<?php echo $project_short_name; ?>.png" class="mt-3" alt="">
                                        </div>
                                        <h4>About</h4>
                                        <p><?php echo $project_description; ?></p>
