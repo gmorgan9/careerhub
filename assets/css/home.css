@@ -16,6 +16,7 @@
     color: white;
 }
 .all-btn:hover {
+    background-color: var(--primary-color) !important;
     color: white !important;
 }
 
