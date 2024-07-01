@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('America/Denver');
-// require_once "../../../../app/database/connection.php";
-// require_once "../../../../path.php";
+require_once "../../../../app/database/connection.php";
+require_once "../../../../path.php";
 session_start();
 
 error_reporting(E_ALL);
@@ -88,19 +88,19 @@ foreach ($files as $file) {
                 </div>
                     <legend class="text-white" for="form-checks" style="font-size: 16px !important;">Active Career Experience</legend>
                     <div class="form-check form-check-inline text-white">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1" <?php if ($ce_status == 'active-1') {?> checked <? } else {} ?>>
+                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1" <?php if ($ce_status == 'active-1') {?> checked <?php } else {} ?>>
                       <label class="form-check-label" for="ce_status1">
                         Active 1
                       </label>
                     </div>
                     <div class="form-check form-check-inline text-white">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <? } else {} ?>>
+                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <?php } else {} ?>>
                       <label class="form-check-label" for="ce_status2">
                         Active 2
                       </label>
                     </div>
                     <div class="form-check form-check-inline text-white mb-3">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3" <?php if ($ce_status == 'active-3') {?> checked <? } else {} ?>>
+                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3" <?php if ($ce_status == 'active-3') {?> checked <?php } else {} ?>>
                       <label class="form-check-label" for="ce_status3">
                         Active 3
                       </label>
