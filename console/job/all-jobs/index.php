@@ -144,6 +144,15 @@ $result = mysqli_query($conn, $sql);
                                         <p><?php echo $bonus_pay ?? '--'; ?></p>
                                         <h4>Job Type</h4>
                                         <p><?php echo $job_type ?? '--'; ?></p>
+                                        <h4>Other Details</h4>
+                                        <ul class="tags">
+                                            <?php if($watchlist == 1) { ?>
+                                                <li>Watching</li>
+                                            <?php } ?>
+                                            <?php if($interview_set == 1) { ?>
+                                                <li>Interview Set</li>
+                                            <?php } ?>
+                                        </ul>
                                         <h4>Notes</h4>
                                         <p><?php echo $ce_notes ?? 'No listed notes.'; ?></p>
                                        
