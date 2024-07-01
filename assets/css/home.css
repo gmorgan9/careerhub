@@ -809,8 +809,7 @@ a {
     text-decoration: none;
 }
 
-.tags a,
-.tags li a,
+.tags li,
 .tagcloud a {
     background-color: #666;
     border: 1px solid transparent;
