@@ -82,7 +82,7 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $project_release ? $project_release : '-'; ?></td>
                             <td><?php echo $project_category ? $project_category : ''; ?></td>
                             <td style="font-size: 20px;">
-                                <a class="view" data-bs-toggle="offcanvas" data-bs-target="#project-canvas-<?php echo $project_id; ?>" style="text-decoration: none;">
+                                <a class="view pe-auto" data-bs-toggle="offcanvas" data-bs-target="#project-canvas-<?php echo $project_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 

@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $sql);
                                     <i class="bi bi-arrow-repeat text-info"></i>
                                 </a>
                                 &nbsp;
-                                <a class="view" data-bs-toggle="offcanvas" data-bs-target="#cert-canvas-<?php echo $cert_id; ?>" style="text-decoration: none;">
+                                <a class="view pe-auto" data-bs-toggle="offcanvas" data-bs-target="#cert-canvas-<?php echo $cert_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
@@ -97,7 +97,7 @@ $result = mysqli_query($conn, $sql);
                             </td>
                         </tr>
 
-                        <!-- View Project Canvas -->
+                        <!-- View Cert Canvas -->
                             <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="cert-canvas-<?php echo $cert; ?>" aria-labelledby="offcanvasRightLabel">
                                
                                <div class="offcanvas-body">
