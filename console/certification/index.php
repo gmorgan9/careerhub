@@ -207,7 +207,7 @@ $result = mysqli_query($conn, $sql);
                                         <div class="modal-body text-white">
                                             <form action="" method="POST">
                                                 <input type="hidden" name="cert_id" value="<?php echo $cert_id; ?>">
-                                                <input type="date" name="cert_renew" id="cert_renew" style="padding-bottom: 0 !important;">
+                                                <input type="date" class="form-input" name="cert_renew" id="cert_renew" style="padding-bottom: 0 !important;">
 
                                                 <input type="submit" name="cert-renewal" class="all-btn" value="Renew Certification">
                                             </form>
