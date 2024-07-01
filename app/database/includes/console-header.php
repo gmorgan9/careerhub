@@ -23,17 +23,17 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                 <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
                     <span class="dropdown-item-text"><strong>Job Central</strong></span>
                     <a class="dropdown-item" href="/console/admin/add-job"><span>Add Job</span></a>
-                    <a class="dropdown-item disabled" href="/console/admin/update-job">Update Job</a>
-                    <a class="dropdown-item" href="/console/admin/search-jobs">Search Jobs</a>
+                    <a class="dropdown-item disabled" href="/console/admin/update-job"><span>Update Job</span></a>
+                    <a class="dropdown-item" href="/console/admin/search-jobs"><span>Search Jobs</span></a>
                     <div class="dropdown-divider"></div>
                     <span class="dropdown-item-text"><strong>Experience</strong></span>
-                    <a class="dropdown-item" href="/console/admin/experience">Experience</a>
+                    <a class="dropdown-item" href="/console/admin/experience"><span>Experience</span></a>
                     <div class="dropdown-divider"></div>
                     <span class="dropdown-item-text"><strong>Projects</strong></span>
-                    <a class="dropdown-item" href="/console/admin/project">Projects</a>
+                    <a class="dropdown-item" href="/console/admin/project"><span>Projects</span></a>
                     <div class="dropdown-divider"></div>
                     <span class="dropdown-item-text"><strong>Certifications</strong></span>
-                    <a class="dropdown-item" href="/console/admin/add-certification">Add Certification</a>
+                    <a class="dropdown-item" href="/console/admin/add-certification"><span>Add Certification</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="index.php?logout=1">Settings</a>
                 </div>
