@@ -32,7 +32,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                     <div class="dropdown-divider"></div>
                     <span class="dropdown-item-text"><strong>Projects</strong></span>
                     <a class="dropdown-item" href="/console/admin/project"><span>View</span></a>
-                    <a class="dropdown-item" href="/console/admin/project"><span>Add</span></a>
+                    <a class="dropdown-item" href="/console/admin/project/add-project"><span>Add</span></a>
                     <div class="dropdown-divider"></div>
                     <span class="dropdown-item-text"><strong>Certifications</strong></span>
                     <a class="dropdown-item" href="/console/admin/add-certification"><span>View</span></a>
