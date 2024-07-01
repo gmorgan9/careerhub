@@ -74,15 +74,15 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $project_release ? $project_release : '-'; ?></td>
                             <td><?php echo $project_category ? $project_category : ''; ?></td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/admin/project/?viewid=<?php echo $project_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $project_id; ?>" style="text-decoration: none;">
+                                <a href="<?php echo BASE_URL; ?>/console/project/?viewid=<?php echo $project_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $project_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/admin/project/update-project/?updateid=<?php echo $project_id; ?>" style="text-decoration: none;">
+                                <a href="/console/project/update-project/?updateid=<?php echo $project_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="/console/admin/project/?deleteid=<?php echo $project_id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="/console/project/?deleteid=<?php echo $project_id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>
