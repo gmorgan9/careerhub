@@ -84,6 +84,7 @@ foreach ($files as $file) {
                             <label class="form-label text-white" for="project_github_user">Github User</label>
                             <input id="project_github_user" type="text" name="project_github_user" class="form-input" value="<?php echo $project_github_user; ?>">
                         </div>
+                        <label class="form-label text-white" for="project_description">Description</label>
                     </div>
                     <div class="right-column">
                         <div class="form-group">
@@ -109,9 +110,7 @@ foreach ($files as $file) {
                         </div>
                     </div>
                 </div>
-                
                 <textarea id="project_description" name="project_description" class="form-input mb-3" rows="2"><?php echo $project_description; ?></textarea>
-                <label class="form-label text-white" for="project_description">Description</label>
                 <input type="submit" name="add-project" class="form-btn mt-5" value="Add Project">
             </form>
         </div>
