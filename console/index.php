@@ -140,9 +140,9 @@ foreach ($files as $file) {
                 </div>
                 <!-- end Declined -->
 
-                <!-- Total -->
+                <!-- All -->
                 <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                    <a class="text-decoration-none stretched-link" href="/console/jobs/total-jobs">
+                    <a class="text-decoration-none stretched-link" href="/console/jobs/all-jobs">
                         <div class="card-body p-0">
                             <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                                 <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
@@ -162,7 +162,7 @@ foreach ($files as $file) {
                                         }
                                     ?>
                                 </h5>
-                                <p class="card-title text-center">Total Jobs</p>
+                                <p class="card-title text-center">All Jobs</p>
                                 <div class="overlay-text">
                                     View Details
                                 </div>
@@ -170,7 +170,7 @@ foreach ($files as $file) {
                         </div>
                     </a>
                 </div>
-                <!-- end Total -->
+                <!-- end All -->
                 </div>
             <!-- end Top Row -->
 
