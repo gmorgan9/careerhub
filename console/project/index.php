@@ -62,11 +62,18 @@ $result = mysqli_query($conn, $sql);
                 <?php
                 if (mysqli_num_rows($all_result) > 0) {
                     while ($row = mysqli_fetch_assoc($all_result)) {
-                        $project_id         = $row['project_id'];
-                        $project_idno       = $row['idno'];
-                        $project_name       = $row['project_name'];
-                        $project_release    = $row['project_release'];
-                        $project_category   = $row['project_category'];
+                        $project_id            = $row['project_id'];
+                        $project_idno          = $row['idno'];  
+                        $project_name          = $row['project_name']; 
+                        $project_short_name    = $row['project_short_name']; 
+                        $project_description   = $row['project_description'];
+                        $project_github_link   = $row['project_github_link'];
+                        $project_github_user   = $row['project_github_user'];
+                        $project_url           = $row['project_url'];
+                        $project_release       = $row['project_release'];
+                        $project_tech          = $row['project_tech'];
+                        $project_content       = $row['project_content'];
+                        $technologies          = explode(", ", $project_tech);
                 ?>
                         <tr>
                             <th scope="row"><?php echo $project_idno; ?></th>
