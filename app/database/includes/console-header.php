@@ -22,10 +22,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                 </a>
                 <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
                     <span class="dropdown-item-text"><strong>Job Central</strong></span>
-                    <a class="dropdown-item" href="/console/admin/add-job"><span>Open</span></a>
-                    <a class="dropdown-item" href="/console/admin/add-job"><span>Offered</span></a>
-                    <a class="dropdown-item" href="/console/admin/add-job"><span>Declined</span></a>
-                    <a class="dropdown-item" href="/console/admin/add-job"><span>Total</span></a>
+                    <a class="dropdown-item" href="/console/jobs/total-jobs"><span>View</span></a>
                     <a class="dropdown-item" href="/console/admin/add-job"><span>Add</span></a>
                     <a class="dropdown-item" href="/console/admin/search-jobs"><span>Search Jobs</span></a>
                     <div class="dropdown-divider"></div>
