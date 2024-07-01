@@ -109,7 +109,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -131,7 +131,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
@@ -197,7 +197,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -219,7 +219,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
@@ -301,7 +301,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -323,7 +323,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
@@ -389,7 +389,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -411,7 +411,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
@@ -493,7 +493,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -515,7 +515,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
@@ -581,7 +581,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -603,7 +603,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
@@ -685,7 +685,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -707,7 +707,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
@@ -773,7 +773,7 @@ if ($conn->connect_error) {
                                                         <p class="text-truncate" style="width: 350px;"><?php echo $project_description; ?></p>
                                                         <ul class="tags">
                                                             <?php foreach ($technologies as $tech): ?>
-                                                                <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                <li><?php echo htmlspecialchars($tech); ?></li>
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     </div>
@@ -795,7 +795,7 @@ if ($conn->connect_error) {
                                                                 <h4>Technologies</h4>
                                                                 <ul class="tags">
                                                                     <?php foreach ($technologies as $tech): ?>
-                                                                        <li><a href=""><?php echo htmlspecialchars($tech); ?></a></li>
+                                                                        <li><?php echo htmlspecialchars($tech); ?></li>
                                                                     <?php endforeach; ?>
                                                                 </ul>
                                                                 <h4>
