@@ -112,12 +112,14 @@ foreach ($files as $file) {
                 <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" rows="2"><?php echo $ce_notes; ?></textarea>
                 <input type="submit" name="update-experience" class="form-btn mt-2" value="Update Experience">
             </form>
-            <?php } } ?>
-
             <?php echo $count_active1; ?>
             <?php echo $count_active2; ?>
             <?php echo $count_active3; ?>
+            <?php echo $ce_id; ?>
             <?php echo $id; ?>
+            <?php } } ?>
+
+         
 
         </div> 
     </div>
