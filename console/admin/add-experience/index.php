@@ -95,7 +95,7 @@ foreach ($files as $file) {
                         <label class="form-label text-white" for="ce_notes">Experience Notes <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                         <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" rows="2"></textarea>
                     </div>
-                    <input type="submit" name="add-experience" class="form-btn mt-2" value="Add Certification">
+                    <input type="submit" name="add-experience" class="form-btn mt-2" value="Add Experience">
                 </div>
             </form>
         </div> 
