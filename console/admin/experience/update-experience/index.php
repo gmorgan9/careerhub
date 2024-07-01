@@ -117,6 +117,7 @@ foreach ($files as $file) {
             <?php echo $count_active1; ?>
             <?php echo $count_active2; ?>
             <?php echo $count_active3; ?>
+            <?php echo $id; ?>
 
         </div> 
     </div>
