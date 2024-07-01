@@ -171,7 +171,7 @@ $count_cert = $count_cert_row['count'];
                                 <div class="text">
                                     <ul>
                                         <?php foreach ($job_duties as $job_duty): ?>
-                                            <li><?php echo htmlspecialchars($job_duty); ?>/li>
+                                            <li><?php echo htmlspecialchars($job_duty); ?></li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
