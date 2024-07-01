@@ -106,7 +106,7 @@ $result = mysqli_query($conn, $sql);
                                    <div class="main-project-details">
                                        <h3 class="mt-5"><?php echo $cert_name; ?></h3>
                                        <div class="project-image d-flex justify-content-center">
-                                           <img src="../../assets/images/cert-logos/<?php echo $cert_short_name; ?>.png" class="mt-3" alt="" style="width: 75px;">
+                                           <img src="../../assets/images/cert-logos/<?php echo $cert_short_name; ?>.png" class="mt-3" alt="" style="width: 75px !important;">
                                        </div>
                                        <h4>Credential ID</h4>
                                        <p><?php echo $cred_id; ?></p>
