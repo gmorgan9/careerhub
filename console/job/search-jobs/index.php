@@ -140,8 +140,8 @@ foreach ($files as $file) {
         </nav>
         <?php endif; ?>
     <!-- end Pagnation links -->
-                </div>
-                </div>
+        </div>
+    </div>
 
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
 
