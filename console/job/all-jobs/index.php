@@ -40,7 +40,7 @@ $result = mysqli_query($conn, $sql);
     <div class="page_title">    
             <h2 class="text-white title">All Jobs</h2>
         </div>
-    <div class="container-fluid">
+    <div class="container-fluid" style="height: calc(100vh - 502px);">
         
 
         <!-- <div class="content text-white" style="margin-top: 55px;"> -->
@@ -228,6 +228,8 @@ $result = mysqli_query($conn, $sql);
         ?>
     </div>
 
+
+    <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>  
             
     
 
