@@ -74,15 +74,15 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $cert_expire ? $cert_expire : 'In-progress'; ?></td>
                             <td><?php echo $cert_provider ? $cert_provider : ''; ?></td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/certification/?viewid=<?php echo $cert_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $cert_id; ?>" style="text-decoration: none;">
+                                <a href="<?php echo BASE_URL; ?>/console/certification/?certviewid=<?php echo $cert_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $cert_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/certification/update-certification/?updateid=<?php echo $cert_id; ?>" style="text-decoration: none;">
+                                <a href="/console/certification/update-certification/?certupdid=<?php echo $cert_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="/console/certification/?deleteid=<?php echo $cert_id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="/console/certification/?certdelid=<?php echo $cert_id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>
