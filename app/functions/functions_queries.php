@@ -424,6 +424,37 @@
     }
 // End Job - Update Job
 
+// Certification - Update Certification
+    if (isset($_POST['update-certification'])) {
+        $cert_id = isset($_POST['cert_id']) ? mysqli_real_escape_string($conn, $_POST['cert_id']) : "";
+        $idno = isset($_POST['idno']) ? mysqli_real_escape_string($conn, $_POST['idno']) : "";
+        $cert_name = isset($_POST['cert_name']) ? mysqli_real_escape_string($conn, $_POST['cert_name']) : "";
+        $cert_short_name = isset($_POST['cert_short_name']) ? mysqli_real_escape_string($conn, $_POST['cert_short_name']) : "";
+        $cert_issued = isset($_POST['cert_issued']) ? mysqli_real_escape_string($conn, $_POST['cert_issued']) : "";
+        $cert_expire = isset($_POST['cert_expire']) ? mysqli_real_escape_string($conn, $_POST['cert_expire']) : "";
+        $cert_renewed = isset($_POST['cert_renewed']) ? mysqli_real_escape_string($conn, $_POST['cert_renewed']) : "";
+        $cred_id = isset($_POST['cred_id']) ? mysqli_real_escape_string($conn, $_POST['cred_id']) : "";
+        $cert_provider = isset($_POST['cert_provider']) ? mysqli_real_escape_string($conn, $_POST['cert_provider']) : "";
+
+        $update = "UPDATE certifications SET 
+                    idno = NULLIF('$idno', ''), 
+                    cert_name = NULLIF('$cert_name', ''), 
+                    cert_short_name = NULLIF('$cert_short_name', ''), 
+                    cert_issued = NULLIF('$cert_issued', ''), 
+                    cert_expire = NULLIF('$cert_expire', ''), 
+                    cert_renewed = NULLIF('$cert_renewed', ''), 
+                    cred_id = NULLIF('$cred_id', ''), 
+                    cert_provider = NULLIF('$cert_provider', '')
+                   WHERE cert_id = '$cert_id';";
+
+        $result = mysqli_query($conn, $update);
+        if (!$result) {
+            die('Error updating record: ' . mysqli_error($conn));
+        }
+        header('location:' . BASE_URL . '/console/experience');
+    }
+// End Certification - Update Certification
+
 
 // -------- Delete Queries -------- //
 
