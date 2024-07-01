@@ -13,7 +13,7 @@
 // end Certifications - SELECT all certifications
 
 // Career Experience - SELECT all experience
-    $ce_sql = "SELECT * FROM career_experience ORDER BY ce_status ASC;";
+    $ce_sql = "SELECT * FROM career_experience WHERE ce_status = 'active-1' OR 'active-2' OR 'active-3' ORDER BY ce_status ASC;";
     $ce_result = mysqli_query($conn, $ce_sql);
 // end Career Experience - SELECT all experience
 
