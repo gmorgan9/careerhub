@@ -4,7 +4,7 @@ require_once "../../app/database/connection.php";
 require_once "../../path.php";
 session_start();
 
-$files = glob("../../../app/functions/*.php");
+$files = glob("../../app/functions/*.php");
 foreach ($files as $file) {
     require_once $file;
 }
