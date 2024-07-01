@@ -46,21 +46,21 @@ foreach ($files as $file) {
     <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
         
         <?php
-            $id = $_GET['ce_id'];
-            $sql = "SELECT * FROM career_experience WHERE ce_id=$id";
-            $result = mysqli_query($conn, $sql);
-            if($result) {
-                $num_rows = mysqli_num_rows($result);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $ce_id          = $row['ce_id'];
-                    $ce_idno        = $row['idno'];
-                    $ce_job_title   = $row['ce_job_title'];
-                    $ce_company     = $row['ce_company'];
-                    $ce_start       = $row['ce_start'];
-                    $ce_end         = $row['ce_end'];
-                    $ce_job_duties  = $row['ce_job_duties'];
-                    $ce_notes       = $row['ce_notes'];
-                    $ce_status      = $row['ce_status'];
+            // $id = $_GET['ce_id'];
+            // $sql = "SELECT * FROM career_experience WHERE ce_id=$id";
+            // $result = mysqli_query($conn, $sql);
+            // if($result) {
+            //     $num_rows = mysqli_num_rows($result);
+            //     while ($row = mysqli_fetch_assoc($result)) {
+            //         $ce_id          = $row['ce_id'];
+            //         $ce_idno        = $row['idno'];
+            //         $ce_job_title   = $row['ce_job_title'];
+            //         $ce_company     = $row['ce_company'];
+            //         $ce_start       = $row['ce_start'];
+            //         $ce_end         = $row['ce_end'];
+            //         $ce_job_duties  = $row['ce_job_duties'];
+            //         $ce_notes       = $row['ce_notes'];
+            //         $ce_status      = $row['ce_status'];
                 ?>
         <div class="form">
             <form action="" method="POST">
