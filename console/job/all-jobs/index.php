@@ -110,15 +110,16 @@ $result = mysqli_query($conn, $sql);
                                     <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
                                     <hr>
                                     <div class="main-project-details">
+                                        <div class="small-details">
+                                            <?php if ($watchlist == 1) { ?>
+                                                <i class="bi bi-eye text-white"></i>
+                                            <?php } ?>
+                                            <?php if ($interview_set == 1) { ?>
+                                                <i class="bi bi-people"></i>
+                                            <?php } ?>
+                                        </div>
                                         <h3 class="mt-5"><?php echo $job_title; ?></h3>
-                                        <div class="float-end">
-                                                    <?php if ($watchlist == 1) { ?>
-                                                        <i class="bi bi-eye text-white"></i>
-                                                    <?php } ?>
-                                                    <?php if ($interview_set == 1) { ?>
-                                                        <i class="bi bi-people"></i>
-                                                    <?php } ?>
-                                                </div>
+                                        
                                         <h4>Company Name</h4>
                                         <p><?php echo $company ?? '--'; ?></p>
                                         <h4>Location</h4>
