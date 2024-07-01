@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST['update-experience'])) {
-    $id = $_POST['ce_id'];
 
     // Sanitize input fields
+    $ce_id = isset($_POST['ce_id']) ? mysqli_real_escape_string($conn, $_POST['ce_id']) : "";
     $ce_company = isset($_POST['ce_company']) ? mysqli_real_escape_string($conn, $_POST['ce_company']) : "";
     $ce_start = isset($_POST['ce_start']) ? mysqli_real_escape_string($conn, $_POST['ce_start']) : "";
     $ce_end = isset($_POST['ce_end']) ? mysqli_real_escape_string($conn, $_POST['ce_end']) : "";
@@ -19,7 +19,7 @@ if (isset($_POST['update-experience'])) {
                 ce_job_duties = NULLIF('$ce_job_duties', ''), 
                 ce_status = NULLIF('$ce_status', ''), 
                 ce_notes = NULLIF('$ce_notes', '')
-               WHERE ce_id = '$id';";
+               WHERE ce_id = '$ce_id';";
     
     mysqli_query($conn, $update);
     if (!$result) {
