@@ -85,6 +85,19 @@ $count_cert = $count_cert_row['count'];
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
+                                Linux
+                            </div>
+                            <div class="col-xs-9 col-sm-6">
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-half"></i>
+                            </div>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Ubuntu, Kali, CLI</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
                                 Coding
                             </div>
                             <div class="col-sm-6">
@@ -121,19 +134,6 @@ $count_cert = $count_cert_row['count'];
                                 <i class="bi bi-square"></i>
                             </div>
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including MySQL, PostgresSQL, MariaDB</span>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Linux
-                            </div>
-                            <div class="col-xs-9 col-sm-6">
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-half"></i>
-                            </div>
-                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Ubuntu, Kali, CLI</span>
                         </div>
                     </div>
                 </div>
