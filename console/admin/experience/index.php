@@ -215,9 +215,9 @@ $result = mysqli_query($conn, $sql);
                     }
                 } else {
                 ?>
-                    <tr>
-                        <td colspan="6" class="text-center">No jobs found.</td>
-                    </tr>
+                    <div class="alert project-alert" role="alert">
+                                No current experience.
+                            </div>
                 <?php
                 }
                 ?>
