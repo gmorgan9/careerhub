@@ -107,7 +107,7 @@ $result = mysqli_query($conn, $sql);
                             </td>
                         </tr>
 
-                        <!-- View Experience Canvas -->
+                        <!-- View Job Canvas -->
                             <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="job-canvas-<?php echo $id; ?>" aria-labelledby="offcanvasRightLabel">
                                 <div class="offcanvas-body">
                                     <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
@@ -164,7 +164,7 @@ $result = mysqli_query($conn, $sql);
                                     </div>
                                 </div>
                             </div>
-                        <!-- end View Experience Canvas -->
+                        <!-- end View Job Canvas -->
 
 
                 <?php
