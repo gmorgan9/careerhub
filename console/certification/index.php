@@ -205,7 +205,7 @@ $result = mysqli_query($conn, $sql);
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-white">
-                                            <div class="alert alert-secondary" role="alert">
+                                            <div class="alert alert-info" role="alert">
                                                 <i class="bi bi-info-circle-fill"></i> &nbsp; Certification Renewal for: <strong><?php echo $cert_name; ?></strong>
                                             </div>
                                             <form action="" method="POST">
