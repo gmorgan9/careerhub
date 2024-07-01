@@ -77,10 +77,13 @@ $result = mysqli_query($conn, $sql);
                         $job_type       = $row['job_type'];
                         $interview_set  = $row['interview_set'];
                         $notes          = $row['notes'];
-                        $created_at     = new DateTime($row['created_at'], new DateTimeZone('UTC'));
+                        $created_at     = $row['created_at'];
+                        $updated_at     = $row['updated_at'];
 
-                        $created_at->setTimezone(new DateTimeZone('America/Denver'));
-                        $formatted_date = $created_at->format('M d, Y');
+                        $updated_time = strtotime($updated_at);
+                        $updated_at_formatted = date('M j, Y', $updated_time);
+                        $created_time = strtotime($created_at);
+                        $created_at_formatted = date('M j, Y', $created_time);
                 ?>
                         <tr>
                             <th scope="row"><?php echo $idno; ?></th>
