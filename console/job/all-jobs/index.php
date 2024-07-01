@@ -121,7 +121,7 @@ $result = mysqli_query($conn, $sql);
                                         <br>
                                             <hr>
                                             <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Status</p> 
+                                                <p class="fw-bold">Status</p> 
                                                 <?php if ($status == 'Applied') { ?>
                                                     <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $status; ?></span></p>
                                                 <?php } else if ($status == 'Interviewed') { ?>
