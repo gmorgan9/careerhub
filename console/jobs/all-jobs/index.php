@@ -30,7 +30,7 @@ $result = mysqli_query($conn, $sql);
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Total Jobs - MorganServer Career Hub</title>
+    <title>All Jobs - MorganServer Career Hub</title>
 </head>
 <body style="background-color: rgb(34,34,34);">
 
@@ -38,7 +38,7 @@ $result = mysqli_query($conn, $sql);
     <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
 
     <div class="page_title">    
-            <h2 class="text-white title">Total Jobs</h2>
+            <h2 class="text-white title">All Jobs</h2>
         </div>
     <div class="container-fluid">
         
