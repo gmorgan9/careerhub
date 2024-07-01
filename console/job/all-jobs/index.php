@@ -123,7 +123,14 @@ $result = mysqli_query($conn, $sql);
                                         </div>
 
                                         <h3 class="mt-3"><?php echo $job_title; ?></h3>
-                                        
+                                        <p class="text-secondary" style="font-size: 12px;">
+                                            <span class="pe-3">
+                                                Last updated: <?php echo $updated_at_formatted; ?>
+                                            </span>
+                                            <span>
+                                                Applied: <?php echo $created_at_formatted; ?>
+                                            </span>
+                                        </p>
                                         <h4>Company Name</h4>
                                         <p><?php echo $company ?? '--'; ?></p>
                                         <h4>Location</h4>
