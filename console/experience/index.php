@@ -107,7 +107,7 @@ $result = mysqli_query($conn, $sql);
                         </tr>
 
                         <!-- View Experience Canvas -->
-                            <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="exp-canvas-<?php echo $cert_id; ?>" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="exp-canvas-<?php echo $ce_id; ?>" aria-labelledby="offcanvasRightLabel">
         
                                <div class="offcanvas-body">
                                    <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
