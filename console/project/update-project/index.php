@@ -51,6 +51,7 @@ foreach ($files as $file) {
             $result = mysqli_query($conn, $sql);
             if($result) {
                 while ($row = mysqli_fetch_assoc($result)) {
+                    $project_id             = $row['project_id'];
                     $project_idno           = $row['idno'];
                     $project_name           = $row['project_name'];
                     $project_short_name     = $row['project_short_name'];
