@@ -68,21 +68,21 @@ foreach ($files as $file) {
                             <input id="ce_end" type="text" name="ce_end" class="form-input">
                         </div> 
                     </div>
-                    <div class="form-check">
-                        <label for="form-checks">Active Career Experience <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                        <div class="form-check text-white form-check-inline">
+                    <div class="form-check text-white">
+                        <legend for="form-checks">Active Career Experience <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></legend>
+                        <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
                           <label class="form-check-label" for="ce_status1">
                             Active 1
                           </label>
                         </div>
-                        <div class="form-check text-white form-check-inline">
+                        <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
                           <label class="form-check-label" for="ce_status2">
                             Active 2
                           </label>
                         </div>
-                        <div class="form-check text-white form-check-inline">
+                        <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
                           <label class="form-check-label" for="ce_status3">
                             Active 3
