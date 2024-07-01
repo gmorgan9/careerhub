@@ -149,6 +149,10 @@ $result = mysqli_query($conn, $sql);
                                             <?php if($interview_set == 1) { ?>
                                                 <li>Interview Set</li>
                                             <?php } ?>
+                                            <?php if($interview_set == 0 && $watchlist == 0) { ?>
+                                                <li>No other details.</li>
+                                            <?php } ?>
+
                                         </ul>
                                         <h4>Notes</h4>
                                         <p><?php echo $ce_notes ?? 'No listed notes.'; ?></p>
