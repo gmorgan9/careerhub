@@ -39,9 +39,9 @@ $result = mysqli_query($conn, $sql);
 
     <div class="page_title">   
         <h2 class="text-white title">Projects</h2> 
-        <!-- <div class="float-end">
-            <a class="all-btn" href="<?php echo BASE_URL; ?>/console/admin/project/add-project">Add Project</a>
-        </div> -->
+        <div class="float-end">
+            <a class="all-btn" href="<?php echo BASE_URL; ?>/console/project/add-project">Add Project</a>
+        </div>
     </div>
 
     <div class="container-fluid" style="height: calc(100vh - 502px);">
