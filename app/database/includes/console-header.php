@@ -20,7 +20,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                 <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Admin
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
                     <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
                     <a class="dropdown-item disabled" href="/console/admin/update-job">Update Job</a>
                     <a class="dropdown-item" href="/console/admin/search-jobs">Search Jobs</a>
