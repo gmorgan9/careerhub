@@ -63,6 +63,7 @@ foreach ($files as $file) {
                     $ce_status      = $row['ce_status'];
                 ?>
         <div class="form">
+            <input type="hidden" class="form-input" id="ce_id" name="ce_id" value="<?php echo $ce_id; ?>">
             <form action="" method="POST">
                 <div class="form-group">
                     <label class="form-label text-white" for="ce_company">Company Name</label>
