@@ -13,7 +13,7 @@ $limit = 10; // Number of entries per page
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 $offset = ($page - 1) * $limit;
 
-$sql = "SELECT * FROM jobs WHERE status = 'Offered' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
+$sql = "SELECT * FROM jobs WHERE status = 'Rejected' ORDER BY created_at DESC LIMIT $limit OFFSET $offset";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -30,7 +30,7 @@ $result = mysqli_query($conn, $sql);
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Job Offers - MorganServer Career Hub</title>
+    <title>Rejected Jobs - MorganServer Career Hub</title>
 </head>
 <body style="background-color: rgb(34,34,34);">
 
@@ -39,7 +39,7 @@ $result = mysqli_query($conn, $sql);
 
 
     <div class="page_title">    
-            <h2 class="text-white title">Job Offers</h2>
+            <h2 class="text-white title">Rejected Jobs</h2>
         </div>
     <div class="container-fluid">
         
@@ -78,11 +78,11 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                             <td><?php echo $row['status'] ? $row['status'] : '-'; ?></td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/jobs/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
+                                <a href="<?php echo BASE_URL; ?>/console/job/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/admin/update-job/?updateid=<?php echo $id; ?>" style="text-decoration: none;">
+                                <a href="/console/job/update-job/?updateid=<?php echo $id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
@@ -212,7 +212,7 @@ $result = mysqli_query($conn, $sql);
 
         <?php
         // Pagination links
-        $sql_count = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Offered'";
+        $sql_count = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Rejected'";
         $result_count = mysqli_query($conn, $sql_count);
         $row_count = mysqli_fetch_assoc($result_count);
         $total_records = $row_count['total'];
