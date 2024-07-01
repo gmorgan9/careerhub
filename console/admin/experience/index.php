@@ -213,17 +213,16 @@ $result = mysqli_query($conn, $sql);
 
                 <?php
                     }
-                 ?>
-            </tbody>
-        </table>
-        <?php } else {
+                } else {
                 ?>
-                    <div class="alert project-alert" role="alert">
-                                No current experience.
-                            </div>
+                    <tr>
+                        <td colspan="7" class="text-center">No experience found.</td>
+                    </tr>
                 <?php
                 }
                 ?>
+            </tbody>
+        </table>
 
         <?php
         // Pagination links
