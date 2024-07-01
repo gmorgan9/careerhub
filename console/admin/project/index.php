@@ -225,6 +225,8 @@ $result = mysqli_query($conn, $sql);
         ?>
     </div>
 
+    <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
+
             
     
 
