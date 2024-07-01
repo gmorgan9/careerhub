@@ -92,7 +92,7 @@ $result = mysqli_query($conn, $sql);
                             </td>
                         </tr>
 
-                        <!-- VIEW Modal -->
+                        <!-- View Modal -->
                             <div class="modal fade" id="viewModal<?php echo $cert_id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content" style="background-color: #333;">
@@ -194,9 +194,9 @@ $result = mysqli_query($conn, $sql);
                                     </div>
                                 </div>
                             </div>
-                        <!-- end VIEW Modal -->
+                        <!-- end View Modal -->
 
-                        <!-- VIEW Modal -->
+                        <!-- Renewal Modal -->
                             <div class="modal fade" id="cert-renew-<?php echo $cert_id; ?>" tabindex="-1" aria-labelledby="cert-renew-Label" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content" style="background-color: #333;">
@@ -224,7 +224,7 @@ $result = mysqli_query($conn, $sql);
                                     </div>
                                 </div>
                             </div>
-                        <!-- end VIEW Modal -->
+                        <!-- end Renewal Modal -->
 
 
                 <?php
