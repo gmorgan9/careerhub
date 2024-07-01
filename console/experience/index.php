@@ -73,6 +73,7 @@ $result = mysqli_query($conn, $sql);
                         $ce_job_duties  = $row['ce_job_duties'];
                         $ce_notes       = $row['ce_notes'];
                         $ce_status      = $row['ce_status'];
+                        $job_duties      = explode("- ", $ce_job_duties);
                 ?>
                         <tr>
                             <th scope="row"><?php echo $ce_idno; ?></th>
