@@ -453,6 +453,23 @@
     }
 // End Certification - Update Certification
 
+// Certification - Update Certification (renewal date)
+    if (isset($_POST['cert-renewal'])) {
+        $cert_id = isset($_POST['cert_id']) ? mysqli_real_escape_string($conn, $_POST['cert_id']) : "";
+        $cert_renewed = isset($_POST['cert_renewed']) ? mysqli_real_escape_string($conn, $_POST['cert_renewed']) : "";
+
+        $update = "UPDATE certifications SET 
+                    cert_renewed = NULLIF('$cert_renewed', '')
+                   WHERE cert_id = '$cert_id';";
+
+        $result = mysqli_query($conn, $update);
+        if (!$result) {
+            die('Error updating record: ' . mysqli_error($conn));
+        }
+        header('location:' . BASE_URL . '/console/certification');
+    }
+// End Certification - Update Certification (renewal date)
+
 
 // -------- Delete Queries -------- //
 

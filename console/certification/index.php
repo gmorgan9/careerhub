@@ -74,6 +74,10 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $cert_expire ? $cert_expire : 'In-progress'; ?></td>
                             <td><?php echo $cert_provider ? $cert_provider : ''; ?></td>
                             <td style="font-size: 20px;">
+                                <a href="" class="view" data-bs-toggle="modal" data-bs-target="#cert-renew-<?php echo $cert_id; ?>" style="text-decoration: none;">
+                                    <i class="bi bi-arrow-repeat text-info"></i>
+                                </a>
+                                &nbsp;
                                 <a href="<?php echo BASE_URL; ?>/console/certification/?certviewid=<?php echo $cert_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $cert_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
@@ -183,6 +187,30 @@ $result = mysqli_query($conn, $sql);
                                                 <p><span><?php echo $cap['notes']; ?></span></p>
                                             </div>
                                             <?php } } ?>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- end VIEW Modal -->
+
+                        <!-- VIEW Modal -->
+                            <div class="modal fade" id="cert-renew-<?php echo $cert_id; ?>" tabindex="-1" aria-labelledby="cert-renew-Label" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content" style="background-color: #333;">
+                                        <div class="modal-header text-white">
+                                            <h5 class="modal-title" id="viewModalLabel">View Certification</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-white">
+                                            <form action="" method="POST">
+                                                <input type="hidden" name="cert_id" value="<?php echo $cert_id; ?>">
+                                                <input type="date" name="cert_renew" id="cert_renew" style="padding-bottom: 0 !important;">
+
+                                                <input type="submit" name="cert-renewal" class="all-btn" value="Renew Certification">
+                                            </form>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
