@@ -141,6 +141,7 @@ foreach ($files as $file) {
         <?php endif; ?>
     <!-- end Pagnation links -->
                 </div>
+                </div>
 
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
 
