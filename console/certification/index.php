@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $sql);
                                     <i class="bi bi-arrow-repeat text-info"></i>
                                 </a>
                                 &nbsp;
-                                <a href="<?php echo BASE_URL; ?>/console/certification/?certviewid=<?php echo $cert_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $cert_id; ?>" style="text-decoration: none;">
+                                <a class="view" data-bs-toggle="offcanvas" data-bs-target="#cert-canvas-<?php echo $cert_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $sql);
                         </tr>
 
                         <!-- View Project Canvas -->
-                            <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="project-canvas-<?php echo $cert; ?>" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="cert-canvas-<?php echo $cert; ?>" aria-labelledby="offcanvasRightLabel">
                                
                                <div class="offcanvas-body">
                                    <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
