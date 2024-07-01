@@ -162,7 +162,7 @@ $count_cert = $count_cert_row['count'];
                                         $ce_job_title    = $row['ce_job_title'];
                                         $ce_job_duties   = $row['ce_job_duties'];
                                         $ce_status       = $row['ce_status'];
-                                        $job_duties      = explode(". ", $ce_job_duties);
+                                        $job_duties      = explode("- ", $ce_job_duties);
                             ?>
                             <div class="timeline-item">
                                 <h5 class="item-period "><?php echo $ce_start; ?> - <?php if(is_null($ce_end)) { ?>Current <?php } else { echo $ce_end; } ?></h5>
