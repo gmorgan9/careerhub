@@ -94,13 +94,13 @@ foreach ($files as $file) {
                   </label>
                 </div>
                 <div class="form-check form-check-inline text-white">
-                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <?php } else {} ?> <?php if ($count_active2 == 1 && $ce_id != $id) { echo 'disabled'; } ?>>
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <?php } else {} ?> <?php if ($ce_status != 'active-2' && $count_active2 == 1) { ?> disabled <?php } else {} ?>>
                   <label class="form-check-label" for="ce_status2">
                     Active 2
                   </label>
                 </div>
                 <div class="form-check form-check-inline text-white mb-3">
-                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3" <?php if ($ce_status == 'active-3') {?> checked <?php } else {} ?> <?php if ($count_active3 == 1 && $ce_id != $id) { echo 'disabled'; } ?>>
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3" <?php if ($ce_status == 'active-3') {?> checked <?php } else {} ?> <?php if ($ce_status != 'active-3' && $count_active3 == 1) { ?> disabled <?php } else {} ?>>
                   <label class="form-check-label" for="ce_status3">
                     Active 3
                   </label>
