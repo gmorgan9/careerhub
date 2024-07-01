@@ -21,7 +21,10 @@ if (isset($_POST['update-experience'])) {
                 ce_notes = NULLIF('$ce_notes', '')
                WHERE ce_id = '$ce_id';";
     
-    mysqli_query($conn, $update);
+    $result = mysqli_query($conn, $update);
+    if (!$result) {
+        die('Error updating record: ' . mysqli_error($conn));
+    }
     header('location:' . BASE_URL . '/console/admin/experience');
 }
 
