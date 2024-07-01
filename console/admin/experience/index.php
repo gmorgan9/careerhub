@@ -37,9 +37,15 @@ $result = mysqli_query($conn, $sql);
 
     <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
 
-    <div class="page_title">    
+    <div class="page_title">   
+        <div class="float-start">
             <h2 class="text-white title">Career Experience</h2>
+        </div> 
+        <div class="float-end">
+            <a href="<?php echo BASE_URL; ?>/console/admin/expereince/add-experience">Add Experience</a>
         </div>
+    </div>
+
     <div class="container-fluid">
         
 
