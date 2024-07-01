@@ -74,6 +74,7 @@ $result = mysqli_query($conn, $sql);
                         $project_tech          = $row['project_tech'];
                         $project_content       = $row['project_content'];
                         $technologies          = explode(", ", $project_tech);
+                        $project_category      = $row['project_category'];
                 ?>
                         <tr>
                             <th scope="row"><?php echo $project_idno; ?></th>
