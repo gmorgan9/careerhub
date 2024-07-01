@@ -170,4 +170,40 @@
     // $odd_os_result = mysqli_query($conn, $odd_os_sql);
 // end Open Source - odd projects
 
+// Update Projects
+    if (isset($_POST['update-project'])) {
+        $project_id = isset($_POST['project_id']) ? mysqli_real_escape_string($conn, $_POST['project_id']) : "";
+        $project_name = isset($_POST['project_name']) ? mysqli_real_escape_string($conn, $_POST['project_name']) : "";
+        $project_short_name = isset($_POST['project_short_name']) ? mysqli_real_escape_string($conn, $_POST['project_short_name']) : "";
+        $project_description = isset($_POST['project_description']) ? mysqli_real_escape_string($conn, $_POST['project_description']) : "";
+        $project_github_link = isset($_POST['project_github_link']) ? mysqli_real_escape_string($conn, $_POST['project_github_link']) : "";
+        $project_github_user = isset($_POST['project_github_user']) ? mysqli_real_escape_string($conn, $_POST['project_github_user']) : "";
+        $project_url = isset($_POST['project_url']) ? mysqli_real_escape_string($conn, $_POST['project_url']) : "";
+        $project_release = isset($_POST['project_release']) ? mysqli_real_escape_string($conn, $_POST['project_release']) : "";
+        $project_tech = isset($_POST['project_tech']) ? mysqli_real_escape_string($conn, $_POST['project_tech']) : "";
+        $project_category = isset($_POST['project_category']) ? mysqli_real_escape_string($conn, $_POST['project_category']) : "";
+        $project_content = isset($_POST['project_content']) ? mysqli_real_escape_string($conn, $_POST['project_content']) : "";
+
+        // Update the project
+        $update = "UPDATE projects SET 
+                    project_name = NULLIF('$project_name', ''), 
+                    project_short_name = NULLIF('$project_short_name', ''), 
+                    project_description = NULLIF('$project_description', ''), 
+                    project_github_link = NULLIF('$project_github_link', ''), 
+                    project_github_user = NULLIF('$project_github_user', ''), 
+                    project_url = NULLIF('$project_url', ''), 
+                    project_release = NULLIF('$project_release', ''), 
+                    project_tech = NULLIF('$project_tech', ''), 
+                    project_category = NULLIF('$project_category', ''), 
+                    project_content = NULLIF('$project_content', '')
+                   WHERE project_id = '$project_id';";
+
+        $result = mysqli_query($conn, $update);
+        if (!$result) {
+            die('Error updating record: ' . mysqli_error($conn));
+        }
+        header('location:' . BASE_URL . '/console/project');
+    }
+// end Update Projects
+
 ?>
