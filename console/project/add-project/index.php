@@ -47,34 +47,44 @@ foreach ($files as $file) {
         
         <div class="form">
             <form action="" method="POST">
+                <input type="hidden" name="project_id" value="<?php echo $project_id; ?>">
                 <div class="controls two-columns">
                     <div class="left-column">
                         <div class="form-group">
-                            <input id="project_name" type="text" name="project_name" class="form-input" placeholder="Project Name" required="required" data-error="Project Name is required.">
+                            <label class="form-label text-white" for="project_name">Project Name</label>
+                            <input id="project_name" type="text" name="project_name" class="form-input" value="<?php echo $project_name; ?>">
                         </div>
                         <div class="form-group">
-                            <input id="project_short_name" type="text" name="project_short_name" class="form-input" placeholder="Project Short Name" required="required" data-error="Project Short Name is required.">
+                            <label class="form-label text-white" for="project_short_name">Project Short Name</label>
+                            <input id="project_short_name" type="text" name="project_short_name" class="form-input" value="<?php echo $project_short_name; ?>" >
                         </div>
                         <div class="form-group">
-                            <input id="project_github_link" type="text" name="project_github_link" class="form-input" placeholder="Github Project Link" required="required" data-error="Github Project Link is required.">
+                            <label class="form-label text-white" for="project_github_link">Github Link</label>
+                            <input id="project_github_link" type="text" name="project_github_link" class="form-input" value="<?php echo $project_github_link; ?>">
                         </div>
                         <div class="form-group">
-                            <input id="project_github_user" type="text" name="project_github_user" class="form-input" placeholder="Github User" required="required">
+                            <label class="form-label text-white" for="project_github_user">Github User</label>
+                            <input id="project_github_user" type="text" name="project_github_user" class="form-input" value="<?php echo $project_github_user; ?>">
                         </div>
+                        <label class="form-label text-white" for="project_description">Description</label>
                     </div>
                     <div class="right-column">
                         <div class="form-group">
-                            <input id="project_url" type="text" name="project_url" class="form-input" placeholder="Project URL" required="required" data-error="Project URL is required.">
+                            <label class="form-label text-white" for="project_URL">Project URL</label>
+                            <input id="project_url" type="text" name="project_url" class="form-input" value="<?php echo $project_url; ?>">
                         </div>
                         <div class="form-group">
-                            <input id="project_release" type="date" name="project_release" class="form-input" required="required" style="padding-bottom: 0 !important;">
+                            <label class="form-label text-white" for="project_release">Release Date</label>
+                            <input id="project_release" type="date" name="project_release" class="form-input" style="padding-bottom: 0 !important;" value="<?php echo $project_release; ?>">
                         </div>
                         <div class="form-group">
-                            <input id="project_tech" type="text" name="project_tech" class="form-input" placeholder="Project Technologies" required="required">
+                            <label class="form-label text-white" for="project_tech">Technologies</label>
+                            <input id="project_tech" type="text" name="project_tech" class="form-input" value="<?php echo $project_tech; ?>">
                         </div>
                         <div class="form-group">
-                            <select class="form-input" name="project_category" style="color: rgb(169,169,169) !important;">
-                                <option value="">Please select one...</option>
+                            <label class="form-label text-white" for="project_category">Category</label>
+                            <select class="form-input" name="project_category">
+                                <option value="<?php echo $project_category; ?>"><?php echo $project_category; ?></option>
                                 <option value="Web Development">Web Development</option>
                                 <option value="Scripting & Automation">Scripting & Automation</option>
                                 <option value="Software Development">Software Development</option>
@@ -82,9 +92,8 @@ foreach ($files as $file) {
                         </div>
                     </div>
                 </div>
-                <textarea id="project_description" name="project_description" class="form-input mb-3" placeholder="Project Description" rows="2"></textarea>
-                <!-- <textarea id="project_content" name="project_content" class="" placeholder="" rows="7"></textarea> -->
-                <input type="submit" name="add-project" class="form-btn mt-5" value="Add Project">
+                <textarea id="project_description" name="project_description" class="form-input mb-3" rows="2"><?php echo $project_description; ?></textarea>
+                <input type="submit" name="update-project" class="form-btn mt-5" value="Update Project">
             </form>
         </div> 
     </div>
