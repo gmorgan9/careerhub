@@ -90,7 +90,7 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $job_title ? $job_title : '-'; ?></td>
                             <td><?php echo $company ? $company : '-'; ?></td>
                             <td><?php echo $location ? $location : '-'; ?></td>
-                            <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
+                            <td><?php echo $created_at_formatted ? $created_at_formatted : '-'; ?></td>
                             <td><?php echo $status ? $status : '-'; ?></td>
                             <td style="font-size: 20px;">
                                 <a class="view" data-bs-toggle="offcanvas" data-bs-target="#job-canvas-<?php echo $id; ?>" style="text-decoration: none; cursor: pointer;">
@@ -153,6 +153,11 @@ $result = mysqli_query($conn, $sql);
                                                 <li>Interview Set</li>
                                             <?php } ?>
                                         </ul>
+                                        <p>
+                                            <?php if($interview_set == 0 && $watchlist == 0) { ?>
+                                                No other details.
+                                            <?php } ?>
+                                        </p>
                                         <h4>Notes</h4>
                                         <p><?php echo $ce_notes ?? 'No listed notes.'; ?></p>
                                        
