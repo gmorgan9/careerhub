@@ -174,6 +174,8 @@ foreach ($files as $file) {
 
     <div class="mt-5"></div>
 
+    <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
+
     <script>
         tinymce.init({
             selector: 'textarea',
