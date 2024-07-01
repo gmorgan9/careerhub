@@ -76,7 +76,13 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $ce_job_title ? $ce_job_title : '-'; ?></td>
                             <td><?php echo $ce_start ? $ce_start : '-'; ?></td>
                             <td><?php echo $ce_end ? $ce_end : 'Current'; ?></td>
-                            <td><?php echo $ce_status ? $ce_status : '-'; ?></td>
+                            <td>
+                                <?php if ($ce_status == 'active-1' || $ce_status == 'active-2' || $ce_status == 'active-3') { ?>
+                                    Active
+                                <?php } else { ?>
+                                    Not Active
+                                <?php } ?>
+                            </td>
                             <td style="font-size: 20px;">
                                 <a href="<?php echo BASE_URL; ?>/console/admin/experience/?viewid=<?php echo $ce_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
