@@ -110,16 +110,16 @@ $result = mysqli_query($conn, $sql);
                                        </div>
                                        <h4>Credential ID</h4>
                                         <p><?php echo $cred_id ?? '---'; ?></p>
-                                                            
+
                                         <h4>Original Issue Date</h4>
-                                        <p><?php echo $cert_issued ?? '---'; ?></p>
-                                                            
+                                        <p><?php echo $cert_issued ?? 'In-progress'; ?></p>
+
                                         <h4>Expiration Date</h4>
                                         <p><?php echo $cert_expire ?? '---'; ?></p>
-                                                            
+
                                         <h4>Renewal Date</h4>
                                         <p><?php echo $cert_renewed ?? '---'; ?></p>
-                                                            
+
                                         <h4>Provider</h4>
                                         <p><?php echo $cert_provider ?? '---'; ?></p>
 
