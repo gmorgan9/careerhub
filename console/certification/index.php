@@ -211,12 +211,12 @@ $result = mysqli_query($conn, $sql);
                                             <form action="" method="POST">
                                                 <input type="hidden" name="cert_id" value="<?php echo $cert_id; ?>">
                                                 <div class="form-group">
-                                                    <label class="form-label text-white" for="cert_renewed">Renewal Date</label>
-                                                    <input type="date" class="form-input" name="cert_renewed" id="cert_renewed" style="padding-bottom: 0 !important;">
+                                                    <label class="form-label text-white" for="cert_renewed">Renewal Date <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                                                    <input type="date" class="form-input" name="cert_renewed" id="cert_renewed" style="padding-bottom: 0 !important;" required>
                                                 </div>
                                                 <div class="form-group mt-3">
-                                                    <label class="form-label text-white" for="cert_expire">Expiration Date</label>
-                                                    <input type="date" class="form-input" name="cert_expire" id="cert_expire" style="padding-bottom: 0 !important;" value="<?php echo $cert_expire; ?>">
+                                                    <label class="form-label text-white" for="cert_expire">Expiration Date <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                                                    <input type="date" class="form-input" name="cert_expire" id="cert_expire" style="padding-bottom: 0 !important;" value="<?php echo $cert_expire; ?>" required>
                                                 </div>
                                                 <input type="submit" name="cert-renewal" class="all-btn mt-3" value="Renew Certification">
                                             </form>
