@@ -100,7 +100,7 @@ $result = mysqli_query($conn, $sql);
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="/console/experience/?deleteid=<?php echo $ce_id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="/console/experience/?expdelid=<?php echo $ce_id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>

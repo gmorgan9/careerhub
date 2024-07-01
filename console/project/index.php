@@ -82,7 +82,7 @@ $result = mysqli_query($conn, $sql);
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="/console/project/?deleteid=<?php echo $project_id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="/console/project/?prodelid=<?php echo $project_id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>

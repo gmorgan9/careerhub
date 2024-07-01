@@ -70,7 +70,7 @@ foreach ($files as $file) {
                     </div>
                     <div class="right-column">
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_URL">Project URL</label>
+                            <label class="form-label text-white" for="project_URL">Project URL <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                             <input id="project_url" type="text" name="project_url" class="form-input">
                         </div>
                         <div class="form-group">

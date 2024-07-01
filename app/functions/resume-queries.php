@@ -44,12 +44,22 @@
 // end Career Experience - Count active-3 Career Experience
 
 // Career Experience - Delete Experience
-    if(isset($_GET['deleteid'])) {
-        $id = $_GET['deleteid'];
+    if(isset($_GET['expdelid'])) {
+        $id = $_GET['expdelid'];
 
         $sql = "DELETE FROM career_experience WHERE ce_id=$id";
         $result = mysqli_query($conn, $sql);
         header('location:' . BASE_URL . '/console/experience');
+    }
+// End Career Experience - Delete Experience
+
+// Career Experience - Delete Experience
+    if(isset($_GET['prodelid'])) {
+        $id = $_GET['prodelid'];
+
+        $sql = "DELETE FROM projects WHERE project_id=$id";
+        $result = mysqli_query($conn, $sql);
+        header('location:' . BASE_URL . '/console/project');
     }
 // End Career Experience - Delete Experience
 
