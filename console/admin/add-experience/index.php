@@ -70,19 +70,19 @@ foreach ($files as $file) {
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                          <input class="form-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
+                          <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
                           <label class="form-check-label" for="ce_status1">
                             Active 1
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
+                          <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
                           <label class="form-check-label" for="ce_status2">
                             Active 2
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
+                          <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
                           <label class="form-check-label" for="ce_status3">
                             Active 3
                           </label>
