@@ -198,7 +198,7 @@ $result = mysqli_query($conn, $sql);
 
                         <!-- VIEW Modal -->
                             <div class="modal fade" id="cert-renew-<?php echo $cert_id; ?>" tabindex="-1" aria-labelledby="cert-renew-Label" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
+                                <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content" style="background-color: #333;">
                                         <div class="modal-header text-white">
                                             <h5 class="modal-title" id="viewModalLabel">Certification Renewal</h5>
