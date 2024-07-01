@@ -68,26 +68,24 @@ foreach ($files as $file) {
                             <input id="ce_end" type="text" name="ce_end" class="form-input">
                         </div> 
                     </div>
-                    <div class="form-check text-white">
-                        <legend for="form-checks" style="font-size: 16px !important;">Active Career Experience <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></legend>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
-                          <label class="form-check-label" for="ce_status1">
-                            Active 1
-                          </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
-                          <label class="form-check-label" for="ce_status2">
-                            Active 2
-                          </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
-                          <label class="form-check-label" for="ce_status3">
-                            Active 3
-                          </label>
-                        </div>
+                    <legend for="form-checks" style="font-size: 16px !important;">Active Career Experience <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></legend>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
+                      <label class="form-check-label" for="ce_status1">
+                        Active 1
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
+                      <label class="form-check-label" for="ce_status2">
+                        Active 2
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
+                      <label class="form-check-label" for="ce_status3">
+                        Active 3
+                      </label>
                     </div>
                     <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" placeholder="Experience Job Duties" rows="4"></textarea>
                     <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" placeholder="Experience Notes" rows="2"></textarea>
