@@ -88,7 +88,7 @@ foreach ($files as $file) {
                 </div>
                 <legend class="text-white" for="form-checks" style="font-size: 16px !important;">Active Career Experience <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Only 3 active experiences can be shown at a time</span></legend>
                 <div class="form-check form-check-inline text-white">
-                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1" <?php if ($ce_status == 'active-1') { ?> checked <?php } else {} ?> <?php if ($count_active1 == 1 && $ce_id != $id) { ?> disabled <?php } else {} ?>>
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1" <?php if ($ce_status == 'active-1') { ?> checked <?php } else {} ?> <?php if ($ce_status == 'active-1' && $count_active1 == 1) { ?> disabled <?php } else {} ?>>
                   <label class="form-check-label" for="ce_status1">
                     Active 1
                   </label>
