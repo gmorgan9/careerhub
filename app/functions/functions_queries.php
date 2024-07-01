@@ -508,7 +508,7 @@
     if(isset($_GET['certdelid'])) {
         $id = $_GET['certdelid'];
 
-        $sql = "DELETE FROM certification WHERE cert_id=$id";
+        $sql = "DELETE FROM certifications WHERE cert_id=$id";
         $result = mysqli_query($conn, $sql);
         header('location:' . BASE_URL . '/console/certification');
     }
