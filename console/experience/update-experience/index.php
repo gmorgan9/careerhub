@@ -43,7 +43,7 @@ foreach ($files as $file) {
                 Update Experience
             </h2>
         </div>
-    <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
+    <div class="container-fluid" style="height: calc(100vh - 502px);">
         
         <?php
             $id = $_GET['updateid'];

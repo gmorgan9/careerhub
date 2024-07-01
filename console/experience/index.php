@@ -40,11 +40,11 @@ $result = mysqli_query($conn, $sql);
     <div class="page_title">   
         <h2 class="text-white title">Career Experience</h2> 
         <div class="float-end">
-            <a class="all-btn" href="<?php echo BASE_URL; ?>/console/admin/experience/add-experience">Add Experience</a>
+            <a class="all-btn" href="<?php echo BASE_URL; ?>/console/experience/add-experience">Add Experience</a>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="height: calc(100vh - 502px);">
         
 
         <!-- <div class="content text-white" style="margin-top: 55px;"> -->
@@ -92,15 +92,15 @@ $result = mysqli_query($conn, $sql);
                                 <?php } ?>
                             </td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/admin/experience/?viewid=<?php echo $ce_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $ce_id; ?>" style="text-decoration: none;">
+                                <a href="<?php echo BASE_URL; ?>/console/experience/?viewid=<?php echo $ce_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/admin/experience/update-experience/?updateid=<?php echo $ce_id; ?>" style="text-decoration: none;">
+                                <a href="/console/experience/update-experience/?updateid=<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="/console/admin/experience/?deleteid=<?php echo $ce_id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="/console/experience/?deleteid=<?php echo $ce_id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>
