@@ -816,7 +816,7 @@ a {
     color: #fff;
 }
 
-.tags a {
+.tags li {
     display: inline-block;
     font-size: 12px;
     line-height: 1.5em;
