@@ -27,8 +27,8 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                     <a class="dropdown-item" href="/console/admin/search-jobs"><span>Search Jobs</span></a>
                     <div class="dropdown-divider"></div>
                     <span class="dropdown-item-text"><strong>Experience</strong></span>
-                    <a class="dropdown-item" href="/console/admin/experience"><span>View</span></a>
-                    <a class="dropdown-item" href="/console/admin/experience"><span>Add</span></a>
+                    <a class="dropdown-item" href="/console/experience"><span>View</span></a>
+                    <a class="dropdown-item" href="/console/experience/add-experience"><span>Add</span></a>
                     <div class="dropdown-divider"></div>
                     <span class="dropdown-item-text"><strong>Projects</strong></span>
                     <a class="dropdown-item" href="/console/project"><span>View</span></a>
