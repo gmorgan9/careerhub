@@ -62,8 +62,8 @@ $result = mysqli_query($conn, $sql);
                 <?php
                 if (mysqli_num_rows($all_result) > 0) {
                     while ($row = mysqli_fetch_assoc($all_result)) {
-                        $project_id              = $row['project_id'];
-                        $project_idno            = $row['idno'];
+                        $project_id         = $row['project_id'];
+                        $project_idno       = $row['idno'];
                         $project_name       = $row['project_name'];
                         $project_release    = $row['project_release'];
                         $project_category   = $row['project_category'];
@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $sql);
                         </tr>
 
                         <!-- VIEW Modal -->
-                            <div class="modal fade" id="viewModal<?php echo $ce_id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="viewModal<?php echo $project_id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content" style="background-color: #333;">
                                         <div class="modal-header text-white">
@@ -98,7 +98,7 @@ $result = mysqli_query($conn, $sql);
                                         </div>
                                         <div class="modal-body text-white">
                                             <?php
-                                                $new = "SELECT * FROM career_experience WHERE ce_id=$ce_id";
+                                                $new = "SELECT * FROM projects WHERE project_id=$project_id";
                                                 $new1 = mysqli_query($conn, $new);
                                                 if ($new1) {
                                                     while ($cap = mysqli_fetch_assoc($new1)) {
