@@ -213,7 +213,10 @@ $result = mysqli_query($conn, $sql);
 
                 <?php
                     }
-                } else {
+                 ?>
+            </tbody>
+        </table>
+        <?php } else {
                 ?>
                     <div class="alert project-alert" role="alert">
                                 No current experience.
@@ -221,8 +224,6 @@ $result = mysqli_query($conn, $sql);
                 <?php
                 }
                 ?>
-            </tbody>
-        </table>
 
         <?php
         // Pagination links
