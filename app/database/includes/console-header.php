@@ -38,7 +38,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                     <a class="dropdown-item" href="/console/certification"><span>View</span></a>
                     <a class="dropdown-item" href="/console/certification/add-certification"><span>Add</span></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/console/admin/settings">Settings</a>
+                    <a class="dropdown-item" href="/console/admin-settings">Admin Settings</a>
                 </div>
             </li>
         </ul>
