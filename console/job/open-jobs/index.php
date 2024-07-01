@@ -77,15 +77,15 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                             <td><?php echo $row['status'] ? $row['status'] : '-'; ?></td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/job/open-jobs/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
+                                <a href="<?php echo BASE_URL; ?>/console/job/open-jobs/?jobviewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/job/update-job/?updateid=<?php echo $id; ?>" style="text-decoration: none;">
+                                <a href="/console/job/update-job/?jobupdid=<?php echo $id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="open-app.php?deleteid=<?php echo $id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="/console/job/open-jobs/?jobdelid=<?php echo $id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>

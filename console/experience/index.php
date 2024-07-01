@@ -92,11 +92,11 @@ $result = mysqli_query($conn, $sql);
                                 <?php } ?>
                             </td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/experience/?viewid=<?php echo $ce_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $ce_id; ?>" style="text-decoration: none;">
+                                <a href="<?php echo BASE_URL; ?>/console/experience/?expviewid=<?php echo $ce_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/experience/update-experience/?updateid=<?php echo $ce_id; ?>" style="text-decoration: none;">
+                                <a href="/console/experience/update-experience/?expupdid=<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;

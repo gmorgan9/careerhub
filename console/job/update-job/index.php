@@ -44,7 +44,7 @@ foreach ($files as $file) {
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto; margin-top: 55px;">
 
             <?php
-            $id = $_GET['updateid'];
+            $id = $_GET['jobupdid'];
             $sql = "SELECT * FROM jobs WHERE job_id=$id";
             $result = mysqli_query($conn, $sql);
             if($result) {
