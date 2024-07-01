@@ -78,31 +78,31 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $ce_end ? $ce_end : 'Current'; ?></td>
                             <td><?php echo $ce_status ? $ce_status : '-'; ?></td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/admin/experience/?viewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
+                                <a href="<?php echo BASE_URL; ?>/console/admin/experience/?viewid=<?php echo $ce_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
-                                <a href="/console/admin/update-job/?updateid=<?php echo $id; ?>" style="text-decoration: none;">
+                                <a href="/console/admin/update-job/?updateid=<?php echo $ce_id; ?>" style="text-decoration: none;">
                                     <i class="bi bi-pencil-square" style="color:#005382;"></i>
                                 </a>
                                 &nbsp;
-                                <a href="open-app.php?deleteid=<?php echo $id; ?>" class="delete" style="text-decoration: none;">
+                                <a href="open-app.php?deleteid=<?php echo $ce_id; ?>" class="delete" style="text-decoration: none;">
                                     <i class="bi bi-trash" style="color:#941515;"></i>
                                 </a>
                             </td>
                         </tr>
 
                         <!-- VIEW Modal -->
-                            <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="viewModal<?php echo $ce_id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content" style="background-color: #333;">
                                         <div class="modal-header text-white">
-                                            <h5 class="modal-title" id="viewModalLabel">View Job</h5>
+                                            <h5 class="modal-title" id="viewModalLabel">View Experience</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-white">
                                             <?php
-                                                $new = "SELECT * FROM career_experience WHERE ce_id=$id";
+                                                $new = "SELECT * FROM career_experience WHERE ce_id=$ce_id";
                                                 $new1 = mysqli_query($conn, $new);
                                                 if ($new1) {
                                                     while ($cap = mysqli_fetch_assoc($new1)) {
