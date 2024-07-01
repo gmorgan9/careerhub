@@ -130,8 +130,8 @@ $count_cert = $count_cert_row['count'];
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
                                 <i class="bi bi-square-half"></i>
-                                <i class="bi bi-square"></i>
                             </div>
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including Burpesuite, Wazuh, ELK Stack, OSquery</span>
                         </div>
