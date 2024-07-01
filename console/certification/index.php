@@ -133,7 +133,7 @@ $result = mysqli_query($conn, $sql);
                                    
                                </div>
                            </div>
-                        <!-- end View Project Canvas -->
+                        <!-- end View Cert Canvas -->
 
                         <!-- Renewal Modal -->
                             <div class="modal fade" id="cert-renew-<?php echo $cert_id; ?>" tabindex="-1" aria-labelledby="cert-renew-Label" aria-hidden="true">

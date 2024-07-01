@@ -92,7 +92,7 @@ $result = mysqli_query($conn, $sql);
                                 <?php } ?>
                             </td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/experience/?expviewid=<?php echo $ce_id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $ce_id; ?>" style="text-decoration: none;">
+                                <a class="view" data-bs-toggle="offcanvas" data-bs-target="#exp-canvas-<?php echo $ce_id; ?>" style="text-decoration: none; cursor: pointer !important;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
@@ -106,109 +106,35 @@ $result = mysqli_query($conn, $sql);
                             </td>
                         </tr>
 
-                        <!-- VIEW Modal -->
-                            <div class="modal fade" id="viewModal<?php echo $ce_id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content" style="background-color: #333;">
-                                        <div class="modal-header text-white">
-                                            <h5 class="modal-title" id="viewModalLabel">View Experience</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body text-white">
-                                            <?php
-                                                $new = "SELECT * FROM career_experience WHERE ce_id=$ce_id";
-                                                $new1 = mysqli_query($conn, $new);
-                                                if ($new1) {
-                                                    while ($cap = mysqli_fetch_assoc($new1)) {
-                                            ?>
-                                            <!-- Display the content of the selected entry -->
-                                            <div>
-                                                <h5 class="float-start">Job Details</h5>
-                                                <div class="float-end">
-                                                    <?php if ($cap['watchlist'] == 1) { ?>
-                                                        <i class="bi bi-eye text-muted"></i>
-                                                    <?php } ?>
-                                                    <?php if ($cap['interview_set'] == 1) { ?>
-                                                        <i class="bi bi-people"></i>
-                                                    <?php } ?>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <hr>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Status</p> 
-                                                <?php if ($cap['status'] == 'Applied') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                                <?php } else if ($cap['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                                <?php } else if ($cap['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                                <?php } else if ($cap['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
-                                                <?php } ?>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Connected Emails</p>
-                                                <p><span class="float-end">
-                                                    <?php
-                                                        $count = "SELECT COUNT(*) as email_count FROM email_application WHERE job_id='$id'";
-                                                        $count_result = mysqli_query($conn, $count);
-                                                        $rtotal = mysqli_fetch_assoc($count_result);
-                                                        $email_count = $rtotal['email_count'];
-                                                        echo $email_count < 10 ? "0$email_count" : $email_count;
-                                                    ?>
-                                                </span></p>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Job Title</p> 
-                                                <p><span class="float-end"><?php echo $cap['job_title']; ?></span></p>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Company</p> 
-                                                <p><span class="float-end"><?php echo $cap['company']; ?></span></p>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Location</p>
-                                                <p><span class="float-end"><?php echo $cap['location']; ?></span></p>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Job Link</p> 
-                                                <p><a target="_blank" href="<?php echo $cap['job_link']; ?>" class="float-end">Link Here</a></p>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Job Type</p> 
-                                                <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Base Pay</p> 
-                                                <p><span class="float-end"><?php echo $cap['pay']; ?></span></p>
-                                            </div>
-                                            <br>
-                                            <div class="ms-3 me-3">
-                                                <p class="float-start fw-bold">Bonus Pay</p> 
-                                                <p><span class="float-end"><?php echo $cap['bonus_pay']; ?></span></p>
-                                            </div>
-                                            <br><br>
-                                            <div class="ms-3 me-3">
-                                                <p class="fw-bold">Notes</p> 
-                                                <p><span><?php echo $cap['notes']; ?></span></p>
-                                            </div>
-                                            <?php } } ?>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <!-- end VIEW Modal -->
+                        <!-- View Experience Canvas -->
+                            <div class="offcanvas project-offcanvas offcanvas-end" tabindex="-1" id="exp-canvas-<?php echo $cert_id; ?>" aria-labelledby="offcanvasRightLabel">
+        
+                               <div class="offcanvas-body">
+                                   <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
+                                   <hr>
+                                   <div class="main-project-details">
+                                       <h3 class="mt-5"><?php echo $cert_name; ?></h3>
+                                       <div class="project-image d-flex justify-content-center">
+                                           <img src="../../assets/images/cert-logos/<?php echo $cert_short_name; ?>.png" class="mt-3" alt="" style="width: 180px !important;">
+                                       </div>
+                                       <h4>Credential ID</h4>
+                                        <p><?php echo $cred_id ?? 'In-progress'; ?></p>
+                                        <h4>Original Issue Date</h4>
+                                        <p><?php echo $cert_issued ?? 'In-progress'; ?></p>
+                                        <h4>Expiration Date</h4>
+                                        <p><?php echo $cert_expire ?? 'In-progress'; ?></p>
+                                        <h4>Renewal Date</h4>
+                                        <p><?php echo $cert_renewed ?? '---'; ?></p>
+                                        <h4>Provider</h4>
+                                        <p><?php echo $cert_provider ?? '---'; ?></p>
+                                       <a href="<?php echo $cert_credly; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
+                                           Open Certification &nbsp; 
+                                           <i class="bi bi-box-arrow-up-right"></i>
+                                       </a>
+                                   </div>
+                               </div>
+                           </div>
+                        <!-- end View Experience Canvas -->
 
 
                 <?php
