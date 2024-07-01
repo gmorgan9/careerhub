@@ -105,6 +105,12 @@ foreach ($files as $file) {
                     Active 3
                   </label>
                 </div>
+                <div class="form-check form-check-inline text-white mb-3">
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status4" value="not-active" <?php if ($ce_status == 'not-active') {?> checked <?php } else {} ?>>
+                  <label class="form-check-label" for="ce_status4">
+                    Not Active
+                  </label>
+                </div>
                 <br>
                 <label class="form-label text-white" for="ce_job_duties">Experience Job Duties</label>
                 <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" rows="4"><?php echo $ce_job_duties; ?></textarea>
