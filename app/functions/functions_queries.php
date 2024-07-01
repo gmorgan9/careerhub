@@ -437,12 +437,10 @@
         $cert_provider = isset($_POST['cert_provider']) ? mysqli_real_escape_string($conn, $_POST['cert_provider']) : "";
 
         $update = "UPDATE certifications SET 
-                    idno = NULLIF('$idno', ''), 
                     cert_name = NULLIF('$cert_name', ''), 
                     cert_short_name = NULLIF('$cert_short_name', ''), 
                     cert_issued = NULLIF('$cert_issued', ''), 
-                    cert_expire = NULLIF('$cert_expire', ''), 
-                    cert_renewed = NULLIF('$cert_renewed', ''), 
+                    cert_expire = NULLIF('$cert_expire', ''),
                     cred_id = NULLIF('$cred_id', ''), 
                     cert_provider = NULLIF('$cert_provider', '')
                    WHERE cert_id = '$cert_id';";
