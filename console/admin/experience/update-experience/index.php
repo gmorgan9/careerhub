@@ -64,7 +64,7 @@ foreach ($files as $file) {
                 ?>
         <div class="form">
             <form action="" method="POST">
-                <input type="text" class="form-input text-white" id="ce_id" name="ce_id" value="<?php echo $ce_id; ?>">
+                <input type="hidden" class="form-input text-white" id="ce_id" name="ce_id" value="<?php echo $ce_id; ?>">
                 <div class="form-group">
                     <label class="form-label text-white" for="ce_company">Company Name</label>
                     <input id="cert_ce_companyname" type="text" name="ce_company" class="form-input" value="<?php echo $ce_company; ?>">
