@@ -51,40 +51,40 @@ foreach ($files as $file) {
                 <div class="controls two-columns">
                     <div class="left-column">
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_name">Project Name</label>
-                            <input id="project_name" type="text" name="project_name" class="form-input" value="<?php echo $project_name; ?>">
+                            <label class="form-label text-white" for="project_name">Project Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="project_name" type="text" name="project_name" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_short_name">Project Short Name</label>
-                            <input id="project_short_name" type="text" name="project_short_name" class="form-input" value="<?php echo $project_short_name; ?>" >
+                            <label class="form-label text-white" for="project_short_name">Project Short Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="project_short_name" type="text" name="project_short_name" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_github_link">Github Link</label>
-                            <input id="project_github_link" type="text" name="project_github_link" class="form-input" value="<?php echo $project_github_link; ?>">
+                            <label class="form-label text-white" for="project_github_link">Github Link <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="project_github_link" type="text" name="project_github_link" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_github_user">Github User</label>
-                            <input id="project_github_user" type="text" name="project_github_user" class="form-input" value="<?php echo $project_github_user; ?>">
+                            <label class="form-label text-white" for="project_github_user">Github User <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="project_github_user" type="text" name="project_github_user" class="form-input" required>
                         </div>
-                        <label class="form-label text-white" for="project_description">Description</label>
+                        <label class="form-label text-white" for="project_description">Description <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
                     </div>
                     <div class="right-column">
                         <div class="form-group">
                             <label class="form-label text-white" for="project_URL">Project URL</label>
-                            <input id="project_url" type="text" name="project_url" class="form-input" value="<?php echo $project_url; ?>">
+                            <input id="project_url" type="text" name="project_url" class="form-input">
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_release">Release Date</label>
-                            <input id="project_release" type="date" name="project_release" class="form-input" style="padding-bottom: 0 !important;" value="<?php echo $project_release; ?>">
+                            <label class="form-label text-white" for="project_release">Release Date <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="project_release" type="date" name="project_release" class="form-input" style="padding-bottom: 0 !important;" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_tech">Technologies</label>
-                            <input id="project_tech" type="text" name="project_tech" class="form-input" value="<?php echo $project_tech; ?>">
+                            <label class="form-label text-white" for="project_tech">Technologies <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="project_tech" type="text" name="project_tech" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label text-white" for="project_category">Category</label>
-                            <select class="form-input" name="project_category">
-                                <option value="<?php echo $project_category; ?>"><?php echo $project_category; ?></option>
+                            <label class="form-label text-white" for="project_category">Category <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <select class="form-input" name="project_category" required>
+                                <option value="">Please select one...</option>
                                 <option value="Web Development">Web Development</option>
                                 <option value="Scripting & Automation">Scripting & Automation</option>
                                 <option value="Software Development">Software Development</option>
@@ -92,7 +92,7 @@ foreach ($files as $file) {
                         </div>
                     </div>
                 </div>
-                <textarea id="project_description" name="project_description" class="form-input mb-3" rows="2"><?php echo $project_description; ?></textarea>
+                <textarea id="project_description" name="project_description" class="form-input mb-3" rows="2"></textarea>
                 <input type="submit" name="update-project" class="form-btn mt-5" value="Update Project">
             </form>
         </div> 
