@@ -268,11 +268,17 @@ $count_cert = $count_cert_row['count'];
                                     </div>
                                     <div class="cert-date">
                                         <span>
-                                            <?php if(is_null($cert_issued)) { ?>
-                                            In-progress
-                                            <?php } else { ?>
-                                                Issued: <?php echo $cert_issued; ?>
-                                            <?php } ?>
+                                            <?php
+                                            if (is_null($cert_issued) && is_null($cert_renewed)) {
+                                                echo "In-progress";
+                                            } else {
+                                                if (!is_null($cert_issued) && is_null($cert_renewed)) {
+                                                    echo "Issued: " . $cert_issued;
+                                                } else if (!is_null($cert_issued) && !is_null($cert_renewed)) {
+                                                    echo "Renewed: " . $cert_renewed;
+                                                }
+                                            }
+                                            ?>
                                         </span>
                                     </div>
                                     <div class="cert-company">
