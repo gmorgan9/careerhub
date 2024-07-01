@@ -109,15 +109,20 @@ $result = mysqli_query($conn, $sql);
                                            <img src="../../assets/images/cert-logos/<?php echo $cert_short_name; ?>.png" class="mt-3" alt="" style="width: 180px !important;">
                                        </div>
                                        <h4>Credential ID</h4>
-                                       <p><?php echo $cred_id; ?></p>
-                                       <h4>Original Issue Date</h4>
-                                       <p><?php echo $cert_issued; ?></p>
-                                       <h4>Expiration Date</h4>
-                                       <p><?php echo $cert_expire; ?></p>
-                                       <h4>Renewal Date</h4>
-                                       <p><?php echo $cert_renewed; ?></p>
-                                       <h4>Provider</h4>
-                                       <p><?php echo $cert_provider; ?></p>
+                                        <p><?php echo $cred_id ?? '---'; ?></p>
+                                                            
+                                        <h4>Original Issue Date</h4>
+                                        <p><?php echo $cert_issued ?? '---'; ?></p>
+                                                            
+                                        <h4>Expiration Date</h4>
+                                        <p><?php echo $cert_expire ?? '---'; ?></p>
+                                                            
+                                        <h4>Renewal Date</h4>
+                                        <p><?php echo $cert_renewed ?? '---'; ?></p>
+                                                            
+                                        <h4>Provider</h4>
+                                        <p><?php echo $cert_provider ?? '---'; ?></p>
+
                                        
                                        
                                        <a href="<?php echo $cert_credly; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
