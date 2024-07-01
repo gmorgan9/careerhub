@@ -38,6 +38,11 @@ foreach ($files as $file) {
 
     <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
 
+    <div class="page_title">
+        <h2 class="text-white title">
+            Admin Settings
+        </h2>
+    </div>
 
     <div class="container-fluid" style="height: calc(100vh - 502px);">
 
