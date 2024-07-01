@@ -63,7 +63,7 @@ $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($cert_result) > 0) {
                     while ($row = mysqli_fetch_assoc($cert_result)) {
                         $cert_id          = $row['cert_id'];
-                        $idno             = $row['idno'];
+                        $cert_idno        = $row['idno'];
                         $cert_name        = $row['cert_name'];
                         $cert_short_name  = $row['cert_short_name'];
                         $cert_issued      = $row['cert_issued'];
@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $sql);
                                     <i class="bi bi-arrow-repeat text-info"></i>
                                 </a>
                                 &nbsp;
-                                <a class="view pe-auto" data-bs-toggle="offcanvas" data-bs-target="#cert-canvas-<?php echo $cert_id; ?>" style="text-decoration: none;">
+                                <a class="view" data-bs-toggle="offcanvas" data-bs-target="#cert-canvas-<?php echo $cert_id; ?>" style="text-decoration: none; cursor: pointer !important;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
