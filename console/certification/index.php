@@ -210,9 +210,14 @@ $result = mysqli_query($conn, $sql);
                                             </div>
                                             <form action="" method="POST">
                                                 <input type="hidden" name="cert_id" value="<?php echo $cert_id; ?>">
-                                                <input type="date" class="form-input" name="cert_renewed" id="cert_renewed" style="padding-bottom: 0 !important;">
-                                                <input type="date" class="form-input mt-3" name="cert_expire" id="cert_expire" style="padding-bottom: 0 !important;" value="<?php echo $cert_expire; ?>">
-
+                                                <div class="form-group">
+                                                    <label class="form-label text-white" for="cert_renewed">Renewal Date</label>
+                                                    <input type="date" class="form-input" name="cert_renewed" id="cert_renewed" style="padding-bottom: 0 !important;">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label text-white" for="cert_expire">Expiration Date</label>
+                                                    <input type="date" class="form-input mt-3" name="cert_expire" id="cert_expire" style="padding-bottom: 0 !important;" value="<?php echo $cert_expire; ?>">
+                                                </div>
                                                 <input type="submit" name="cert-renewal" class="all-btn mt-3" value="Renew Certification">
                                             </form>
                                         </div>
