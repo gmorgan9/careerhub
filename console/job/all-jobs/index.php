@@ -111,7 +111,7 @@ $result = mysqli_query($conn, $sql);
                                     <hr>
                                     <div class="main-project-details">
                                         <h3 class="mt-5"><?php echo $job_title; ?></h3>
-                                        <div class="">
+                                        <div class="float-end">
                                                     <?php if ($watchlist == 1) { ?>
                                                         <i class="bi bi-eye text-white"></i>
                                                     <?php } ?>
