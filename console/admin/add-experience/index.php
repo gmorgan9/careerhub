@@ -68,7 +68,6 @@ foreach ($files as $file) {
                             <input id="ce_end" type="text" name="ce_end" class="form-input">
                         </div> 
                     </div>
-                    <div class="form-group">
                         <div class="form-check">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
                           <label class="form-check-label" for="ce_status1">
@@ -87,7 +86,6 @@ foreach ($files as $file) {
                             Active 3
                           </label>
                         </div>
-                    </div>
                     <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" placeholder="Experience Job Duties" rows="4"></textarea>
                     <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" placeholder="Experience Notes" rows="2"></textarea>
                     <input type="submit" name="add-experience" class="form-btn mt-2" value="Add Certification">
