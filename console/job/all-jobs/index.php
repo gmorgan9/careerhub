@@ -88,7 +88,7 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $company ? $company : '-'; ?></td>
                             <td><?php echo $location ? $location : '-'; ?></td>
                             <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
-                            <td><?php echo $row['status'] ? $row['status'] : '-'; ?></td>
+                            <td><?php echo $status ? $status : '-'; ?></td>
                             <td style="font-size: 20px;">
                                 <a class="view" data-bs-toggle="offcanvas" data-bs-target="#job-canvas-<?php echo $id; ?>" style="text-decoration: none; cursor: pointer;">
                                     <i class="bi bi-eye text-success"></i>
@@ -113,7 +113,7 @@ $result = mysqli_query($conn, $sql);
                                         <h3 class="mt-5"><?php echo $job_title; ?></h3>
                                         <div class="float-end">
                                                     <?php if ($watchlist == 1) { ?>
-                                                        <i class="bi bi-eye text-muted"></i>
+                                                        <i class="bi bi-eye text-white"></i>
                                                     <?php } ?>
                                                     <?php if ($interview_set == 1) { ?>
                                                         <i class="bi bi-people"></i>
