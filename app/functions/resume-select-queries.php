@@ -12,9 +12,14 @@
     $count_cert = $count_cert_row['count'];
 // end Certifications - SELECT all certifications
 
-// Career Experience - SELECT all experience
+// Career Experience - SELECT all active experience
     $ce_sql = "SELECT * FROM career_experience WHERE ce_status IN ('active-1', 'active-2', 'active-3') ORDER BY ce_status ASC;";
     $ce_result = mysqli_query($conn, $ce_sql);
+// end Career Experience - SELECT all active experience
+
+// Career Experience - SELECT all experience
+    $ce_all_sql = "SELECT * FROM career_experience";
+    $ce_all_result = mysqli_query($conn, $ce_all_sql);
 // end Career Experience - SELECT all experience
 
 ?>
