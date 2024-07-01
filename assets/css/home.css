@@ -324,9 +324,9 @@
     display: block;
 }
 
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
     display: none;
-}
+} */
 
 .dropdown-item span {
     padding-left: 15px !important;
