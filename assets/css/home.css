@@ -752,8 +752,8 @@ figure {
 }
 
 .offcanvas {
-    background-color: var(--background-color);
-    color: white;
+    background-color: var(--background-color) !important;
+    color: white !important;
 }
 
 .portfolio-page-wrapper .block-title h3 {
