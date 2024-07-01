@@ -43,7 +43,7 @@
     $count_active3 = $count_active3_row['count'];
 // end Career Experience - Count active-3 Career Experience
 
-// DELETE
+// Career Experience - Delete Experience
     if(isset($_GET['deleteid'])) {
         $id = $_GET['deleteid'];
 
@@ -51,6 +51,6 @@
         $result = mysqli_query($conn, $sql);
         header('location:' . BASE_URL . '/console/admin/experience');
     }
-// END DELETE
+// End Career Experience - Delete Experience
 
 ?>
