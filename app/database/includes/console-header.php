@@ -21,12 +21,18 @@ $current_page = basename($_SERVER['REQUEST_URI']);
                     Admin
                 </a>
                 <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown" style="margin-left: -50px;">
+                    <li><span class="dropdown-item-text"><strong>Job Central</strong></span></li>
                     <a class="dropdown-item" href="/console/admin/add-job">Add Job</a>
                     <a class="dropdown-item disabled" href="/console/admin/update-job">Update Job</a>
                     <a class="dropdown-item" href="/console/admin/search-jobs">Search Jobs</a>
                     <div class="dropdown-divider"></div>
+                    <li><span class="dropdown-item-text"><strong>Experience</strong></span></li>
                     <a class="dropdown-item" href="/console/admin/experience">Experience</a>
+                    <div class="dropdown-divider"></div>
+                    <li><span class="dropdown-item-text"><strong>Projects</strong></span></li>
                     <a class="dropdown-item" href="/console/admin/project">Projects</a>
+                    <div class="dropdown-divider"></div>
+                    <li><span class="dropdown-item-text"><strong>Certifications</strong></span></li>
                     <a class="dropdown-item" href="/console/admin/add-certification">Add Certification</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="index.php?logout=1">Settings</a>
