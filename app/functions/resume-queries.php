@@ -49,6 +49,7 @@
 
         $sql = "DELETE FROM career_experience WHERE ce_id=$id";
         $result = mysqli_query($conn, $sql);
+        header('location:' . BASE_URL . '/console/admin/experience');
     }
 // END DELETE
 
