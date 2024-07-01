@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $sql);
         
 
         <!-- <div class="content text-white" style="margin-top: 55px;"> -->
-        <table class="table text-white w-75 mx-auto">
+        <table class="table text-white w-75 mx-auto" style="margin-top: -30px;">
             <thead>
                 <tr>
                     <th scope="col">#</th>
