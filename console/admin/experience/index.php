@@ -77,8 +77,12 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $ce_start ? $ce_start : '-'; ?></td>
                             <td><?php echo $ce_end ? $ce_end : 'Current'; ?></td>
                             <td>
-                                <?php if ($ce_status == 'active-1' || $ce_status == 'active-2' || $ce_status == 'active-3') { ?>
-                                    Active
+                                <?php if ($ce_status == 'active-1') { ?>
+                                    Active (1)
+                                <?php } else if ($ce_status == 'active-2') { ?>
+                                    Active (2)
+                                <?php } else if ($ce_status == 'active-3') { ?>
+                                    Active (3)
                                 <?php } else { ?>
                                     Not Active
                                 <?php } ?>
