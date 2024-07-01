@@ -71,7 +71,6 @@ $result = mysqli_query($conn, $sql);
                         <tr>
                             <th scope="row"><?php echo $project_idno; ?></th>
                             <td><?php echo $project_name ? $project_name : '-'; ?></td>
-                            <td><?php echo $ce_job_title ? $ce_job_title : '-'; ?></td>
                             <td><?php echo $project_release ? $project_release : '-'; ?></td>
                             <td><?php echo $project_category ? $project_category : ''; ?></td>
                             <td style="font-size: 20px;">
