@@ -45,55 +45,56 @@ foreach ($files as $file) {
         </div>
     <div class="container-fluid" style="max-width: 1320px; margin: 0 auto;">
         
-        <div class="form">
-            <form action="" method="POST">
+    <div class="form">
+    <form action="" method="POST">
+        <div class="form-group">
+            <label class="form-label text-white" for="ce_company">Company Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+            <input id="cert_ce_companyname" type="text" name="ce_company" class="form-input" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label text-white" for="ce_job_title">Experience Job Title <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+            <input id="ce_job_title" type="text" name="ce_job_title" class="form-input" required>
+        </div>
+        <div class="controls two-columns">
+            <div class="left-column">
                 <div class="form-group">
-                    <label class="form-label text-white" for="ce_company">Company Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                    <input id="cert_ce_companyname" type="text" name="ce_company" class="form-input" required>
+                    <label class="form-label text-white" for="ce_start">Experience Start <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                    <input id="ce_start" type="text" name="ce_start" class="form-input" required>
                 </div>
+            </div>
+            <div class="right-column">
                 <div class="form-group">
-                    <label class="form-label text-white" for="ce_job_title">Experience Job Title <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                    <input id="ce_job_title" type="text" name="ce_job_title" class="form-input" required>
-                </div>
-                <div class="controls two-columns">
-                    <div class="left-column">
-                        <div class="form-group">
-                            <label class="form-label text-white" for="ce_start">Experience Start <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                            <input id="ce_start" type="text" name="ce_start" class="form-input" required>
-                        </div>
-                    </div>
-                    <div class="right-column">
-                        <div class="form-group">
-                            <label class="form-label text-white" for="ce_end">Experience End <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
-                            <input id="ce_end" type="text" name="ce_end" class="form-input">
-                        </div> 
-                    </div>
-                </div>
-                <div class="form-checks d-flex mb-3">
-                    <div class="form-check text-white">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
-                      <label class="form-check-label" for="ce_status1">
-                        Active 1
-                      </label>
-                    </div>
-                    <div class="form-check text-white">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
-                      <label class="form-check-label" for="ce_status2">
-                        Active 2
-                      </label>
-                    </div>
-                    <div class="form-check text-white">
-                      <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
-                      <label class="form-check-label" for="ce_status3">
-                        Active 3
-                      </label>
-                    </div>
-                </div>
-                <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" placeholder="Experience Job Duties" rows="4"></textarea>
-                <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" placeholder="Experience Notes" rows="2"></textarea>
-                <input type="submit" name="add-experience" class="form-btn mt-2" value="Add Certification"> 
-            </form>
-        </div> 
+                    <label class="form-label text-white" for="ce_end">Experience End <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
+                    <input id="ce_end" type="text" name="ce_end" class="form-input">
+                </div> 
+            </div>
+        </div>
+        <div class="form-checks d-flex mb-3">
+            <div class="form-check text-white me-3">
+                <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
+                <label class="form-check-label" for="ce_status1">
+                    Active 1
+                </label>
+            </div>
+            <div class="form-check text-white me-3">
+                <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2">
+                <label class="form-check-label" for="ce_status2">
+                    Active 2
+                </label>
+            </div>
+            <div class="form-check text-white">
+                <input class="form-check-input" type="radio" name="ce_status" id="ce_status3" value="active-3">
+                <label class="form-check-label" for="ce_status3">
+                    Active 3
+                </label>
+            </div>
+        </div>
+        <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" placeholder="Experience Job Duties" rows="4"></textarea>
+        <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" placeholder="Experience Notes" rows="2"></textarea>
+        <input type="submit" name="add-experience" class="form-btn mt-2" value="Add Certification">
+    </form>
+</div>
+
     </div>
 
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
