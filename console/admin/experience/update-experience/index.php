@@ -94,7 +94,7 @@ foreach ($files as $file) {
                   </label>
                 </div>
                 <div class="form-check form-check-inline text-white">
-                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <?php } else {} ?> <?php echo ($count_active2 == 1 && $ce_id != $id) ? 'disabled' : ''; ?> disabled>
+                  <input class="form-check-input" type="radio" name="ce_status" id="ce_status2" value="active-2" <?php if ($ce_status == 'active-2') {?> checked <?php } else {} ?> <?php echo ($count_active2 == 1 && $ce_id != $id) ? 'disabled' : ''; ?>>
                   <label class="form-check-label" for="ce_status2">
                     Active 2
                   </label>
@@ -113,6 +113,10 @@ foreach ($files as $file) {
                 <input type="submit" name="update-experience" class="form-btn mt-2" value="Update Experience">
             </form>
             <?php } } ?>
+
+            <?php echo $count_active1; ?>
+            <?php echo $count_active2; ?>
+            <?php echo $count_active3; ?>
 
         </div> 
     </div>
