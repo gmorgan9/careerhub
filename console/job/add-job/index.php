@@ -39,7 +39,7 @@ foreach ($files as $file) {
         </h2>
     </div>  
 
-    <div class="container-fluid" style="height: calc(100vh - 502px);">
+    <div class="container-fluid">
             
         <div class="content text-white" style="max-width: 1320px; margin: 0 auto;">
             
