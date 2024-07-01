@@ -109,8 +109,9 @@ foreach ($files as $file) {
                         </div>
                     </div>
                 </div>
-                <label class="form-label text-white" for="project_description">Description</label>
+                
                 <textarea id="project_description" name="project_description" class="form-input mb-3" rows="2"><?php echo $project_description; ?></textarea>
+                <label class="form-label text-white" for="project_description">Description</label>
                 <input type="submit" name="add-project" class="form-btn mt-5" value="Add Project">
             </form>
         </div>
