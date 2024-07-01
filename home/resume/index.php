@@ -70,7 +70,7 @@ $count_cert = $count_cert_row['count'];
                         <h2>Additional Skills & Interests</h2>
                     </div>
                     <div class="text">
-                        <div class="row">
+                        <div class="row pb-2">
                             <div class="col-sm-4">
                                 SIEM Tools
                             </div>
@@ -83,7 +83,7 @@ $count_cert = $count_cert_row['count'];
                             </div>
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including Burpesuite, Wazuh, ELK Stack, OSquery</span>
                         </div>
-                        <div class="row">
+                        <div class="row pb-2">
                             <div class="col-sm-4">
                                 Linux
                             </div>
@@ -96,7 +96,7 @@ $count_cert = $count_cert_row['count'];
                             </div>
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including Ubuntu, Kali, CLI</span>
                         </div>
-                        <div class="row">
+                        <div class="row pb-2">
                             <div class="col-sm-4">
                                 Coding
                             </div>
@@ -109,7 +109,7 @@ $count_cert = $count_cert_row['count'];
                             </div>
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including Python, C(novice), C++(novice)</span>
                         </div>
-                        <div class="row">
+                        <div class="row pb-2">
                             <div class="col-sm-4">
                                 Web Development
                             </div>
