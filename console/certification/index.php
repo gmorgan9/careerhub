@@ -109,13 +109,13 @@ $result = mysqli_query($conn, $sql);
                                            <img src="../../assets/images/cert-logos/<?php echo $cert_short_name; ?>.png" class="mt-3" alt="" style="width: 180px !important;">
                                        </div>
                                        <h4>Credential ID</h4>
-                                        <p><?php echo $cred_id ?? '---'; ?></p>
+                                        <p><?php echo $cred_id ?? 'In-progress'; ?></p>
 
                                         <h4>Original Issue Date</h4>
                                         <p><?php echo $cert_issued ?? 'In-progress'; ?></p>
 
                                         <h4>Expiration Date</h4>
-                                        <p><?php echo $cert_expire ?? '---'; ?></p>
+                                        <p><?php echo $cert_expire ?? 'In-progress'; ?></p>
 
                                         <h4>Renewal Date</h4>
                                         <p><?php echo $cert_renewed ?? '---'; ?></p>
