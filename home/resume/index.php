@@ -72,6 +72,32 @@ $count_cert = $count_cert_row['count'];
                     <div class="text">
                         <div class="row">
                             <div class="col-sm-4">
+                                Coding
+                            </div>
+                            <div class="col-sm-6">
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-half"></i>
+                                <i class="bi bi-square"></i>
+                            </div>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Python, C(novice), C++(novice)</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                SIEM Tools
+                            </div>
+                            <div class="col-xs-9 col-sm-6">
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-fill"></i>
+                                <i class="bi bi-square-half"></i>
+                            </div>
+                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Burpesuite, Wazuh, ELK Stack, OSquery</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
                                 Web Development
                             </div>
                             <div class="col-xs-9 col-sm-6">
@@ -108,32 +134,6 @@ $count_cert = $count_cert_row['count'];
                                 <i class="bi bi-square-half"></i>
                             </div>
                             <span class="text-secondary fst-italic" style="font-size: 12px;">Including Ubuntu, Kali, CLI</span>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                Coding
-                            </div>
-                            <div class="col-sm-6">
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-half"></i>
-                                <i class="bi bi-square"></i>
-                            </div>
-                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Python, C(novice), C++(novice)</span>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                SIEM Tools
-                            </div>
-                            <div class="col-xs-9 col-sm-6">
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-fill"></i>
-                                <i class="bi bi-square-half"></i>
-                            </div>
-                            <span class="text-secondary fst-italic" style="font-size: 12px;">Including Burpesuite, Wazuh, ELK Stack, OSquery</span>
                         </div>
                     </div>
                 </div>
