@@ -68,7 +68,7 @@ foreach ($files as $file) {
                             <input id="ce_end" type="text" name="ce_end" class="form-input">
                         </div> 
                     </div>
-                    <div class="form-checks d-flex">
+                    <div class="form-checks d-inline">
                         <div class="form-check text-white mb-3">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
                           <label class="form-check-label" for="ce_status1">
