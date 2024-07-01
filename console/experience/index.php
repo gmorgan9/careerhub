@@ -115,9 +115,6 @@ $result = mysqli_query($conn, $sql);
                                    <hr>
                                    <div class="main-project-details">
                                        <h3 class="mt-5"><?php echo $ce_job_title; ?></h3>
-                                       <div class="project-image d-flex justify-content-center">
-                                           <img src="../../assets/images/cert-logos/<?php echo $cert_short_name; ?>.png" class="mt-3" alt="" style="width: 180px !important;">
-                                       </div>
                                        <h4>Company Name</h4>
                                         <p><?php echo $ce_company ?? '--'; ?></p>
                                         <h4>Duties</h4>
