@@ -47,7 +47,7 @@ foreach ($files as $file) {
                 <div class="card-container justify-content-center mx-auto">
                 <!-- Open/Awaiting -->
                     <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                        <a class="text-decoration-none stretched-link" href="/console/jobs/open-jobs">
+                        <a class="text-decoration-none stretched-link" href="/console/job/open-jobs">
                             <div class="card-body p-0">
                                 <div class="left float-start" style="background-color: lightgreen; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                                     <i class="bi bi-clipboard d-block mx-auto my-3 ms-4 me-4 text-black" style=" margin-top: 20px !important; font-size: 48px;"></i>
@@ -78,7 +78,7 @@ foreach ($files as $file) {
 
                 <!-- Recieved Offer -->
                     <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                        <a class="text-decoration-none stretched-link" href="/console/jobs/offer-jobs">
+                        <a class="text-decoration-none stretched-link" href="/console/job/offer-jobs">
                             <div class="card-body p-0">
                                 <div class="left float-start" style="background-color: lightblue; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                                     <i class="bi bi-clipboard-check d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
@@ -110,7 +110,7 @@ foreach ($files as $file) {
 
                 <!-- Declined -->
                     <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                        <a class="text-decoration-none stretched-link" href="/console/jobs/declined-jobs">
+                        <a class="text-decoration-none stretched-link" href="/console/job/declined-jobs">
                             <div class="card-body p-0">
                                 <div class="left float-start" style="background-color: lightpink; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                                     <i class="bi bi-clipboard-x d-block mx-auto my-3 ms-4 me-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
@@ -142,7 +142,7 @@ foreach ($files as $file) {
 
                 <!-- All -->
                     <div class="card top-card me-3" style="min-width: 18rem; max-width: 18rem; background-color: #333333;">
-                        <a class="text-decoration-none stretched-link" href="/console/jobs/all-jobs">
+                        <a class="text-decoration-none stretched-link" href="/console/job/all-jobs">
                             <div class="card-body p-0">
                                 <div class="left float-start" style="background-color: lightsalmon; height: 100%; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                                     <i class="bi bi-clipboard-data d-block mx-auto my-3 me-4 ms-4 text-black" style="margin-top: 20px !important; font-size: 48px;"></i>
@@ -213,7 +213,7 @@ foreach ($files as $file) {
                                                         <?php } else if($row['status'] == 'Interested') { ?>
                                                             <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                         <?php } ?>
-                                                        <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                        <a href="/console/job/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
                                                 </li>
                                             <?php 
                                             }
@@ -262,7 +262,7 @@ foreach ($files as $file) {
                                                     <?php } else if($row['status'] == 'Interested') { ?>
                                                         <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                     <?php } ?>
-                                                    <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                    <a href="/console/job/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
                                                 </li>
                                             <?php 
                                             }
@@ -356,7 +356,7 @@ foreach ($files as $file) {
                                                     <?php } else if($row['status'] == 'Interested') { ?>
                                                         <p><span class="float-end" style="margin-top: -75px;"><i style="font-size: 12px;" class="bi bi-circle-fill text-secondary"></i>&nbsp;<span style="font-size: 12px;"><?php echo $row['status']; ?></span></span></p>
                                                     <?php } ?>
-                                                    <a href="/console/jobs/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
+                                                    <a href="/console/job/view-job/?viewid=<?php echo $job_id; ?>" class="text-decoration-none stretched-link"></a>
                                                     <p class="float-end text-secondary" style="font-size: 11px; margin-top: -15px; margin-bottom: -15px;"><?php echo $time_ago; ?></p>
                                                 </li>
                                             <?php
