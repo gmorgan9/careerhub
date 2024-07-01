@@ -92,7 +92,7 @@ foreach ($files as $file) {
                             <input id="project_tech" type="text" name="project_tech" class="form-input" value="<?php echo $project_tech; ?>">
                         </div>
                         <div class="form-group">
-                            <select class="form-input" name="project_category" style="color: rgb(169,169,169) !important;">
+                            <select class="form-input" name="project_category">
                                 <option value="<?php echo $project_category; ?>"><?php echo $project_category; ?></option>
                                 <option value="Web Development">Web Development</option>
                                 <option value="Scripting & Automation">Scripting & Automation</option>
