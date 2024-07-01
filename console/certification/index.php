@@ -201,10 +201,11 @@ $result = mysqli_query($conn, $sql);
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content" style="background-color: #333;">
                                         <div class="modal-header text-white">
-                                            <h5 class="modal-title" id="viewModalLabel">View Certification</h5>
+                                            <h5 class="modal-title" id="viewModalLabel">Certification Renewal</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body text-white">
+                                            Cert to be renewed: <?php echo $cert_name; ?>
                                             <form action="" method="POST">
                                                 <input type="hidden" name="cert_id" value="<?php echo $cert_id; ?>">
                                                 <input type="date" class="form-input" name="cert_renew" id="cert_renew" style="padding-bottom: 0 !important;">
