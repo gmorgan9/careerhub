@@ -756,6 +756,10 @@ figure {
     color: white !important;
 }
 
+.offcanvas a {
+    text-decoration: none !important;
+}
+
 .portfolio-page-wrapper .block-title h3 {
     font-size: 18px;
     margin-bottom: 15px;
