@@ -177,42 +177,6 @@ $count_cert = $count_cert_row['count'];
                                 </div>
                             </div>
                             <?php }} ?>
-                            <!-- <div class="timeline-item">
-                                <h5 class="item-period ">Jan 2023 - July 2023</h5>
-                                <span class="item-company">Arctic Wolf</span>
-                                <h4 class="item-title">Triage Security Analyst Intern</h4>
-                                <div class="text">
-                                    <ul>
-                                        <li>
-                                            Triaged 500+ customer requests daily, applied playbook driven solutions, and initiated incident investigations.
-                                        </li>
-                                        <li>
-                                            Developed new run books resulting in a 20% increase in team efficiency through streamlined processes and enhanced knowledge management.
-                                        </li>
-                                        <li>
-                                            Troubleshot and resolved over 100 issues with sensors and scanners, achieving a 97% success rate in maintaining operational health and minimizing downtime..
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
-                            <!-- <div class="timeline-item">
-                                <h5 class="item-period ">Jan 2023 - July 2023</h5>
-                                <span class="item-company">Brigham Young University Office of Information Technology</span>
-                                <h4 class="item-title">Student Systems Engineer</h4>
-                                <div class="text">
-                                    <ul>
-                                        <li>
-                                            Managed and optimized over 10 ESXi hypervisors, utilizing vCenter technology to oversee and enhance the performance of 200+ virtual machines (VMs), resulting in a 20% reduction in downtime and a 15% improvement in overall system efficiency.
-                                        </li>
-                                        <li>
-                                            Diagnosed and resolved technical challenges pertaining to Dell MX chassis, blades, and network switches.
-                                        </li>
-                                        <li>
-                                        Documented 15+ processes and procedures for future reference, enhancing team efficiency by 10% and facilitating knowledge sharing across departments.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
                         </div>
                     <!-- end Experience -->
 

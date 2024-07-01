@@ -113,24 +113,28 @@ $result = mysqli_query($conn, $sql);
                                    <button type="button" class="off-canvas-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-arrow-left-circle"></i></button>
                                    <hr>
                                    <div class="main-project-details">
-                                       <h3 class="mt-5"><?php echo $cert_name; ?></h3>
+                                       <h3 class="mt-5"><?php echo $ce_job_title; ?></h3>
                                        <div class="project-image d-flex justify-content-center">
                                            <img src="../../assets/images/cert-logos/<?php echo $cert_short_name; ?>.png" class="mt-3" alt="" style="width: 180px !important;">
                                        </div>
-                                       <h4>Credential ID</h4>
-                                        <p><?php echo $cred_id ?? 'In-progress'; ?></p>
-                                        <h4>Original Issue Date</h4>
-                                        <p><?php echo $cert_issued ?? 'In-progress'; ?></p>
-                                        <h4>Expiration Date</h4>
-                                        <p><?php echo $cert_expire ?? 'In-progress'; ?></p>
-                                        <h4>Renewal Date</h4>
-                                        <p><?php echo $cert_renewed ?? '---'; ?></p>
+                                       <h4>Company Name</h4>
+                                        <p><?php echo $ce_company ?? '--'; ?></p>
+                                        <h4>Duties</h4>
+                                        <ul>
+                                            <?php foreach ($job_duties as $job_duty): ?>
+                                                <li><?php echo htmlspecialchars($job_duty); ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                        <h4>Time Period</h4>
+                                        <p><?php echo $ce_start; ?> - <?php if(is_null($ce_end)) { ?>Current <?php } else { echo $ce_end; } ?></p>
+                                        <h4>Notes</h4>
+                                        <p><?php echo $ce_notes ?? 'No listed notes.'; ?></p>
                                         <h4>Provider</h4>
-                                        <p><?php echo $cert_provider ?? '---'; ?></p>
-                                       <a href="<?php echo $cert_credly; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
-                                           Open Certification &nbsp; 
+                                        
+                                        <a href="/console/experience/update-experience/?expupdid=<?php echo $ce_id; ?>" class="open__project" target="_blank" id="cardHover" rel="noopener noreferrer">
+                                           Edit Experience &nbsp; 
                                            <i class="bi bi-box-arrow-up-right"></i>
-                                       </a>
+                                        </a>
                                    </div>
                                </div>
                            </div>
