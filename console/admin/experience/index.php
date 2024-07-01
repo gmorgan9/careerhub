@@ -222,7 +222,7 @@ $result = mysqli_query($conn, $sql);
 
         <?php
         // Pagination links
-        $sql_count = "SELECT COUNT(*) as total FROM jobs WHERE status = 'Applied'";
+        $sql_count = "SELECT COUNT(*) as total FROM career_experience";
         $result_count = mysqli_query($conn, $sql_count);
         $row_count = mysqli_fetch_assoc($result_count);
         $total_records = $row_count['total'];
