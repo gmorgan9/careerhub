@@ -111,6 +111,14 @@ $result = mysqli_query($conn, $sql);
                                     <hr>
                                     <div class="main-project-details">
                                         <h3 class="mt-5"><?php echo $job_title; ?></h3>
+                                        <div class="float-end">
+                                                    <?php if ($watchlist == 1) { ?>
+                                                        <i class="bi bi-eye text-muted"></i>
+                                                    <?php } ?>
+                                                    <?php if ($interview_set == 1) { ?>
+                                                        <i class="bi bi-people"></i>
+                                                    <?php } ?>
+                                                </div>
                                         <h4>Company Name</h4>
                                         <p><?php echo $company ?? '--'; ?></p>
                                         <h4>Location</h4>
