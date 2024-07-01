@@ -7,10 +7,10 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$files = glob("../../../app/functions/*.php");
-foreach ($files as $file) {
-    require_once $file;
-}
+// $files = glob("../../../app/functions/*.php");
+// foreach ($files as $file) {
+//     require_once $file;
+// }
 
 ?>
 
