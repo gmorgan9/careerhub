@@ -38,8 +38,12 @@ $result = mysqli_query($conn, $sql);
     <?php include(ROOT_PATH . "/app/database/includes/console-header.php"); ?>
 
     <div class="page_title">    
-            <h2 class="text-white title">All Jobs</h2>
+        <h2 class="text-white title">All Jobs</h2>
+        <div class="float-end">
+            <a class="all-btn" href="<?php echo BASE_URL; ?>/console/job/add-job">Add Job</a>
         </div>
+    </div>
+
     <div class="container-fluid">
         
 
