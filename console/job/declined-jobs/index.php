@@ -78,7 +78,7 @@ $result = mysqli_query($conn, $sql);
                             <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                             <td><?php echo $row['status'] ? $row['status'] : '-'; ?></td>
                             <td style="font-size: 20px;">
-                                <a href="<?php echo BASE_URL; ?>/console/job/declined-jobs/?jobviewid=<?php echo $id; ?>" class="view" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" style="text-decoration: none;">
+                                <a class="view" data-bs-toggle="offcanvas" data-bs-target="#job-canvas-<?php echo $id; ?>" style="text-decoration: none; cursor: pointer;">
                                     <i class="bi bi-eye text-success"></i>
                                 </a>
                                 &nbsp; 
