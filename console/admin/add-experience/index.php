@@ -29,7 +29,7 @@ foreach ($files as $file) {
     <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
 
 
-    <title>Add Certification - MorganServer Career Hub</title>
+    <title>Add Experience - MorganServer Career Hub</title>
 
     
 </head>
@@ -40,43 +40,37 @@ foreach ($files as $file) {
 
         <div class="page_title">
             <h2 class="text-white title">
-                Add Certification
+                Add Experience
             </h2>
         </div>
     <div class="container-fluid" style="max-width: 1320px; margin: 0 auto; height: calc(100vh - 530px);">
         
         <div class="form">
             <form action="" method="POST">
+                <div class="form-group">
+                    <label class="form-label text-white" for="ce_company">Company Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                    <input id="cert_ce_companyname" type="text" name="ce_company" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label text-white" for="ce_job_title">Experience Job Title <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                    <input id="cert_expire" type="text" name="cert_expire" class="form-input" required>
+                </div>
                 <div class="controls two-columns">
                     <div class="left-column">
                         <div class="form-group">
-                            <label class="form-label text-white" for="cert_name">Certification Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                            <input id="cert_name" type="text" name="cert_name" class="form-input" required>
+                            <label class="form-label text-white" for="ce_start">Experience Start <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
+                            <input id="ce_start" type="text" name="ce_start" class="form-input" required>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label text-white" for="cert_short_name">Certification Short Name <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                            <input id="cert_short_name" type="text" name="cert_short_name" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label text-white" for="cert_issued">Certification Issue Date <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
-                            <input id="cert_issued" type="date" name="cert_issued" class="form-input" style="padding-bottom: 0 !important;">
-                        </div>
-                        <input type="submit" name="add-certification" class="form-btn mt-2" value="Add Certification">
                     </div>
                     <div class="right-column">
                         <div class="form-group">
-                            <label class="form-label text-white" for="cert_expire">Certification Expiry Date <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
-                            <input id="cert_expire" type="date" name="cert_expire" class="form-input" style="padding-bottom: 0 !important;">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label text-white" for="cred_id">Credential ID <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
-                            <input id="cred_id" type="text" name="cred_id" class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label text-white" for="cert_provider">Certification Provider <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
-                            <input id="cert_provider" type="text" name="cert_provider" class="form-input" required>
-                        </div>
+                            <label class="form-label text-white" for="ce_end">Experience End <span class="text-secondary" style="font-size: 12px;">&nbsp;&nbsp;Optional</span></label>
+                            <input id="ce_end" type="text" name="ce_end" class="form-input">
+                        </div> 
                     </div>
+                    <textarea id="ce_job_duties" name="ce_job_duties" class="form-input mb-3" placeholder="Experience Job Duties" rows="4"></textarea>
+                    <textarea id="ce_notes" name="ce_notes" class="form-input mb-3" placeholder="Experience Notes" rows="2"></textarea>
+                    <input type="submit" name="add-experience" class="form-btn mt-2" value="Add Certification">
                 </div>
             </form>
         </div> 
