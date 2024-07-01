@@ -69,6 +69,7 @@ foreach ($files as $file) {
                         </div> 
                     </div>
                     <div class="form-check">
+                        <label for="form-checks">Active Career Experience <span class="text-danger" style="font-size: 8px; vertical-align: top;">&nbsp;<i class="bi bi-asterisk"></i></span></label>
                         <div class="form-check text-white form-check-inline">
                           <input class="form-check-input" type="radio" name="ce_status" id="ce_status1" value="active-1">
                           <label class="form-check-label" for="ce_status1">
