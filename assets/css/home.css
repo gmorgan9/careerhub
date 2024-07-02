@@ -37,9 +37,9 @@
 
 /* Styles for the active pagination item */
 .pagination .page-item.active .page-link {
-    background-color: #444444 !important;
+    background-color: var(--light-gray) !important;
     border-color: #666666 !important;
-    color: var(--light-gray) !important; /* Change to your preferred color */
+    color: var(--primary-color) !important; /* Change to your preferred color */
 }
 
 .form-btn {
