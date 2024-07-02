@@ -1,13 +1,13 @@
 <?php
 date_default_timezone_set('America/Denver');
-require_once "../../app/database/connection.php";
-require_once "../../path.php";
+require_once "../../../app/database/connection.php";
+require_once "../../../path.php";
 session_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$files = glob("../../app/functions/*.php");
+$files = glob("../../../app/functions/*.php");
 foreach ($files as $file) {
     require_once $file;
 }
@@ -24,7 +24,7 @@ foreach ($files as $file) {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="../../assets/css/home.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../../assets/css/home.css?v=<?php echo time(); ?>">
 
     <title>Contact - MorganServer Career Hub</title>
 
