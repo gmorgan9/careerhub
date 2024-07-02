@@ -36,7 +36,7 @@
 }
 
 /* Styles for the active pagination item */
-.pagination .page-item.active .page-link {
+.pagination .page-item.active {
     background-color: #555555;
     border-color: #666666;
     color: yellow; /* Change to your preferred color */
