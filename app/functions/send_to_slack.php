@@ -9,17 +9,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "text" => "New message from your website:\n*Full Name:* $fullName\n*Email:* $email\n*Subject:* $subject\n*Message:* $message"
     ]);
 
-    $webhookURL = 'https://hooks.slack.com/services/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'; // Replace with your Slack webhook URL
+    $webhookURL = 'https://hooks.slack.com/services/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'; // Replace with your Slack webhook URL
 
     $ch = curl_init($webhookURL);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
     curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Get response back
 
-    $result = curl_exec($ch);
-    if ($result === FALSE) {
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    if ($response === FALSE) {
         die('Curl failed: ' . curl_error($ch));
     }
+
+    if ($http_code != 200) {
+        die('Slack API responded with status code ' . $http_code . ': ' . $response);
+    }
+
     curl_close($ch);
 
     echo "Message sent successfully!";
