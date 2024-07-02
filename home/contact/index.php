@@ -72,6 +72,9 @@ foreach ($files as $file) {
                     <div class="form">
                     <div class="form">
     <form action="https://formsubmit.co/5858e7a751b8315d824b1bdf35ce716d" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
         <div class="controls two-columns">
             <div class="left-column">
                 <div class="form-group">
