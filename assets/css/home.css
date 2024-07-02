@@ -28,8 +28,18 @@
     color: white !important;
 }
 
-.pagination .active {
-    color: pink;
+/* General pagination styles */
+.pagination .page-item .page-link {
+    background-color: #333333;
+    border-color: #444444;
+    color: white;
+}
+
+/* Styles for the active pagination item */
+.pagination .page-item.active .page-link {
+    background-color: #555555;
+    border-color: #666666;
+    color: yellow; /* Change to your preferred color */
 }
 
 .form-btn {
