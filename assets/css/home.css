@@ -39,7 +39,7 @@
 .pagination .page-item.active .page-link {
     background-color: #555555;
     border-color: #666666;
-    color: yellow !important; /* Change to your preferred color */
+    color: #994E4E !important; /* Change to your preferred color */
 }
 
 .form-btn {
