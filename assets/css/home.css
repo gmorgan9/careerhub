@@ -28,6 +28,10 @@
     color: white !important;
 }
 
+.pagination .active {
+    color: pink;
+}
+
 .form-btn {
     background-color: rgb(51, 51, 51);
     border-radius: 50px;
