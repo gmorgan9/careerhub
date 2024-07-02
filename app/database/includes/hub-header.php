@@ -5,7 +5,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
     <div class="left">
         <a href="/home" class="text-white text-decoration-none">
             <img src="<?php echo BASE_URL; ?>/assets/images/logo.png" alt="" style="height: 44px; width: 44px;">
-            &nbsp;<span style="font-size: 20px;"><strong>Garrett</strong> Morgan</span>
+            &nbsp;<span style="font-size: 20px; margin-top: -10px;"><strong>Garrett</strong> Morgan</span>
         </a>
     </div>
     <div class="right">
