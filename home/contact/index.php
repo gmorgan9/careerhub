@@ -70,7 +70,7 @@ foreach ($files as $file) {
                         </h2>
                     </div>
                     <div class="form">
-                        <form action="" method="">
+                        <form action="" method="" id="contactForm">
                             <div class="controls two-columns">
                                 <div class="left-column">
                                     <div class="form-group">
