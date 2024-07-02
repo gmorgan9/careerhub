@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "text" => "New message from your website:\n*Full Name:* $fullName\n*Email:* $email\n*Subject:* $subject\n*Message:* $message"
     ]);
 
-    $webhookURL = 'https://hooks.slack.com/services/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'; // Replace with your Slack webhook URL
+    $webhookURL = 'https://hooks.slack.com/services/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'; // Replace with your Slack webhook URL
 
     $ch = curl_init($webhookURL);
     curl_setopt($ch, CURLOPT_POST, 1);
