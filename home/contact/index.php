@@ -71,7 +71,7 @@ foreach ($files as $file) {
                     </div>
                     <div class="form">
                     <div class="form">
-    <form id="contactForm" action="../../app/functions/send_to_slack.php" method="POST">
+    <form action="https://formsubmit.co/garrett.morgan@morganserver.com" method="POST">
         <div class="controls two-columns">
             <div class="left-column">
                 <div class="form-group">
