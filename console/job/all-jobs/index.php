@@ -194,7 +194,7 @@ $result = mysqli_query($conn, $sql);
         $total_pages = ceil($total_records / $limit);
 
         if ($total_pages > 1) {
-            echo '<ul class="pagination justify-content-center">';
+            echo '<ul class="pagination justify-content-center" style="background-color: #333333;">';
             for ($i = 1; $i <= $total_pages; $i++) {
                 $active = ($page == $i) ? "active" : "";
                 echo "<li class='page-item {$active}'><a class='page-link' href='?page={$i}'>{$i}</a></li>";
