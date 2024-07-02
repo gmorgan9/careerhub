@@ -70,27 +70,30 @@ foreach ($files as $file) {
                         </h2>
                     </div>
                     <div class="form">
-                        <form action="" method="" id="contactForm">
-                            <div class="controls two-columns">
-                                <div class="left-column">
-                                    <div class="form-group">
-                                        <input id="full_name" type="text" name="name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="email" type="text" name="name" class="form-input" placeholder="Email Address" required="required" data-error="Email Address is required.">
-                                    </div>
-                                    <div class="form-group">
-                                        <input id="subject" type="text" name="name" class="form-input" placeholder="Subject" required="required" data-error="Subject is required.">
-                                    </div>
-                                </div>
-                                <div class="right-column">
-                                    <div class="form-group">
-                                        <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
-                                    </div>
-                                </div>
-                                <input type="submit" class="form-btn" value="Send message">
-                            </div>
-                        </form>
+                    <div class="form">
+    <form id="contactForm" action="../../app/functions/send_to_slack.php" method="POST">
+        <div class="controls two-columns">
+            <div class="left-column">
+                <div class="form-group">
+                    <input id="full_name" type="text" name="full_name" class="form-input" placeholder="Full Name" required="required" data-error="Name is required.">
+                </div>
+                <div class="form-group">
+                    <input id="email" type="text" name="email" class="form-input" placeholder="Email Address" required="required" data-error="Email Address is required.">
+                </div>
+                <div class="form-group">
+                    <input id="subject" type="text" name="subject" class="form-input" placeholder="Subject" required="required" data-error="Subject is required.">
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="form-group">
+                    <textarea id="form_message" name="message" class="form-input" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                </div>
+            </div>
+            <input type="submit" class="form-btn" value="Send message">
+        </div>
+    </form>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -100,7 +103,7 @@ foreach ($files as $file) {
 
     <?php include(ROOT_PATH . "/app/database/includes/site-footer.php"); ?>
 
-    <script src="../../assets/js/slack_notify.js"></script>
+    <!-- <script src="../../assets/js/slack_notify.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
