@@ -30,9 +30,9 @@
 
 /* General pagination styles */
 .pagination .page-item .page-link {
-    background-color: #333333;
-    border-color: #444444;
-    color: white;
+    background-color: #333333 !important;
+    border-color: #444444 !important;
+    color: white !important;
 }
 
 /* Styles for the active pagination item */
