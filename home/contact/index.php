@@ -71,7 +71,7 @@ foreach ($files as $file) {
                     </div>
                     <div class="form">
                     <div class="form">
-    <form action="https://formsubmit.co/garrett.morgan@morganserver.com" method="POST">
+    <form action="5858e7a751b8315d824b1bdf35ce716d" method="POST">
         <div class="controls two-columns">
             <div class="left-column">
                 <div class="form-group">
