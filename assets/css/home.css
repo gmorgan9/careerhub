@@ -36,10 +36,10 @@
 }
 
 /* Styles for the active pagination item */
-.pagination .page-item.active {
+.pagination .page-item.active .page-link {
     background-color: #555555;
     border-color: #666666;
-    color: yellow; /* Change to your preferred color */
+    color: yellow !important; /* Change to your preferred color */
 }
 
 .form-btn {
