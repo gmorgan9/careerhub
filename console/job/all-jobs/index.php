@@ -197,7 +197,7 @@ $result = mysqli_query($conn, $sql);
             echo '<ul class="pagination justify-content-center">';
             for ($i = 1; $i <= $total_pages; $i++) {
                 $active = ($page == $i) ? "active" : "";
-                echo "<li class='page-item {$active}'><a class='page-link' href='?page={$i}' style='background-color: #333333 !important;'>{$i}</a></li>";
+                echo "<li class='page-item {$active}'><a class='page-link' href='?page={$i}' style='background-color: #333333 !important; border-color: #333333;'>{$i}</a></li>";
             }
             echo '</ul>';
         }
